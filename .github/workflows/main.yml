@@ -29,24 +29,24 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '12'
-      - run: npm install
+      - run: cd Front && npm install
       - run: npm run build
       
       
       # Runs a single command using the runners shell
       - name: Copy built front assets to back for packaging
-        run: cp -r Front/dist/* Back/src/main/resources/assets
+        run: cd .. && cp -r Front/dist/* Back/src/main/resources/assets
 
       # Build java application
       - uses: actions/setup-java@v1
         with:
           java-version: 11
-      - run: mvn clean package
+      - run: cd Back && mvn clean package
 
 
       # Runs a single command using the runners shell
       - name: Copy built application package for docker
-        run: mkdir Docker/build && cp Back/target/GI.war Docker/build/GI.war
+        run: cd .. && mkdir Docker/build && cp Back/target/GI.war Docker/build/GI.war
 
       # Deploy application to heroku
       - name: Build, Push and Deploy to Heroku
