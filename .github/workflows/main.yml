@@ -35,7 +35,7 @@ jobs:
       
       # Runs a single command using the runners shell
       - name: Copy built front assets to back for packaging
-        run: cp -r Front/dist/* Back/src/main/resources/assets
+        run: mkdir -p Back/src/main/resources/assets || true && cp -r Front/dist/* Back/src/main/resources/assets
 
       # Build java application
       - uses: actions/setup-java@v1
@@ -56,4 +56,4 @@ jobs:
           email: ${{ secrets.HEROKU_EMAIL }} # your heroku email
           api_key: ${{ secrets.HEROKU_API_KEY }} # your  heroku api key
           app_name: "genshin-application"
-          dockerfile_path: "Docker"
+          dockerfile: "Docker"
