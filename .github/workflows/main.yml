@@ -35,7 +35,7 @@ jobs:
       
       # Runs a single command using the runners shell
       - name: Copy built front assets to back for packaging
-        run: mkdir Back/src/main/resources/assets || true && cp -r Front/dist/* Back/src/main/resources/assets
+        run: mkdir -p Back/src/main/resources/assets || true && cp -r Front/dist/* Back/src/main/resources/assets
 
       # Build java application
       - uses: actions/setup-java@v1
