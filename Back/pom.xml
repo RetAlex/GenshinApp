@@ -52,5 +52,14 @@
                 <directory>src/main/test</directory>
             </testResource>
         </testResources>
+
+        <finalName>GI</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.3</version>
+            </plugin>
+        </plugins>
     </build>
 </project>

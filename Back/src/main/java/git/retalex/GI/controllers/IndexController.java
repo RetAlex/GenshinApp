@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class IndexController {
-    private static final String indexPath = "/index.html";
+    private static final String indexPath = "assets/index.html";
     @GetMapping(path = {"", "/"}, produces = "text/html")
     public String getHelloWorld() throws Exception{
         return new String(new ClassPathResource(indexPath).getInputStream().readAllBytes());
