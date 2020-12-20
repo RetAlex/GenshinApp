@@ -46,7 +46,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Copy built application package for docker
-        run: mkdir Docker/build && cp Back/target/GI.war Docker/build/GI.war
+        run: cp Back/target/GI.war Docker/build/GI.war
 
       # Deploy application to heroku
       - name: Build, Push and Deploy to Heroku
