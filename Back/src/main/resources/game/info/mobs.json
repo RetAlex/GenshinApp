@@ -4,8 +4,8 @@
     "handbookAmount": 6,
     "image": "/placeholder.png",
     "experience": {
-      "WL0": 40,
-      "WL1": 42
+      "wl0": 40,
+      "wl1": 42
     }
   },
   {
@@ -13,8 +13,8 @@
     "handbookAmount": 5,
     "image": "/placeholder.png",
     "experience": {
-      "WL0": 40,
-      "WL1": 42
+      "wl0": 40,
+      "wl1": 42
     }
   },
   {
@@ -22,8 +22,8 @@
     "handbookAmount": 6,
     "image": "/placeholder.png",
     "experience": {
-      "WL0": 40,
-      "WL1": 42
+      "wl0": 40,
+      "wl1": 42
     }
   },
   {
@@ -31,8 +31,8 @@
     "handbookAmount": 9,
     "image": "/placeholder.png",
     "experience": {
-      "WL0": 40,
-      "WL1": 42
+      "wl0": 40,
+      "wl1": 42
     }
   },
   {
@@ -40,8 +40,8 @@
     "handbookAmount": 10,
     "image": "/placeholder.png",
     "experience": {
-      "WL0": 40,
-      "WL1": 42
+      "wl0": 40,
+      "wl1": 42
     }
   },
   {
@@ -49,8 +49,8 @@
     "handbookAmount": 1,
     "image": "/placeholder.png",
     "experience": {
-      "WL0": 40,
-      "WL1": 42
+      "wl0": 40,
+      "wl1": 42
     }
   },
   {
@@ -58,8 +58,8 @@
     "handbookAmount": 13,
     "image": "/placeholder.png",
     "experience": {
-      "WL0": 40,
-      "WL1": 42
+      "wl0": 40,
+      "wl1": 42
     }
   },
   {
@@ -67,8 +67,8 @@
     "handbookAmount": 0,
     "image": "/game/images/FatuiScirmisher.jpg",
     "experience": {
-      "WL0": 0,
-      "WL1": 0
+      "wl0": 0,
+      "wl1": 0
     }
   },
   {
@@ -76,8 +76,8 @@
     "handbookAmount": 0,
     "image": "/game/images/Hilichurl.jpg",
     "experience": {
-      "WL0": 0,
-      "WL1": 0
+      "wl0": 0,
+      "wl1": 0
     }
   },
   {
@@ -85,8 +85,8 @@
     "handbookAmount": 0,
     "image": "/game/images/HilichurlShooter.jpg",
     "experience": {
-      "WL0": 0,
-      "WL1": 0
+      "wl0": 0,
+      "wl1": 0
     }
   },
   {
@@ -94,8 +94,8 @@
     "handbookAmount": 0,
     "image": "/game/images/Mitachurl.jpg",
     "experience": {
-      "WL0": 0,
-      "WL1": 0
+      "wl0": 0,
+      "wl1": 0
     }
   },
   {
@@ -103,8 +103,8 @@
     "handbookAmount": 0,
     "image": "/game/images/Samachurl.jpg",
     "experience": {
-      "WL0": 0,
-      "WL1": 0
+      "wl0": 0,
+      "wl1": 0
     }
   },
   {
@@ -112,8 +112,8 @@
     "handbookAmount": 0,
     "image": "/game/images/Slime.jpg",
     "experience": {
-      "WL0": 0,
-      "WL1": 0
+      "wl0": 0,
+      "wl1": 0
     }
   },
   {
@@ -121,8 +121,8 @@
     "handbookAmount": 0,
     "image": "/game/images/TreasureHoarder.jpg",
     "experience": {
-      "WL0": 0,
-      "WL1": 0
+      "wl0": 0,
+      "wl1": 0
     }
   },
   {
@@ -130,8 +130,8 @@
     "handbookAmount": 0,
     "image": "/game/images/Whopperflower.jpg",
     "experience": {
-      "WL0": 0,
-      "WL1": 0
+      "wl0": 0,
+      "wl1": 0
     }
   }
 ]
