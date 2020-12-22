@@ -1,137 +1,92 @@
 [
   {
+    "id": 1,
     "name": "Ruin Guard",
     "handbookAmount": 6,
-    "image": "/placeholder.png",
-    "experience": {
-      "wl0": 40,
-      "wl1": 42
-    }
+    "image": "/placeholder.png"
   },
   {
+    "id": 2,
     "name": "Ruin Hunter",
     "handbookAmount": 5,
-    "image": "/placeholder.png",
-    "experience": {
-      "wl0": 40,
-      "wl1": 42
-    }
+    "image": "/placeholder.png"
   },
   {
+    "id": 3,
     "name": "Fatui Agent",
     "handbookAmount": 6,
-    "image": "/placeholder.png",
-    "experience": {
-      "wl0": 40,
-      "wl1": 42
-    }
+    "image": "/placeholder.png"
   },
   {
+    "id": 4,
     "name": "Fatui Cicin Mage",
     "handbookAmount": 9,
-    "image": "/placeholder.png",
-    "experience": {
-      "wl0": 40,
-      "wl1": 42
-    }
+    "image": "/placeholder.png"
   },
   {
+    "id": 5,
     "name": "Geovishap Hatchling",
     "handbookAmount": 10,
-    "image": "/placeholder.png",
-    "experience": {
-      "wl0": 40,
-      "wl1": 42
-    }
+    "image": "/placeholder.png"
   },
   {
+    "id": 6,
     "name": "Hilichurl Chieftain",
     "handbookAmount": 1,
-    "image": "/placeholder.png",
-    "experience": {
-      "wl0": 40,
-      "wl1": 42
-    }
+    "image": "/placeholder.png"
   },
   {
+    "id": 7,
     "name": "Abyss Mage",
     "handbookAmount": 13,
-    "image": "/placeholder.png",
-    "experience": {
-      "wl0": 40,
-      "wl1": 42
-    }
+    "image": "/placeholder.png"
   },
   {
+    "id": 8,
     "name": "Fatui Scirmisher",
-    "handbookAmount": 0,
-    "image": "/game/images/FatuiScirmisher.jpg",
-    "experience": {
-      "wl0": 0,
-      "wl1": 0
-    }
+    "handbookAmount": 15,
+    "image": "/game/images/FatuiScirmisher.jpg"
   },
   {
+    "id": 9,
     "name": "Hilichurl",
-    "handbookAmount": 0,
-    "image": "/game/images/Hilichurl.jpg",
-    "experience": {
-      "wl0": 0,
-      "wl1": 0
-    }
+    "handbookAmount": 32,
+    "image": "/game/images/Hilichurl.jpg"
   },
   {
+    "id": 10,
     "name": "Hilichurl Shooter",
-    "handbookAmount": 0,
-    "image": "/game/images/HilichurlShooter.jpg",
-    "experience": {
-      "wl0": 0,
-      "wl1": 0
-    }
+    "handbookAmount": 18,
+    "image": "/game/images/HilichurlShooter.jpg"
   },
   {
+    "id": 11,
     "name": "Mitachurl",
-    "handbookAmount": 0,
-    "image": "/game/images/Mitachurl.jpg",
-    "experience": {
-      "wl0": 0,
-      "wl1": 0
-    }
+    "handbookAmount": 13,
+    "image": "/game/images/Mitachurl.jpg"
   },
   {
+    "id": 12,
     "name": "Samachurl",
-    "handbookAmount": 0,
-    "image": "/game/images/Samachurl.jpg",
-    "experience": {
-      "wl0": 0,
-      "wl1": 0
-    }
+    "handbookAmount": 13,
+    "image": "/game/images/Samachurl.jpg"
   },
   {
+    "id": 13,
     "name": "Slime",
-    "handbookAmount": 0,
-    "image": "/game/images/Slime.jpg",
-    "experience": {
-      "wl0": 0,
-      "wl1": 0
-    }
+    "handbookAmount": 41,
+    "image": "/game/images/Slime.jpg"
   },
   {
+    "id": 14,
     "name": "Treasure Hoarder",
-    "handbookAmount": 0,
-    "image": "/game/images/TreasureHoarder.jpg",
-    "experience": {
-      "wl0": 0,
-      "wl1": 0
-    }
+    "handbookAmount": 30,
+    "image": "/game/images/TreasureHoarder.jpg"
   },
   {
+    "id": 15,
     "name": "Whopperflower",
-    "handbookAmount": 0,
-    "image": "/game/images/Whopperflower.jpg",
-    "experience": {
-      "wl0": 0,
-      "wl1": 0
-    }
+    "handbookAmount": 9,
+    "image": "/game/images/Whopperflower.jpg"
   }
 ]
