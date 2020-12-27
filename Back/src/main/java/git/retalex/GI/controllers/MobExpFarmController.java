@@ -1,0 +1,54 @@
+package git.retalex.GI.controllers;
+
+import git.retalex.GI.utils.exceptions.ResourceNotFoundException;
+import git.retalex.GI.utils.models.DropResponse;
+import git.retalex.GI.utils.models.ItemResponse;
+import git.retalex.GI.utils.models.MobsInformationResponse;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.io.IOException;
+
+@Api(tags="MobExpCalculator")
+@RestController
+@RequestMapping("/exp-calc")
+public class MobExpFarmController {
+    private static final String mobsInfoPath = "/game/info/mobs.json";
+    private static final String itemsInfoPath = "/game/info/items.json";
+    private static final String dropsInfoPrefix = "/game/info/drops/WL";
+
+    @ApiOperation(value = "Retrieve the main mobs information", responseContainer = "List", response = MobsInformationResponse.class)
+    @GetMapping(path = "/mobs", produces = "application/json")
+    public String getMobsInformation() throws IOException {
+        try {
+            return new String(new ClassPathResource(mobsInfoPath).getInputStream().readAllBytes());
+        }catch (IOException e){
+            throw new ResourceNotFoundException();
+        }
+    }
+
+    @ApiOperation(value = "Retrieve items list", responseContainer = "List", response = ItemResponse.class)
+    @GetMapping(path = "/items", produces = "application/json")
+    public String getItemInformation(){
+        try {
+            return new String(new ClassPathResource(itemsInfoPath).getInputStream().readAllBytes());
+        }catch (IOException e){
+            throw new ResourceNotFoundException();
+        }
+    }
+
+    @ApiOperation(value = "Retrieve all monsters drops for appropriate world level", responseContainer = "List", response = DropResponse.class)
+    @GetMapping(path = "/drops", produces = "application/json")
+    public String getWorldLevelDrops(@RequestParam("wl") int wl){
+        try {
+            return new String(new ClassPathResource(dropsInfoPrefix+wl+".json").getInputStream().readAllBytes());
+        }catch (IOException e){
+            throw new ResourceNotFoundException();
+        }
+    }
+}
