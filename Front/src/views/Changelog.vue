@@ -19,7 +19,7 @@
                     <div class="change-item">
                         <div class="change-content">
                             <ul>
-                                <li v-for="changeDescription in change.changes" :key="changeDescription"><p>{{ changeDescription }}</p></li>
+                                <li v-for="changeDescription in change.changes" :key="changeDescription"><p>- {{ changeDescription }}</p></li>
                             </ul>
                             <div class="user-image">
                                 <img src="../assets/images/version.svg" alt="">
