@@ -4,8 +4,8 @@
             <div class="container">
                 <div class="row">
                     <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
-                        <h1>Sed ut perspiciatis unde omnis</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                        <h1>Genshin application</h1>
+                      <p>Check out the new features available for any user completely for free. List of features will be updated as soon as new features are added so be sure to keep in touch with the latest updates in our <a><router-link to="/changelog">changelog</router-link></a> </p>
                         <router-link class="main-button-slider" to="/calc"><span>Character Expirience Calculator</span></router-link>
                     </div>
                 </div>

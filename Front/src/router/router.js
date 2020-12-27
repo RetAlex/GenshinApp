@@ -1,9 +1,9 @@
 import Changelog from "@/views/Changelog";
-import ContactUs from "@/views/ContactUs";
+import AboutUs from "@/views/AboutUs";
 import Home from "@/views/Home";
 
 export const routes = [
     {path: '/', component: Home},
     {path: '/changelog', component: Changelog},
-    {path: '/contact-us', component: ContactUs}
+    {path: '/about-us', component: AboutUs}
 ];

@@ -11,7 +11,7 @@
                             <li><a><router-link to="/">Home</router-link></a></li>
                             <li><a><router-link to="/calc">Calculator</router-link></a></li>
                             <li><a><router-link to="/changelog">Changelog</router-link></a></li>
-                            <li><a><router-link to="/contact-us">Contact Us</router-link></a></li>
+                            <li><a><router-link to="/about-us">About Us</router-link></a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
