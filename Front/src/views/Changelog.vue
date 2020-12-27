@@ -9,61 +9,23 @@
                 </div>
                 <div class="offset-lg-3 col-lg-6">
                     <div class="center-text">
-                        <p>Donec tempus, sem non rutrum imperdiet, lectus orci fringilla nulla, at accumsan elit eros a turpis. Ut sagittis lectus libero.</p>
+                        <p>This page contains all the latest updates of an application. The updates are posted as soon as they are available for users.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" v-for="change in changeLog" :key="change">
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="change-item">
                         <div class="change-content">
                             <ul>
-                                <li><p>- Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis, egestas scelerisque orci. Maecenas a finibus odio.</p></li>
-                                <li><p>- Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis, egestas scelerisque orci. Maecenas a finibus odio.</p></li>
-                                <li><p>- Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis, egestas scelerisque orci. Maecenas a finibus odio.</p></li>
+                                <li v-for="changeDescription in change.changes" :key="changeDescription"><p>- {{ changeDescription }}</p></li>
                             </ul>
                             <div class="user-image">
                                 <img src="../assets/images/version.svg" alt="">
                             </div>
                             <div class="change-info">
-                                <h3 class="user-name">Version 1.1</h3>
-                                <span>New Features</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="change-item">
-                        <div class="change-content">
-                            <ul>
-                                <li><p>- Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis, egestas scelerisque orci. Maecenas a finibus odio.</p></li>
-                                <li><p>- Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis, egestas scelerisque orci. Maecenas a finibus odio.</p></li>
-                                <li><p>- Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis, egestas scelerisque orci. Maecenas a finibus odio.</p></li>
-                            </ul>
-                            <div class="user-image">
-                                <img src="../assets/images/version.svg" alt="">
-                            </div>
-                            <div class="change-info">
-                                <h3 class="user-name">Version 1.1</h3>
-                                <span>New Features</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="change-item">
-                        <div class="change-content">
-                            <ul>
-                                <li><p>- Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis, egestas scelerisque orci. Maecenas a finibus odio.</p></li>
-                                <li><p>- Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis, egestas scelerisque orci. Maecenas a finibus odio.</p></li>
-                                <li><p>- Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis, egestas scelerisque orci. Maecenas a finibus odio.</p></li>
-                            </ul>
-                            <div class="user-image">
-                                <img src="../assets/images/version.svg" alt="">
-                            </div>
-                            <div class="change-info">
-                                <h3 class="user-name">Version 1.1</h3>
+                                <h3 class="user-name">{{ change.version }}</h3>
                                 <span>New Features</span>
                             </div>
                         </div>
@@ -76,7 +38,14 @@
 
 <script>
     export default {
-        name: "Changelog"
+        name: "Changelog",
+        data(){
+          return {
+            changeLog: [
+              {version: "Version 1.0", changes: ["The site was created.", "Initial version of XP farm calculator was added.", "CI/CD process configured for faster and better development cycles.", "Informational pages were filled with current info."]}
+            ]
+          }
+        }
     }
 </script>
 
