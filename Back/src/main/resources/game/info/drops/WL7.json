@@ -1,0 +1,111 @@
+{
+  "expectedLevels": "75-89",
+  "drops": [
+    {
+      "id": 1,
+      "experience": 57,
+      "mora": 200,
+      "items": [
+      ]
+    },
+    {
+      "id": 2,
+      "experience": 57,
+      "mora": 200,
+      "items": [
+      ]
+    },
+    {
+      "id": 3,
+      "experience": 57,
+      "mora": 200,
+      "items": [
+      ]
+    },
+    {
+      "id": 4,
+      "79": "55",
+      "experience": 57,
+      "mora": 200,
+      "items": [
+      ]
+    },
+    {
+      "id": 5,
+      "experience": 57,
+      "mora": 200,
+      "items": [
+      ]
+    },
+    {
+      "id": 6,
+      "experience": 57,
+      "mora": 600,
+      "items": [
+      ]
+    },
+    {
+      "id": 7,
+      "experience": 57,
+      "mora": 200,
+      "items": [
+      ]
+    },
+    {
+      "id": 8,
+      "experience": 19,
+      "mora": 40,
+      "items": [
+      ]
+    },
+    {
+      "id": 9,
+      "experience": 19,
+      "mora": 40,
+      "items": [
+      ]
+    },
+    {
+      "id": 10,
+      "experience": 19,
+      "mora": 40,
+      "items": [
+      ]
+    },
+    {
+      "id": 11,
+      "experience": 57,
+      "mora": 200,
+      "items": [
+      ]
+    },
+    {
+      "id": 12,
+      "experience": -1,
+      "mora": -1,
+      "items": [
+      ]
+    },
+    {
+      "id": 13,
+      "experience": 19,
+      "mora": 40,
+      "items": [
+      ]
+    },
+    {
+      "id": 14,
+      "experience": 19,
+      "mora": 40,
+      "items": [
+      ]
+    },
+    {
+      "id": 15,
+      "experience": 19,
+      "mora": 40,
+      "items": [
+      ]
+    }
+  ]
+}
