@@ -37,10 +37,10 @@
                             <a>WL5</a>
                         </li>
                         <li>
-                            <a class="active">WL6</a>
+                            <a>WL6</a>
                         </li>
                         <li>
-                            <a class="inactive">WL7</a>
+                            <a class="active">WL7</a>
                         </li>
                     </ul>
                 </div>
@@ -57,7 +57,7 @@
                             <div class="monster-card-control">
                                 <div class="monster-name">{{mob.name}}</div>
                                 <input class="monster-amount-input" v-model="mobAmounts['mob'+mob.id]" type="number" placeholder="0"/>
-                                <button class="monster-handbook-button">Fill</button>
+                                <button class="monster-handbook-button" @click="fillFromHandbook(mob.id)">Fill</button>
                             </div>
                         </div>
                     </div>
@@ -95,9 +95,10 @@
         name: "CharExp",
         data: function () {
             return {
-                currentWL: 6,
+                currentWL: 7,
                 experienceTable: {},
                 unfilteredMobs: [],
+                mobsById: {},
                 mobs: {},
                 mobTypes: [],
                 mobAmounts: {},
@@ -108,34 +109,40 @@
             await this.getMobs()
         },
         methods: {
+            fillFromHandbook(mobId){
+                this.mobAmounts["mob"+mobId]=this.mobsById["mob"+mobId].handbookAmount;
+                this.doCalc();
+            },
             async getMobs() {
-                const res = await fetch("http://localhost:8080/exp-calc/mobs");
+                const res = await fetch("/exp-calc/mobs");
                 this.unfilteredMobs = await res.json();
                 for (let i = 0; i < this.unfilteredMobs.length; i++) {
                     if (!this.mobs[this.unfilteredMobs[i].type]) this.mobs[this.unfilteredMobs[i].type] = [];
-                    this.mobs[this.unfilteredMobs[i].type].push(this.unfilteredMobs[i]);
+                    let currentMob = this.unfilteredMobs[i];
+                    this.mobs[currentMob.type].push(currentMob);
+                    this.mobsById["mob"+currentMob.id]=currentMob;
                 }
                 this.mobTypes = Object.keys(this.mobs)
             },
             async doCalc(){
-                console.log(this.mobAmounts)
                 if(!this.experienceTable["WL"+this.currentWL]){
                     let WL = this.currentWL;
-                    let res = await fetch("http://localhost:8080/exp-calc/drops?wl="+WL)
-                    this.experienceTable["WL"+WL] = await res.json()
+                    let res = await fetch("/exp-calc/drops?wl="+WL)
+                    this.experienceTable["WL"+WL] = (await res.json()).drops
                 }
                 this.results.experience=0;
                 this.results.mora=0;
                 for (let i = 0; i < this.unfilteredMobs.length; i++) {
-                    let mobId = this.unfilteredMobs[0].id;
+                    let mobId = this.unfilteredMobs[i].id;
                     let mobDrops = this.experienceTable["WL"+this.currentWL]["mob"+mobId];
                     if(!mobDrops){
                       console.log("The "+mobId+" mob drops are not filled for the WL"+this.currentWL)
                       //TODO add warning to the frontend
                       continue;
                     }
-                    this.results.experience+=this.mobAmounts["mob"+mobId]+mobDrops.experience;
-                    this.results.mora+=this.mobAmounts["mob"+mobId]+mobDrops.mora;
+                    let mobAmount = Number.parseInt(this.mobAmounts["mob"+mobId]) || 0;
+                    this.results.experience+=mobAmount*mobDrops.experience;
+                    this.results.mora+=mobAmount*mobDrops.mora;
                 }
             }
         }
