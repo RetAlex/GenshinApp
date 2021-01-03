@@ -29,31 +29,15 @@
                     </ul>
                 </div>
               </div>
-              <div class="row">
+              <div class="row" v-for="mobType in mobTypes" :key="mobType">
                 <div>
                   <div class="head row">
-                    <h1>Elite enemies</h1>
+                    <h1>{{ mobType }}</h1>
                   </div>
                   <div class="enemies row">
-                    <div class="monster-card" v-for="mob in mobs" :key="mob.id">
+                    <div class="monster-card" v-for="mob in mobs[mobType]" :key="mob.id">
                       <img class="monster-image" :src="mob.image" :alt="mob.name">
                       <div>{{mob.name}}</div>
-                      <div class="monster-card-control">
-                        <input class="monster-amount-input" type="number" placeholder="0"/>
-                        <button class="monster-handbook-button">Fill</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div>
-                  <div class="head row">
-                    <h1>Common enemies</h1>
-                  </div>
-                  <div class="enemies row">
-                    <div class="monster-card">
-                      <img class="monster-image" src="../assets/images/monster.png">
                       <div class="monster-card-control">
                         <input class="monster-amount-input" type="number" placeholder="0"/>
                         <button class="monster-handbook-button">Fill</button>
@@ -82,18 +66,22 @@
       name: "CharExp",
       data: function () {
           return {
-            mobs:[],
-            eliteMobs: [],
-            commonMobs: []
+            mobs: {},
+            mobTypes: []
           }
       },
-      mounted(){
-        this.getMobs()
+      async created(){
+        await this.getMobs()
       },
       methods: {
           async getMobs(){
             const res = await fetch("http://localhost:8080/exp-calc/mobs");
-            this.mobs = await res.json();
+            let unfilteredMobs = await res.json();
+            for(let i=0; i<unfilteredMobs.length; i++){
+              if(!this.mobs[unfilteredMobs[i].type]) this.mobs[unfilteredMobs[i].type]=[];
+              this.mobs[unfilteredMobs[i].type].push(unfilteredMobs[i]);
+            }
+            this.mobTypes = Object.keys(this.mobs)
           }
       }
     }
