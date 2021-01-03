@@ -19,28 +19,28 @@
                 <div class="advent-rank-wrap">
                     <ul>
                         <li>
-                            <a class="inactive">WL0</a>
+                            <a>WL0</a>
                         </li>
                         <li>
-                            <a class="inactive">WL1</a>
+                            <a>WL1</a>
                         </li>
                         <li>
-                            <a class="inactive">WL2</a>
+                            <a>WL2</a>
                         </li>
                         <li>
-                            <a class="inactive">WL3</a>
+                            <a>WL3</a>
                         </li>
                         <li>
-                            <a class="inactive">WL4</a>
+                            <a>WL4</a>
                         </li>
                         <li>
-                            <a class="inactive">WL5</a>
+                            <a>WL5</a>
                         </li>
                         <li>
                             <a class="active">WL6</a>
                         </li>
                         <li>
-                            <a class="active">WL7</a>
+                            <a class="inactive">WL7</a>
                         </li>
                     </ul>
                 </div>
@@ -56,7 +56,7 @@
                                  :alt="mob.name">
                             <div class="monster-card-control">
                                 <div class="monster-name">{{mob.name}}</div>
-                                <input class="monster-amount-input" type="number" placeholder="0"/>
+                                <input class="monster-amount-input" v-model="mobAmounts['mob'+mob.id]" type="number" placeholder="0"/>
                                 <button class="monster-handbook-button">Fill</button>
                             </div>
                         </div>
@@ -65,20 +65,20 @@
             </div>
             <div class="row result">
                 <div class="process">
-                    <button class="main-button"><span>Calculate!</span></button>
+                    <button class="main-button" @click="doCalc()"><span>Calculate!</span></button>
                 </div>
                 <section class="counter">
                     <div class="content">
                         <div class="row">
                             <div class="col-md-6 col-sm-12">
                                 <div class="count-item decoration-bottom">
-                                    <strong>0 XP</strong>
-                                    <span>Experience</span>
+                                    <strong>{{results.experience}}</strong>
+                                    <span>XP</span>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-12">
                                 <div class="count-item decoration-top">
-                                    <strong>63</strong>
+                                    <strong>{{results.mora}}</strong>
                                     <span>Mora</span>
                                 </div>
                             </div>
@@ -95,8 +95,13 @@
         name: "CharExp",
         data: function () {
             return {
+                currentWL: 6,
+                experienceTable: {},
+                unfilteredMobs: [],
                 mobs: {},
-                mobTypes: []
+                mobTypes: [],
+                mobAmounts: {},
+                results: { experience: 0, mora: 0 }
             }
         },
         async created() {
@@ -104,13 +109,34 @@
         },
         methods: {
             async getMobs() {
-                const res = await fetch("https://genshin-application-ci.herokuapp.com/exp-calc/mobs");
-                let unfilteredMobs = await res.json();
-                for (let i = 0; i < unfilteredMobs.length; i++) {
-                    if (!this.mobs[unfilteredMobs[i].type]) this.mobs[unfilteredMobs[i].type] = [];
-                    this.mobs[unfilteredMobs[i].type].push(unfilteredMobs[i]);
+                const res = await fetch("http://localhost:8080/exp-calc/mobs");
+                this.unfilteredMobs = await res.json();
+                for (let i = 0; i < this.unfilteredMobs.length; i++) {
+                    if (!this.mobs[this.unfilteredMobs[i].type]) this.mobs[this.unfilteredMobs[i].type] = [];
+                    this.mobs[this.unfilteredMobs[i].type].push(this.unfilteredMobs[i]);
                 }
                 this.mobTypes = Object.keys(this.mobs)
+            },
+            async doCalc(){
+                console.log(this.mobAmounts)
+                if(!this.experienceTable["WL"+this.currentWL]){
+                    let WL = this.currentWL;
+                    let res = await fetch("http://localhost:8080/exp-calc/drops?wl="+WL)
+                    this.experienceTable["WL"+WL] = await res.json()
+                }
+                this.results.experience=0;
+                this.results.mora=0;
+                for (let i = 0; i < this.unfilteredMobs.length; i++) {
+                    let mobId = this.unfilteredMobs[0].id;
+                    let mobDrops = this.experienceTable["WL"+this.currentWL]["mob"+mobId];
+                    if(!mobDrops){
+                      console.log("The "+mobId+" mob drops are not filled for the WL"+this.currentWL)
+                      //TODO add warning to the frontend
+                      continue;
+                    }
+                    this.results.experience+=this.mobAmounts["mob"+mobId]+mobDrops.experience;
+                    this.results.mora+=this.mobAmounts["mob"+mobId]+mobDrops.mora;
+                }
             }
         }
     }
@@ -167,7 +193,7 @@
     }
 
     .enemies-title {
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         font-size: 15px;
         color: #777;
         margin-bottom: 10px;
