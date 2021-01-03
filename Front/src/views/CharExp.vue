@@ -35,15 +35,9 @@
                     <h1>Elite enemies</h1>
                   </div>
                   <div class="enemies row">
-                    <div class="monster-card">
-                      <img class="monster-image" src="../assets/images/monster.png">
-                      <div class="monster-card-control">
-                        <input class="monster-amount-input" type="number" placeholder="0"/>
-                        <button class="monster-handbook-button">Fill</button>
-                      </div>
-                    </div>
-                    <div class="monster-card">
-                      <img class="monster-image" src="../assets/images/monster.png">
+                    <div class="monster-card" v-for="mob in mobs" :key="mob.id">
+                      <img class="monster-image" :src="mob.image" :alt="mob.name">
+                      <div>{{mob.name}}</div>
                       <div class="monster-card-control">
                         <input class="monster-amount-input" type="number" placeholder="0"/>
                         <button class="monster-handbook-button">Fill</button>
@@ -85,12 +79,23 @@
 
 <script>
     export default {
-        name: "CharExp",
-        data: function () {
-            return {
-
-            }
-        }
+      name: "CharExp",
+      data: function () {
+          return {
+            mobs:[],
+            eliteMobs: [],
+            commonMobs: []
+          }
+      },
+      mounted(){
+        this.getMobs()
+      },
+      methods: {
+          async getMobs(){
+            const res = await fetch("http://localhost:8080/exp-calc/mobs");
+            this.mobs = await res.json();
+          }
+      }
     }
 </script>
 

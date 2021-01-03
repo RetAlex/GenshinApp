@@ -3,90 +3,90 @@
     "id": 1,
     "name": "Ruin Guard",
     "handbookAmount": 6,
-    "image": "/placeholder.png"
+    "image": "http://genshin-application.herokuapp.com/placeholder.png"
   },
   {
     "id": 2,
     "name": "Ruin Hunter",
     "handbookAmount": 5,
-    "image": "/placeholder.png"
+    "image": "http://genshin-application.herokuapp.com/placeholder.png"
   },
   {
     "id": 3,
     "name": "Fatui Agent",
     "handbookAmount": 6,
-    "image": "/placeholder.png"
+    "image": "http://genshin-application.herokuapp.com/placeholder.png"
   },
   {
     "id": 4,
     "name": "Fatui Cicin Mage",
     "handbookAmount": 9,
-    "image": "/placeholder.png"
+    "image": "http://genshin-application.herokuapp.com/placeholder.png"
   },
   {
     "id": 5,
     "name": "Geovishap Hatchling",
     "handbookAmount": 10,
-    "image": "/placeholder.png"
+    "image": "http://genshin-application.herokuapp.com/placeholder.png"
   },
   {
     "id": 6,
     "name": "Hilichurl Chieftain",
     "handbookAmount": 1,
-    "image": "/placeholder.png"
+    "image": "http://genshin-application.herokuapp.com/placeholder.png"
   },
   {
     "id": 7,
     "name": "Abyss Mage",
     "handbookAmount": 13,
-    "image": "/placeholder.png"
+    "image": "http://genshin-application.herokuapp.com/placeholder.png"
   },
   {
     "id": 8,
     "name": "Fatui Scirmisher",
     "handbookAmount": 15,
-    "image": "/game/images/FatuiScirmisher.jpg"
+    "image": "http://genshin-application.herokuapp.com/game/images/FatuiScirmisher.jpg"
   },
   {
     "id": 9,
     "name": "Hilichurl",
     "handbookAmount": 32,
-    "image": "/game/images/Hilichurl.jpg"
+    "image": "http://genshin-application.herokuapp.com/game/images/Hilichurl.jpg"
   },
   {
     "id": 10,
     "name": "Hilichurl Shooter",
     "handbookAmount": 18,
-    "image": "/game/images/HilichurlShooter.jpg"
+    "image": "http://genshin-application.herokuapp.com/game/images/HilichurlShooter.jpg"
   },
   {
     "id": 11,
     "name": "Mitachurl",
     "handbookAmount": 13,
-    "image": "/game/images/Mitachurl.jpg"
+    "image": "http://genshin-application.herokuapp.com/game/images/Mitachurl.jpg"
   },
   {
     "id": 12,
     "name": "Samachurl",
     "handbookAmount": 13,
-    "image": "/game/images/Samachurl.jpg"
+    "image": "http://genshin-application.herokuapp.com/game/images/Samachurl.jpg"
   },
   {
     "id": 13,
     "name": "Slime",
     "handbookAmount": 41,
-    "image": "/game/images/Slime.jpg"
+    "image": "http://genshin-application.herokuapp.com/game/images/Slime.jpg"
   },
   {
     "id": 14,
     "name": "Treasure Hoarder",
     "handbookAmount": 30,
-    "image": "/game/images/TreasureHoarder.jpg"
+    "image": "http://genshin-application.herokuapp.com/game/images/TreasureHoarder.jpg"
   },
   {
     "id": 15,
     "name": "Whopperflower",
     "handbookAmount": 9,
-    "image": "/game/images/Whopperflower.jpg"
+    "image": "http://genshin-application.herokuapp.com/game/images/Whopperflower.jpg"
   }
 ]
