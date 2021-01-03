@@ -18,234 +18,416 @@
             <div class="row">
                 <div class="advent-rank-wrap">
                     <ul>
-                      <li><button class="inactive">WL0</button></li>
-                      <li><button class="inactive">WL1</button></li>
-                      <li><button class="inactive">WL2</button></li>
-                      <li><button class="inactive">WL3</button></li>
-                      <li><button class="inactive">WL4</button></li>
-                      <li><button class="inactive">WL5</button></li>
-                      <li><button class="active">WL6</button></li>
-                      <li><button class="active">WL7</button></li>
+                        <li>
+                            <a class="inactive">WL0</a>
+                        </li>
+                        <li>
+                            <a class="inactive">WL1</a>
+                        </li>
+                        <li>
+                            <a class="inactive">WL2</a>
+                        </li>
+                        <li>
+                            <a class="inactive">WL3</a>
+                        </li>
+                        <li>
+                            <a class="inactive">WL4</a>
+                        </li>
+                        <li>
+                            <a class="inactive">WL5</a>
+                        </li>
+                        <li>
+                            <a class="active">WL6</a>
+                        </li>
+                        <li>
+                            <a class="active">WL7</a>
+                        </li>
                     </ul>
                 </div>
-              </div>
-              <div class="row" v-for="mobType in mobTypes" :key="mobType">
-                <div>
-                  <div class="head row">
-                    <h1>{{ mobType }}</h1>
-                  </div>
-                  <div class="enemies row">
-                    <div class="monster-card" v-for="mob in mobs[mobType]" :key="mob.id">
-                      <img class="monster-image" :src="mob.image" :alt="mob.name">
-                      <div>{{mob.name}}</div>
-                      <div class="monster-card-control">
-                        <input class="monster-amount-input" type="number" placeholder="0"/>
-                        <button class="monster-handbook-button">Fill</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row result">
-                <div>
-                  <div class="process">
-                    <button>Calculate!</button>
-                  </div>
-                  <div class="show">
-                    <div>Your total experience: 0 xp</div>
-                    <div>Your total mora: 0 mora</div>
-                  </div>
-                </div>
-              </div>
             </div>
+            <div class="row" v-for="mobType in mobTypes" :key="mobType">
+                <div>
+                    <div class="head row">
+                        <h2 class="enemies-title">{{ mobType }}</h2>
+                    </div>
+                    <div class="enemies row">
+                        <div class="monster-card" v-for="mob in mobs[mobType]" :key="mob.id">
+                            <img class="monster-image" :src="'https://genshin-application-ci.herokuapp.com' + mob.image"
+                                 :alt="mob.name">
+                            <div class="monster-card-control">
+                                <div class="monster-name">{{mob.name}}</div>
+                                <input class="monster-amount-input" type="number" placeholder="0"/>
+                                <button class="monster-handbook-button">Fill</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row result">
+                <div class="process">
+                    <button class="main-button"><span>Calculate!</span></button>
+                </div>
+                <section class="counter">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="count-item decoration-bottom">
+                                    <strong>0 XP</strong>
+                                    <span>Experience</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="count-item decoration-top">
+                                    <strong>63</strong>
+                                    <span>Mora</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </section>
 </template>
 
 <script>
     export default {
-      name: "CharExp",
-      data: function () {
-          return {
-            mobs: {},
-            mobTypes: []
-          }
-      },
-      async created(){
-        await this.getMobs()
-      },
-      methods: {
-          async getMobs(){
-            const res = await fetch("http://localhost:8080/exp-calc/mobs");
-            let unfilteredMobs = await res.json();
-            for(let i=0; i<unfilteredMobs.length; i++){
-              if(!this.mobs[unfilteredMobs[i].type]) this.mobs[unfilteredMobs[i].type]=[];
-              this.mobs[unfilteredMobs[i].type].push(unfilteredMobs[i]);
+        name: "CharExp",
+        data: function () {
+            return {
+                mobs: {},
+                mobTypes: []
             }
-            this.mobTypes = Object.keys(this.mobs)
-          }
-      }
+        },
+        async created() {
+            await this.getMobs()
+        },
+        methods: {
+            async getMobs() {
+                const res = await fetch("https://genshin-application-ci.herokuapp.com/exp-calc/mobs");
+                let unfilteredMobs = await res.json();
+                for (let i = 0; i < unfilteredMobs.length; i++) {
+                    if (!this.mobs[unfilteredMobs[i].type]) this.mobs[unfilteredMobs[i].type] = [];
+                    this.mobs[unfilteredMobs[i].type].push(unfilteredMobs[i]);
+                }
+                this.mobTypes = Object.keys(this.mobs)
+            }
+        }
     }
 </script>
 
 <style>
-  .result{
-    margin-top: 30px;
-  }
-  ul li{
-    display: inline;
-  }
-  .monster-image{
-    height: 100px;
-    width: 100px;
-    margin-bottom: 5px;
-  }
-  .monster-amount-input{
-    width: 60px;
-    margin-right: 5px;
-  }
-  .monster-handbook-button {
-    width: 35px;
-  }
-  .monster-card {
-    margin-right: 10px;
-  }
-    /*.advent-rank-wrap {*/
-    /*    width: 100%;*/
-    /*}*/
+    .result {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 
-    /*.advent-rank-wrap ul {*/
-    /*    display: flex;*/
-    /*    justify-content: center;*/
-    /*    flex-wrap: wrap;*/
-    /*}*/
+    .result .process {
+        margin-bottom: 25px;
+    }
 
-    /*.advent-rank-wrap ul li{*/
-    /*    color: #95c74a;*/
-    /*    text-align: center;*/
-    /*    font-weight: bold;*/
-    /*    font-size: 20px;*/
-    /*    padding: 5px 25px;*/
-    /*    border-radius: 20px;*/
-    /*    border: 2px #95c74a solid;*/
-    /*    cursor: pointer;*/
-    /*    margin-right: 10px;*/
-    /*    margin-top: 15px;*/
-    /*    transition: all 0.3s ease;*/
-    /*}*/
+    .result .show {
+        padding: 20px 0px;
+        border-top: 1px #ccc solid;
+        width: 100%;
+    }
 
-    /*.advent-rank-wrap ul li.active{*/
-    /*    color: white;*/
-    /*    background-color: #95c74a;*/
-    /*    padding: 5px 35px;*/
-    /*}*/
+    .result .show .center-text p {
+        margin-bottom: 0;
+    }
 
-    /*.monster-card {*/
-    /*    display: flex;*/
-    /*    background: #fff;*/
-    /*    padding: 20px;*/
-    /*    border-radius: 20px;*/
-    /*    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);*/
-    /*    margin-bottom: 30px;*/
-    /*    position: relative;*/
+    .result .show .center-text {
+        margin-bottom: 15px;
+    }
+
+    ul li {
+        display: inline;
+    }
+
+    .monster-image {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 5px;
+        border-radius: 50%;
+    }
+
+    .monster-amount-input {
+        width: 60px;
+        margin-right: 5px;
+    }
+
+    .monster-card {
+        margin-right: 10px;
+    }
+
+    .advent-rank-wrap {
+        width: 100%;
+    }
+
+    .enemies-title {
+        letter-spacing: 2px;
+        font-size: 15px;
+        color: #777;
+        margin-bottom: 10px;
+    }
+
+    .advent-rank-wrap ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .advent-rank-wrap ul li a {
+        color: #95c74a;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 5px 25px;
+        border-radius: 20px;
+        border: 2px #95c74a solid;
+        cursor: pointer;
+        margin-right: 10px;
+        margin-top: 15px;
+        transition: all 0.3s ease;
+    }
+
+    .advent-rank-wrap ul li a.active {
+        color: white;
+        background-color: #95c74a;
+        padding: 5px 35px;
+    }
+
+    .monster-card {
+        width: 300px;
+        display: flex;
+        background: #fff;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+        margin-bottom: 30px;
+        position: relative;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        text-align: center;
+    }
+
+    .monster-card:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        background: #fff;
+        width: 100%;
+        opacity: .15;
+        height: 100%;
+        bottom: -10px;
+        left: 0px;
+        right: -20px;
+        margin: auto;
+        border-radius: 20px;
+    }
+
+    .monster-card .monster-name {
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .monster-card .monster-card-control {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px;
+    }
+
+    .monster-card .monster-card-control button {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 12px;
+        background: rgba(91, 170, 246, 0);
+        border: 1px rgb(91, 170, 246) solid;
+        border-radius: 20px;
+        padding: 3px 15px;
+        color: rgb(91, 170, 246);
+        transition: all 0.3s ease;
+        margin-top: auto;
+    }
+
+    .monster-card .monster-card-control button:hover {
+        background: rgba(91, 170, 246, 1);
+        color: #fff;
+    }
+
+    .monster-card .monster-card-control input {
+        color: #777;
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border: 1px solid #eee;
+        width: 100%;
+        height: 50px;
+        outline: none;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 25px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin-bottom: 10px;
+    }
+
+    .monster-card span {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        color: #777;
+        letter-spacing: .75px;
+    }
+
+    .monster-card strong {
+        display: block;
+        font-weight: 400;
+        font-size: 17px;
+        color: #1e1e1e;
+        letter-spacing: 0.25px;
+        margin-bottom: 5px;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 992px) {
+        .advent-rank-wrap ul li {
+            font-size: 16px;
+        }
+    }
+
+    .counter {
+        overflow: hidden;
+        position: relative;
+        margin-left: -120px;
+        margin-right: -120px;
+    }
+
+    .counter:before {
+        content: '';
+        position: absolute;
+        width: 140%;
+        height: 140%;
+        opacity: .90;
+        background: #fff;
+        z-index: 2;
+        top: -20%;
+        left: -20%;
+    }
+
+    .counter .content {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+    }
+
+    .counter .content .count-item {
+        height: 200px;
+        position: relative;
+        float: left;
+        width: 100%;
+    }
+
+    .counter .content .count-item.decoration-bottom {
+        position: relative;
+    }
+
+    /*.counter .content .count-item.decoration-bottom:after {*/
+    /*    content: '';*/
+    /*    position: absolute;*/
+    /*    width: 70%;*/
+    /*    height: 32px;*/
+    /*    top: 50px;*/
+    /*    left: 70%;*/
+    /*    background: url(../assets/images/circle-dec.png) center center no-repeat;*/
     /*    -webkit-transition: all 0.3s ease 0s;*/
     /*    -moz-transition: all 0.3s ease 0s;*/
     /*    -o-transition: all 0.3s ease 0s;*/
     /*    transition: all 0.3s ease 0s;*/
-    /*    text-align: center;*/
     /*}*/
 
-    /*.monster-card:hover {*/
-    /*    margin-top: -10px;*/
-    /*}*/
+    .counter .content .count-item.decoration-top {
+        position: relative;
+    }
 
-    /*.monster-card:before {*/
+    /*.counter .content .count-item.decoration-top:after {*/
     /*    content: '';*/
     /*    position: absolute;*/
-    /*    z-index: -1;*/
-    /*    background: #fff;*/
-    /*    width: 100%;*/
-    /*    opacity: .15;*/
-    /*    height: 100%;*/
-    /*    bottom: -10px;*/
-    /*    left: 0px;*/
-    /*    right: -20px;*/
-    /*    margin: auto;*/
-    /*    border-radius: 20px;*/
+    /*    width: 70%;*/
+    /*    height: 32px;*/
+    /*    top: 50px;*/
+    /*    left: 70%;*/
+    /*    background: url(../assets/images/circle-dec.png) center center no-repeat;*/
+    /*    -webkit-transition: all 0.3s ease 0s;*/
+    /*    -moz-transition: all 0.3s ease 0s;*/
+    /*    -o-transition: all 0.3s ease 0s;*/
+    /*    transition: all 0.3s ease 0s;*/
     /*}*/
 
-    /*.monster-card .monster-card-img {*/
-    /*    flex: 1;*/
-    /*    margin-right: 15px;*/
-    /*    display: block;*/
-    /*    background-image: url('../assets/images/monster.png');*/
-    /*    background-size: contain;*/
-    /*    height: 90px;*/
-    /*    width: 90px;*/
-    /*    border-radius: 50%;*/
-    /*}*/
+    .counter .content .count-item strong {
+        display: block;
+        text-align: center;
+        font-weight: 600;
+        font-size: 36px;
+        letter-spacing: 0.25px;
+        margin-bottom: 10px;
+        color: #1e1e1e;
+        margin-top: 50px;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+    }
 
-    /*.monster-card .monster-card-control {*/
-    /*    flex: 3;*/
-    /*    display: flex;*/
-    /*    flex-direction: column;*/
-    /*    justify-content: space-between;*/
-    /*}*/
+    .counter .content .count-item span {
+        display: block;
+        text-align: center;
+        color: #777;
+        font-weight: 500;
+        font-size: 17px;
+        letter-spacing: 0.25px;
+    }
 
-    /*.monster-card .monster-card-control button {*/
-    /*    text-transform: uppercase;*/
-    /*    letter-spacing: 2px;*/
-    /*    font-size: 12px;*/
-    /*    background: rgba(91, 170, 246, 0);*/
-    /*    border: 1px rgb(91, 170, 246) solid;*/
-    /*    border-radius: 20px;*/
-    /*    padding: 3px 15px;*/
-    /*    color: rgb(91, 170, 246);*/
-    /*    transition: all 0.3s ease;*/
-    /*}*/
+    @media (max-width: 991px) {
+        .counter {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
 
-    /*.monster-card .monster-card-control button:hover {*/
-    /*    background: rgba(91, 170, 246, 1);*/
-    /*    color: #fff;*/
-    /*}*/
+        .counter .content {
+            position: relative !important;
+            top: 0% !important;
+            transform: perspective(1px) translateY(0%) !important;
+        }
 
-    /*.monster-card .monster-card-control input {*/
-    /*    color: #777;*/
-    /*    font-size: 14px;*/
-    /*    letter-spacing: 2px;*/
-    /*    text-transform: uppercase;*/
-    /*    border: 1px solid #eee;*/
-    /*    width: 100%;*/
-    /*    height: 50px;*/
-    /*    outline: none;*/
-    /*    padding-left: 20px;*/
-    /*    padding-right: 20px;*/
-    /*    border-radius: 25px;*/
-    /*    -webkit-appearance: none;*/
-    /*    -moz-appearance: none;*/
-    /*    appearance: none;*/
-    /*}*/
+        .counter .content .count-item {
+            height: auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
 
-    /*.monster-card span {*/
-    /*    display: block;*/
-    /*    font-weight: 400;*/
-    /*    font-size: 14px;*/
-    /*    color: #777;*/
-    /*    letter-spacing: .75px;*/
-    /*}*/
+        .counter .content .count-item:hover strong {
+            margin-top: 0px;
+        }
 
-    /*.monster-card strong {*/
-    /*    display: block;*/
-    /*    font-weight: 400;*/
-    /*    font-size: 17px;*/
-    /*    color: #1e1e1e;*/
-    /*    letter-spacing: 0.25px;*/
-    /*    margin-bottom: 5px;*/
-    /*    margin-top: 20px;*/
-    /*}*/
+        .counter .content .count-item:before {
+            display: none;
+        }
 
-    /*@media (max-width: 992px) {*/
-    /*    .advent-rank-wrap ul li{*/
-    /*        font-size: 16px;*/
-    /*    }*/
-    /*}*/
+        .counter .content .count-item:after {
+            display: none;
+        }
+
+        .counter .content .count-item strong {
+            margin-top: 0px;
+        }
+    }
 </style>
