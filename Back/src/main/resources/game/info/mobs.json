@@ -4,56 +4,56 @@
     "name": "Ruin Guard",
     "handbookAmount": 6,
     "type": "Elite enemy",
-    "image": "/placeholder.png"
+    "image": "/game/images/RuinGuard.jpg"
   },
   {
     "id": 2,
     "name": "Ruin Hunter",
     "handbookAmount": 5,
     "type": "Elite enemy",
-    "image": "/placeholder.png"
+    "image": "/game/images/RuinHunter.jpg"
   },
   {
     "id": 3,
     "name": "Fatui Agent",
     "handbookAmount": 6,
     "type": "Elite enemy",
-    "image": "/placeholder.png"
+    "image": "/game/images/FatuiAgent.jpg"
   },
   {
     "id": 4,
     "name": "Fatui Cicin Mage",
     "handbookAmount": 9,
     "type": "Elite enemy",
-    "image": "/placeholder.png"
+    "image": "/game/images/FatuiCicinMage.jpg"
   },
   {
     "id": 5,
     "name": "Geovishap Hatchling",
     "handbookAmount": 10,
     "type": "Elite enemy",
-    "image": "/placeholder.png"
+    "image": "/game/images/GeovishapHatchling.jpg"
   },
   {
     "id": 6,
     "name": "Hilichurl Chieftain",
     "handbookAmount": 1,
     "type": "Elite enemy",
-    "image": "/placeholder.png"
+    "image": "/game/images/HilichurlChieftain.jpg"
   },
   {
     "id": 7,
     "name": "Abyss Mage",
     "handbookAmount": 13,
     "type": "Elite enemy",
-    "image": "/placeholder.png"
+    "image": "/game/images/FatuiSkirmisher.jpg"
   },
   {
     "id": 8,
     "name": "Fatui Scirmisher",
     "handbookAmount": 15,
     "type": "Common enemy",
-    "image": "/game/images/FatuiScirmisher.jpg"
+    "image": "/game/images/FatuiSkirmisher.jpg"
   },
   {
     "id": 9,
