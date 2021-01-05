@@ -52,7 +52,7 @@
                     </div>
                     <div class="enemies row">
                         <div class="monster-card" v-for="mob in mobs[mobType]" :key="mob.id">
-                            <img class="monster-image" :src="'https://genshin-application-ci.herokuapp.com' + mob.image"
+                            <img class="monster-image" :src="mob.image"
                                  :alt="mob.name">
                             <div class="monster-card-control">
                                 <div class="monster-name">{{mob.name}}</div>
