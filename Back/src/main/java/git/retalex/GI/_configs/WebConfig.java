@@ -39,6 +39,9 @@ public class WebConfig implements WebMvcConfigurer {
         var gameRegistration = registry.addResourceHandler("/game/**");
         gameRegistration.addResourceLocations("classpath:/game/");
 
+        registry.addResourceHandler("/favicon.ico")
+                .addResourceLocations("classpath:/assets/");
+
         //Swagger-ui configuration
         registry.addResourceHandler("/swagger-ui.html")
                 .addResourceLocations("classpath:/META-INF/resources/");
