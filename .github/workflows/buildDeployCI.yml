@@ -19,9 +19,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '12'
-      - run: |
-          cd Front && npm install
-          cd Front && npm run build
+      - run: cd Front && npm install && npm run build
 
       # Build java application
       - uses: actions/setup-java@v1
