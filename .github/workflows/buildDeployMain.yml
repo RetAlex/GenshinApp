@@ -1,24 +1,15 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
-
-# Controls when the action will run. 
+name: Production build and deploy
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
@@ -27,31 +18,30 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '12'
-      - run: cd Front && npm install
-      - run: cd Front && npm run build
-      
-      
-      # Runs a single command using the runners shell
-      - name: Copy built front assets to back for packaging
-        run: mkdir -p Back/src/main/resources/assets || true && cp -r Front/dist/* Back/src/main/resources/assets
+      - run: cd Front && npm install && npm run build
 
-      # Build java application
+      # Copy frontend assets and build java application
       - uses: actions/setup-java@v1
         with:
           java-version: 11
-      - run: cd Back && mvn clean package
+      - run: |
+          mkdir -p Back/src/main/resources/assets || true && cp -r Front/dist/* Back/src/main/resources/assets
+          cd Back && mvn clean package
 
+      # Copy the artifact and build docker image
+      - name: Copy built application package for docker and build an image
+        run: |
+          cp Back/target/GI.war Docker/Production/build/GI.war
+          docker build -t ${{secrets.DOCKER_IMAGE_NAME}} Docker/Production
 
-      # Runs a single command using the runners shell
-      - name: Copy built application package for docker
-        run: cp Back/target/GI.war Docker/build/GI.war
+      # Deploy application to production
+      - name: Deploy application to production
+        uses: chrislennon/action-aws-cli@v1.1
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - run: |
+          aws ecr get-login-password --region ${{secrets.AWS_REGION}} | docker login --password-stdin ${{secrets.DOCKER_REGISTRY_URL}}
+          docker push ${{secrets.DOCKER_IMAGE_NAME}}
+          aws ecs update-service --cluster ${{secrets.AWS_ECS_CLUSTER_NAME}} --service ${{secrets.AWS_ECS_SERVICE_NAME}} --force-new-deployment
 
-      # Deploy application to heroku
-      - name: Build, Push and Deploy to Heroku
-        id: heroku
-        uses: jctaveras/heroku-deploy@v1.0.0  # use the latest version of the action
-        with:
-          email: ${{ secrets.HEROKU_EMAIL }} # your heroku email
-          api_key: ${{ secrets.HEROKU_API_KEY }} # your  heroku api key
-          app_name: "genshin-application"
-          dockerfile: "Docker"
