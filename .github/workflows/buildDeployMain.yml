@@ -24,12 +24,14 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: 11
-      - run: mkdir -p Back/src/main/resources/assets || true && cp -r Front/dist/* Back/src/main/resources/assets \
+      - run: |
+          mkdir -p Back/src/main/resources/assets || true && cp -r Front/dist/* Back/src/main/resources/assets
           cd Back && mvn clean package
 
       # Copy the artifact and build docker image
       - name: Copy built application package for docker and build an image
-        run: cp Back/target/GI.war Docker/Production/build/GI.war \
+        run: |
+          cp Back/target/GI.war Docker/Production/build/GI.war
           docker build -t ${{secrets.DOCKER_IMAGE_NAME}} Docker/Production
 
       # Deploy application to production
@@ -38,7 +40,8 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: aws ecr get-login-password --region ${{secrets.AWS_REGION}} | docker login --password-stdin ${{secrets.DOCKER_REGISTRY_URL}} \
-          docker push ${{secrets.DOCKER_IMAGE_NAME}} \
+      - run: |
+          aws ecr get-login-password --region ${{secrets.AWS_REGION}} | docker login --password-stdin ${{secrets.DOCKER_REGISTRY_URL}}
+          docker push ${{secrets.DOCKER_IMAGE_NAME}}
           aws ecs update-service --cluster ${{secrets.AWS_ECS_CLUSTER_NAME}} --service ${{secrets.AWS_ECS_SERVICE_NAME}} --force-new-deployment
 

@@ -19,14 +19,16 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '12'
-      - run: cd Front && npm install \
+      - run: |
+          cd Front && npm install
           cd Front && npm run build
 
       # Build java application
       - uses: actions/setup-java@v1
         with:
           java-version: 11
-      - run: mkdir -p Back/src/main/resources/assets || true && cp -r Front/dist/* Back/src/main/resources/assets \
+      - run: |
+          mkdir -p Back/src/main/resources/assets || true && cp -r Front/dist/* Back/src/main/resources/assets
           cd Back && mvn clean package
 
 
