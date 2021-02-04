@@ -18,29 +18,8 @@
             <div class="row">
                 <div class="advent-rank-wrap">
                     <ul>
-                        <li>
-                            <a>WL0</a>
-                        </li>
-                        <li>
-                            <a>WL1</a>
-                        </li>
-                        <li>
-                            <a>WL2</a>
-                        </li>
-                        <li>
-                            <a>WL3</a>
-                        </li>
-                        <li>
-                            <a>WL4</a>
-                        </li>
-                        <li>
-                            <a>WL5</a>
-                        </li>
-                        <li>
-                            <a>WL6</a>
-                        </li>
-                        <li>
-                            <a class="active">WL7</a>
+                        <li v-for="index in 7" :key="index">
+                            <a :class="index===currentWL?'active':''" @click="changeWL(index)">WL{{index}}</a>
                         </li>
                     </ul>
                 </div>
@@ -117,33 +96,50 @@
                 const res = await fetch("/exp-calc/mobs");
                 this.unfilteredMobs = await res.json();
                 for (let i = 0; i < this.unfilteredMobs.length; i++) {
-                    if (!this.mobs[this.unfilteredMobs[i].type]) this.mobs[this.unfilteredMobs[i].type] = [];
+                    if (!this.mobs[this.unfilteredMobs[i].typeLong]) this.mobs[this.unfilteredMobs[i].typeLong] = [];
                     let currentMob = this.unfilteredMobs[i];
-                    this.mobs[currentMob.type].push(currentMob);
+                    this.mobs[currentMob.typeLong].push(currentMob);
                     this.mobsById["mob"+currentMob.id]=currentMob;
                 }
                 this.mobTypes = Object.keys(this.mobs)
             },
             async doCalc(){
+                let WL = this.currentWL;
+                let currentExpInfo;
                 if(!this.experienceTable["WL"+this.currentWL]){
-                    let WL = this.currentWL;
-                    let res = await fetch("/exp-calc/drops?wl="+WL)
-                    this.experienceTable["WL"+WL] = (await res.json()).drops
+                    let res = await fetch("/exp-calc/calculator?wl="+WL)
+                    currentExpInfo = await res.json();
+                    this.experienceTable["WL"+WL] = currentExpInfo
+                } else {
+                    currentExpInfo = this.experienceTable["WL"+WL];
                 }
-                this.results.experience=0;
-                this.results.mora=0;
+                let enemiesTotal = {};
                 for (let i = 0; i < this.unfilteredMobs.length; i++) {
                     let mobId = this.unfilteredMobs[i].id;
-                    let mobDrops = this.experienceTable["WL"+this.currentWL]["mob"+mobId];
-                    if(!mobDrops){
-                      console.log("The "+mobId+" mob drops are not filled for the WL"+this.currentWL)
-                      //TODO add warning to the frontend
-                      continue;
-                    }
-                    let mobAmount = Number.parseInt(this.mobAmounts["mob"+mobId]) || 0;
-                    this.results.experience+=mobAmount*mobDrops.experience;
-                    this.results.mora+=mobAmount*mobDrops.mora;
+                    let mobType = this.unfilteredMobs[i].type;
+                    if(!enemiesTotal[mobType]) enemiesTotal[mobType]=0;
+                    enemiesTotal[mobType]+=Number.parseInt(this.mobAmounts["mob"+mobId]) || 0;
+
+                //     let mobDrops = this.experienceTable["WL"+this.currentWL]["mob"+mobId];
+                //     if(!mobDrops){
+                //       console.log("The "+mobId+" mob drops are not filled for the WL"+this.currentWL)
+                //       //TODO add warning to the frontend
+                //       continue;
+                //     }
+                //     let mobAmount = Number.parseInt(this.mobAmounts["mob"+mobId]) || 0;
+                //     this.results.experience+=mobAmount*mobDrops.experience;
+                //     this.results.mora+=mobAmount*mobDrops.mora
                 }
+
+                this.results.experience=0;
+                this.results.mora=0;
+                for(let mobType in enemiesTotal) {
+                  this.results.experience+=enemiesTotal[mobType]*currentExpInfo.enemies[mobType].expectedXp;
+                  this.results.mora+=enemiesTotal[mobType]*currentExpInfo.enemies[mobType].expectedMora;
+                }
+            },
+            changeWL(wl){
+              this.currentWL=wl;
             }
         }
     }

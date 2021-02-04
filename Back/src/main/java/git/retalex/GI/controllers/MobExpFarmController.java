@@ -21,6 +21,7 @@ public class MobExpFarmController {
     private static final String mobsInfoPath = "/game/info/mobs.json";
     private static final String itemsInfoPath = "/game/info/items.json";
     private static final String dropsInfoPrefix = "/game/info/drops/WL";
+    private static final String calculatorInfoPrefix = "/game/info/calculator/WL";
 
     @ApiOperation(value = "Retrieve the main mobs information", responseContainer = "List", response = MobsInformationResponse.class)
     @GetMapping(path = "/mobs", produces = "application/json")
@@ -37,6 +38,16 @@ public class MobExpFarmController {
     public String getItemInformation(){
         try {
             return new String(new ClassPathResource(itemsInfoPath).getInputStream().readAllBytes());
+        }catch (IOException e){
+            throw new ResourceNotFoundException();
+        }
+    }
+
+    @ApiOperation(value = "Retrieve all monsters calculator info (xp + mora) for appropriate world level", responseContainer = "List", response = DropResponse.class)
+    @GetMapping(path = "/calculator", produces = "application/json")
+    public String getWorldLevelCalculatorInfo(@RequestParam("wl") int wl){
+        try {
+            return new String(new ClassPathResource(calculatorInfoPrefix+wl+".json").getInputStream().readAllBytes());
         }catch (IOException e){
             throw new ResourceNotFoundException();
         }

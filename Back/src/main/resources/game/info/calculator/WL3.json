@@ -1,0 +1,13 @@
+{
+  "expectedLevels": "30-50",
+  "enemies": {
+    "common": {
+      "expectedXp": 14,
+      "expectedMora": 30
+    },
+    "elite": {
+      "expectedXp": 45,
+      "expectedMora": 180
+    }
+  }
+}

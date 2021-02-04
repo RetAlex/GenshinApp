@@ -3,105 +3,120 @@
     "id": 1,
     "name": "Ruin Guard",
     "handbookAmount": 6,
-    "type": "Elite enemy",
+    "type": "elite",
+    "typeLong": "Elite enemy",
     "image": "/game/images/RuinGuard.jpg"
   },
   {
     "id": 2,
     "name": "Ruin Hunter",
     "handbookAmount": 5,
-    "type": "Elite enemy",
+    "type": "elite",
+    "typeLong": "Elite enemy",
     "image": "/game/images/RuinHunter.jpg"
   },
   {
     "id": 3,
     "name": "Fatui Agent",
     "handbookAmount": 6,
-    "type": "Elite enemy",
+    "type": "elite",
+    "typeLong": "Elite enemy",
     "image": "/game/images/FatuiAgent.jpg"
   },
   {
     "id": 4,
     "name": "Fatui Cicin Mage",
     "handbookAmount": 9,
-    "type": "Elite enemy",
+    "type": "elite",
+    "typeLong": "Elite enemy",
     "image": "/game/images/FatuiCicinMage.jpg"
   },
   {
     "id": 5,
     "name": "Geovishap Hatchling",
     "handbookAmount": 10,
-    "type": "Elite enemy",
+    "type": "elite",
+    "typeLong": "Elite enemy",
     "image": "/game/images/GeovishapHatchling.jpg"
   },
   {
     "id": 6,
     "name": "Hilichurl Chieftain",
     "handbookAmount": 1,
-    "type": "Elite enemy",
+    "type": "elite",
+    "typeLong": "Elite enemy",
     "image": "/game/images/HilichurlChieftain.jpg"
   },
   {
     "id": 7,
     "name": "Abyss Mage",
     "handbookAmount": 13,
-    "type": "Elite enemy",
+    "type": "elite",
+    "typeLong": "Elite enemy",
     "image": "/game/images/AbyssMage.jpg"
   },
   {
     "id": 8,
     "name": "Fatui Scirmisher",
     "handbookAmount": 15,
-    "type": "Common enemy",
+    "type": "common",
+    "typeLong": "Common enemy",
     "image": "/game/images/FatuiSkirmisher.jpg"
   },
   {
     "id": 9,
     "name": "Hilichurl",
     "handbookAmount": 32,
-    "type": "Common enemy",
+    "type": "common",
+    "typeLong": "Common enemy",
     "image": "/game/images/Hilichurl.jpg"
   },
   {
     "id": 10,
     "name": "Hilichurl Shooter",
     "handbookAmount": 18,
-    "type": "Common enemy",
+    "type": "common",
+    "typeLong": "Common enemy",
     "image": "/game/images/HilichurlShooter.jpg"
   },
   {
     "id": 11,
     "name": "Mitachurl",
     "handbookAmount": 13,
-    "type": "Elite enemy",
+    "type": "elite",
+    "typeLong": "Elite enemy",
     "image": "/game/images/Mitachurl.jpg"
   },
   {
     "id": 12,
     "name": "Samachurl",
     "handbookAmount": 13,
-    "type": "Common enemy",
+    "type": "common",
+    "typeLong": "Common enemy",
     "image": "/game/images/Samachurl.jpg"
   },
   {
     "id": 13,
     "name": "Slime",
     "handbookAmount": 41,
-    "type": "Common enemy",
+    "type": "common",
+    "typeLong": "Common enemy",
     "image": "/game/images/Slime.jpg"
   },
   {
     "id": 14,
     "name": "Treasure Hoarder",
     "handbookAmount": 30,
-    "type": "Common enemy",
+    "type": "common",
+    "typeLong": "Common enemy",
     "image": "/game/images/TreasureHoarder.jpg"
   },
   {
     "id": 15,
     "name": "Whopperflower",
     "handbookAmount": 9,
-    "type": "Common enemy",
+    "type": "common",
+    "typeLong": "Common enemy",
     "image": "/game/images/Whopperflower.jpg"
   }
 ]

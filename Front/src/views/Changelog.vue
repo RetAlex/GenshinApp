@@ -42,7 +42,8 @@
         data(){
           return {
             changeLog: [
-              {version: "Version 1.0", changes: ["The site was created.", "Initial version of XP farm calculator was added.", "CI/CD process configured for faster and better development cycles.", "Informational pages were filled with current info."]}
+              {version: "Version 1.0", changes: ["The site was created.", "Initial version of XP farm calculator was added.", "CI/CD process configured for faster and better development cycles.", "Informational pages were filled with current info."]},
+              {version: "Version 1.1 (Current)", changes: ["Changed the DNS name of the website to make the access esier.", "Changed cloud provider to increase uptime and stability.", "Added WL1-6 experience and mora data and optimized calculations in experience calculator.", "Modified the design and responsiveness of most web pages."]}
             ]
           }
         }
