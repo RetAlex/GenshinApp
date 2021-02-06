@@ -7,13 +7,13 @@
                         <a href="#" class="logo">
                             <img src="../assets/images/logo.svg" alt="Genshin"/>
                         </a>
-                        <ul class="nav">
+                        <ul class="nav" :style="{display: mobileMenu ? 'block' : 'none'}">
                             <li><a><router-link to="/">Home</router-link></a></li>
                             <li><a><router-link to="/calc">Calculator</router-link></a></li>
                             <li><a><router-link to="/changelog">Changelog</router-link></a></li>
                             <li><a><router-link to="/about-us">About Us</router-link></a></li>
                         </ul>
-                        <a class='menu-trigger'>
+                        <a class='menu-trigger' :class="{ 'active' : mobileMenu }" @click.prevent="toggle">
                             <span>Menu</span>
                         </a>
                     </nav>
@@ -25,7 +25,15 @@
 
 <script>
     export default {
-        name: "Header"
+        name: "Header",
+        data: () => ({
+            mobileMenu: false
+        }),
+        methods: {
+            toggle() {
+                this.mobileMenu = !this.mobileMenu
+            }
+        }
     }
 </script>
 

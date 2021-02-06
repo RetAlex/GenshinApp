@@ -30,13 +30,17 @@
                         <h2 class="enemies-title">{{ mobType }}</h2>
                     </div>
                     <div class="enemies row">
-                        <div class="monster-card" v-for="mob in mobs[mobType]" :key="mob.id">
-                            <img class="monster-image" :src="mob.image"
-                                 :alt="mob.name">
-                            <div class="monster-card-control">
-                                <div class="monster-name">{{mob.name}}</div>
-                                <input class="monster-amount-input" v-model="mobAmounts['mob'+mob.id]" type="number" placeholder="0"/>
-                                <button class="monster-handbook-button" @click="fillFromHandbook(mob.id)">Fill</button>
+                        <div class="col-lg-4 col-md-6 col-sm-12" v-for="mob in mobs[mobType]" :key="mob.id">
+                            <div class="monster-card">
+                                <img class="monster-image" :src="mob.image"
+                                     :alt="mob.name">
+                                <div class="monster-card-control">
+                                    <div class="monster-name">{{mob.name}}</div>
+                                    <input class="monster-amount-input" v-model="mobAmounts['mob'+mob.id]" type="number"
+                                           placeholder="0"/>
+                                    <button class="monster-handbook-button" @click="fillFromHandbook(mob.id)">Fill
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -81,15 +85,15 @@
                 mobs: {},
                 mobTypes: [],
                 mobAmounts: {},
-                results: { experience: 0, mora: 0 }
+                results: {experience: 0, mora: 0}
             }
         },
         async created() {
             await this.getMobs()
         },
         methods: {
-            fillFromHandbook(mobId){
-                this.mobAmounts["mob"+mobId]=this.mobsById["mob"+mobId].handbookAmount;
+            fillFromHandbook(mobId) {
+                this.mobAmounts["mob" + mobId] = this.mobsById["mob" + mobId].handbookAmount;
                 this.doCalc();
             },
             async getMobs() {
@@ -99,47 +103,47 @@
                     if (!this.mobs[this.unfilteredMobs[i].typeLong]) this.mobs[this.unfilteredMobs[i].typeLong] = [];
                     let currentMob = this.unfilteredMobs[i];
                     this.mobs[currentMob.typeLong].push(currentMob);
-                    this.mobsById["mob"+currentMob.id]=currentMob;
+                    this.mobsById["mob" + currentMob.id] = currentMob;
                 }
                 this.mobTypes = Object.keys(this.mobs)
             },
-            async doCalc(){
+            async doCalc() {
                 let WL = this.currentWL;
                 let currentExpInfo;
-                if(!this.experienceTable["WL"+this.currentWL]){
-                    let res = await fetch("/exp-calc/calculator?wl="+WL)
+                if (!this.experienceTable["WL" + this.currentWL]) {
+                    let res = await fetch("/exp-calc/calculator?wl=" + WL);
                     currentExpInfo = await res.json();
-                    this.experienceTable["WL"+WL] = currentExpInfo
+                    this.experienceTable["WL" + WL] = currentExpInfo
                 } else {
-                    currentExpInfo = this.experienceTable["WL"+WL];
+                    currentExpInfo = this.experienceTable["WL" + WL];
                 }
                 let enemiesTotal = {};
                 for (let i = 0; i < this.unfilteredMobs.length; i++) {
                     let mobId = this.unfilteredMobs[i].id;
                     let mobType = this.unfilteredMobs[i].type;
-                    if(!enemiesTotal[mobType]) enemiesTotal[mobType]=0;
-                    enemiesTotal[mobType]+=Number.parseInt(this.mobAmounts["mob"+mobId]) || 0;
+                    if (!enemiesTotal[mobType]) enemiesTotal[mobType] = 0;
+                    enemiesTotal[mobType] += Number.parseInt(this.mobAmounts["mob" + mobId]) || 0;
 
-                //     let mobDrops = this.experienceTable["WL"+this.currentWL]["mob"+mobId];
-                //     if(!mobDrops){
-                //       console.log("The "+mobId+" mob drops are not filled for the WL"+this.currentWL)
-                //       //TODO add warning to the frontend
-                //       continue;
-                //     }
-                //     let mobAmount = Number.parseInt(this.mobAmounts["mob"+mobId]) || 0;
-                //     this.results.experience+=mobAmount*mobDrops.experience;
-                //     this.results.mora+=mobAmount*mobDrops.mora
+                    //     let mobDrops = this.experienceTable["WL"+this.currentWL]["mob"+mobId];
+                    //     if(!mobDrops){
+                    //       console.log("The "+mobId+" mob drops are not filled for the WL"+this.currentWL)
+                    //       //TODO add warning to the frontend
+                    //       continue;
+                    //     }
+                    //     let mobAmount = Number.parseInt(this.mobAmounts["mob"+mobId]) || 0;
+                    //     this.results.experience+=mobAmount*mobDrops.experience;
+                    //     this.results.mora+=mobAmount*mobDrops.mora
                 }
 
-                this.results.experience=0;
-                this.results.mora=0;
-                for(let mobType in enemiesTotal) {
-                  this.results.experience+=enemiesTotal[mobType]*currentExpInfo.enemies[mobType].expectedXp;
-                  this.results.mora+=enemiesTotal[mobType]*currentExpInfo.enemies[mobType].expectedMora;
+                this.results.experience = 0;
+                this.results.mora = 0;
+                for (let mobType in enemiesTotal) {
+                    this.results.experience += enemiesTotal[mobType] * currentExpInfo.enemies[mobType].expectedXp;
+                    this.results.mora += enemiesTotal[mobType] * currentExpInfo.enemies[mobType].expectedMora;
                 }
             },
-            changeWL(wl){
-              this.currentWL=wl;
+            changeWL(wl) {
+                this.currentWL = wl;
             }
         }
     }
@@ -187,15 +191,12 @@
         margin-right: 5px;
     }
 
-    .monster-card {
-        margin-right: 10px;
-    }
-
     .advent-rank-wrap {
         width: 100%;
     }
 
     .enemies-title {
+        padding-left: 20px;
         letter-spacing: 1px;
         font-size: 15px;
         color: #777;
@@ -229,7 +230,7 @@
     }
 
     .monster-card {
-        width: 300px;
+        /*width: 300px;*/
         display: flex;
         background: #fff;
         padding: 20px;
@@ -330,14 +331,15 @@
     @media (max-width: 992px) {
         .advent-rank-wrap ul li {
             font-size: 16px;
+            line-height: 2.5;
         }
     }
 
     .counter {
         overflow: hidden;
         position: relative;
-        margin-left: -120px;
-        margin-right: -120px;
+        margin-left: -20%;
+        margin-right: -20%;
     }
 
     .counter:before {
