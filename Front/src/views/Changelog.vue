@@ -14,8 +14,8 @@
                 </div>
             </div>
 
-            <div class="row" v-for="change in changeLog" :key="change">
-                <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12" v-for="change in changeLog" :key="change">
                     <div class="change-item">
                         <div class="change-content">
                             <ul>
@@ -25,8 +25,8 @@
                                 <img src="../assets/images/version.svg" alt="">
                             </div>
                             <div class="change-info">
-                                <h3 class="user-name">{{ change.version }}</h3>
-                                <span>New Features</span>
+                                <h3 class="user-name"><a :href="change.link" target="_blank">{{ change.version }}</a></h3>
+                                <a>{{ change.date }}</a>
                             </div>
                         </div>
                     </div>
@@ -42,8 +42,8 @@
         data(){
           return {
             changeLog: [
-              {version: "Version 1.0", changes: ["The site was created.", "Initial version of XP farm calculator was added.", "CI/CD process configured for faster and better development cycles.", "Informational pages were filled with current info."]},
-              {version: "Version 1.1 (Current)", changes: ["Changed the DNS name of the website to make the access esier.", "Changed cloud provider to increase uptime and stability.", "Added WL1-6 experience and mora data and optimized calculations in experience calculator.", "Modified the design and responsiveness of most web pages."]}
+              {version: "Version 1.0", changes: ["The site was created.", "Initial version of XP farm calculator was added.", "CI/CD process configured for faster and better development cycles.", "Informational pages were filled with current info."], date: '4 Jan 2021', link: 'https://github.com/RetAlex/GenshinApp/pull/11'},
+              {version: "Version 1.1 (Current)", changes: ["Changed the DNS name of the website to make the access esier.", "Changed cloud provider to increase uptime and stability.", "Added WL1-6 experience and mora data and optimized calculations in experience calculator.", "Modified the design and responsiveness of most web pages."], date: '4 Feb 2021', link: 'https://github.com/RetAlex/GenshinApp/pull/21'}
             ]
           }
         }
@@ -103,11 +103,19 @@
         transition: all 0.3s ease 0s;
     }
 
+    .change-item .change-content .change-info h3 a{
+        color: #1e1e1e;
+        transition: all 0.3s ease 0s;
+    }
+
+    .change-item .change-content .change-info h3 a:hover{
+        color: #5baaf6;
+    }
+
     .change-item .change-content .change-info .user-name {
         display: block;
         font-weight: 400;
         font-size: 17px;
-        color: #1e1e1e;
         letter-spacing: 0.25px;
         margin-bottom: 5px;
     }

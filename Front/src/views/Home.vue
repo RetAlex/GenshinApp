@@ -69,15 +69,10 @@
         }
         .welcome-area .header-text h1 {
             text-align: center;
-            color: #363636;
             margin-bottom: 15px;
-        }
-        .welcome-area .header-text h1 span {
-            color: #363636;
         }
         .welcome-area .header-text p {
             text-align: center;
-            color: #363636;
             margin-bottom: 60px;
         }
     }
