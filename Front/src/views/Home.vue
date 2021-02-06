@@ -110,12 +110,8 @@
             line-height: 30px !important;
             margin-bottom: 30px !important;
         }
-        .welcome-area .header-text h1 span {
-            color: #fff;
-        }
         .welcome-area .header-text p {
             text-align: center;
-            color: #fff;
             font-size: 14px;
             line-height: 22px;
             margin-bottom: 60px;
