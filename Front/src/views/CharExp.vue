@@ -53,13 +53,36 @@
                 <section class="counter">
                     <div class="content">
                         <div class="row">
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-4 col-sm-12">
                                 <div class="count-item decoration-bottom">
                                     <strong>{{results.experience}}</strong>
                                     <span>XP</span>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-4 col-sm-12">
+                                <div class="count-item decoration-top">
+                                    <div class="reward-items">
+                                        <div class="reward-item">
+                                            <div class="reward-item-image"></div>
+                                            <div class="reward-item-count">x2</div>
+                                        </div>
+                                        <div class="reward-item">
+                                            <div class="reward-item-image"></div>
+                                            <div class="reward-item-count">x2</div>
+                                        </div>
+                                        <div class="reward-item">
+                                            <div class="reward-item-image"></div>
+                                            <div class="reward-item-count">x2</div>
+                                        </div>
+                                        <div class="reward-item">
+                                            <div class="reward-item-image"></div>
+                                            <div class="reward-item-count">x2</div>
+                                        </div>
+                                    </div>
+                                    <span>Items</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
                                 <div class="count-item decoration-top">
                                     <strong>{{results.mora}}</strong>
                                     <span>Mora</span>
@@ -416,6 +439,38 @@
         -moz-transition: all 0.3s ease 0s;
         -o-transition: all 0.3s ease 0s;
         transition: all 0.3s ease 0s;
+    }
+
+    .reward-items {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .reward-item {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .reward-item-image {
+        border-radius: 50%;
+        background-image: url("../assets/images/item.png");
+        background-size: contain;
+        height: 40px;
+        width: 40px;
+    }
+
+    .reward-item-count {
+        margin-left: -10px;
+        border: 1px #ccc solid;
+        z-index: -1;
+        padding: 5px 20px;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
     }
 
     .counter .content .count-item span {
