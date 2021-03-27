@@ -94,13 +94,14 @@
             return {
                 currentWL: 7,
                 experienceTable: {},
+                dropsTable: {},
                 unfilteredMobs: [],
                 mobsById: {},
                 mobs: {},
                 mobTypes: [],
                 mobAmounts: {},
                 results: {experience: 0, mora: 0},
-                rewardItems: {"item1":{"amount":10, "name":"Some random item", "image": "http://localhost:8080/game/images/items/placeholder_item.png"}}
+                rewardItems: {item1:{"amount":10, "name":"Some random item", "image": "http://localhost:8080/game/images/items/placeholder_item.png"}}
             }
         },
         async created() {
@@ -124,13 +125,11 @@
             },
             async doCalc() {
                 let WL = this.currentWL;
-                let currentExpInfo;
-                if (!this.experienceTable["WL" + this.currentWL]) {
+                let currentExpInfo = null;
+                if (!(currentExpInfo = this.experienceTable["WL" + this.currentWL])) {
                     let res = await fetch("http://localhost:8080/exp-calc/calculator?wl=" + WL);
                     currentExpInfo = await res.json();
                     this.experienceTable["WL" + WL] = currentExpInfo
-                } else {
-                    currentExpInfo = this.experienceTable["WL" + WL];
                 }
                 let enemiesTotal = {};
                 for (let i = 0; i < this.unfilteredMobs.length; i++) {
@@ -146,6 +145,39 @@
                     this.results.experience += enemiesTotal[mobType] * currentExpInfo.enemies[mobType].expectedXp;
                     this.results.mora += enemiesTotal[mobType] * currentExpInfo.enemies[mobType].expectedMora;
                 }
+                this.calcMobDrops(WL);
+            },
+            async calcMobDrops(wl){
+                let currentDropsInfo = null;
+                if(!(currentDropsInfo = this.dropsTable["WL"+wl])){
+                    let res = await fetch("http://localhost:8080/exp-calc/drops?wl=" + wl);
+                    currentDropsInfo = await res.json();
+                    this.dropsTable["WL" + wl] = currentDropsInfo;
+                }
+
+                if(!this.rewardItems){
+                  let items = await fetch("http://localhost:8080/exp-calc/drops?wl=" + wl);
+                  for(let item in items){
+                    this.rewardItems["item"+item.id]=item;
+                  }
+                }
+
+                this.resetDropAmounts();
+
+                for (let i = 0; i < this.unfilteredMobs.length; i++) {
+                  let mobId = this.unfilteredMobs[i].id;
+                  let droppedItems = currentDropsInfo["mob"+mobId].items;
+                  for(let key in droppedItems){
+                    let droppedItem = droppedItems[key];
+                    let amountToBeAdded = Number.parseInt(this.mobAmounts["mob" + mobId]) || 0;
+                    this.rewardItems["item"+droppedItem.id].amount+=droppedItem.chance*amountToBeAdded;
+                  }
+                }
+            },
+            resetDropAmounts(){
+              for(let key in this.rewardItems){
+                this.rewardItems[key].amount=0;
+              }
             },
             changeWL(wl) {
                 this.currentWL = wl;

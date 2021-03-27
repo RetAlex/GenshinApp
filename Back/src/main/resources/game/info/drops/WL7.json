@@ -1,170 +1,165 @@
 {
-  "expectedLevels": "75-89",
-  "drops": {
-    "mob1": {
-      "id": 1,
-      "experience": 57,
-      "mora": 200,
-      "items": [
-        {
-          "id": 1,
-          "change": 0.5
-        }
-      ]
-    },
-    "mob2": {
-      "id": 2,
-      "experience": 57,
-      "mora": 200,
-      "items": [
-        {
-          "id": 1,
-          "change": 0.5
-        }
-      ]
-    },
-    "mob3": {
-      "id": 3,
-      "experience": 57,
-      "mora": 200,
-      "items": [
-        {
-          "id": 1,
-          "change": 0.5
-        }
-      ]
-    },
-    "mob4": {
-      "id": 4,
-      "experience": 57,
-      "mora": 200,
-      "items": [
-        {
-          "id": 1,
-          "change": 0.5
-        }
-      ]
-    },
-    "mob5": {
-      "id": 5,
-      "experience": 57,
-      "mora": 200,
-      "items": [
-        {
-          "id": 1,
-          "change": 0.5
-        }
-      ]
-    },
-    "mob6": {
-      "id": 6,
-      "experience": 57,
-      "mora": 600,
-      "items": [
-        {
-          "id": 1,
-          "change": 0.5
-        }
-      ]
-    },
-    "mob7": {
-      "id": 7,
-      "experience": 57,
-      "mora": 200,
-      "items": [
-        {
-          "id": 1,
-          "change": 0.5
-        }
-      ]
-    },
-    "mob8": {
-      "id": 8,
-      "experience": 19,
-      "mora": 40,
-      "items": [
-        {
-          "id": 1,
-          "change": 0.5
-        }
-      ]
-    },
-    "mob9": {
-      "id": 9,
-      "experience": 19,
-      "mora": 40,
-      "items": [
-        {
-          "id": 1,
-          "change": 0.5
-        }
-      ]
-    },
-    "mob10": {
-      "id": 10,
-      "experience": 19,
-      "mora": 40,
-      "items": [
-        {
-          "id": 1,
-          "change": 0.5
-        }
-      ]
-    },
-    "mob11": {
-      "id": 11,
-      "experience": 57,
-      "mora": 200,
-      "items": [
-        {
-          "id": 1,
-          "change": 0.5
-        }
-      ]
-    },
-    "mob12": {
-      "id": 12,
-      "experience": -1,
-      "mora": -1,
-      "items": [
-        {
-          "id": 1,
-          "change": 0.5
-        }
-      ]
-    },
-    "mob13": {
-      "id": 13,
-      "experience": 19,
-      "mora": 40,
-      "items": [
-        {
-          "id": 1,
-          "change": 0.5
-        }
-      ]
-    },
-    "mob14": {
-      "id": 14,
-      "experience": 19,
-      "mora": 40,
-      "items": [
-        {
-          "id": 1,
-          "change": 0.5
-        }
-      ]
-    },
-    "mob15": {
-      "id": 15,
-      "experience": 19,
-      "mora": 40,
-      "items": [
-        {
-          "id": 1,
-          "change": 0.5
-        }
-      ]
-    }
+  "mob1": {
+    "id": 1,
+    "items": [
+      {
+        "id": 1,
+        "chance": 5
+      }
+    ]
+  },
+  "mob2": {
+    "id": 2,
+    "experience": 57,
+    "mora": 200,
+    "items": [
+      {
+        "id": 1,
+        "chance": 1
+      }
+    ]
+  },
+  "mob3": {
+    "id": 3,
+    "experience": 57,
+    "mora": 200,
+    "items": [
+      {
+        "id": 1,
+        "chance": 2
+      }
+    ]
+  },
+  "mob4": {
+    "id": 4,
+    "experience": 57,
+    "mora": 200,
+    "items": [
+      {
+        "id": 1,
+        "chance": 3
+      }
+    ]
+  },
+  "mob5": {
+    "id": 5,
+    "experience": 57,
+    "mora": 200,
+    "items": [
+      {
+        "id": 1,
+        "chance": 4
+      }
+    ]
+  },
+  "mob6": {
+    "id": 6,
+    "experience": 57,
+    "mora": 600,
+    "items": [
+      {
+        "id": 1,
+        "chance": 6
+      }
+    ]
+  },
+  "mob7": {
+    "id": 7,
+    "experience": 57,
+    "mora": 200,
+    "items": [
+      {
+        "id": 1,
+        "chance": 7
+      }
+    ]
+  },
+  "mob8": {
+    "id": 8,
+    "experience": 19,
+    "mora": 40,
+    "items": [
+      {
+        "id": 1,
+        "chance": 8
+      }
+    ]
+  },
+  "mob9": {
+    "id": 9,
+    "experience": 19,
+    "mora": 40,
+    "items": [
+      {
+        "id": 1,
+        "chance": 0.5
+      }
+    ]
+  },
+  "mob10": {
+    "id": 10,
+    "experience": 19,
+    "mora": 40,
+    "items": [
+      {
+        "id": 1,
+        "chance": 0.5
+      }
+    ]
+  },
+  "mob11": {
+    "id": 11,
+    "experience": 57,
+    "mora": 200,
+    "items": [
+      {
+        "id": 1,
+        "chance": 0.5
+      }
+    ]
+  },
+  "mob12": {
+    "id": 12,
+    "experience": -1,
+    "mora": -1,
+    "items": [
+      {
+        "id": 1,
+        "chance": 0.5
+      }
+    ]
+  },
+  "mob13": {
+    "id": 13,
+    "experience": 19,
+    "mora": 40,
+    "items": [
+      {
+        "id": 1,
+        "chance": 0.5
+      }
+    ]
+  },
+  "mob14": {
+    "id": 14,
+    "experience": 19,
+    "mora": 40,
+    "items": [
+      {
+        "id": 1,
+        "chance": 0.5
+      }
+    ]
+  },
+  "mob15": {
+    "id": 15,
+    "experience": 19,
+    "mora": 40,
+    "items": [
+      {
+        "id": 1,
+        "chance": 0.5
+      }
+    ]
   }
 }
