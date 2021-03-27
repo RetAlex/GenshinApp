@@ -1,6 +1,158 @@
 [
   {
-    "id": -1,
-    "name": "Item #1 placeholder"
+    "id": 1,
+    "name": "Damaged Mask"
+  },
+  {
+    "id": 2,
+    "name": "Stained Mask"
+  },
+  {
+    "id": 3,
+    "name": "Ominous Mask"
+  },
+  {
+    "id": 4,
+    "name": "Divining Scroll"
+  },
+  {
+    "id": 5,
+    "name": "Sealed Scroll"
+  },
+  {
+    "id": 6,
+    "name": "Forbidden Curse Scroll"
+  },
+  {
+    "id": 7,
+    "name": "Firm Arrowhead"
+  },
+  {
+    "id": 8,
+    "name": "Sharp Arrowhead"
+  },
+  {
+    "id": 9,
+    "name": "Weathered Arrowhead"
+  },
+  {
+    "id": 10,
+    "name": "Heavy Horn"
+  },
+  {
+    "id": 11,
+    "name": "Black Bronze Horn"
+  },
+  {
+    "id": 12,
+    "name": "Black Crystal Horn"
+  },
+  {
+    "id": 13,
+    "name": "Dead Ley Line Branch"
+  },
+  {
+    "id": 14,
+    "name": "Dead Ley Line Leaves"
+  },
+  {
+    "id": 15,
+    "name": "Ley Line Sprout"
+  },
+  {
+    "id": 16,
+    "name": "Mist Grass Pollen"
+  },
+  {
+    "id": 17,
+    "name": "Mist Grass"
+  },
+  {
+    "id": 18,
+    "name": "Mist Grass Wick"
+  },
+  {
+    "id": 19,
+    "name": "Hunter's Sacrificial Knife"
+  },
+  {
+    "id": 20,
+    "name": "Agent's Sacrificial Knife"
+  },
+  {
+    "id": 21,
+    "name": "Inspector's Sacrificial Knife"
+  },
+  {
+    "id": 22,
+    "name": "Recruit's Insignia"
+  },
+  {
+    "id": 23,
+    "name": "Sergeant's Insignia"
+  },
+  {
+    "id": 24,
+    "name": "Lieutenant's Insignia"
+  },
+  {
+    "id": 25,
+    "name": "Slime Condensate"
+  },
+  {
+    "id": 26,
+    "name": "Slime Secretions"
+  },
+  {
+    "id": 27,
+    "name": "Slime Concentrate"
+  },
+  {
+    "id": 28,
+    "name": "Whopperflower Nectar"
+  },
+  {
+    "id": 29,
+    "name": "Shimmering Nectar"
+  },
+  {
+    "id": 30,
+    "name": "Energy Nectar"
+  },
+  {
+    "id": 31,
+    "name": "Fragile Bone Shard"
+  },
+  {
+    "id": 32,
+    "name": "Strudy Bone Shard"
+  },
+  {
+    "id": 33,
+    "name": "Fossilized Bone Shard"
+  },
+  {
+    "id": 34,
+    "name": "Treasure Hoarder Insignia"
+  },
+  {
+    "id": 35,
+    "name": "Silver Raven Insignia"
+  },
+  {
+    "id": 36,
+    "name": "Golden Raven Insignia"
+  },
+  {
+    "id": 37,
+    "name": "Chaos Device"
+  },
+  {
+    "id": 38,
+    "name": "Chaos Circuit"
+  },
+  {
+    "id": 39,
+    "name": "Chaos Core"
   }
 ]
