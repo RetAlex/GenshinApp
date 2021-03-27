@@ -1,158 +1,197 @@
 [
   {
     "id": 1,
-    "name": "Damaged Mask"
+    "name": "Damaged Mask",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 2,
-    "name": "Stained Mask"
+    "name": "Stained Mask",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 3,
-    "name": "Ominous Mask"
+    "name": "Ominous Mask",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 4,
-    "name": "Divining Scroll"
+    "name": "Divining Scroll",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 5,
-    "name": "Sealed Scroll"
+    "name": "Sealed Scroll",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 6,
-    "name": "Forbidden Curse Scroll"
+    "name": "Forbidden Curse Scroll",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 7,
-    "name": "Firm Arrowhead"
+    "name": "Firm Arrowhead",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 8,
-    "name": "Sharp Arrowhead"
+    "name": "Sharp Arrowhead",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 9,
-    "name": "Weathered Arrowhead"
+    "name": "Weathered Arrowhead",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 10,
-    "name": "Heavy Horn"
+    "name": "Heavy Horn",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 11,
-    "name": "Black Bronze Horn"
+    "name": "Black Bronze Horn",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 12,
-    "name": "Black Crystal Horn"
+    "name": "Black Crystal Horn",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 13,
-    "name": "Dead Ley Line Branch"
+    "name": "Dead Ley Line Branch",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 14,
-    "name": "Dead Ley Line Leaves"
+    "name": "Dead Ley Line Leaves",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 15,
-    "name": "Ley Line Sprout"
+    "name": "Ley Line Sprout",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 16,
-    "name": "Mist Grass Pollen"
+    "name": "Mist Grass Pollen",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 17,
-    "name": "Mist Grass"
+    "name": "Mist Grass",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 18,
-    "name": "Mist Grass Wick"
+    "name": "Mist Grass Wick",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 19,
-    "name": "Hunter's Sacrificial Knife"
+    "name": "Hunter's Sacrificial Knife",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 20,
-    "name": "Agent's Sacrificial Knife"
+    "name": "Agent's Sacrificial Knife",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 21,
-    "name": "Inspector's Sacrificial Knife"
+    "name": "Inspector's Sacrificial Knife",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 22,
-    "name": "Recruit's Insignia"
+    "name": "Recruit's Insignia",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 23,
-    "name": "Sergeant's Insignia"
+    "name": "Sergeant's Insignia",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 24,
-    "name": "Lieutenant's Insignia"
+    "name": "Lieutenant's Insignia",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 25,
-    "name": "Slime Condensate"
+    "name": "Slime Condensate",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 26,
-    "name": "Slime Secretions"
+    "name": "Slime Secretions",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 27,
-    "name": "Slime Concentrate"
+    "name": "Slime Concentrate",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 28,
-    "name": "Whopperflower Nectar"
+    "name": "Whopperflower Nectar",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 29,
-    "name": "Shimmering Nectar"
+    "name": "Shimmering Nectar",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 30,
-    "name": "Energy Nectar"
+    "name": "Energy Nectar",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 31,
-    "name": "Fragile Bone Shard"
+    "name": "Fragile Bone Shard",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 32,
-    "name": "Strudy Bone Shard"
+    "name": "Strudy Bone Shard",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 33,
-    "name": "Fossilized Bone Shard"
+    "name": "Fossilized Bone Shard",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 34,
-    "name": "Treasure Hoarder Insignia"
+    "name": "Treasure Hoarder Insignia",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 35,
-    "name": "Silver Raven Insignia"
+    "name": "Silver Raven Insignia",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 36,
-    "name": "Golden Raven Insignia"
+    "name": "Golden Raven Insignia",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 37,
-    "name": "Chaos Device"
+    "name": "Chaos Device",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 38,
-    "name": "Chaos Circuit"
+    "name": "Chaos Circuit",
+    "image": "/game/images/items/placeholder_item.png"
   },
   {
     "id": 39,
-    "name": "Chaos Core"
+    "name": "Chaos Core",
+    "image": "/game/images/items/placeholder_item.png"
   }
 ]

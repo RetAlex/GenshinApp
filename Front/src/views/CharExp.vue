@@ -61,25 +61,16 @@
                             </div>
                             <div class="col-md-4 col-sm-12">
                                 <div class="count-item decoration-top">
-                                    <div class="reward-items">
-                                        <div class="reward-item">
-                                            <div class="reward-item-image"></div>
-                                            <div class="reward-item-count">x2</div>
-                                        </div>
-                                        <div class="reward-item">
-                                            <div class="reward-item-image"></div>
-                                            <div class="reward-item-count">x2</div>
-                                        </div>
-                                        <div class="reward-item">
-                                            <div class="reward-item-image"></div>
-                                            <div class="reward-item-count">x2</div>
-                                        </div>
-                                        <div class="reward-item">
-                                            <div class="reward-item-image"></div>
-                                            <div class="reward-item-count">x2</div>
+                                    <div v-if="Object.keys(rewardItems).length === 0">Choose mobs and their amounts to show the estimated drops</div>
+                                    <div v-if="Object.keys(rewardItems).length > 0">
+                                        <span>Items</span>
+                                        <div class="reward-items" v-for="id in Object.keys(rewardItems)" :key="id">
+                                            <div class="reward-item">
+                                                <img class="reward-item-image" :src="rewardItems[id].image" :alt="rewardItems[id].name"/>
+                                                <div class="reward-item-count">{{rewardItems[id].amount}}</div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <span>Items</span>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-12">
@@ -108,7 +99,8 @@
                 mobs: {},
                 mobTypes: [],
                 mobAmounts: {},
-                results: {experience: 0, mora: 0}
+                results: {experience: 0, mora: 0},
+                rewardItems: {"item1":{"amount":10, "name":"Some random item", "image": "http://localhost:8080/game/images/items/placeholder_item.png"}}
             }
         },
         async created() {
@@ -120,7 +112,7 @@
                 this.doCalc();
             },
             async getMobs() {
-                const res = await fetch("/exp-calc/mobs");
+                const res = await fetch("http://localhost:8080/exp-calc/mobs");
                 this.unfilteredMobs = await res.json();
                 for (let i = 0; i < this.unfilteredMobs.length; i++) {
                     if (!this.mobs[this.unfilteredMobs[i].typeLong]) this.mobs[this.unfilteredMobs[i].typeLong] = [];
@@ -134,7 +126,7 @@
                 let WL = this.currentWL;
                 let currentExpInfo;
                 if (!this.experienceTable["WL" + this.currentWL]) {
-                    let res = await fetch("/exp-calc/calculator?wl=" + WL);
+                    let res = await fetch("http://localhost:8080/exp-calc/calculator?wl=" + WL);
                     currentExpInfo = await res.json();
                     this.experienceTable["WL" + WL] = currentExpInfo
                 } else {
@@ -146,16 +138,6 @@
                     let mobType = this.unfilteredMobs[i].type;
                     if (!enemiesTotal[mobType]) enemiesTotal[mobType] = 0;
                     enemiesTotal[mobType] += Number.parseInt(this.mobAmounts["mob" + mobId]) || 0;
-
-                    //     let mobDrops = this.experienceTable["WL"+this.currentWL]["mob"+mobId];
-                    //     if(!mobDrops){
-                    //       console.log("The "+mobId+" mob drops are not filled for the WL"+this.currentWL)
-                    //       //TODO add warning to the frontend
-                    //       continue;
-                    //     }
-                    //     let mobAmount = Number.parseInt(this.mobAmounts["mob"+mobId]) || 0;
-                    //     this.results.experience+=mobAmount*mobDrops.experience;
-                    //     this.results.mora+=mobAmount*mobDrops.mora
                 }
 
                 this.results.experience = 0;
