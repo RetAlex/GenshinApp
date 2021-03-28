@@ -32,12 +32,12 @@
                     <div class="enemies row">
                         <div class="col-lg-4 col-md-6 col-sm-12" v-for="mob in mobs[mobType]" :key="mob.id">
                             <div class="monster-card">
-                                <img class="monster-image" :src="mob.image"
+                                <img class="monster-image" :src="apiLink + mob.image"
                                      :alt="mob.name">
                                 <div class="monster-card-control">
                                     <div class="monster-name">{{mob.name}}</div>
                                     <input class="monster-amount-input" v-model="mobAmounts['mob'+mob.id]" type="number"
-                                           placeholder="0"/>
+                                           placeholder="0" min="0"/>
                                     <button class="monster-handbook-button" @click="fillFromHandbook(mob.id)">Fill
                                     </button>
                                 </div>
@@ -61,15 +61,23 @@
                             </div>
                             <div class="col-md-4 col-sm-12">
                                 <div class="count-item decoration-top">
-                                    <div v-if="Object.keys(rewardItems).length === 0">Choose mobs and their amounts to show the estimated drops</div>
-                                    <div v-if="Object.keys(rewardItems).length > 0">
+                                    <div v-if="Object.keys(rewardItems).length === 0">
+                                        <strong>0</strong>
                                         <span>Items</span>
-                                        <div class="reward-items" v-for="id in Object.keys(rewardItems)" :key="id">
-                                            <div class="reward-item" v-if="rewardItems[id].amount>0">
-                                                <img class="reward-item-image" :src="rewardItems[id].image" :alt="rewardItems[id].name"/>
-                                                <div class="reward-item-count">{{rewardItems[id].amount}}</div>
+                                    </div>
+                                    <div v-if="Object.keys(rewardItems).length > 0">
+                                        <div class="reward-items">
+                                            <div v-for="item in rewardItems" :key="item.id">
+                                                <div class="reward-item" v-if="item && item.amount > 0">
+                                                    <b-tooltip :class="'rarity-' + item.rarity" :label="item.name" position="is-bottom">
+                                                        <img class="reward-item-image" :src="apiLink + item.image"
+                                                             :alt="item.name"/>
+                                                    </b-tooltip>
+                                                    <div class="reward-item-count">x{{item.amount}}</div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <span class="item-name">Items</span>
                                     </div>
                                 </div>
                             </div>
@@ -88,6 +96,7 @@
 </template>
 
 <script>
+
     export default {
         name: "CharExp",
         data: function () {
@@ -101,7 +110,8 @@
                 mobTypes: [],
                 mobAmounts: {},
                 results: {experience: 0, mora: 0},
-                rewardItems: {}
+                rewardItems: {},
+                apiLink: process.env.VUE_APP_API
             }
         },
         async created() {
@@ -113,7 +123,7 @@
                 this.doCalc();
             },
             async getMobs() {
-                const res = await fetch("/exp-calc/mobs");
+                const res = await fetch(this.apiLink + "/exp-calc/mobs");
                 this.unfilteredMobs = await res.json();
                 for (let i = 0; i < this.unfilteredMobs.length; i++) {
                     if (!this.mobs[this.unfilteredMobs[i].typeLong]) this.mobs[this.unfilteredMobs[i].typeLong] = [];
@@ -127,7 +137,7 @@
                 let WL = this.currentWL;
                 let currentExpInfo = null;
                 if (!(currentExpInfo = this.experienceTable["WL" + this.currentWL])) {
-                    let res = await fetch("/exp-calc/calculator?wl=" + WL);
+                    let res = await fetch(this.apiLink + "/exp-calc/calculator?wl=" + WL);
                     currentExpInfo = await res.json();
                     this.experienceTable["WL" + WL] = currentExpInfo
                 }
@@ -145,45 +155,45 @@
                     this.results.experience += enemiesTotal[mobType] * currentExpInfo.enemies[mobType].expectedXp;
                     this.results.mora += enemiesTotal[mobType] * currentExpInfo.enemies[mobType].expectedMora;
                 }
-                this.rewardItems = await this.calcMobDrops(WL);
+                this.calcMobDrops(WL);
             },
-            async calcMobDrops(wl){
+            async calcMobDrops(wl) {
                 let drops = {};
                 let currentDropsInfo = null;
-                if(!(currentDropsInfo = this.dropsTable["WL"+wl])){
-                    let res = await fetch("/exp-calc/drops?wl=" + wl);
+                if (!(currentDropsInfo = this.dropsTable["WL" + wl])) {
+                    let res = await fetch(this.apiLink + "/exp-calc/drops?wl=" + wl);
                     currentDropsInfo = await res.json();
                     this.dropsTable["WL" + wl] = currentDropsInfo;
                 }
 
-                if(!this.rewardItems || Object.keys(this.rewardItems).length === 0){
-                  let res = await fetch("/exp-calc/items");
-                  let items = await res.json();
-                  for(let key in items){
-                    let item = items[key];
-                    this.rewardItems["item"+item.id]=item;
-                  }
+                if (!this.rewardItems || Object.keys(this.rewardItems).length === 0) {
+                    let res = await fetch(this.apiLink + "/exp-calc/items");
+                    let items = await res.json();
+                    for (let key in items) {
+                        let item = items[key];
+                        this.rewardItems["item" + item.id] = item;
+                    }
                 }
-                drops = this.rewardItems
+                drops = this.rewardItems;
 
                 this.resetDropAmounts(drops);
 
                 for (let i = 0; i < this.unfilteredMobs.length; i++) {
-                  let mobId = this.unfilteredMobs[i].id;
-                  let droppedItems = currentDropsInfo["mob"+mobId].items;
-                  for(let key in droppedItems){
-                    let droppedItem = droppedItems[key];
-                    let amountToBeAdded = Number.parseInt(this.mobAmounts["mob" + mobId]) || 0;
-                    drops["item"+droppedItem.id].amount+=droppedItem.chance*amountToBeAdded;
-                  }
+                    let mobId = this.unfilteredMobs[i].id;
+                    let droppedItems = currentDropsInfo["mob" + mobId].items;
+                    for (let key in droppedItems) {
+                        let droppedItem = droppedItems[key];
+                        let amountToBeAdded = Number.parseInt(this.mobAmounts["mob" + mobId]) || 0;
+                        drops["item" + droppedItem.id].amount += droppedItem.chance * amountToBeAdded;
+                    }
                 }
 
-                return drops;
+                Object.assign(this.rewardItems, drops);
             },
-            resetDropAmounts(drops){
-              for(let key in drops){
-                drops[key].amount=0;
-              }
+            resetDropAmounts(drops) {
+                for (let key in drops) {
+                    drops[key].amount = 0;
+                }
             },
             changeWL(wl) {
                 this.currentWL = wl;
@@ -378,6 +388,14 @@
         }
     }
 
+    .b-tooltip.is-primary .tooltip-content {
+        background: #5baaf6;
+    }
+
+    .b-tooltip.is-bottom.is-primary .tooltip-content::before {
+        border-bottom-color: #5baaf6;
+    }
+
     .counter {
         overflow: hidden;
         position: relative;
@@ -404,7 +422,7 @@
     }
 
     .counter .content .count-item {
-        height: 200px;
+        min-height: 200px;
         position: relative;
         float: left;
         width: 100%;
@@ -467,6 +485,7 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 10px;
+        flex-flow: wrap;
     }
 
     .reward-item {
@@ -478,10 +497,25 @@
 
     .reward-item-image {
         border-radius: 50%;
-        background-image: url("../assets/images/item.png");
         background-size: contain;
         height: 40px;
         width: 40px;
+    }
+
+    .rarity-1 .reward-item-image {
+        background-image: url("../assets/images/rarity-1.png");
+    }
+
+    .rarity-2 .reward-item-image {
+        background-image: url("../assets/images/rarity-2.png");
+    }
+
+    .rarity-3 .reward-item-image {
+        background-image: url("../assets/images/rarity-3.png");
+    }
+
+    .rarity-4 .reward-item-image {
+        background-image: url("../assets/images/rarity-4.png");
     }
 
     .reward-item-count {
@@ -500,6 +534,10 @@
         font-weight: 500;
         font-size: 17px;
         letter-spacing: 0.25px;
+    }
+
+    .counter .content .count-item span.item-name {
+        margin-bottom: 50px;
     }
 
     @media (max-width: 991px) {
