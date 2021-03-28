@@ -113,7 +113,7 @@
                 this.doCalc();
             },
             async getMobs() {
-                const res = await fetch("http://localhost:8080/exp-calc/mobs");
+                const res = await fetch("/exp-calc/mobs");
                 this.unfilteredMobs = await res.json();
                 for (let i = 0; i < this.unfilteredMobs.length; i++) {
                     if (!this.mobs[this.unfilteredMobs[i].typeLong]) this.mobs[this.unfilteredMobs[i].typeLong] = [];
@@ -127,7 +127,7 @@
                 let WL = this.currentWL;
                 let currentExpInfo = null;
                 if (!(currentExpInfo = this.experienceTable["WL" + this.currentWL])) {
-                    let res = await fetch("http://localhost:8080/exp-calc/calculator?wl=" + WL);
+                    let res = await fetch("/exp-calc/calculator?wl=" + WL);
                     currentExpInfo = await res.json();
                     this.experienceTable["WL" + WL] = currentExpInfo
                 }
@@ -151,13 +151,13 @@
                 let drops = {};
                 let currentDropsInfo = null;
                 if(!(currentDropsInfo = this.dropsTable["WL"+wl])){
-                    let res = await fetch("http://localhost:8080/exp-calc/drops?wl=" + wl);
+                    let res = await fetch("/exp-calc/drops?wl=" + wl);
                     currentDropsInfo = await res.json();
                     this.dropsTable["WL" + wl] = currentDropsInfo;
                 }
 
                 if(!this.rewardItems || Object.keys(this.rewardItems).length === 0){
-                  let res = await fetch("http://localhost:8080/exp-calc/items");
+                  let res = await fetch("/exp-calc/items");
                   let items = await res.json();
                   for(let key in items){
                     let item = items[key];
