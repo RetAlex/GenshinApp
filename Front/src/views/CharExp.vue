@@ -184,7 +184,7 @@
                     for (let key in droppedItems) {
                         let droppedItem = droppedItems[key];
                         let amountToBeAdded = Number.parseInt(this.mobAmounts["mob" + mobId]) || 0;
-                        drops["item" + droppedItem.id].amount += droppedItem.chance * amountToBeAdded;
+                        drops["item" + droppedItem.id].amount += Math.floor(droppedItem.chance * amountToBeAdded);
                     }
                 }
 
