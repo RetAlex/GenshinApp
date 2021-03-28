@@ -3,8 +3,16 @@
     "id": 1,
     "items": [
       {
-        "id": 1,
-        "chance": 5
+        "id": 37,
+        "chance": 2.5
+      },
+      {
+        "id": 38,
+        "chance": 1
+      },
+      {
+        "id": 39,
+        "chance": 0.1
       }
     ]
   },
@@ -14,8 +22,16 @@
     "mora": 200,
     "items": [
       {
-        "id": 1,
+        "id": 37,
+        "chance": 2.5
+      },
+      {
+        "id": 38,
         "chance": 1
+      },
+      {
+        "id": 39,
+        "chance": 0.1
       }
     ]
   },
@@ -25,8 +41,28 @@
     "mora": 200,
     "items": [
       {
-        "id": 1,
+        "id": 19,
+        "chance": 5
+      },
+      {
+        "id": 20,
         "chance": 2
+      },
+      {
+        "id": 21,
+        "chance": 0.3
+      },
+      {
+        "id": 22,
+        "chance": 0.3
+      },
+      {
+        "id": 23,
+        "chance": 0.1
+      },
+      {
+        "id": 24,
+        "chance": 0.05
       }
     ]
   },
@@ -36,8 +72,28 @@
     "mora": 200,
     "items": [
       {
-        "id": 1,
-        "chance": 3
+        "id": 16,
+        "chance": 5
+      },
+      {
+        "id": 17,
+        "chance": 2
+      },
+      {
+        "id": 18,
+        "chance": 0.3
+      },
+      {
+        "id": 22,
+        "chance": 0.3
+      },
+      {
+        "id": 23,
+        "chance": 0.1
+      },
+      {
+        "id": 24,
+        "chance": 0.05
       }
     ]
   },
@@ -47,8 +103,16 @@
     "mora": 200,
     "items": [
       {
-        "id": 1,
-        "chance": 4
+        "id": 31,
+        "chance": 5
+      },
+      {
+        "id": 32,
+        "chance": 2
+      },
+      {
+        "id": 33,
+        "chance": 0.3
       }
     ]
   },
@@ -58,8 +122,28 @@
     "mora": 600,
     "items": [
       {
+        "id": 10,
+        "chance": 5
+      },
+      {
+        "id": 11,
+        "chance": 2
+      },
+      {
+        "id": 12,
+        "chance": 0.3
+      },
+      {
         "id": 1,
-        "chance": 6
+        "chance": 0.3
+      },
+      {
+        "id": 2,
+        "chance": 0.1
+      },
+      {
+        "id": 3,
+        "chance": 0.05
       }
     ]
   },
@@ -69,8 +153,16 @@
     "mora": 200,
     "items": [
       {
-        "id": 1,
-        "chance": 7
+        "id": 13,
+        "chance": 5
+      },
+      {
+        "id": 14,
+        "chance": 2
+      },
+      {
+        "id": 15,
+        "chance": 0.3
       }
     ]
   },
@@ -80,8 +172,16 @@
     "mora": 40,
     "items": [
       {
-        "id": 1,
-        "chance": 8
+        "id": 22,
+        "chance": 1.5
+      },
+      {
+        "id": 23,
+        "chance": 0.5
+      },
+      {
+        "id": 24,
+        "chance": 0.1
       }
     ]
   },
@@ -93,6 +193,14 @@
       {
         "id": 1,
         "chance": 0.5
+      },
+      {
+        "id": 2,
+        "chance": 0.1
+      },
+      {
+        "id": 3,
+        "chance": 0.05
       }
     ]
   },
@@ -102,8 +210,28 @@
     "mora": 40,
     "items": [
       {
+        "id": 7,
+        "chance": 1
+      },
+      {
+        "id": 8,
+        "chance": 0.25
+      },
+      {
+        "id": 9,
+        "chance": 0.05
+      },
+      {
         "id": 1,
-        "chance": 0.5
+        "chance": 0.3
+      },
+      {
+        "id": 2,
+        "chance": 0.1
+      },
+      {
+        "id": 3,
+        "chance": 0.05
       }
     ]
   },
@@ -113,8 +241,16 @@
     "mora": 200,
     "items": [
       {
-        "id": 1,
+        "id": 10,
+        "chance": 2
+      },
+      {
+        "id": 11,
         "chance": 0.5
+      },
+      {
+        "id": 12,
+        "chance": 0.1
       }
     ]
   },
@@ -124,8 +260,16 @@
     "mora": -1,
     "items": [
       {
-        "id": 1,
-        "chance": 0.5
+        "id": 4,
+        "chance": 2
+      },
+      {
+        "id": 5,
+        "chance": 1
+      },
+      {
+        "id": 6,
+        "chance": 0.3
       }
     ]
   },
@@ -135,8 +279,16 @@
     "mora": 40,
     "items": [
       {
-        "id": 1,
-        "chance": 0.5
+        "id": 25,
+        "chance": 0.7
+      },
+      {
+        "id": 26,
+        "chance": 0.3
+      },
+      {
+        "id": 27,
+        "chance": 0.1
       }
     ]
   },
@@ -146,8 +298,16 @@
     "mora": 40,
     "items": [
       {
-        "id": 1,
+        "id": 34,
+        "chance": 1
+      },
+      {
+        "id": 35,
         "chance": 0.5
+      },
+      {
+        "id": 36,
+        "chance": 0.3
       }
     ]
   },
@@ -157,8 +317,16 @@
     "mora": 40,
     "items": [
       {
-        "id": 1,
-        "chance": 0.5
+        "id": 28,
+        "chance": 3.5
+      },
+      {
+        "id": 29,
+        "chance": 1
+      },
+      {
+        "id": 30,
+        "chance": 0.3
       }
     ]
   }

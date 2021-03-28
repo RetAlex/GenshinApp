@@ -65,7 +65,7 @@
                                     <div v-if="Object.keys(rewardItems).length > 0">
                                         <span>Items</span>
                                         <div class="reward-items" v-for="id in Object.keys(rewardItems)" :key="id">
-                                            <div class="reward-item">
+                                            <div class="reward-item" v-if="rewardItems[id].amount>0">
                                                 <img class="reward-item-image" :src="rewardItems[id].image" :alt="rewardItems[id].name"/>
                                                 <div class="reward-item-count">{{rewardItems[id].amount}}</div>
                                             </div>
@@ -101,7 +101,7 @@
                 mobTypes: [],
                 mobAmounts: {},
                 results: {experience: 0, mora: 0},
-                rewardItems: {item1:{"amount":10, "name":"Some random item", "image": "http://localhost:8080/game/images/items/placeholder_item.png"}}
+                rewardItems: {}
             }
         },
         async created() {
@@ -145,9 +145,10 @@
                     this.results.experience += enemiesTotal[mobType] * currentExpInfo.enemies[mobType].expectedXp;
                     this.results.mora += enemiesTotal[mobType] * currentExpInfo.enemies[mobType].expectedMora;
                 }
-                this.calcMobDrops(WL);
+                this.rewardItems = await this.calcMobDrops(WL);
             },
             async calcMobDrops(wl){
+                let drops = {};
                 let currentDropsInfo = null;
                 if(!(currentDropsInfo = this.dropsTable["WL"+wl])){
                     let res = await fetch("http://localhost:8080/exp-calc/drops?wl=" + wl);
@@ -155,14 +156,17 @@
                     this.dropsTable["WL" + wl] = currentDropsInfo;
                 }
 
-                if(!this.rewardItems){
-                  let items = await fetch("http://localhost:8080/exp-calc/drops?wl=" + wl);
-                  for(let item in items){
+                if(!this.rewardItems || Object.keys(this.rewardItems).length === 0){
+                  let res = await fetch("http://localhost:8080/exp-calc/items");
+                  let items = await res.json();
+                  for(let key in items){
+                    let item = items[key];
                     this.rewardItems["item"+item.id]=item;
                   }
                 }
+                drops = this.rewardItems
 
-                this.resetDropAmounts();
+                this.resetDropAmounts(drops);
 
                 for (let i = 0; i < this.unfilteredMobs.length; i++) {
                   let mobId = this.unfilteredMobs[i].id;
@@ -170,13 +174,15 @@
                   for(let key in droppedItems){
                     let droppedItem = droppedItems[key];
                     let amountToBeAdded = Number.parseInt(this.mobAmounts["mob" + mobId]) || 0;
-                    this.rewardItems["item"+droppedItem.id].amount+=droppedItem.chance*amountToBeAdded;
+                    drops["item"+droppedItem.id].amount+=droppedItem.chance*amountToBeAdded;
                   }
                 }
+
+                return drops;
             },
-            resetDropAmounts(){
-              for(let key in this.rewardItems){
-                this.rewardItems[key].amount=0;
+            resetDropAmounts(drops){
+              for(let key in drops){
+                drops[key].amount=0;
               }
             },
             changeWL(wl) {
