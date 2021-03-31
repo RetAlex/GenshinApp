@@ -1,6 +1,236 @@
 [
   {
-    "id": -1,
-    "name": "Item #1 placeholder"
+    "id": 1,
+    "name": "Damaged Mask",
+    "image": "/game/images/items/Item_Mask_Damaged.png",
+    "rarity": 1
+  },
+  {
+    "id": 2,
+    "name": "Stained Mask",
+    "image": "/game/images/items/Item_Mask_Stained.png",
+    "rarity": 2
+  },
+  {
+    "id": 3,
+    "name": "Ominous Mask",
+    "image": "/game/images/items/Item_Mask_Ominous.png",
+    "rarity": 3
+  },
+  {
+    "id": 4,
+    "name": "Divining Scroll",
+    "image": "/game/images/items/Item_Scroll_Divining.png",
+    "rarity": 1
+  },
+  {
+    "id": 5,
+    "name": "Sealed Scroll",
+    "image": "/game/images/items/Item_Scroll_Sealed.png",
+    "rarity": 2
+  },
+  {
+    "id": 6,
+    "name": "Forbidden Curse Scroll",
+    "image": "/game/images/items/Item_Scroll_Forbidden.png",
+    "rarity": 3
+  },
+  {
+    "id": 7,
+    "name": "Firm Arrowhead",
+    "image": "/game/images/items/Item_Arrowhead_Firm.png",
+    "rarity": 1
+  },
+  {
+    "id": 8,
+    "name": "Sharp Arrowhead",
+    "image": "/game/images/items/Item_Arrowhead_Sharp.png",
+    "rarity": 2
+  },
+  {
+    "id": 9,
+    "name": "Weathered Arrowhead",
+    "image": "/game/images/items/Item_Arrowhead_Weathered.png",
+    "rarity": 3
+  },
+  {
+    "id": 10,
+    "name": "Heavy Horn",
+    "image": "/game/images/items/Item_Heavy_Horn.png",
+    "rarity": 2
+  },
+  {
+    "id": 11,
+    "name": "Black Bronze Horn",
+    "image": "/game/images/items/Item_Horn_Black_Bronze.png",
+    "rarity": 3
+  },
+  {
+    "id": 12,
+    "name": "Black Crystal Horn",
+    "image": "/game/images/items/Item_Horn_Black_Crystal.png",
+    "rarity": 4
+  },
+  {
+    "id": 13,
+    "name": "Dead Ley Line Branch",
+    "image": "/game/images/items/Item_Ley_Line_Branches.png",
+    "rarity": 2
+  },
+  {
+    "id": 14,
+    "name": "Dead Ley Line Leaves",
+    "image": "/game/images/items/Item_Ley_Line_Leaves.png",
+    "rarity": 3
+  },
+  {
+    "id": 15,
+    "name": "Ley Line Sprout",
+    "image": "/game/images/items/Item_Ley_Line_Sprrout.png",
+    "rarity": 4
+  },
+  {
+    "id": 16,
+    "name": "Mist Grass Pollen",
+    "image": "/game/images/items/Item_Mist_Grass_Pollen.png",
+    "rarity": 2
+  },
+  {
+    "id": 17,
+    "name": "Mist Grass",
+    "image": "/game/images/items/Item_Mist_Grass.png",
+    "rarity": 3
+  },
+  {
+    "id": 18,
+    "name": "Mist Grass Wick",
+    "image": "/game/images/items/Item_Mist_Grass_Wick.png",
+    "rarity": 4
+  },
+  {
+    "id": 19,
+    "name": "Hunter's Sacrificial Knife",
+    "image": "/game/images/items/Item_Sacrificial_Knife_Hunters.png",
+    "rarity": 2
+  },
+  {
+    "id": 20,
+    "name": "Agent's Sacrificial Knife",
+    "image": "/game/images/items/Item_Sacrificial_Knife_Agent.png",
+    "rarity": 3
+  },
+  {
+    "id": 21,
+    "name": "Inspector's Sacrificial Knife",
+    "image": "/game/images/items/Item_Sacrificial_Knife_Inspector.png",
+    "rarity": 4
+  },
+  {
+    "id": 22,
+    "name": "Recruit's Insignia",
+    "image": "/game/images/items/Item_Insignia_Recruit.png",
+    "rarity": 1
+  },
+  {
+    "id": 23,
+    "name": "Sergeant's Insignia",
+    "image": "/game/images/items/Item_Insignia_Sergants.png",
+    "rarity": 2
+  },
+  {
+    "id": 24,
+    "name": "Lieutenant's Insignia",
+    "image": "/game/images/items/Item_Insignia_Lieutenant.png",
+    "rarity": 3
+  },
+  {
+    "id": 25,
+    "name": "Slime Condensate",
+    "image": "/game/images/items/Item_Slime_Condensate.png",
+    "rarity": 1
+  },
+  {
+    "id": 26,
+    "name": "Slime Secretions",
+    "image": "/game/images/items/Item_Slime_Secretions.png",
+    "rarity": 2
+  },
+  {
+    "id": 27,
+    "name": "Slime Concentrate",
+    "image": "/game/images/items/Item_Slime_Concentrate.png",
+    "rarity": 3
+  },
+  {
+    "id": 28,
+    "name": "Whopperflower Nectar",
+    "image": "/game/images/items/Item_Nectar_Whopperflower.png",
+    "rarity": 1
+  },
+  {
+    "id": 29,
+    "name": "Shimmering Nectar",
+    "image": "/game/images/items/Item_Nectar_Shimmering.png",
+    "rarity": 2
+  },
+  {
+    "id": 30,
+    "name": "Energy Nectar",
+    "image": "/game/images/items/Item_Nectar_Energy.png",
+    "rarity": 3
+  },
+  {
+    "id": 31,
+    "name": "Fragile Bone Shard",
+    "image": "/game/images/items/Item_Bone_Shard_Fragile.png",
+    "rarity": 2
+  },
+  {
+    "id": 32,
+    "name": "Strudy Bone Shard",
+    "image": "/game/images/items/Item_Bone_Shard_Sturdy.png",
+    "rarity": 3
+  },
+  {
+    "id": 33,
+    "name": "Fossilized Bone Shard",
+    "image": "/game/images/items/Item_Bone_Shard_Fossilized.png",
+    "rarity": 4
+  },
+  {
+    "id": 34,
+    "name": "Treasure Hoarder Insignia",
+    "image": "/game/images/items/Item_Raven_Insignia_Treasure.png",
+    "rarity": 1
+  },
+  {
+    "id": 35,
+    "name": "Silver Raven Insignia",
+    "image": "/game/images/items/Item_Raven_Insignia_Silver.png",
+    "rarity": 2
+  },
+  {
+    "id": 36,
+    "name": "Golden Raven Insignia",
+    "image": "/game/images/items/Item_Raven_Insignia_Gold.png",
+    "rarity": 3
+  },
+  {
+    "id": 37,
+    "name": "Chaos Device",
+    "image": "/game/images/items/Item_Chaos_Device.png",
+    "rarity": 2
+  },
+  {
+    "id": 38,
+    "name": "Chaos Circuit",
+    "image": "/game/images/items/Item_Chaos_Circuit.png",
+    "rarity": 3
+  },
+  {
+    "id": 39,
+    "name": "Chaos Core",
+    "image": "/game/images/items/Item_Chaos_Core.png",
+    "rarity": 4
   }
 ]

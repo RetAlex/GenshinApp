@@ -32,12 +32,12 @@
                     <div class="enemies row">
                         <div class="col-lg-4 col-md-6 col-sm-12" v-for="mob in mobs[mobType]" :key="mob.id">
                             <div class="monster-card">
-                                <img class="monster-image" :src="mob.image"
+                                <img class="monster-image" :src="apiLink + mob.image"
                                      :alt="mob.name">
                                 <div class="monster-card-control">
                                     <div class="monster-name">{{mob.name}}</div>
                                     <input class="monster-amount-input" v-model="mobAmounts['mob'+mob.id]" type="number"
-                                           placeholder="0"/>
+                                           placeholder="0" min="0"/>
                                     <button class="monster-handbook-button" @click="fillFromHandbook(mob.id)">Fill
                                     </button>
                                 </div>
@@ -48,18 +48,40 @@
             </div>
             <div class="row result">
                 <div class="process">
-                    <button class="main-button" @click="doCalc()"><span>Calculate!</span></button>
+                    <button class="main-button" v-on:click="doCalc()"><span>Calculate!</span></button>
                 </div>
                 <section class="counter">
                     <div class="content">
                         <div class="row">
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-4 col-sm-12">
                                 <div class="count-item decoration-bottom">
                                     <strong>{{results.experience}}</strong>
                                     <span>XP</span>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-4 col-sm-12">
+                                <div class="count-item decoration-top">
+                                    <div v-if="Object.keys(rewardItemsDisplayed).length === 0">
+                                        <strong>0</strong>
+                                        <span>Items</span>
+                                    </div>
+                                    <div v-if="Object.keys(rewardItemsDisplayed).length > 0">
+                                        <div class="reward-items">
+                                            <div v-for="item in rewardItemsDisplayed" :key="item.id">
+                                                <div class="reward-item" v-if="item && item.amount > 0">
+                                                    <b-tooltip :class="'rarity-' + item.rarity" :label="item.name" position="is-bottom">
+                                                        <img class="reward-item-image" :src="apiLink + item.image"
+                                                             :alt="item.name"/>
+                                                    </b-tooltip>
+                                                    <div class="reward-item-count">x{{item.amount}}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="item-name">Items</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
                                 <div class="count-item decoration-top">
                                     <strong>{{results.mora}}</strong>
                                     <span>Mora</span>
@@ -74,18 +96,24 @@
 </template>
 
 <script>
+    import Vue from 'vue'
+
     export default {
         name: "CharExp",
         data: function () {
             return {
                 currentWL: 7,
                 experienceTable: {},
+                dropsTable: {},
                 unfilteredMobs: [],
                 mobsById: {},
                 mobs: {},
                 mobTypes: [],
                 mobAmounts: {},
-                results: {experience: 0, mora: 0}
+                results: {experience: 0, mora: 0},
+                rewardItems: {},
+                rewardItemsDisplayed: {},
+                apiLink: process.env.VUE_APP_API
             }
         },
         async created() {
@@ -97,7 +125,7 @@
                 this.doCalc();
             },
             async getMobs() {
-                const res = await fetch("/exp-calc/mobs");
+                const res = await fetch(this.apiLink + "/exp-calc/mobs");
                 this.unfilteredMobs = await res.json();
                 for (let i = 0; i < this.unfilteredMobs.length; i++) {
                     if (!this.mobs[this.unfilteredMobs[i].typeLong]) this.mobs[this.unfilteredMobs[i].typeLong] = [];
@@ -109,13 +137,11 @@
             },
             async doCalc() {
                 let WL = this.currentWL;
-                let currentExpInfo;
-                if (!this.experienceTable["WL" + this.currentWL]) {
-                    let res = await fetch("/exp-calc/calculator?wl=" + WL);
+                let currentExpInfo = null;
+                if (!(currentExpInfo = this.experienceTable["WL" + this.currentWL])) {
+                    let res = await fetch(this.apiLink + "/exp-calc/calculator?wl=" + WL);
                     currentExpInfo = await res.json();
                     this.experienceTable["WL" + WL] = currentExpInfo
-                } else {
-                    currentExpInfo = this.experienceTable["WL" + WL];
                 }
                 let enemiesTotal = {};
                 for (let i = 0; i < this.unfilteredMobs.length; i++) {
@@ -123,16 +149,6 @@
                     let mobType = this.unfilteredMobs[i].type;
                     if (!enemiesTotal[mobType]) enemiesTotal[mobType] = 0;
                     enemiesTotal[mobType] += Number.parseInt(this.mobAmounts["mob" + mobId]) || 0;
-
-                    //     let mobDrops = this.experienceTable["WL"+this.currentWL]["mob"+mobId];
-                    //     if(!mobDrops){
-                    //       console.log("The "+mobId+" mob drops are not filled for the WL"+this.currentWL)
-                    //       //TODO add warning to the frontend
-                    //       continue;
-                    //     }
-                    //     let mobAmount = Number.parseInt(this.mobAmounts["mob"+mobId]) || 0;
-                    //     this.results.experience+=mobAmount*mobDrops.experience;
-                    //     this.results.mora+=mobAmount*mobDrops.mora
                 }
 
                 this.results.experience = 0;
@@ -140,6 +156,46 @@
                 for (let mobType in enemiesTotal) {
                     this.results.experience += enemiesTotal[mobType] * currentExpInfo.enemies[mobType].expectedXp;
                     this.results.mora += enemiesTotal[mobType] * currentExpInfo.enemies[mobType].expectedMora;
+                }
+                this.calcMobDrops(WL);
+            },
+            async calcMobDrops(wl) {
+                let drops = {};
+                let currentDropsInfo = null;
+                if (!(currentDropsInfo = this.dropsTable["WL" + wl])) {
+                    let res = await fetch(this.apiLink + "/exp-calc/drops?wl=" + wl);
+                    currentDropsInfo = await res.json();
+                    this.dropsTable["WL" + wl] = currentDropsInfo;
+                }
+
+                if (!this.rewardItems || Object.keys(this.rewardItems).length === 0) {
+                    let res = await fetch(this.apiLink + "/exp-calc/items");
+                    let items = await res.json();
+                    for (let key in items) {
+                        let item = items[key];
+                        this.rewardItems["item" + item.id] = item;
+                    }
+                }
+                drops = this.rewardItems;
+                this.rewardItemsDisplayed = Object.assign({}, this.rewardItems)
+
+                this.resetDropAmounts(drops);
+
+                for (let i = 0; i < this.unfilteredMobs.length; i++) {
+                    let mobId = this.unfilteredMobs[i].id;
+                    let droppedItems = currentDropsInfo["mob" + mobId].items;
+                    for (let key in droppedItems) {
+                        let droppedItem = droppedItems[key];
+                        let amountToBeAdded = Number.parseInt(this.mobAmounts["mob" + mobId]) || 0;
+                        drops["item" + droppedItem.id].amount += Math.floor(droppedItem.chance * amountToBeAdded);
+                    }
+                }
+
+                Vue.set(this.rewardItemsDisplayed, 0, drops);
+            },
+            resetDropAmounts(drops) {
+                for (let key in drops) {
+                    drops[key].amount = 0;
                 }
             },
             changeWL(wl) {
@@ -335,6 +391,14 @@
         }
     }
 
+    .b-tooltip.is-primary .tooltip-content {
+        background: #5baaf6;
+    }
+
+    .b-tooltip.is-bottom.is-primary .tooltip-content::before {
+        border-bottom-color: #5baaf6;
+    }
+
     .counter {
         overflow: hidden;
         position: relative;
@@ -361,7 +425,7 @@
     }
 
     .counter .content .count-item {
-        height: 200px;
+        min-height: 200px;
         position: relative;
         float: left;
         width: 100%;
@@ -418,6 +482,78 @@
         transition: all 0.3s ease 0s;
     }
 
+    .reward-items {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        flex-flow: wrap;
+    }
+
+    .reward-item {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .reward-item-image {
+        border-radius: 50%;
+        background-size: contain;
+        height: 40px;
+        width: 40px;
+    }
+
+    .rarity-1 .reward-item-image {
+        background: rgb(133,134,138);
+        background: -moz-linear-gradient(175deg, rgba(133,134,138,1) 0%, rgba(176,174,172,1) 100%);
+        background: -webkit-linear-gradient(175deg, rgba(133,134,138,1) 0%, rgba(176,174,172,1) 100%);
+        background: linear-gradient(175deg, rgba(133,134,138,1) 0%, rgba(176,174,172,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#85868a",endColorstr="#b0aeac",GradientType=1);
+    }
+
+    .rarity-2 .reward-item-image {
+        background: rgb(111,137,134);
+        background: -moz-linear-gradient(175deg, rgba(111,137,134,1) 0%, rgba(126,185,157,1) 100%);
+        background: -webkit-linear-gradient(175deg, rgba(111,137,134,1) 0%, rgba(126,185,157,1) 100%);
+        background: linear-gradient(175deg, rgba(111,137,134,1) 0%, rgba(126,185,157,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6f8986",endColorstr="#7eb99d",GradientType=1);
+    }
+
+    .rarity-3 .reward-item-image {
+        background: rgb(124,138,167);
+        background: -moz-linear-gradient(175deg, rgba(124,138,167,1) 0%, rgba(127,184,215,1) 100%);
+        background: -webkit-linear-gradient(175deg, rgba(124,138,167,1) 0%, rgba(127,184,215,1) 100%);
+        background: linear-gradient(175deg, rgba(124,138,167,1) 0%, rgba(127,184,215,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7c8aa7",endColorstr="#7fb8d7",GradientType=1);
+    }
+
+    .rarity-4 .reward-item-image {
+        background: rgb(123,117,161);
+        background: -moz-linear-gradient(175deg, rgba(123,117,161,1) 0%, rgba(167,142,209,1) 100%);
+        background: -webkit-linear-gradient(175deg, rgba(123,117,161,1) 0%, rgba(167,142,209,1) 100%);
+        background: linear-gradient(175deg, rgba(123,117,161,1) 0%, rgba(167,142,209,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7b75a1",endColorstr="#a78ed1",GradientType=1);
+    }
+
+    .rarity-5 .reward-item-image {
+        background: rgb(168,125,87);
+        background: -moz-linear-gradient(175deg, rgba(168,125,87,1) 0%, rgba(223,166,103,1) 100%);
+        background: -webkit-linear-gradient(175deg, rgba(168,125,87,1) 0%, rgba(223,166,103,1) 100%);
+        background: linear-gradient(175deg, rgba(168,125,87,1) 0%, rgba(223,166,103,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a87d57",endColorstr="#dfa667",GradientType=1);
+    }
+
+    .reward-item-count {
+        margin-left: -10px;
+        border: 1px #ccc solid;
+        z-index: -1;
+        padding: 5px 20px;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
     .counter .content .count-item span {
         display: block;
         text-align: center;
@@ -425,6 +561,10 @@
         font-weight: 500;
         font-size: 17px;
         letter-spacing: 0.25px;
+    }
+
+    .counter .content .count-item span.item-name {
+        margin-bottom: 50px;
     }
 
     @media (max-width: 991px) {
