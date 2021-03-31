@@ -44,5 +44,6 @@ jobs:
       - run: |
           aws ecr get-login-password | docker login --username AWS --password-stdin ${{secrets.DOCKER_REGISTRY_URL}}
           docker push ${{secrets.DOCKER_IMAGE_NAME}}
-          aws ecs update-service --cluster ${{secrets.AWS_ECS_CLUSTER_NAME}} --service ${{secrets.AWS_ECS_SERVICE_NAME}} --force-new-deployment
+      # Commented due to insufficient capacity to avoid disruptive triggers;
+      # aws ecs update-service --cluster ${{secrets.AWS_ECS_CLUSTER_NAME}} --service ${{secrets.AWS_ECS_SERVICE_NAME}} --force-new-deployment
 
