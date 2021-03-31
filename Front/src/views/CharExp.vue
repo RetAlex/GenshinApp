@@ -48,7 +48,7 @@
             </div>
             <div class="row result">
                 <div class="process">
-                    <button class="main-button" @click="doCalc()"><span>Calculate!</span></button>
+                    <button class="main-button" v-on:click="doCalc()"><span>Calculate!</span></button>
                 </div>
                 <section class="counter">
                     <div class="content">
@@ -96,6 +96,7 @@
 </template>
 
 <script>
+    import Vue from 'vue'
 
     export default {
         name: "CharExp",
@@ -188,7 +189,7 @@
                     }
                 }
 
-                Object.assign(this.rewardItems, drops);
+                Vue.set(this.rewardItems, 0, drops);
             },
             resetDropAmounts(drops) {
                 for (let key in drops) {
