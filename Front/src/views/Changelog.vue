@@ -43,7 +43,8 @@
           return {
             changeLog: [
               {version: "Version 1.0", changes: ["The site was created.", "Initial version of XP farm calculator was added.", "CI/CD process configured for faster and better development cycles.", "Informational pages were filled with current info."], date: '4 Jan 2021', link: 'https://github.com/RetAlex/GenshinApp/pull/11'},
-              {version: "Version 1.1 (Current)", changes: ["Changed the DNS name of the website to make the access esier.", "Changed cloud provider to increase uptime and stability.", "Added WL1-6 experience and mora data and optimized calculations in experience calculator.", "Modified the design and responsiveness of most web pages."], date: '4 Feb 2021', link: 'https://github.com/RetAlex/GenshinApp/pull/21'}
+              {version: "Version 1.1", changes: ["Changed the DNS name of the website to make the access esier.", "Changed cloud provider to increase uptime and stability.", "Added WL1-6 experience and mora data and optimized calculations in experience calculator.", "Modified the design and responsiveness of most web pages."], date: '4 Feb 2021', link: 'https://github.com/RetAlex/GenshinApp/pull/21'},
+              {version: "Version 1.2 (Current)", changes: ["Added the new DROPS feature for exp calculator!", "Now you can calculate the approximate amount of materials gain from the mob farming along with mora and EXP", "Minor bug fixes and UI improvements", "Added loot table for all the hostiles in WL 7, other WLs are coming shortly."], date: '31 March 2021', link: 'https://github.com/RetAlex/GenshinApp/pull/21'}
             ]
           }
         }

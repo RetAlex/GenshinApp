@@ -28,9 +28,9 @@
                                 <h5 class="team-title">RetAlex</h5>
                                 <h6 class="team-subtitle">Main Contact Point</h6>
                                 <ul>
-                                    <li><a href="https://github.com/RetAlex"><i class="fa fa-github"></i><span>RetAlex</span></a>
+                                    <li><a href="https://github.com/RetAlex" target="_blank"><i class="fa fa-github"></i><span>RetAlex</span></a>
                                     </li>
-                                    <li><a href="https://discord.com/users/656622764534530058"><i
+                                    <li><a href="https://discord.com/users/656622764534530058" target="_blank"><i
                                             class="fab fa-discord"></i><span>Oleskii#5426</span></a></li>
                                     <li>[In-game UID: 706886715]</li>
                                 </ul>
@@ -46,15 +46,32 @@
                                 <h5 class="team-title">Julia Podpruhina</h5>
                                 <h6 class="team-subtitle">Contributor</h6>
                                 <ul>
-                                    <li><a href="https://github.com/juliapodpruhina"><i class="fa fa-github"></i><span>Julia Podpruhina</span></a>
+                                    <li><a href="https://github.com/juliapodpruhina" target="_blank"><i class="fa fa-github"></i><span>Julia Podpruhina</span></a>
                                     </li>
-                                    <li><a href="https://discord.com/users/776519843373514784"><i
+                                    <li><a href="https://discord.com/users/776519843373514784" target="_blank"><i
                                             class="fab fa-discord"></i><span>etre_libre#3913</span></a></li>
                                     <li>[In-game UID: 709400234]</li>
                                 </ul>
                             </div>
                         </div>
+                      <div class="col-lg-4 col-md-6 col-sm-6 col-12"
+                           data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                        <div class="team-small-item">
+                          <div class="icon">
+                            <i><img src="../assets/images/team/cake.svg" alt=""></i>
+                          </div>
+                          <h5 class="team-title">Seypy</h5>
+                          <h6 class="team-subtitle">Contributor</h6>
+                          <ul>
+                            <li><a><i class="fa fa-github"></i><span>No github available</span></a>
+                            <li><a href="https://discord.com/users/826856383018172450" target="_blank"><i
+                                class="fab fa-discord"></i><span>seypy#7849</span></a></li>
+                            <li>[In-game UID: 7019755118]</li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
+                  <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
                 </div>
             </div>
         </div>
