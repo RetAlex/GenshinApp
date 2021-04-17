@@ -4,6 +4,7 @@ import git.retalex.GI.models.calculator.CalculateRequest;
 import git.retalex.GI.models.calculator.CalculatedMobDrops;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -24,9 +25,11 @@ public class CalculatorService {
         return result;
     }
 
-    //TODO implement
     public CalculatedMobDrops getDropsForMob(CalculateRequest.Mob mob, int WL){
-        throw new RuntimeException("Feature wasn't implemented yet");
+        var drops = resourceManager.getDropForMob(WL, mob.getId());
+        var items = new HashMap<Integer, Integer>();
+        drops.getItems().forEach(item -> items.put(item.getId(), Math.round(item.getChance()*mob.getAmount())));
+        return new CalculatedMobDrops(mob.getAmount()*drops.getMora(), mob.getAmount()*drops.getExperience(), items);
     }
 
     public void mergeDropResponseIntoFirst(CalculatedMobDrops first, CalculatedMobDrops second){
