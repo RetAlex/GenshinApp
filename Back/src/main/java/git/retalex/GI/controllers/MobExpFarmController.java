@@ -1,9 +1,9 @@
 package git.retalex.GI.controllers;
 
 import git.retalex.GI.utils.exceptions.ResourceNotFoundException;
-import git.retalex.GI.utils.models.DropResponse;
-import git.retalex.GI.utils.models.ItemResponse;
-import git.retalex.GI.utils.models.MobsInformationResponse;
+import git.retalex.GI.models.DropResponse;
+import git.retalex.GI.models.ItemResponse;
+import git.retalex.GI.models.MobsInformationResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.core.io.ClassPathResource;
