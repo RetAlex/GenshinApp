@@ -1,16 +1,15 @@
 package git.retalex.GI.controllers;
 
-import git.retalex.GI.utils.exceptions.ResourceNotFoundException;
+import git.retalex.GI.models.CalculateRequest;
 import git.retalex.GI.models.DropResponse;
 import git.retalex.GI.models.ItemResponse;
 import git.retalex.GI.models.MobsInformationResponse;
+import git.retalex.GI.services.CalculatorService;
+import git.retalex.GI.utils.exceptions.ResourceNotFoundException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
@@ -22,6 +21,12 @@ public class MobExpFarmController {
     private static final String itemsInfoPath = "/game/info/items.json";
     private static final String dropsInfoPrefix = "/game/info/drops/WL";
     private static final String calculatorInfoPrefix = "/game/info/calculator/WL";
+
+    private final CalculatorService calculatorService;
+
+    public MobExpFarmController(CalculatorService calculatorService) {
+        this.calculatorService = calculatorService;
+    }
 
     @ApiOperation(value = "Retrieve the main mobs information", responseContainer = "List", response = MobsInformationResponse.class)
     @GetMapping(path = "/mobs", produces = "application/json")
@@ -61,5 +66,11 @@ public class MobExpFarmController {
         }catch (IOException e){
             throw new ResourceNotFoundException();
         }
+    }
+
+    @ApiOperation(value = "Calculate mora/exp and drops from the list of monsters in request", response = DropResponse.class)
+    @PostMapping(path = "calculate")
+    public DropResponse dropResponse(@RequestBody CalculateRequest request){
+        return calculatorService.getDropsForMobs(request.getMobs());
     }
 }
