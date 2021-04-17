@@ -1,9 +1,11 @@
 package git.retalex.GI.controllers;
 
 import git.retalex.GI.models.calculator.CalculateRequest;
+import git.retalex.GI.models.calculator.CalculatedDropResponse;
 import git.retalex.GI.models.calculator.DropResponse;
 import git.retalex.GI.models.ItemResponse;
 import git.retalex.GI.models.MobsInformationResponse;
+import git.retalex.GI.models.calculator.DroppedItem;
 import git.retalex.GI.services.CalculatorService;
 import git.retalex.GI.utils.exceptions.ResourceNotFoundException;
 import io.swagger.annotations.Api;
@@ -12,6 +14,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.stream.Collectors;
 
 @Api(tags="MobExpCalculator")
 @RestController
@@ -69,10 +72,11 @@ public class MobExpFarmController {
     }
 
     @ApiOperation(value = "Calculate mora/exp and drops from the list of monsters in request", response = DropResponse.class)
-    @PostMapping(path = "calculate")
-    public DropResponse dropResponse(@RequestBody CalculateRequest request){
+    @PostMapping(path = "/calculate")
+    public CalculatedDropResponse dropResponse(@RequestBody CalculateRequest request){
         var drops = calculatorService.getDropsForMobs(request.getMobs());
         //TODO implement conversion
-        throw new RuntimeException("Not implemented yet");
+        var items = drops.getDropAmounts().entrySet().stream().map(DroppedItem::fromEntry).collect(Collectors.toList());
+        return new CalculatedDropResponse(drops.getMora(), drops.getExperience(), items);
     }
 }
