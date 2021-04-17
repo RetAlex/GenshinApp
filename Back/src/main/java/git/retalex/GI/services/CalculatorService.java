@@ -9,17 +9,23 @@ import java.util.Map;
 
 @Service
 public class CalculatorService {
-    public CalculatedMobDrops getDropsForMobs(List<CalculateRequest.Mob> mobs){
+    private final ResourceManager resourceManager;
+
+    public CalculatorService(ResourceManager resourceManager) {
+        this.resourceManager = resourceManager;
+    }
+
+    public CalculatedMobDrops getDropsForMobs(List<CalculateRequest.Mob> mobs, int WL){
         var result = new CalculatedMobDrops();
         for(var mob: mobs){
-            var mobDrop = getDropsForMob(mob);
+            var mobDrop = getDropsForMob(mob, WL);
             mergeDropResponseIntoFirst(result, mobDrop);
         }
         return result;
     }
 
     //TODO implement
-    public CalculatedMobDrops getDropsForMob(CalculateRequest.Mob mob){
+    public CalculatedMobDrops getDropsForMob(CalculateRequest.Mob mob, int WL){
         throw new RuntimeException("Feature wasn't implemented yet");
     }
 

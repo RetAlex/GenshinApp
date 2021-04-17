@@ -9,6 +9,7 @@ import java.util.List;
 @NoArgsConstructor
 public class CalculateRequest {
     private List<Mob> mobs;
+    private int WL;
 
     @Data
     @NoArgsConstructor

@@ -74,7 +74,7 @@ public class MobExpFarmController {
     @ApiOperation(value = "Calculate mora/exp and drops from the list of monsters in request", response = DropResponse.class)
     @PostMapping(path = "/calculate")
     public CalculatedDropResponse dropResponse(@RequestBody CalculateRequest request){
-        var drops = calculatorService.getDropsForMobs(request.getMobs());
+        var drops = calculatorService.getDropsForMobs(request.getMobs(), request.getWL());
         //TODO implement conversion
         var items = drops.getDropAmounts().entrySet().stream().map(DroppedItem::fromEntry).collect(Collectors.toList());
         return new CalculatedDropResponse(drops.getMora(), drops.getExperience(), items);
