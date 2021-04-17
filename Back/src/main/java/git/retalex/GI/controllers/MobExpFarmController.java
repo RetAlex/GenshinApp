@@ -1,7 +1,7 @@
 package git.retalex.GI.controllers;
 
-import git.retalex.GI.models.CalculateRequest;
-import git.retalex.GI.models.DropResponse;
+import git.retalex.GI.models.calculator.CalculateRequest;
+import git.retalex.GI.models.calculator.DropResponse;
 import git.retalex.GI.models.ItemResponse;
 import git.retalex.GI.models.MobsInformationResponse;
 import git.retalex.GI.services.CalculatorService;
@@ -71,6 +71,8 @@ public class MobExpFarmController {
     @ApiOperation(value = "Calculate mora/exp and drops from the list of monsters in request", response = DropResponse.class)
     @PostMapping(path = "calculate")
     public DropResponse dropResponse(@RequestBody CalculateRequest request){
-        return calculatorService.getDropsForMobs(request.getMobs());
+        var drops = calculatorService.getDropsForMobs(request.getMobs());
+        //TODO implement conversion
+        throw new RuntimeException("Not implemented yet");
     }
 }
