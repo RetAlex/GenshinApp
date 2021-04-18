@@ -71,11 +71,10 @@ public class MobExpFarmController {
         }
     }
 
-    @ApiOperation(value = "Calculate mora/exp and drops from the list of monsters in request", response = DropResponse.class)
+    @ApiOperation(value = "Calculate mora/exp and drops from the list of monsters in request", response = CalculatedDropResponse.class)
     @PostMapping(path = "/calculate")
     public CalculatedDropResponse dropResponse(@RequestBody CalculateRequest request){
-        var drops = calculatorService.getDropsForMobs(request.getMobs(), request.getWL());
-        //TODO implement conversion
+        var drops = calculatorService.getDropsForMobs(request.getMobs(), request.getWorldLevel());
         var items = drops.getDropAmounts().entrySet().stream().map(DroppedItem::fromEntry).collect(Collectors.toList());
         return new CalculatedDropResponse(drops.getMora(), drops.getExperience(), items);
     }
