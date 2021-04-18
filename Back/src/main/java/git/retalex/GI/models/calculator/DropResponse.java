@@ -1,4 +1,4 @@
-package git.retalex.GI.utils.models;
+package git.retalex.GI.models.calculator;
 
 import lombok.Data;
 
