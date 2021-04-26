@@ -10,6 +10,7 @@
                         <ul class="nav" :style="{display: mobileMenu ? 'block' : 'none'}">
                             <li><a><router-link to="/">Home</router-link></a></li>
                             <li><a><router-link to="/calc">Calculator</router-link></a></li>
+                            <li><a><router-link to="/routes">Farming Routes</router-link></a></li>
                             <li><a><router-link to="/changelog">Changelog</router-link></a></li>
                             <li><a><router-link to="/about-us">About Us</router-link></a></li>
                         </ul>
