@@ -43,7 +43,8 @@
           return {
             changeLog: [
               {version: "Version 1.0", changes: ["The site was created.", "Initial version of XP farm calculator was added.", "CI/CD process configured for faster and better development cycles.", "Informational pages were filled with current info."], date: '4 Jan 2021', link: 'https://github.com/RetAlex/GenshinApp/pull/11'},
-              {version: "Version 1.1 (Current)", changes: ["Changed the DNS name of the website to make the access esier.", "Changed cloud provider to increase uptime and stability.", "Added WL1-6 experience and mora data and optimized calculations in experience calculator.", "Modified the design and responsiveness of most web pages."], date: '4 Feb 2021', link: 'https://github.com/RetAlex/GenshinApp/pull/21'}
+              {version: "Version 1.1 (Current)", changes: ["Changed the DNS name of the website to make the access esier.", "Changed cloud provider to increase uptime and stability.", "Added WL1-6 experience and mora data and optimized calculations in experience calculator.", "Modified the design and responsiveness of most web pages."], date: '4 Feb 2021', link: 'https://github.com/RetAlex/GenshinApp/pull/21'},
+              {version: "Version 1.2 (BETA)", changes: ["Added map feature with mock farm routes", "Moved experience calculation to backend for better reuse", "Bugfixes and optimisations", "Added automated tests for better QA"], date: '29 Apr 2021', link: 'https://github.com/RetAlex/GenshinApp/pull/30'}
             ]
           }
         }
