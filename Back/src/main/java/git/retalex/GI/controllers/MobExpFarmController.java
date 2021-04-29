@@ -1,18 +1,20 @@
 package git.retalex.GI.controllers;
 
+import git.retalex.GI.models.calculator.CalculateRequest;
+import git.retalex.GI.models.calculator.CalculatedDropResponse;
+import git.retalex.GI.models.calculator.DropResponse;
+import git.retalex.GI.models.ItemResponse;
+import git.retalex.GI.models.MobsInformationResponse;
+import git.retalex.GI.models.calculator.DroppedItem;
+import git.retalex.GI.services.CalculatorService;
 import git.retalex.GI.utils.exceptions.ResourceNotFoundException;
-import git.retalex.GI.utils.models.DropResponse;
-import git.retalex.GI.utils.models.ItemResponse;
-import git.retalex.GI.utils.models.MobsInformationResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.stream.Collectors;
 
 @Api(tags="MobExpCalculator")
 @RestController
@@ -22,6 +24,12 @@ public class MobExpFarmController {
     private static final String itemsInfoPath = "/game/info/items.json";
     private static final String dropsInfoPrefix = "/game/info/drops/WL";
     private static final String calculatorInfoPrefix = "/game/info/calculator/WL";
+
+    private final CalculatorService calculatorService;
+
+    public MobExpFarmController(CalculatorService calculatorService) {
+        this.calculatorService = calculatorService;
+    }
 
     @ApiOperation(value = "Retrieve the main mobs information", responseContainer = "List", response = MobsInformationResponse.class)
     @GetMapping(path = "/mobs", produces = "application/json")
@@ -61,5 +69,13 @@ public class MobExpFarmController {
         }catch (IOException e){
             throw new ResourceNotFoundException();
         }
+    }
+
+    @ApiOperation(value = "Calculate mora/exp and drops from the list of monsters in request", response = CalculatedDropResponse.class)
+    @PostMapping(path = "/calculate")
+    public CalculatedDropResponse dropResponse(@RequestBody CalculateRequest request){
+        var drops = calculatorService.getDropsForMobs(request.getMobs(), request.getWorldLevel());
+        var items = drops.getDropAmounts().entrySet().stream().map(DroppedItem::fromEntry).collect(Collectors.toList());
+        return new CalculatedDropResponse(drops.getMora(), drops.getExperience(), items);
     }
 }

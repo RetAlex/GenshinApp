@@ -61,13 +61,13 @@
                             </div>
                             <div class="col-md-4 col-sm-12">
                                 <div class="count-item decoration-top">
-                                    <div v-if="Object.keys(rewardItems).length === 0">
+                                    <div v-if="Object.keys(rewardItemsDisplayed).length === 0">
                                         <strong>0</strong>
                                         <span>Items</span>
                                     </div>
-                                    <div v-if="Object.keys(rewardItems).length > 0">
+                                    <div v-if="Object.keys(rewardItemsDisplayed).length > 0">
                                         <div class="reward-items">
-                                            <div v-for="item in rewardItems" :key="item.id">
+                                            <div v-for="item in rewardItemsDisplayed" :key="item.id">
                                                 <div class="reward-item" v-if="item && item.amount > 0">
                                                     <b-tooltip :class="'rarity-' + item.rarity" :label="item.name" position="is-bottom">
                                                         <img class="reward-item-image" :src="apiLink + item.image"
@@ -112,6 +112,7 @@
                 mobAmounts: {},
                 results: {experience: 0, mora: 0},
                 rewardItems: {},
+                rewardItemsDisplayed: {},
                 apiLink: process.env.VUE_APP_API
             }
         },
@@ -176,6 +177,7 @@
                     }
                 }
                 drops = this.rewardItems;
+                this.rewardItemsDisplayed = Object.assign({}, this.rewardItems)
 
                 this.resetDropAmounts(drops);
 
@@ -189,7 +191,7 @@
                     }
                 }
 
-                Vue.set(this.rewardItems, 0, drops);
+                Vue.set(this.rewardItemsDisplayed, 0, drops);
             },
             resetDropAmounts(drops) {
                 for (let key in drops) {
