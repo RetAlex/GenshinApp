@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Yaoguang shore",
+    "mobs": [
+      {
+        "id": 6,
+        "amount": 1
+      },
+      {
+        "id": 1,
+        "amount": 1
+      },
+      {
+        "id": 9,
+        "amount": 3
+      },
+      {
+        "id": 10,
+        "amount": 4
+      },
+      {
+        "id": 4,
+        "amount": 1
+      },
+      {
+        "id": 15,
+        "amount": 1
+      },
+      {
+        "id": 3,
+        "amount": 1
+      },
+      {
+        "id": 13,
+        "amount": 4
+      },
+      {
+        "id": 2,
+        "amount": 1
+      },
+      {
+        "id": 7,
+        "amount": 1
+      }
+    ],
+    "points": [
+      {
+        "name": "Hilichurl Chieftain", "lng": 310.5, "lat": 135, "mobId": 6
+      },
+      {
+        "name": "Ruin Guard", "lng": 320, "lat": 117, "mobId": 1
+      },
+      {
+        "name": "Small Hilichurl Camp", "lng": 309.06, "lat": 96.5, "mobId": 9
+      },
+      {
+        "name": "Fatui Cicin Mage", "lng": 295.5, "lat": 74.03, "mobId": 4
+      },
+      {
+        "name": "Cryo Whopperflower", "lng": 264.98, "lat": 59.82, "mobId": 15
+      },
+      {
+        "name": "Fatui Pyro Agent", "lng": 264.49, "lat": 87.18, "mobId": 3
+      },
+      {
+        "name": "Slime gang", "lng": 235.45, "lat": 65.23, "mobId": 13
+      },
+      {
+        "name": "Ruin hunter", "lng": 211.51, "lat": 55.81, "mobId": 2
+      },
+      {
+        "name": "Abyss mage", "lng": 224.60, "lat": 96.57, "mobId": 7
+      }
+    ],
+    "line": {
+      "latlngs": [[310.5, 135], [320, 117], [309.06, 96.5], [295.5, 96.5], [264.98, 59.82], [264.49, 87.18], [235.45, 65.23], [211.51, 55.81], [224.60, 96.57]],
+      "color": "white",
+      "weight": 2
+    },
+    "show": false
+  }
+]
