@@ -41,10 +41,10 @@
 <style scoped>
     .header-area {
         position: relative;
+        z-index: 10000;
         top: 30px;
         left: 0px;
         right: 0px;
-        z-index: 100;
         height: 100px;
         -webkit-transition: all 0.3s ease 0s;
         -moz-transition: all 0.3s ease 0s;
