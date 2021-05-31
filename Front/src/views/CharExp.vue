@@ -102,7 +102,7 @@
         name: "CharExp",
         data: function () {
             return {
-                currentWL: localStorage.wl || 7,
+                currentWL: localStorage.wl,
                 experienceTable: {},
                 dropsTable: {},
                 unfilteredMobs: [],
