@@ -28,7 +28,7 @@
                                   :lat-lng="teleport" :icon="icons[teleport.type]"></l-marker>
                         <l-layer-group v-for="route in routes" :key="route.name" :visible="route.show">
                             <l-marker v-for="point in route.points" :key="point.name"
-                                      :lat-lng="point" :icon="pointIcons[point.type]"></l-marker>
+                                      :lat-lng="point" :icon="mobIcons[point.mobId].point"></l-marker>
                             <l-polyline :lat-lngs="route.line.latlngs" :color="route.line.color" :weight="route.line.weight"
                                         :className="'path'"></l-polyline>
                         </l-layer-group>
@@ -41,27 +41,41 @@
                         <h3 class="route-title">{{route.name}}</h3>
                     </div>
                     <div class="route-body">
-                        <div class="price-wrapper">
-                            <img src="https://genshin-application-ci.herokuapp.com/game/images/RuinGuard.jpg"
-                                 alt="Ruin Guard" class="monster-image">
-                            <img src="https://genshin-application-ci.herokuapp.com/game/images/RuinGuard.jpg"
-                                 alt="Ruin Guard" class="monster-image">
+                        <div class="monsters-wrapper">
+                            <span class="monster" v-for="mob in route.mobs" :key="mob.id">
+                                <img :src="mobIcons[mob.id].image" class="monster-image">
+                                <span class="monster-amount">{{mob.amount}}</span>
+                            </span>
                         </div>
-                        <b-collapse class="list" :open="false" position="is-bottom" animation="slide" aria-id="contentIdForA11y1">
+                        <b-collapse class="list" :open="false" @open="getRouteDrop(route)" position="is-bottom" animation="slide" aria-id="contentIdForA11y1">
                             <template #trigger="props">
                                 <a aria-controls="contentIdForA11y1">
                                     <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon>
                                     {{ !props.open ? 'Show estimated drop' : 'Hide estimated drop' }}
                                 </a>
                             </template>
-                            <div class="drop-info row">
-                                <div class="drop-info-item col-md-6">
-                                    <img class="drop-icon" src="../assets/images/icons/mora.png"/>
-                                    <span>x{{route.drop.mora}}</span>
+                            <div class="drop-info-wrapper">
+                                <b-loading :is-full-page="false" :active="!route.drop"></b-loading>
+                                <div class="drop-info row" v-if="route.drop">
+                                    <div class="drop-info-item col-md-6">
+                                        <img class="drop-icon" src="../assets/images/icons/mora.png"/>
+                                        <span>x{{route.drop.totalMora}}</span>
+                                    </div>
+                                    <div class="drop-info-item col-md-6">
+                                        <img class="drop-icon" src="../assets/images/icons/char_exp.png"/>
+                                        <span>x{{route.drop.totalExperience}}</span>
+                                    </div>
                                 </div>
-                                <div class="drop-info-item col-md-6">
-                                    <img class="drop-icon" src="../assets/images/icons/char_exp.png"/>
-                                    <span>x{{route.drop.exp}}</span>
+
+                                <div class="drop-info" v-if="route.drop">
+                                    <div v-for="item in route.drop.items" :key="item.itemId" class="drop-info-item">
+                                        <div v-if="item && item.amount > 0">
+                                            <span :class="'rarity-' + itemIcons[item.itemId]['rarity']">
+                                                <img class="drop-icon" :alt="itemIcons[item.itemId]['name']" :src="itemIcons[item.itemId]['image']"/>
+                                            </span>
+                                            <span>x{{item.amount}}</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </b-collapse>
@@ -80,7 +94,7 @@
     import {CRS} from "leaflet";
     import {LMap, LImageOverlay, LPolyline, LLayerGroup} from 'vue2-leaflet';
     import {teleportIcons, teleports} from "@/assets/constants/teleport-data";
-    import {pointIcons, routes} from "@/assets/constants/routes-data";
+    import L from "leaflet";
 
     export default {
         name: "RouteMap",
@@ -92,6 +106,7 @@
         },
         data() {
             return {
+                apiLink: process.env.VUE_APP_API,
                 url: "http://genshin-application-ci.herokuapp.com/game/images/maps/map_1.png",
                 bounds: [[-500, -500], [1000, 1000]],
                 maxBounds: [[-500, -500], [1000, 1000]],
@@ -100,19 +115,65 @@
                 crs: CRS.Simple,
                 icons: teleportIcons,
                 teleports: teleports,
-                pointIcons: pointIcons,
                 teleportsVisible: true,
-                routes: routes
+                routes: [],
+                mobIcons: {},
+                itemIcons: {}
             };
         },
         methods: {
             addMarker(event) {
                 console.log(event.latlng)
                 //this.markers.push(event.latlng);
+            },
+            async getMobs() {
+                const res = await fetch(this.apiLink + "/exp-calc/mobs");
+                let mobs = await res.json();
+                for (let key in mobs) {
+                    let item = mobs[key];
+                    this.mobIcons[item.id] = {
+                        image: this.apiLink + item.image,
+                        point: L.icon({
+                            iconUrl: this.apiLink + item.image,
+                            iconSize: [26, 26],
+                            iconAnchor: [13, 13],
+                            className: 'point-icon'
+                        })
+                    };
+                }
+            },
+            async getItems() {
+                const res = await fetch(this.apiLink + "/exp-calc/items");
+                let items = await res.json();
+                for (let key in items) {
+                    let item = items[key];
+                    item.image = this.apiLink + item.image;
+                    this.$set(this.itemIcons, item.id, item);
+                }
+            },
+            async getRoutes() {
+                const res = await fetch(this.apiLink + "/game/routes/mainRoutes.json");
+                this.routes = await res.json();
+            },
+            async getRouteDrop(route) {
+                if (route.drop) return;
+                const requestOptions = {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({mobs: route.mobs, worldLevel: localStorage.wl})
+                };
+                const res = await fetch(this.apiLink + "/exp-calc/calculate", requestOptions);
+                this.$set(route, 'drop', await res.json());
+                console.log(route)
             }
         },
         mounted() {
             this.$refs.map.mapObject.setView([70, 120], 1);
+        },
+        async created() {
+            await this.getMobs();
+            await this.getItems();
+            await this.getRoutes();
         }
     }
 </script>
@@ -125,6 +186,13 @@
 
     .collapse:not(.show) {
         display: block;
+    }
+
+    .b-tooltip.is-primary .tooltip-content {
+        z-index: 10000;
+        padding: 3px 5px;
+        font-size: 9px;
+        background: #5baaf6;
     }
 
     .map-wrap {
@@ -170,7 +238,7 @@
         color: #1e1e1e;
     }
 
-    .route-item.active .route-body .price-wrapper {
+    .route-item.active .route-body .monsters-wrapper {
         background-color: #ff589e;
     }
 
@@ -203,11 +271,31 @@
         margin-left: 5px;
     }
 
-    .route-item .route-body .price-wrapper {
+    .route-item .route-body .monsters-wrapper {
         text-align: center;
         width: 80%;
         margin: auto;
         margin-top: 5px;
+    }
+
+    .route-item .route-body .monsters-wrapper .monster {
+        position: relative;
+    }
+
+    .route-item .route-body .monsters-wrapper .monster-amount {
+        color: white;
+        background: rgb(91, 170, 246);
+        border-radius: 50%;
+        font-size: 10px;
+        font-weight: bold;
+        width: 15px;
+        display: flex;
+        height: 15px;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: -5px;
+        right: -5px;
     }
 
     .route-item .route-body .list a {
@@ -227,9 +315,22 @@
         color: #5baaf6;
     }
 
+    .route-item .route-body .list .drop-info-wrapper {
+        position: relative;
+        min-height: 100px;
+    }
+
     .route-item .route-body .list .drop-info {
         font-size: 13px;
         padding: 10px 20px;
+        position: relative;
+    }
+
+    .route-item .route-body .list .drop-info:nth-child(2) {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
     }
 
     .route-item .route-body .list .drop-info .drop-info-item {
@@ -240,7 +341,8 @@
 
     .route-item .route-body .list .drop-info .drop-info-item .drop-icon {
         width: 22px;
-        margin: 0 5px;
+        margin: 2px 5px;
+        border-radius: 50%;
     }
 
     .route-item .route-body .list {
