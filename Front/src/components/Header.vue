@@ -34,6 +34,9 @@
             toggle() {
                 this.mobileMenu = !this.mobileMenu
             }
+        },
+        mounted() {
+            if (!localStorage.wl) localStorage.wl = 7;
         }
     }
 </script>
