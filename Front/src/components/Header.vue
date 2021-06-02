@@ -10,6 +10,7 @@
                         <ul class="nav" :style="{display: mobileMenu ? 'block' : 'none'}">
                             <li><a><router-link to="/">Home</router-link></a></li>
                             <li><a><router-link to="/calc">Calculator</router-link></a></li>
+                            <li><a><router-link to="/routes">Farming Routes</router-link></a></li>
                             <li><a><router-link to="/changelog">Changelog</router-link></a></li>
                             <li><a><router-link to="/about-us">About Us</router-link></a></li>
                         </ul>
@@ -33,6 +34,9 @@
             toggle() {
                 this.mobileMenu = !this.mobileMenu
             }
+        },
+        mounted() {
+            if (!localStorage.wl) localStorage.wl = 7;
         }
     }
 </script>
@@ -40,10 +44,10 @@
 <style scoped>
     .header-area {
         position: relative;
+        z-index: 10000;
         top: 30px;
         left: 0px;
         right: 0px;
-        z-index: 100;
         height: 100px;
         -webkit-transition: all 0.3s ease 0s;
         -moz-transition: all 0.3s ease 0s;

@@ -102,7 +102,7 @@
         name: "CharExp",
         data: function () {
             return {
-                currentWL: 7,
+                currentWL: localStorage.wl,
                 experienceTable: {},
                 dropsTable: {},
                 unfilteredMobs: [],
@@ -200,6 +200,7 @@
             },
             changeWL(wl) {
                 this.currentWL = wl;
+                localStorage.wl = wl;
             }
         }
     }
@@ -392,11 +393,16 @@
     }
 
     .b-tooltip.is-primary .tooltip-content {
+        z-index: 10000;
         background: #5baaf6;
     }
 
     .b-tooltip.is-bottom.is-primary .tooltip-content::before {
         border-bottom-color: #5baaf6;
+    }
+
+    .b-tooltip.is-top.is-primary .tooltip-content::before {
+        border-top-color: #5baaf6;
     }
 
     .counter {
@@ -503,46 +509,6 @@
         background-size: contain;
         height: 40px;
         width: 40px;
-    }
-
-    .rarity-1 .reward-item-image {
-        background: rgb(133,134,138);
-        background: -moz-linear-gradient(175deg, rgba(133,134,138,1) 0%, rgba(176,174,172,1) 100%);
-        background: -webkit-linear-gradient(175deg, rgba(133,134,138,1) 0%, rgba(176,174,172,1) 100%);
-        background: linear-gradient(175deg, rgba(133,134,138,1) 0%, rgba(176,174,172,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#85868a",endColorstr="#b0aeac",GradientType=1);
-    }
-
-    .rarity-2 .reward-item-image {
-        background: rgb(111,137,134);
-        background: -moz-linear-gradient(175deg, rgba(111,137,134,1) 0%, rgba(126,185,157,1) 100%);
-        background: -webkit-linear-gradient(175deg, rgba(111,137,134,1) 0%, rgba(126,185,157,1) 100%);
-        background: linear-gradient(175deg, rgba(111,137,134,1) 0%, rgba(126,185,157,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6f8986",endColorstr="#7eb99d",GradientType=1);
-    }
-
-    .rarity-3 .reward-item-image {
-        background: rgb(124,138,167);
-        background: -moz-linear-gradient(175deg, rgba(124,138,167,1) 0%, rgba(127,184,215,1) 100%);
-        background: -webkit-linear-gradient(175deg, rgba(124,138,167,1) 0%, rgba(127,184,215,1) 100%);
-        background: linear-gradient(175deg, rgba(124,138,167,1) 0%, rgba(127,184,215,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7c8aa7",endColorstr="#7fb8d7",GradientType=1);
-    }
-
-    .rarity-4 .reward-item-image {
-        background: rgb(123,117,161);
-        background: -moz-linear-gradient(175deg, rgba(123,117,161,1) 0%, rgba(167,142,209,1) 100%);
-        background: -webkit-linear-gradient(175deg, rgba(123,117,161,1) 0%, rgba(167,142,209,1) 100%);
-        background: linear-gradient(175deg, rgba(123,117,161,1) 0%, rgba(167,142,209,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7b75a1",endColorstr="#a78ed1",GradientType=1);
-    }
-
-    .rarity-5 .reward-item-image {
-        background: rgb(168,125,87);
-        background: -moz-linear-gradient(175deg, rgba(168,125,87,1) 0%, rgba(223,166,103,1) 100%);
-        background: -webkit-linear-gradient(175deg, rgba(168,125,87,1) 0%, rgba(223,166,103,1) 100%);
-        background: linear-gradient(175deg, rgba(168,125,87,1) 0%, rgba(223,166,103,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a87d57",endColorstr="#dfa667",GradientType=1);
     }
 
     .reward-item-count {

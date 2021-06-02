@@ -1,0 +1,157 @@
+[
+  {
+    "name": "Yaoguang shore",
+    "mobs": [
+      {
+        "id": 6,
+        "amount": 1
+      },
+      {
+        "id": 1,
+        "amount": 1
+      },
+      {
+        "id": 9,
+        "amount": 3
+      },
+      {
+        "id": 10,
+        "amount": 4
+      },
+      {
+        "id": 4,
+        "amount": 1
+      },
+      {
+        "id": 15,
+        "amount": 1
+      },
+      {
+        "id": 3,
+        "amount": 1
+      },
+      {
+        "id": 13,
+        "amount": 4
+      },
+      {
+        "id": 2,
+        "amount": 1
+      },
+      {
+        "id": 7,
+        "amount": 1
+      }
+    ],
+    "points": [
+      {
+        "name": "Hilichurl Chieftain", "lat": 135, "lng": 310.5, "mobId": 6
+      },
+      {
+        "name": "Ruin Guard", "lat": 117, "lng": 320, "mobId": 1
+      },
+      {
+        "name": "Small Hilichurl Camp", "lat": 96.5, "lng": 309.06, "mobId": 9
+      },
+      {
+        "name": "Fatui Cicin Mage", "lat": 74.03, "lng": 295.5, "mobId": 4
+      },
+      {
+        "name": "Cryo Whopperflower", "lat": 59.82, "lng": 264.98, "mobId": 15
+      },
+      {
+        "name": "Fatui Pyro Agent", "lat": 87.18, "lng": 264.49, "mobId": 3
+      },
+      {
+        "name": "Slime gang", "lat": 65.23, "lng": 235.45, "mobId": 13
+      },
+      {
+        "name": "Ruin hunter", "lat": 55.81, "lng": 211.51, "mobId": 2
+      },
+      {
+        "name": "Abyss mage", "lat": 96.57, "lng": 224.60, "mobId": 7
+      }
+    ],
+    "line": {
+      "latlngs": [[135, 310.5], [117, 320], [96.5, 309.06], [96.5, 295.5], [74.03, 295.5], [59.82, 264.98], [87.18, 264.49], [65.23, 235.45], [55.81, 211.51], [96.57, 224.60]],
+      "color": "white",
+      "weight": 2
+    },
+    "show": false
+  },
+  {
+    "name": "Robots&Fatuis",
+    "mobs": [
+      {
+        "id": 8,
+        "amount": 13
+      },
+      {
+        "id": 1,
+        "amount": 4
+      },
+      {
+        "id": 2,
+        "amount": 1
+      },
+      {
+        "id": 4,
+        "amount": 1
+      },
+      {
+        "id": 3,
+        "amount": 2
+      }
+    ],
+    "points": [
+      {
+        "name": "Ruin Guard 1", "lat": -133.75, "lng": -158.88, "mobId": 1
+      },
+      {
+        "name": "Ruin Guard 2", "lat": -145.76, "lng": -178.39, "mobId": 1
+      },
+      {
+        "name": "Ruin hunter", "lat": -135.25, "lng": -184.89, "mobId": 2
+      },
+      {
+        "name": "Ruin Guard 3", "lat": -126.24, "lng": -188.39, "mobId": 1
+      },
+      {
+        "name": "Fatui Cicin Mage", "lat": -107.76, "lng": -206.49, "mobId": 4
+      },
+      {
+        "name": "Fatui Pyro Agent 1", "lat": -92.24, "lng": -205.99, "mobId": 3
+      },
+      {
+        "name": "Fatui Bois", "lat": -92.74, "lng": -177.98, "mobId": 8
+      },
+      {
+        "name": "Lone Fatui Boi", "lat": -115.77, "lng": -169.48, "mobId": 8
+      },
+      {
+        "name": "Another Fatui Gang", "lat": -119.77, "lng": -151.97, "mobId": 8
+      },
+      {
+        "name": "More Fatui Bois", "lat": -113.27, "lng": -134.47, "mobId": 8
+      },
+      {
+        "name": "Even more Fatui Bois", "lat": -116.27, "lng": -105.45, "mobId": 8
+      },
+      {
+        "name": "Fatui roofers (on top of the ruins)", "lat": -98.75, "lng": -93.45, "mobId": 8
+      },
+      {
+        "name": "Fatui Pyro Agent 2", "lat": -85.24, "lng": -107.96, "mobId": 3
+      },
+      {
+        "name": "Ruin Guard 4", "lat": -97.75, "lng": -101.95, "mobId": 1
+      }
+    ],
+    "line": {
+      "latlngs": [[-133.75, -158.88], [-145.76, -178.39], [-135.25, -184.89], [-126.24, -188.39], [-107.76, -206.49], [-92.24, -205.99], [-92.74, -177.98], [-115.77, -169.48], [-119.77, -151.97], [-113.27, -134.47], [-116.27, -105.45], [-98.75, -93.45], [-85.24, -107.96], [-97.75, -101.95]],
+      "color": "white",
+      "weight": 2
+    },
+    "show": false
+  }
+]
