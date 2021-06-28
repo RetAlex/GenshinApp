@@ -107,8 +107,8 @@
             return {
                 apiLink: process.env.VUE_APP_API,
                 url: "https://genshin-application-ci.herokuapp.com/tms/1.0.0/teyvat@png/{z}/{x}/{y}.png",
-                bounds: latLngBounds([[0, 0], [-2048, 2048]]),
-                maxBounds: latLngBounds([[0, 0], [-2048, 2048]]),
+                bounds: latLngBounds([[0, 0], [-1024, 1024]]),
+                maxBounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 minZoom: 0,
                 maxZoom: 3,
                 crs: CRS.Simple,
