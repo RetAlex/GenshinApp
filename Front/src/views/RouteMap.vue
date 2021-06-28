@@ -109,7 +109,7 @@
                 url: "https://genshin-application-ci.herokuapp.com/tms/1.0.0/teyvat@png/{z}/{x}/{y}.png",
                 bounds: [[-500, -500], [1000, 1000]],
                 maxBounds: [[-1000, -1000], [1000, 1000]],
-                minZoom: 0.2,
+                minZoom: 1,
                 maxZoom: 3,
                 crs: CRS.Simple,
                 icons: teleportIcons,
