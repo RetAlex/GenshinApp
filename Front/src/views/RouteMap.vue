@@ -23,7 +23,7 @@
                 <div class="map-wrap">
                     <l-map ref="map" :min-zoom="minZoom" :max-zoom="maxZoom" :max-bounds="maxBounds" :crs="crs"
                            @click="addMarker">
-                        <l-image-overlay :url="url" :bounds="bounds"/>
+                        <l-tile-layer :url="url"/>
                         <l-marker :visible="teleportsVisible" v-for="teleport in teleports" :key="teleport.name"
                                   :lat-lng="teleport" :icon="icons[teleport.type]"></l-marker>
                         <l-layer-group v-for="route in routes" :key="route.name" :visible="route.show">
@@ -92,7 +92,7 @@
 
 <script>
     import {CRS} from "leaflet";
-    import {LMap, LImageOverlay, LPolyline, LLayerGroup} from 'vue2-leaflet';
+    import {LMap, LTileLayer, LPolyline, LLayerGroup} from 'vue2-leaflet';
     import {teleportIcons, teleports} from "@/assets/constants/teleport-data";
     import L from "leaflet";
 
@@ -100,16 +100,16 @@
         name: "RouteMap",
         components: {
             LMap,
-            LImageOverlay,
+            LTileLayer,
             LPolyline,
             LLayerGroup
         },
         data() {
             return {
                 apiLink: process.env.VUE_APP_API,
-                url: "http://genshin-application-ci.herokuapp.com/game/images/maps/map_1.png",
+                url: "https://genshin-application-ci.herokuapp.com/tms/1.0.0/teyvat@png/{z}/{x}/{y}.png",
                 bounds: [[-500, -500], [1000, 1000]],
-                maxBounds: [[-500, -500], [1000, 1000]],
+                maxBounds: [[-1000, -1000], [1000, 1000]],
                 minZoom: 0.2,
                 maxZoom: 3,
                 crs: CRS.Simple,
