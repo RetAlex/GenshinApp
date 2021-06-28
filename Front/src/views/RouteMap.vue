@@ -90,7 +90,7 @@
 </template>
 
 <script>
-    import {CRS} from "leaflet";
+    import {CRS, latLngBounds} from "leaflet";
     import {LMap, LTileLayer, LPolyline, LLayerGroup} from 'vue2-leaflet';
     import {teleportIcons, teleports} from "@/assets/constants/teleport-data";
     import L from "leaflet";
@@ -107,8 +107,8 @@
             return {
                 apiLink: process.env.VUE_APP_API,
                 url: "https://genshin-application-ci.herokuapp.com/tms/1.0.0/teyvat@png/{z}/{x}/{y}.png",
-                bounds: [[-500, -500], [1000, 1000]],
-                maxBounds: [[-1000, -1000], [1000, 1000]],
+                bounds: latLngBounds([[0, 0], [-2048, 2048]]),
+                maxBounds: latLngBounds([[0, 0], [-2048, 2048]]),
                 minZoom: 0,
                 maxZoom: 3,
                 crs: CRS.Simple,
