@@ -8,10 +8,14 @@ import java.util.Map;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class DroppedItem {
     private int amount;
     private int itemId;
+
+    public DroppedItem(int itemId, int amount) {
+        this.amount = amount;
+        this.itemId = itemId;
+    }
 
     public static DroppedItem fromEntry(Map.Entry<Integer, Integer> entry){
         return new DroppedItem(entry.getKey(), entry.getValue());

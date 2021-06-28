@@ -39,6 +39,10 @@ public class WebConfig implements WebMvcConfigurer {
         var gameRegistration = registry.addResourceHandler("/game/**");
         gameRegistration.addResourceLocations("classpath:/game/");
 
+
+        var mapRegistration = registry.addResourceHandler("/tms/1.0.0/teyvat@png/**");
+        mapRegistration.addResourceLocations("classpath:/map/");
+
         registry.addResourceHandler("/favicon.ico")
                 .addResourceLocations("classpath:/assets/");
 

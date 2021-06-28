@@ -36,8 +36,9 @@ public class CalculatorService {
         first.setMora(first.getMora()+second.getMora());
         first.setExperience(first.getExperience()+second.getExperience());
         Map<Integer, Integer> firstDrops = first.getDropAmounts(), secondDrops = second.getDropAmounts();
-        for (var key: secondDrops.keySet()){
-            firstDrops.put(key, firstDrops.getOrDefault(key, 0)+secondDrops.get(key));
+        for (int key: secondDrops.keySet()){
+            int newAmount = firstDrops.getOrDefault(key, 0)+secondDrops.get(key);
+            if(newAmount>0) firstDrops.put(key, newAmount);
         }
     }
 }

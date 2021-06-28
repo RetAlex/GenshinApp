@@ -8,8 +8,7 @@
             </div>
             <div class="offset-lg-3 col-lg-6">
                 <div class="center-text">
-                    <p>This page contains all the latest updates of an application. The updates are posted as soon
-                        as they are available for users.</p>
+                    <p>Welcome on `Farming routes`. This feature allows you to see currently submitted monster farming routes on the map along with the loot they give you. Currently this feature doesn't support custom routes but we are working on it!</p>
                 </div>
             </div>
         </div>
