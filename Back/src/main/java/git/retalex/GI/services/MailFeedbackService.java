@@ -1,18 +1,21 @@
 package git.retalex.GI.services;
 
+import git.retalex.GI.services.interfaces.FeedbackService;
 import git.retalex.GI.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Profile;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FeedbackService {
+@Profile("production")
+public class MailFeedbackService implements FeedbackService {
     @Value("${FEEDBACK_RECIPIENT:}")
     private String feedbackRecipientEmail;
     private final MailSender mailSender;
 
-    public FeedbackService(MailSender mailSender) {
+    public MailFeedbackService(MailSender mailSender) {
         this.mailSender = mailSender;
     }
 
@@ -27,7 +30,7 @@ public class FeedbackService {
             SimpleMailMessage mailMessage = new SimpleMailMessage();
             mailMessage.setSubject("[GI assistant] Feedback suggestion");
             mailMessage.setTo(feedbackRecipientEmail);
-            mailMessage.setText(String.format("Feedback contact email:\n %s\n Feedback message:\n %s", email, message));
+            mailMessage.setText(String.format("Feedback contact email:\n %s\n\n Feedback message:\n %s", email, message));
             mailSender.send(mailMessage);
             return true;
         }catch (Exception e){
