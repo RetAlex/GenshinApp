@@ -315,7 +315,7 @@
 
     a.main-button-slider, button.main-button {
         position: relative;
-        font-size: 20px;
+        font-size: 14px;
         font-weight: bold;
         border-radius: 50px;
         padding: 15px 25px;

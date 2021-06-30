@@ -15,11 +15,11 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <b-field>
-                                        <b-input placeholder="E-mail" v-model="feedback.contactEmail" rounded></b-input>
+                                        <b-input type="email" placeholder="E-mail" v-model="feedback.contactEmail" rounded></b-input>
                                     </b-field>
                                 </div>
                                 <div class="col-lg-12">
-                                    <b-field>
+                                    <b-field class="textarea-field">
                                         <b-input rounded type="textarea" v-model="feedback.feedbackMessage" rows="6" minlength="10" placeholder="Your Message"></b-input>
                                     </b-field>
                                 </div>
@@ -128,6 +128,15 @@
 
     .main-button::before {
         z-index: -1 !important;
+    }
+
+    .help {
+        position: absolute !important;
+        top: 50px !important;
+    }
+
+    .textarea-field .help {
+        top: 170px !important;
     }
 
 </style>
