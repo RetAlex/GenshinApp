@@ -28,7 +28,8 @@
                                 <h5 class="team-title">RetAlex</h5>
                                 <h6 class="team-subtitle">Main Contact Point</h6>
                                 <ul>
-                                    <li><a href="https://github.com/RetAlex" target="_blank"><i class="fa fa-github"></i><span>RetAlex</span></a>
+                                    <li><a href="https://github.com/RetAlex" target="_blank"><i
+                                            class="fa fa-github"></i><span>RetAlex</span></a>
                                     </li>
                                     <li><a href="https://discord.com/users/656622764534530058" target="_blank"><i
                                             class="fab fa-discord"></i><span>Oleskii#5426</span></a></li>
@@ -46,7 +47,8 @@
                                 <h5 class="team-title">Julia Podpruhina</h5>
                                 <h6 class="team-subtitle">Contributor</h6>
                                 <ul>
-                                    <li><a href="https://github.com/juliapodpruhina" target="_blank"><i class="fa fa-github"></i><span>Julia Podpruhina</span></a>
+                                    <li><a href="https://github.com/juliapodpruhina" target="_blank"><i
+                                            class="fa fa-github"></i><span>Julia Podpruhina</span></a>
                                     </li>
                                     <li><a href="https://discord.com/users/776519843373514784" target="_blank"><i
                                             class="fab fa-discord"></i><span>etre_libre#3913</span></a></li>
@@ -54,24 +56,36 @@
                                 </ul>
                             </div>
                         </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6 col-12"
-                           data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
-                        <div class="team-small-item">
-                          <div class="icon">
-                            <i><img src="../assets/images/team/cake.svg" alt=""></i>
-                          </div>
-                          <h5 class="team-title">Seypy</h5>
-                          <h6 class="team-subtitle">Contributor</h6>
-                          <ul>
-                            <li><a><i class="fa fa-github"></i><span>No github available</span></a>
-                            <li><a href="https://discord.com/users/826856383018172450" target="_blank"><i
-                                class="fab fa-discord"></i><span>seypy#7849</span></a></li>
-                            <li>[In-game UID: 7019755118]</li>
-                          </ul>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12"
+                             data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                            <div class="team-small-item">
+                                <div class="icon">
+                                    <i><img src="../assets/images/team/cake.svg" alt=""></i>
+                                </div>
+                                <h5 class="team-title">Seypy</h5>
+                                <h6 class="team-subtitle">Contributor</h6>
+                                <ul>
+                                    <li><a><i class="fa fa-github"></i><span>No github available</span></a>
+                                    <li><a href="https://discord.com/users/826856383018172450" target="_blank"><i
+                                            class="fab fa-discord"></i><span>seypy#7849</span></a></li>
+                                    <li>[In-game UID: 7019755118]</li>
+                                </ul>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+                    <div class="feedback">
+                        <button @click="isFeedbackModalActive = true" class="feedback-button">Send us your
+                            feedback
+                        </button>
+                    </div>
+                    <b-modal v-model="isFeedbackModalActive" has-modal-card trap-focus aria-role="dialog"
+                             aria-label="Feedback" aria-modal>
+                        <template #default="props">
+                            <feedback @close="props.close"></feedback>
+                        </template>
+                    </b-modal>
+                    <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+                            href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
                 </div>
             </div>
         </div>
@@ -80,8 +94,15 @@
 </template>
 
 <script>
+    import Feedback from "@/components/Feedback";
     export default {
-        name: "AboutUs"
+        name: "AboutUs",
+        components: {Feedback},
+        data() {
+            return {
+                isFeedbackModalActive: false
+            }
+        }
     }
 </script>
 
@@ -200,5 +221,24 @@
 
     .team-small-item ul li a span:hover::before {
         border-bottom: rgba(91, 170, 246, 1) 1px dashed;
+    }
+
+    .feedback-button {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 12px;
+        background: rgba(91, 170, 246, 0);
+        border: 1px rgb(91, 170, 246) solid;
+        border-radius: 20px;
+        padding: 3px 15px;
+        color: rgb(91, 170, 246);
+        transition: all 0.3s ease;
+        margin-top: auto;
+    }
+
+    .feedback {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
     }
 </style>
