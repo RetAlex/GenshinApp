@@ -106,7 +106,7 @@
         data() {
             return {
                 apiLink: process.env.VUE_APP_API,
-                url: "https://genshin-application-ci.herokuapp.com/tms/1.0.0/teyvat@png/{z}/{x}/{y}.png",
+                url: this.apiLink + "/tms/1.0.0/teyvat@png/{z}/{x}/{y}.png",
                 bounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 maxBounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 minZoom: 0,
