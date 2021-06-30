@@ -66,7 +66,7 @@
                             <li><a><i class="fa fa-github"></i><span>No github available</span></a>
                             <li><a href="https://discord.com/users/826856383018172450" target="_blank"><i
                                 class="fab fa-discord"></i><span>seypy#7849</span></a></li>
-                            <li>[In-game UID: 7019755118]</li>
+                            <li>[In-game UID: 701975118]</li>
                           </ul>
                         </div>
                       </div>
