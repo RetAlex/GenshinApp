@@ -315,7 +315,7 @@
 
     a.main-button-slider, button.main-button {
         position: relative;
-        font-size: 20px;
+        font-size: 14px;
         font-weight: bold;
         border-radius: 50px;
         padding: 15px 25px;
@@ -425,5 +425,9 @@
         background: -webkit-linear-gradient(175deg, rgba(168,125,87,1) 0%, rgba(223,166,103,1) 100%);
         background: linear-gradient(175deg, rgba(168,125,87,1) 0%, rgba(223,166,103,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a87d57",endColorstr="#dfa667",GradientType=1);
+    }
+
+    .modal-background {
+        background-color: rgba(256, 256, 256, 0.36) !important;
     }
 </style>

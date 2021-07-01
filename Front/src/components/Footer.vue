@@ -4,6 +4,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <ul class="social">
+                        <li><a @click="isFeedbackModalActive = true"><i class="fa fa-envelope"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -14,14 +15,26 @@
                 <div class="col-lg-12">
                     <p class="copyright">Copyright &copy; 2020 Somethingo</p>
                 </div>
+                <b-modal v-model="isFeedbackModalActive" has-modal-card trap-focus aria-role="dialog" aria-label="Feedback" aria-modal>
+                    <template #default="props">
+                        <feedback @close="props.close"></feedback>
+                    </template>
+                </b-modal>
             </div>
         </div>
     </footer>
 </template>
 
 <script>
+    import Feedback from "@/components/Feedback";
     export default {
-        name: "Footer"
+        name: "Footer",
+        components: {Feedback},
+        data() {
+            return {
+                isFeedbackModalActive: false
+            }
+        }
     }
 </script>
 
