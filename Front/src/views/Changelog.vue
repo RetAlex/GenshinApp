@@ -42,6 +42,7 @@
         data(){
           return {
             changeLog: [
+              {version: "Version 1.5 (In development)", changes: [""], date: 'TBD', link: 'TBD'},
               {version: "Version 1.4 (Release, Current)", changes: ["Map performance drastically improved with better management of zoom levels", "Added 2 new routes for more Ruin guards and Treasure hoarders farming", "Added roadmap page", "Added feedback feature on `About us` page, now you can leave feedback to make the site better together!", "Small enhancements to UI/UX"], date: '30 June 2021', link: 'https://github.com/RetAlex/GenshinApp/pull/51'},
               {version: "Version 1.3", changes: ["Farming routes is now available to all users!", "Additional UI/UX enhancements", "Mob calculator now will not display `0` items drops", "Added 2 routes for Liuye", "Tilemap usage is being investigated to enhance loading time, expect the feature in 1.4/1.5"], date: '31 May 2021', link: 'https://github.com/RetAlex/GenshinApp/pull/37'},
               {version: "Version 1.3 (BETA)", changes: ["Added map feature with mock farm routes", "Moved experience calculation to backend for better reuse", "Bugfixes and optimisations", "Added automated tests for better QA", "Added interactive teleports and domains for Mondstadt", "Added animations for farming routes and the mock route for display purposes"], date: '29 Apr 2021', link: 'https://github.com/RetAlex/GenshinApp/pull/30'},
