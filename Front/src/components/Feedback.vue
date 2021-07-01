@@ -5,8 +5,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <h5 class="margin-bottom-30">Talk To Us</h5>
                     <div class="contact-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid</p>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                        <p>If you have any feedback or suggestions - you can reach out to us using this form, so we can make the site better together. Also if you are experiencing issues using web-site, you can use this form to describe us the problem you are facing so we can fix it. Any feedback is appreciated!</p>
+                        <p>Email field is optional if you want us to reach you out to elaborate on the topic.</p>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-6 col-sm-12">

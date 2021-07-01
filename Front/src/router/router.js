@@ -3,11 +3,13 @@ import AboutUs from "@/views/AboutUs";
 import Home from "@/views/Home";
 import CharExp from "@/views/CharExp";
 import RouteMap from "@/views/RouteMap";
+import Roadmap from "@/views/Roadmap";
 
 export const routes = [
     {path: '/', component: Home},
     {path: '/changelog', component: Changelog},
     {path: '/about-us', component: AboutUs},
     {path: '/calc', component: CharExp},
-    {path: '/routes', component: RouteMap}
+    {path: '/routes', component: RouteMap},
+    {path: '/roadmap', component: Roadmap}
 ];
