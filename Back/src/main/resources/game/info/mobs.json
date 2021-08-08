@@ -5,7 +5,7 @@
     "handbookAmount": 6,
     "type": "elite",
     "typeLong": "Elite enemy",
-    "image": "/game/images/RuinGuard.jpg"
+    "image": "/game/images/mobs/RuinGuard.jpg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "handbookAmount": 5,
     "type": "elite",
     "typeLong": "Elite enemy",
-    "image": "/game/images/RuinHunter.jpg"
+    "image": "/game/images/mobs/RuinHunter.jpg"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "handbookAmount": 6,
     "type": "elite",
     "typeLong": "Elite enemy",
-    "image": "/game/images/FatuiAgent.jpg"
+    "image": "/game/images/mobs/FatuiAgent.jpg"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "handbookAmount": 9,
     "type": "elite",
     "typeLong": "Elite enemy",
-    "image": "/game/images/FatuiCicinMage.jpg"
+    "image": "/game/images/mobs/FatuiCicinMage.jpg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "handbookAmount": 10,
     "type": "elite",
     "typeLong": "Elite enemy",
-    "image": "/game/images/GeovishapHatchling.jpg"
+    "image": "/game/images/mobs/GeovishapHatchling.jpg"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "handbookAmount": 1,
     "type": "elite",
     "typeLong": "Elite enemy",
-    "image": "/game/images/HilichurlChieftain.jpg"
+    "image": "/game/images/mobs/HilichurlChieftain.jpg"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "handbookAmount": 13,
     "type": "elite",
     "typeLong": "Elite enemy",
-    "image": "/game/images/AbyssMage.jpg"
+    "image": "/game/images/mobs/AbyssMage.jpg"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "handbookAmount": 15,
     "type": "common",
     "typeLong": "Common enemy",
-    "image": "/game/images/FatuiSkirmisher.jpg"
+    "image": "/game/images/mobs/FatuiSkirmisher.jpg"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "handbookAmount": 32,
     "type": "common",
     "typeLong": "Common enemy",
-    "image": "/game/images/Hilichurl.jpg"
+    "image": "/game/images/mobs/Hilichurl.jpg"
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "handbookAmount": 18,
     "type": "common",
     "typeLong": "Common enemy",
-    "image": "/game/images/HilichurlShooter.jpg"
+    "image": "/game/images/mobs/HilichurlShooter.jpg"
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "handbookAmount": 13,
     "type": "elite",
     "typeLong": "Elite enemy",
-    "image": "/game/images/Mitachurl.jpg"
+    "image": "/game/images/mobs/Mitachurl.jpg"
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "handbookAmount": 13,
     "type": "common",
     "typeLong": "Common enemy",
-    "image": "/game/images/Samachurl.jpg"
+    "image": "/game/images/mobs/Samachurl.jpg"
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@
     "handbookAmount": 41,
     "type": "common",
     "typeLong": "Common enemy",
-    "image": "/game/images/Slime.jpg"
+    "image": "/game/images/mobs/Slime.jpg"
   },
   {
     "id": 14,
@@ -109,7 +109,7 @@
     "handbookAmount": 30,
     "type": "common",
     "typeLong": "Common enemy",
-    "image": "/game/images/TreasureHoarder.jpg"
+    "image": "/game/images/mobs/TreasureHoarder.jpg"
   },
   {
     "id": 15,
@@ -117,6 +117,30 @@
     "handbookAmount": 9,
     "type": "common",
     "typeLong": "Common enemy",
-    "image": "/game/images/Whopperflower.jpg"
+    "image": "/game/images/mobs/Whopperflower.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Fatui: Snezhnayan Maiden",
+    "handbookAmount": 9,
+    "type": "elite",
+    "typeLong": "Elite enemy",
+    "image": "/game/images/mobs/mirror_maiden.jpg.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Ruin Sentinels",
+    "handbookAmount": 9,
+    "type": "elite",
+    "typeLong": "Elite enemy",
+    "image": "/game/images/mobs/ruin_sentient.jpg.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Nobushi",
+    "handbookAmount": 9,
+    "type": "common",
+    "typeLong": "Common enemy",
+    "image": "/game/images/mobs/nobushi.jpg.jpg"
   }
 ]
