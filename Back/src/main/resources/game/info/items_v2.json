@@ -232,5 +232,59 @@
     "name": "Chaos Core",
     "image": "/game/images/items/Item_Chaos_Core.png",
     "rarity": 4
+  },
+  "item40": {
+    "id": 40,
+    "name": "Old Handguard",
+    "image": "/game/images/items/Item_Chaos_Core.png",
+    "rarity": 1
+  },
+  "item41": {
+    "id": 41,
+    "name": "Kageuchi Handguard",
+    "image": "/game/images/items/Item_Chaos_Core.png",
+    "rarity": 2
+  },
+  "item42": {
+    "id": 42,
+    "name": "Famed Handguard",
+    "image": "/game/images/items/Item_Chaos_Core.png",
+    "rarity": 3
+  },
+  "item43": {
+    "id": 43,
+    "name": "Chaos gear",
+    "image": "/game/images/items/Item_Chaos_Core.png",
+    "rarity": 2
+  },
+  "item44": {
+    "id": 44,
+    "name": "Chaos Axis",
+    "image": "/game/images/items/Item_Chaos_Core.png",
+    "rarity": 3
+  },
+  "item45": {
+    "id": 45,
+    "name": "Chaos Oculus",
+    "image": "/game/images/items/Item_Chaos_Core.png",
+    "rarity": 4
+  },
+  "item46": {
+    "id": 46,
+    "name": "Dismal Prism",
+    "image": "/game/images/items/Item_Chaos_Core.png",
+    "rarity": 2
+  },
+  "item47": {
+    "id": 47,
+    "name": "Crystal Prism",
+    "image": "/game/images/items/Item_Chaos_Core.png",
+    "rarity": 3
+  },
+  "item48": {
+    "id": 48,
+    "name": "Polarizing Prism",
+    "image": "/game/images/items/Item_Chaos_Core.png",
+    "rarity": 4
   }
 }
