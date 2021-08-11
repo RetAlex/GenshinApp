@@ -232,5 +232,23 @@
     "name": "Chaos Core",
     "image": "/game/images/items/Item_Chaos_Core.png",
     "rarity": 4
+  },
+  {
+    "id": 46,
+    "name": "Dismal Prism",
+    "image": "/game/images/items/Item_Chaos_Core.png",
+    "rarity": 2
+  },
+  {
+    "id": 47,
+    "name": "Crystal Prism",
+    "image": "/game/images/items/Item_Chaos_Core.png",
+    "rarity": 3
+  },
+  {
+    "id": 48,
+    "name": "Polarizing Prism",
+    "image": "/game/images/items/Item_Chaos_Core.png",
+    "rarity": 4
   }
 ]

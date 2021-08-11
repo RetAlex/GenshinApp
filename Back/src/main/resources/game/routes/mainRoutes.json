@@ -25,10 +25,10 @@
         "name": "1 nobushi 2 TH", "lat": -633.21, "lng": 537.58, "mobId": 18
       },
       {
-        "name": "2 nobushi 2 TH", "lat": -642.28, "lng": 516.39, "mobId": 18
+        "name": "2 nobushi 2 TH v2", "lat": -642.28, "lng": 516.39, "mobId": 18
       },
       {
-        "name": "3 nobushi", "lat": -623.51, "lng": 517.64, "mobId": 18
+        "name": "3 nobushi v2", "lat": -623.51, "lng": 517.64, "mobId": 18
       }
     ],
     "line": {
@@ -54,13 +54,13 @@
         "name": "2 nobushi", "lat": -607.30, "lng": 555.93, "mobId": 18
       },
       {
-        "name": "3 nobushi", "lat": -617.44, "lng": 546.83, "mobId": 18
+        "name": "3 nobushi v2", "lat": -617.44, "lng": 546.83, "mobId": 18
       },
       {
         "name": "4 nobushi", "lat": -633.21, "lng": 537.58, "mobId": 18
       },
       {
-        "name": "4 nobushi", "lat": -642.28, "lng": 516.39, "mobId": 18
+        "name": "4 nobushi v2", "lat": -642.28, "lng": 516.39, "mobId": 18
       }
     ],
     "line": {

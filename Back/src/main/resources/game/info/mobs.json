@@ -125,7 +125,7 @@
     "handbookAmount": 9,
     "type": "elite",
     "typeLong": "Elite enemy",
-    "image": "/game/images/mobs/mirror_maiden.jpg.jpg"
+    "image": "/game/images/mobs/mirror_maiden.jpg"
   },
   {
     "id": 17,
@@ -133,7 +133,7 @@
     "handbookAmount": 9,
     "type": "elite",
     "typeLong": "Elite enemy",
-    "image": "/game/images/mobs/ruin_sentient.jpg.jpg"
+    "image": "/game/images/mobs/ruin_sentient.jpg"
   },
   {
     "id": 18,
@@ -141,6 +141,6 @@
     "handbookAmount": 9,
     "type": "common",
     "typeLong": "Common enemy",
-    "image": "/game/images/mobs/nobushi.jpg.jpg"
+    "image": "/game/images/mobs/nobushi.jpg"
   }
 ]
