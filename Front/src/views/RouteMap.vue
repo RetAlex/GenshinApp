@@ -19,12 +19,13 @@
                 <b-switch v-model="teleportsVisible" type="is-info">Show Teleports</b-switch>
             </b-field>
         </div>
-        <b-tabs type="is-boxed">
-            <b-tab-item v-for="region in regions" :key="region" :label="region">
+        <button v-for="region in regions" :key="region" @click="active = region">{{region}}</button>
+        <div v-for="region in regions" :key="region">
+            <div v-if="region === active">
                 <div class="row map-container">
                     <div class="col-md-9 pr-0">
                         <div class="map-wrap">
-                            <l-map :min-zoom="minZoom" :max-zoom="maxZoom" :max-bounds="maxBounds" :crs="crs"
+                            <l-map :ref="region" :options="{name: region}" :min-zoom="minZoom" :max-zoom="maxZoom" :max-bounds="maxBounds" :crs="crs"
                                    @click="addMarker">
                                 <l-tile-layer :url="getMapUrl(region)"/>
                                 <l-marker :visible="teleportsVisible" v-for="teleport in teleports[region]" :key="teleport.name"
@@ -41,8 +42,8 @@
                     </div>
                     <routes-list :routes="routes" :mobIcons="mobIcons" :itemIcons="itemIcons"></routes-list>
                 </div>
-            </b-tab-item>
-        </b-tabs>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -66,7 +67,7 @@
             return {
                 apiLink: process.env.VUE_APP_API,
                 regions: ['mondstadt', 'liyue', 'inazuma'],
-                url: "http://genshin-application-ci.herokuapp.com/tms/1.0.0/teyvat@png/{z}/{x}/{y}.png",
+                active: 'mondstadt',
                 bounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 maxBounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 minZoom: 0,
