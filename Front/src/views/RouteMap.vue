@@ -115,7 +115,7 @@
                 this.routes = await res.json();
             },
             getMapUrl(region) {
-                return `http://genshin-application-ci.herokuapp.com/tms/1.0.0/teyvat@png/${region}/{z}/{x}/{y}.png`
+                return `https://genshin-application-ci.herokuapp.com/tms/1.0.0/teyvat@png/${region}/{z}/{x}/{y}.png`
             }
         },
         async created() {
