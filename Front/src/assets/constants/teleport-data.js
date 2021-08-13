@@ -2,22 +2,22 @@ import L from 'leaflet';
 
 export const teleportIcons = {
     waypoint: L.icon({
-        iconUrl: 'http://genshin-application-ci.herokuapp.com/game/images/maps/icons/waypoint.png',
+        iconUrl: 'https://genshin-application-ci.herokuapp.com/game/images/maps/icons/waypoint.png',
         iconSize: [27, 32],
         iconAnchor: [11, 32]
     }),
     domain: L.icon({
-        iconUrl: 'http://genshin-application-ci.herokuapp.com/game/images/maps/icons/domain.png',
+        iconUrl: 'https://genshin-application-ci.herokuapp.com/game/images/maps/icons/domain.png',
         iconSize: [27, 27],
         iconAnchor: [16, 16]
     }),
     trial: L.icon({
-        iconUrl: 'http://genshin-application-ci.herokuapp.com/game/images/maps/icons/trial.png',
+        iconUrl: 'https://genshin-application-ci.herokuapp.com/game/images/maps/icons/trial.png',
         iconSize: [32, 32],
         iconAnchor: [11, 11]
     }),
     seven: L.icon({
-        iconUrl: 'http://genshin-application-ci.herokuapp.com/game/images/maps/icons/seven.png',
+        iconUrl: 'https://genshin-application-ci.herokuapp.com/game/images/maps/icons/seven.png',
         iconSize: [27, 32],
         iconAnchor: [11, 32]
     })

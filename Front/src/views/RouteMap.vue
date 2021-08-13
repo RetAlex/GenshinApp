@@ -15,20 +15,29 @@
             </div>
         </div>
         <div class="row map-controls">
+            <b-dropdown v-model="active" aria-role="list">
+                <template #trigger>
+                    <b-button :label="capitalize(active)" type="is-primary" icon-right="menu-down"/>
+                </template>
+                <b-dropdown-item v-for="region in regions" :key="region" :value="region" aria-role="listitem">
+                    {{capitalize(region)}}
+                </b-dropdown-item>
+            </b-dropdown>
             <b-field>
                 <b-switch v-model="teleportsVisible" type="is-info">Show Teleports</b-switch>
             </b-field>
         </div>
-        <button v-for="region in regions" :key="region" @click="active = region">{{region}}</button>
         <div v-for="region in regions" :key="region">
             <div v-if="region === active">
                 <div class="row map-container">
-                    <div class="col-md-9 pr-0">
+                    <div class="col-lg-8 col-md-12 pr-0">
                         <div class="map-wrap">
-                            <l-map :ref="region" :options="{name: region}" :min-zoom="minZoom" :max-zoom="maxZoom" :max-bounds="maxBounds" :crs="crs"
+                            <l-map :ref="region" :options="{name: region}" :min-zoom="minZoom" :max-zoom="maxZoom"
+                                   :max-bounds="maxBounds" :crs="crs"
                                    @click="addMarker">
                                 <l-tile-layer :url="getMapUrl(region)"/>
-                                <l-marker :visible="teleportsVisible" v-for="teleport in teleports[region]" :key="teleport.name"
+                                <l-marker :visible="teleportsVisible" v-for="teleport in teleports[region]"
+                                          :key="teleport.name"
                                           :lat-lng="teleport" :icon="icons[teleport.type]"></l-marker>
                                 <l-layer-group v-for="route in routes" :key="route.name" :visible="route.show">
                                     <l-marker v-for="point in route.points" :key="point.name"
@@ -71,7 +80,7 @@
                 bounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 maxBounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 minZoom: 0,
-                maxZoom: 2,
+                maxZoom: 3,
                 crs: CRS.Simple,
                 icons: teleportIcons,
                 teleports: teleports,
@@ -117,6 +126,9 @@
             },
             getMapUrl(region) {
                 return `https://genshin-application-ci.herokuapp.com/tms/1.0.0/teyvat@png/${region}/{z}/{x}/{y}.png`
+            },
+            capitalize(string) {
+                return string.charAt(0).toUpperCase() + string.slice(1);
             }
         },
         async created() {
@@ -130,7 +142,7 @@
 
 <style>
     #map {
-        padding: 3rem 0.5rem;
+        padding: 3rem 2.5rem;
     }
 
     #map .row {
@@ -180,7 +192,6 @@
         background: #FFFFFF;
         overflow-y: scroll;
         height: 80vh;
-        padding-right: 15px;
     }
 
     .route-item {
@@ -333,22 +344,38 @@
         padding: 0 !important;
     }
 
-    .tabs.is-boxed a {
-        color: #1e1e1e !important;
-        transition: background-color 300ms ease;
+    .dropdown-menu {
+        z-index: 2000;
     }
 
-    .tabs ul {
-        color: #1e1e1e !important;
-        margin-bottom: 0 !important;
+    .dropdown-trigger .button {
+        background: rgba(91, 170, 246, 1) !important;;
     }
 
-    .tabs .is-active a {
-        color: #167df0 !important;
+    .dropdown-trigger .button span {
+        font-weight: bold !important;
     }
 
-    .tabs.is-boxed a:hover {
-        background-color: rgba(253, 205, 229, 0.5);
+    .map-controls {
+        display: flex;
+        align-items: center;
+    }
+
+    .map-controls label.switch {
+        margin-bottom: 0;
+    }
+
+    .map-controls .switch input[type="checkbox"]:checked + .check.is-info {
+        background: rgba(91, 170, 246, 1) !important;;
+    }
+
+    .map-controls .dropdown {
+        margin-right: 10px;
+    }
+
+    a.dropdown-item.is-active, .dropdown .dropdown-menu .has-link a.is-active, button.dropdown-item.is-active {
+        background-color: rgba(253, 205, 229, 1) !important;
+        color: #1e1e1e;
     }
 
 </style>

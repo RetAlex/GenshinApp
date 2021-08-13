@@ -6,10 +6,10 @@ import RouteMap from "@/views/RouteMap";
 import Roadmap from "@/views/Roadmap";
 
 export const routes = [
-    {path: '/', component: Home},
+    {path: '/home', component: Home},
     {path: '/changelog', component: Changelog},
     {path: '/about-us', component: AboutUs},
-    {path: '/calc', component: CharExp},
+    {path: '/', component: CharExp},
     {path: '/routes', component: RouteMap},
     {path: '/roadmap', component: Roadmap}
 ];

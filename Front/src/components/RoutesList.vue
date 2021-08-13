@@ -1,5 +1,5 @@
 <template>
-    <div class="route-list-wrap col-md-3 col-sm-12 pl-0">
+    <div class="route-list-wrap col-lg-4 col-md-12 pl-0">
         <button class="route-list-btn" @click="menuOpened = !menuOpened"><i class="fa fa-list-ul"></i></button>
         <div class="route-items" :class="menuOpened ? 'active' : ''">
             <button class="route-list-close" @click="menuOpened = !menuOpened"><i class="fa fa-close"></i></button>
@@ -118,6 +118,7 @@
             font-size: 20px;
             color: #1e1e1e;
             border-radius: 5px;
+            z-index: 2000;
         }
 
         .route-list-close {
