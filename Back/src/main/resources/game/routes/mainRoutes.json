@@ -1,6 +1,7 @@
 [
   {
     "name": "Narukami beach nobushis",
+    "region": "inazuma",
     "mobs": [
       {
         "id": 18,
@@ -95,6 +96,7 @@
   },
   {
     "name": "Yashiori nobushi",
+    "region": "inazuma",
     "mobs": [
       {
         "id": 18,
@@ -179,6 +181,7 @@
   },
   {
     "name": "Yaoguang shore",
+    "region": "liyue",
     "mobs": [
       {
         "id": 6,
@@ -323,6 +326,7 @@
   },
   {
     "name": "Robots&Fatuis",
+    "region": "liyue",
     "mobs": [
       {
         "id": 8,
@@ -497,6 +501,7 @@
   },
   {
     "name": "Robots",
+    "region": "liyue",
     "mobs": [
       {
         "id": 1,
@@ -555,6 +560,7 @@
   },
   {
     "name": "Treasure hoarders",
+    "region": "liyue",
     "mobs": [
       {
         "id": 14,
