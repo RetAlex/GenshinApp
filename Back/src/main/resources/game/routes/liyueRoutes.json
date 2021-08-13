@@ -1,0 +1,478 @@
+[
+  {
+    "name": "Yaoguang shore",
+    "mobs": [
+      {
+        "id": 6,
+        "amount": 1
+      },
+      {
+        "id": 1,
+        "amount": 1
+      },
+      {
+        "id": 9,
+        "amount": 3
+      },
+      {
+        "id": 10,
+        "amount": 4
+      },
+      {
+        "id": 4,
+        "amount": 1
+      },
+      {
+        "id": 15,
+        "amount": 1
+      },
+      {
+        "id": 3,
+        "amount": 1
+      },
+      {
+        "id": 13,
+        "amount": 4
+      },
+      {
+        "id": 2,
+        "amount": 1
+      },
+      {
+        "id": 7,
+        "amount": 1
+      }
+    ],
+    "points": [
+      {
+        "name": "Hilichurl Chieftain",
+        "lat": -589.14,
+        "lng": 546.33,
+        "mobId": 6
+      },
+      {
+        "name": "Ruin Guard",
+        "lat": -607.30,
+        "lng": 555.93,
+        "mobId": 1
+      },
+      {
+        "name": "Small Hilichurl Camp",
+        "lat": -617.44,
+        "lng": 546.83,
+        "mobId": 9
+      },
+      {
+        "name": "Fatui Cicin Mage",
+        "lat": -633.21,
+        "lng": 537.58,
+        "mobId": 4
+      },
+      {
+        "name": "Cryo Whopperflower",
+        "lat": -642.28,
+        "lng": 516.39,
+        "mobId": 15
+      },
+      {
+        "name": "Fatui Pyro Agent",
+        "lat": -623.51,
+        "lng": 517.64,
+        "mobId": 3
+      },
+      {
+        "name": "Slime gang",
+        "lat": -634.27,
+        "lng": 504.38,
+        "mobId": 13
+      },
+      {
+        "name": "Ruin hunter",
+        "lat": -644.03,
+        "lng": 486.88,
+        "mobId": 2
+      },
+      {
+        "name": "Abyss mage",
+        "lat": -616.25,
+        "lng": 491.63,
+        "mobId": 7
+      }
+    ],
+    "line": {
+      "latlngs": [
+        [
+          -589.14,
+          546.33
+        ],
+        [
+          -607.30,
+          555.93
+        ],
+        [
+          -617.44,
+          546.83
+        ],
+        [
+          -633.21,
+          537.58
+        ],
+        [
+          -642.28,
+          516.39
+        ],
+        [
+          -623.51,
+          517.64
+        ],
+        [
+          -634.27,
+          504.38
+        ],
+        [
+          -644.03,
+          486.88
+        ],
+        [
+          -616.25,
+          491.63
+        ]
+      ],
+      "color": "white",
+      "weight": 2
+    },
+    "show": false
+  },
+  {
+    "name": "Robots&Fatuis",
+    "mobs": [
+      {
+        "id": 8,
+        "amount": 13
+      },
+      {
+        "id": 1,
+        "amount": 4
+      },
+      {
+        "id": 2,
+        "amount": 1
+      },
+      {
+        "id": 4,
+        "amount": 1
+      },
+      {
+        "id": 3,
+        "amount": 2
+      }
+    ],
+    "points": [
+      {
+        "name": "Ruin Guard 1",
+        "lat": -777.13,
+        "lng": 229.80,
+        "mobId": 1
+      },
+      {
+        "name": "Ruin Guard 2",
+        "lat": -783.38,
+        "lng": 220.30,
+        "mobId": 1
+      },
+      {
+        "name": "Ruin hunter",
+        "lat": -777.13,
+        "lng": 211.79,
+        "mobId": 2
+      },
+      {
+        "name": "Ruin Guard 3",
+        "lat": -769.12,
+        "lng": 211.54,
+        "mobId": 1
+      },
+      {
+        "name": "Fatui Cicin Mage",
+        "lat": -758.96,
+        "lng": 198.41,
+        "mobId": 4
+      },
+      {
+        "name": "Fatui Pyro Agent 1",
+        "lat": -747.45,
+        "lng": 199.16,
+        "mobId": 3
+      },
+      {
+        "name": "Fatui Bois",
+        "lat": -746.96,
+        "lng": 217.99,
+        "mobId": 8
+      },
+      {
+        "name": "Lone Fatui Boi",
+        "lat": -760.66,
+        "lng": 223.34,
+        "mobId": 8
+      },
+      {
+        "name": "Another Fatui Gang",
+        "lat": -766.67,
+        "lng": 235.84,
+        "mobId": 8
+      },
+      {
+        "name": "More Fatui Bois",
+        "lat": -757.91,
+        "lng": 250.10,
+        "mobId": 8
+      },
+      {
+        "name": "Even more Fatui Bois",
+        "lat": -763.16,
+        "lng": 267.35,
+        "mobId": 8
+      },
+      {
+        "name": "Fatui roofers (on top of the ruins)",
+        "lat": -749.90,
+        "lng": 273.86,
+        "mobId": 8
+      },
+      {
+        "name": "Fatui Pyro Agent 2",
+        "lat": -740.39,
+        "lng": 265.85,
+        "mobId": 3
+      },
+      {
+        "name": "Ruin Guard 4",
+        "lat": -750.65,
+        "lng": 272.36,
+        "mobId": 1
+      }
+    ],
+    "line": {
+      "latlngs": [
+        [
+          -777.13,
+          229.80
+        ],
+        [
+          -783.38,
+          220.30
+        ],
+        [
+          -777.13,
+          211.79
+        ],
+        [
+          -769.12,
+          211.54
+        ],
+        [
+          -758.96,
+          198.41
+        ],
+        [
+          -747.45,
+          199.16
+        ],
+        [
+          -746.96,
+          217.99
+        ],
+        [
+          -760.66,
+          223.34
+        ],
+        [
+          -766.67,
+          235.84
+        ],
+        [
+          -757.91,
+          250.10
+        ],
+        [
+          -763.16,
+          267.35
+        ],
+        [
+          -749.90,
+          273.86
+        ],
+        [
+          -740.39,
+          265.85
+        ],
+        [
+          -750.65,
+          272.36
+        ]
+      ],
+      "color": "white",
+      "weight": 2
+    },
+    "show": false
+  },
+  {
+    "name": "Robots",
+    "mobs": [
+      {
+        "id": 1,
+        "amount": 4
+      }
+    ],
+    "points": [
+      {
+        "name": "Ruin Guard 1",
+        "lat": -512.89,
+        "lng": 226.90,
+        "mobId": 1
+      },
+      {
+        "name": "Ruin Guard 2",
+        "lat": -534.91,
+        "lng": 222.90,
+        "mobId": 1
+      },
+      {
+        "name": "Ruin Guard 4",
+        "lat": -561.66,
+        "lng": 255.94,
+        "mobId": 1
+      },
+      {
+        "name": "Ruin Guard 3",
+        "lat": -566.66,
+        "lng": 253.69,
+        "mobId": 1
+      }
+    ],
+    "line": {
+      "latlngs": [
+        [
+          -512.89,
+          226.90
+        ],
+        [
+          -534.91,
+          222.90
+        ],
+        [
+          -561.66,
+          255.94
+        ],
+        [
+          -566.66,
+          253.69
+        ]
+      ],
+      "color": "white",
+      "weight": 2
+    },
+    "show": false
+  },
+  {
+    "name": "Treasure hoarders",
+    "mobs": [
+      {
+        "id": 14,
+        "amount": 12
+      },
+      {
+        "id": 10,
+        "amount": 1
+      },
+      {
+        "id": 9,
+        "amount": 1
+      },
+      {
+        "id": 4,
+        "amount": 1
+      }
+    ],
+    "points": [
+      {
+        "name": "Treasure hoarder gang 1",
+        "lat": -641.40,
+        "lng": 410.32,
+        "mobId": 14
+      },
+      {
+        "name": "Treasure hoarder gang 2",
+        "lat": -656.66,
+        "lng": 396.06,
+        "mobId": 14
+      },
+      {
+        "name": "Treasure hoarder gang 3",
+        "lat": -661.42,
+        "lng": 405.57,
+        "mobId": 14
+      },
+      {
+        "name": "Hilichurl gang 1",
+        "lat": -680.94,
+        "lng": 429.57,
+        "mobId": 10
+      },
+      {
+        "name": "Treasure hoarder gang 4",
+        "lat": -694.02,
+        "lng": 441.06,
+        "mobId": 14
+      },
+      {
+        "name": "Cicin mage",
+        "lat": -695.28,
+        "lng": 449.06,
+        "mobId": 4
+      },
+      {
+        "name": "Treasure hoarder gang 5",
+        "lat": -708.58,
+        "lng": 459.89,
+        "mobId": 14
+      }
+    ],
+    "line": {
+      "latlngs": [
+        [
+          -641.40,
+          410.32
+        ],
+        [
+          -656.66,
+          396.06
+        ],
+        [
+          -661.42,
+          405.57
+        ],
+        [
+          -680.94,
+          429.57
+        ],
+        [
+          -694.02,
+          441.06
+        ],
+        [
+          -695.28,
+          449.06
+        ],
+        [
+          -708.58,
+          459.89
+        ]
+      ],
+      "color": "white",
+      "weight": 2
+    },
+    "show": false
+  }
+]
