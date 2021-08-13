@@ -49,7 +49,7 @@
                             </l-map>
                         </div>
                     </div>
-                    <routes-list :routes="routes" :mobIcons="mobIcons" :itemIcons="itemIcons"></routes-list>
+                    <routes-list :region="region" :routes="routes" :mobIcons="mobIcons" :itemIcons="itemIcons"></routes-list>
                 </div>
             </div>
         </div>
@@ -142,7 +142,7 @@
 
 <style>
     #map {
-        padding: 3rem 2.5rem;
+        padding: 3rem 0.5rem;
     }
 
     #map .row {
@@ -371,6 +371,7 @@
 
     .map-controls .dropdown {
         margin-right: 10px;
+        z-index: 3000;
     }
 
     a.dropdown-item.is-active, .dropdown .dropdown-menu .has-link a.is-active, button.dropdown-item.is-active {
