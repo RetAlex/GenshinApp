@@ -8,81 +8,48 @@
             </div>
             <div class="offset-lg-3 col-lg-6">
                 <div class="center-text">
-                    <p>Welcome on `Farming routes`. This feature allows you to see currently submitted monster farming routes on the map along with the loot they give you. Currently this feature doesn't support custom routes but we are working on it!</p>
+                    <p>Welcome on `Farming routes`. This feature allows you to see currently submitted monster farming
+                        routes on the map along with the loot they give you. Currently this feature doesn't support
+                        custom routes but we are working on it!</p>
                 </div>
             </div>
         </div>
         <div class="row map-controls">
+            <b-dropdown v-model="active" aria-role="list">
+                <template #trigger>
+                    <b-button :label="capitalize(active)" type="is-primary" icon-right="menu-down"/>
+                </template>
+                <b-dropdown-item v-for="region in regions" :key="region" :value="region" aria-role="listitem">
+                    {{capitalize(region)}}
+                </b-dropdown-item>
+            </b-dropdown>
             <b-field>
                 <b-switch v-model="teleportsVisible" type="is-info">Show Teleports</b-switch>
             </b-field>
         </div>
-        <div class="row map-container">
-            <div class="col-md-9 pr-0">
-                <div class="map-wrap">
-                    <l-map ref="map" :min-zoom="minZoom" :max-zoom="maxZoom" :max-bounds="maxBounds" :crs="crs"
-                           @click="addMarker">
-                        <l-tile-layer :url="url"/>
-                        <l-marker :visible="teleportsVisible" v-for="teleport in teleports" :key="teleport.name"
-                                  :lat-lng="teleport" :icon="icons[teleport.type]"></l-marker>
-                        <l-layer-group v-for="route in routes" :key="route.name" :visible="route.show">
-                            <l-marker v-for="point in route.points" :key="point.name"
-                                      :lat-lng="point" :icon="mobIcons[point.mobId].point"></l-marker>
-                            <l-polyline :lat-lngs="route.line.latlngs" :color="route.line.color" :weight="route.line.weight"
-                                        :className="'path'"></l-polyline>
-                        </l-layer-group>
-                    </l-map>
-                </div>
-            </div>
-            <div class="route-items col-md-3 pl-0">
-                <div class="route-item" v-for="route in routes" :key="route.name">
-                    <div class="route-header">
-                        <h3 class="route-title">{{route.name}}</h3>
-                    </div>
-                    <div class="route-body">
-                        <div class="monsters-wrapper">
-                            <span class="monster" v-for="mob in route.mobs" :key="mob.id">
-                                <img :src="mobIcons[mob.id].image" class="monster-image">
-                                <span class="monster-amount">{{mob.amount}}</span>
-                            </span>
+        <div v-for="region in regions" :key="region">
+            <div v-if="region === active">
+                <div class="row map-container">
+                    <div class="col-lg-8 col-md-12 pr-0">
+                        <div class="map-wrap">
+                            <l-map :ref="region" :options="{name: region}" :min-zoom="minZoom" :max-zoom="maxZoom"
+                                   :max-bounds="maxBounds" :crs="crs"
+                                   @click="addMarker">
+                                <l-tile-layer :url="getMapUrl(region)"/>
+                                <l-marker :visible="teleportsVisible" v-for="teleport in teleports[region]"
+                                          :key="teleport.name"
+                                          :lat-lng="teleport" :icon="icons[teleport.type]"></l-marker>
+                                <l-layer-group v-for="route in routes" :key="route.name" :visible="route.show">
+                                    <l-marker v-for="point in route.points" :key="point.name"
+                                              :lat-lng="point" :icon="mobIcons[point.mobId].point"></l-marker>
+                                    <l-polyline :lat-lngs="route.line.latlngs" :color="route.line.color"
+                                                :weight="route.line.weight"
+                                                :className="'path'"></l-polyline>
+                                </l-layer-group>
+                            </l-map>
                         </div>
-                        <b-collapse class="list" :open="false" @open="getRouteDrop(route)" position="is-bottom" animation="slide" aria-id="contentIdForA11y1">
-                            <template #trigger="props">
-                                <a aria-controls="contentIdForA11y1">
-                                    <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon>
-                                    {{ !props.open ? 'Show estimated drop' : 'Hide estimated drop' }}
-                                </a>
-                            </template>
-                            <div class="drop-info-wrapper">
-                                <b-loading :is-full-page="false" :active="!route.drop"></b-loading>
-                                <div class="drop-info row" v-if="route.drop">
-                                    <div class="drop-info-item col-md-6">
-                                        <img class="drop-icon" src="../assets/images/icons/mora.png"/>
-                                        <span>x{{route.drop.totalMora}}</span>
-                                    </div>
-                                    <div class="drop-info-item col-md-6">
-                                        <img class="drop-icon" src="../assets/images/icons/char_exp.png"/>
-                                        <span>x{{route.drop.totalExperience}}</span>
-                                    </div>
-                                </div>
-
-                                <div class="drop-info" v-if="route.drop">
-                                    <div v-for="item in route.drop.items" :key="item.itemId" class="drop-info-item">
-                                        <div v-if="item && item.amount > 0">
-                                            <span :class="'rarity-' + itemIcons[item.itemId]['rarity']">
-                                                <img class="drop-icon" :alt="itemIcons[item.itemId]['name']" :src="itemIcons[item.itemId]['image']"/>
-                                            </span>
-                                            <span>x{{item.amount}}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </b-collapse>
                     </div>
-                    <div class="route-footer">
-                        <a class="route-button" v-bind:class="{ hidden: !route.show }" @click="route.show = !route.show">
-                            {{ !route.show ? 'Show on map' : 'Hide on map' }}</a>
-                    </div>
+                    <routes-list :routes="routes" :mobIcons="mobIcons" :itemIcons="itemIcons"></routes-list>
                 </div>
             </div>
         </div>
@@ -94,10 +61,12 @@
     import {LMap, LTileLayer, LPolyline, LLayerGroup} from 'vue2-leaflet';
     import {teleportIcons, teleports} from "@/assets/constants/teleport-data";
     import L from "leaflet";
+    import RoutesList from "@/components/RoutesList";
 
     export default {
         name: "RouteMap",
         components: {
+            RoutesList,
             LMap,
             LTileLayer,
             LPolyline,
@@ -106,11 +75,12 @@
         data() {
             return {
                 apiLink: process.env.VUE_APP_API,
-                url: "http://genshin-application-ci.herokuapp.com/tms/1.0.0/teyvat@png/{z}/{x}/{y}.png",
+                regions: ['mondstadt', 'liyue', 'inazuma'],
+                active: 'mondstadt',
                 bounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 maxBounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 minZoom: 0,
-                maxZoom: 2,
+                maxZoom: 3,
                 crs: CRS.Simple,
                 icons: teleportIcons,
                 teleports: teleports,
@@ -154,22 +124,15 @@
                 const res = await fetch(this.apiLink + "/game/routes/mainRoutes.json");
                 this.routes = await res.json();
             },
-            async getRouteDrop(route) {
-                if (route.drop) return;
-                const requestOptions = {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({mobs: route.mobs, worldLevel: localStorage.wl})
-                };
-                const res = await fetch(this.apiLink + "/exp-calc/calculate", requestOptions);
-                this.$set(route, 'drop', await res.json());
-                console.log(route)
+            getMapUrl(region) {
+                return `https://genshin-application-ci.herokuapp.com/tms/1.0.0/teyvat@png/${region}/{z}/{x}/{y}.png`
+            },
+            capitalize(string) {
+                return string.charAt(0).toUpperCase() + string.slice(1);
             }
         },
-        mounted() {
-            this.$refs.map.mapObject.setView([70, 120], 1);
-        },
         async created() {
+            // this.$refs.map.mapObject.setView([70, 120], 1);
             await this.getMobs();
             await this.getItems();
             await this.getRoutes();
@@ -178,6 +141,15 @@
 </script>
 
 <style>
+    #map {
+        padding: 3rem 2.5rem;
+    }
+
+    #map .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
     .point-icon {
         border-radius: 50%;
         border: 2px white solid;
@@ -199,10 +171,10 @@
         width: 100%;
     }
 
-    .map-container {
-        margin-left: -39px;
-        margin-right: -39px;
-        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.1);
+    #map .row.map-container {
+        position: relative;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
     }
 
     .map-controls {
@@ -220,7 +192,6 @@
         background: #FFFFFF;
         overflow-y: scroll;
         height: 80vh;
-        padding-right: 15px;
     }
 
     .route-item {
@@ -367,6 +338,44 @@
     .route-item .route-footer .route-button.hidden {
         color: #888888;
         background-color: rgba(253, 205, 229, 1);
+    }
+
+    .tab-content {
+        padding: 0 !important;
+    }
+
+    .dropdown-menu {
+        z-index: 2000;
+    }
+
+    .dropdown-trigger .button {
+        background: rgba(91, 170, 246, 1) !important;;
+    }
+
+    .dropdown-trigger .button span {
+        font-weight: bold !important;
+    }
+
+    .map-controls {
+        display: flex;
+        align-items: center;
+    }
+
+    .map-controls label.switch {
+        margin-bottom: 0;
+    }
+
+    .map-controls .switch input[type="checkbox"]:checked + .check.is-info {
+        background: rgba(91, 170, 246, 1) !important;;
+    }
+
+    .map-controls .dropdown {
+        margin-right: 10px;
+    }
+
+    a.dropdown-item.is-active, .dropdown .dropdown-menu .has-link a.is-active, button.dropdown-item.is-active {
+        background-color: rgba(253, 205, 229, 1) !important;
+        color: #1e1e1e;
     }
 
 </style>
