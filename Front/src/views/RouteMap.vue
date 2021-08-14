@@ -39,17 +39,17 @@
                                 <l-marker :visible="teleportsVisible" v-for="teleport in teleports[region]"
                                           :key="teleport.name"
                                           :lat-lng="teleport" :icon="icons[teleport.type]"></l-marker>
-                                <l-layer-group v-for="route in routes" :key="route.name" :visible="route.show">
+                                <l-layer-group v-for="route in routes[region]" :key="route.name" :visible="route.show">
                                     <l-marker v-for="point in route.points" :key="point.name"
                                               :lat-lng="point" :icon="mobIcons[point.mobId].point"></l-marker>
-                                    <l-polyline :lat-lngs="route.line.latlngs" :color="route.line.color"
+                                    <l-polyline v-if="route.line" :lat-lngs="route.line.latlngs" :color="route.line.color"
                                                 :weight="route.line.weight"
                                                 :className="'path'"></l-polyline>
                                 </l-layer-group>
                             </l-map>
                         </div>
                     </div>
-                    <routes-list :routes="routes" :mobIcons="mobIcons" :itemIcons="itemIcons"></routes-list>
+                    <routes-list :routes="routes[region]" :mobIcons="mobIcons" :itemIcons="itemIcons"></routes-list>
                 </div>
             </div>
         </div>
@@ -76,7 +76,7 @@
             return {
                 apiLink: process.env.VUE_APP_API,
                 regions: ['mondstadt', 'liyue', 'inazuma'],
-                active: 'mondstadt',
+                active: 'liyue',
                 bounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 maxBounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 minZoom: 0,
@@ -85,7 +85,7 @@
                 icons: teleportIcons,
                 teleports: teleports,
                 teleportsVisible: true,
-                routes: [],
+                routes: {},
                 mobIcons: {},
                 itemIcons: {}
             };
@@ -122,7 +122,13 @@
             },
             async getRoutes() {
                 const res = await fetch(this.apiLink + "/game/routes/mainRoutes.json");
-                this.routes = await res.json();
+                const dataRoutes = await res.json();
+                let ret = {};
+                dataRoutes.forEach(route => {
+                    if (!ret[route.region]) ret[route.region] = [];
+                    ret[route.region].push(route);
+                    this.$set(this.routes, route.region, ret[route.region]);
+                })
             },
             getMapUrl(region) {
                 return `https://genshin-application-ci.herokuapp.com/tms/1.0.0/teyvat@png/${region}/{z}/{x}/{y}.png`
@@ -142,7 +148,7 @@
 
 <style>
     #map {
-        padding: 3rem 2.5rem;
+        padding: 3rem 0.5rem;
     }
 
     #map .row {
@@ -371,6 +377,7 @@
 
     .map-controls .dropdown {
         margin-right: 10px;
+        z-index: 3000;
     }
 
     a.dropdown-item.is-active, .dropdown .dropdown-menu .has-link a.is-active, button.dropdown-item.is-active {
