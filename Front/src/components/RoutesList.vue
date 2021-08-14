@@ -3,8 +3,8 @@
         <button class="route-list-btn" @click="menuOpened = !menuOpened"><i class="fa fa-list-ul"></i></button>
         <div class="route-items" :class="menuOpened ? 'active' : ''">
             <button class="route-list-close" @click="menuOpened = !menuOpened"><i class="fa fa-close"></i></button>
-            <div v-for="route in routes" :key="route.name">
-                <div class="route-item" v-if="route.region === region">
+            <div v-if="routes && routes.length">
+                <div class="route-item" v-for="route in routes" :key="route.name">
                     <div class="route-header">
                         <h3 class="route-title">{{route.name}}</h3>
                     </div>
@@ -51,11 +51,13 @@
                         </b-collapse>
                     </div>
                     <div class="route-footer">
-                        <a class="route-button" v-bind:class="{ hidden: !route.show }" @click="route.show = !route.show">
+                        <a class="route-button" v-bind:class="{ hidden: !route.show }"
+                           @click="toggleOnMap(route)">
                             {{ !route.show ? 'Show on map' : 'Hide on map' }}</a>
                     </div>
                 </div>
             </div>
+            <div v-else class="center-text"><p>There are no routes for this region yet</p></div>
         </div>
     </div>
 </template>
@@ -63,7 +65,7 @@
 <script>
     export default {
         name: "RoutesList",
-        props: ['routes', 'mobIcons', 'itemIcons', 'region'],
+        props: ['routes', 'mobIcons', 'itemIcons'],
         data() {
             return {
                 apiLink: process.env.VUE_APP_API,
@@ -75,16 +77,17 @@
                 if (route.drop) return;
                 const requestOptions = {
                     method: "POST",
-                    headers: { "Content-Type": "application/json" },
+                    headers: {"Content-Type": "application/json"},
                     body: JSON.stringify({mobs: route.mobs, worldLevel: localStorage.wl})
                 };
                 const res = await fetch(this.apiLink + "/exp-calc/calculate", requestOptions);
                 this.$set(route, 'drop', await res.json());
-                console.log(route)
+                this.$forceUpdate();
+            },
+            toggleOnMap(route) {
+                route.show = !route.show;
+                this.$forceUpdate();
             }
-        },
-        mounted() {
-            console.log(this.routes)
         }
     }
 </script>
@@ -96,6 +99,10 @@
 
     .route-list-close {
         display: none;
+    }
+
+    .route-items .center-text {
+        margin-top: 20px;
     }
 
     @media (max-width: 992px) {
