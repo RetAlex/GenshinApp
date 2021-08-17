@@ -131,7 +131,7 @@
                 })
             },
             getMapUrl(region) {
-                return `https://genshin-application-ci.herokuapp.com/tms/1.0.0/teyvat@png/${region}/{z}/{x}/{y}.png`
+                return `${this.apiLink}/tms/1.0.0/teyvat@png/${region}/{z}/{x}/{y}.png`
             },
             capitalize(string) {
                 return string.charAt(0).toUpperCase() + string.slice(1);
