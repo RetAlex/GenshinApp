@@ -20,7 +20,7 @@
                 <div class="timeline-body">
                     <h4 class="timeline-title"><span class="badge">{{milestone.version}}</span></h4>
                     <p>{{milestone.desc}}</p>
-                    <p class="timeline-subtitle">In development</p>
+                    <p class="timeline-subtitle">{{milestone.status}}</p>
                 </div>
             </div>
         </div>
@@ -33,11 +33,11 @@
         data() {
             return {
                 roadmap: [
-                    {"version": "1.6", "desc": "Custom route feature development"},
-                    {"version": "1.7", "desc": "Route export feature (in URL)"},
-                    {"version": "1.8", "desc": "Route export feature (in files)"},
-                    {"version": "1.9", "desc": "Google drive integration to persist custom routes"},
-                    {"version": "2.0", "desc": "Catching up with all the updates (map, mobs, routes, drop tables etc)"}
+                    {"version": "1.5", "desc": "Custom route feature development", status: "In development"},
+                    {"version": "1.6", "desc": "Route export feature (in URL)", status: "Planned"},
+                    {"version": "1.7", "desc": "Route export feature (in files)", status: "Planned"},
+                    {"version": "1.8", "desc": "Google drive integration to persist custom routes", status: "Planned"},
+                    {"version": "1.9", "desc": "Catching up with all the updates (map, mobs, routes, drop tables etc)", status: "Planned"}
                 ]
             }
         }
