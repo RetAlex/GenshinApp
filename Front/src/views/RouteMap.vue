@@ -229,7 +229,6 @@
         font-size: 17px;
         letter-spacing: 0.25px;
         color: #1e1e1e;
-        width: 180px;
         height: 40px;
         line-height: 40px;
         left: 0px;
