@@ -33,11 +33,11 @@
         data() {
             return {
                 roadmap: [
-                    {"version": "1.5", "desc": "Custom route feature development", status: "In development"},
-                    {"version": "1.6", "desc": "Route export feature (in URL)", status: "Planned"},
-                    {"version": "1.7", "desc": "Route export feature (in files)", status: "Planned"},
-                    {"version": "1.8", "desc": "Google drive integration to persist custom routes", status: "Planned"},
-                    {"version": "1.9", "desc": "Catching up with all the updates (map, mobs, routes, drop tables etc)", status: "Planned"}
+                    {"version": "2.0", "desc": "Inazuma support for farming routes", status: "Released"},
+                    {"version": "2.1", "desc": "Custom route feature development", status: "In development"},
+                    {"version": "2.2", "desc": "Route export feature (in URL)", status: "Planned"},
+                    {"version": "2.3", "desc": "Route export feature (in files)", status: "Planned"},
+                    {"version": "2.4", "desc": "Google drive integration to persist custom routes", status: "Planned"}
                 ]
             }
         }
