@@ -92,8 +92,17 @@
         },
         methods: {
             addMarker(event) {
-                console.log(event.latlng)
+                this.copy(`lat: ${event.latlng.lat}, lng: ${event.latlng.lng}`);
                 //this.markers.push(event.latlng);
+            },
+            copy(text) {
+                let input = document.createElement('textarea');
+                input.innerHTML = text;
+                document.body.appendChild(input);
+                input.select();
+                const result = document.execCommand('copy');
+                document.body.removeChild(input);
+                return result;
             },
             async getMobs() {
                 const res = await fetch(this.apiLink + "/exp-calc/mobs");
