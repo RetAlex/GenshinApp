@@ -142,5 +142,29 @@
     "type": "common",
     "typeLong": "Common enemy",
     "image": "/game/images/mobs/nobushi.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Specter",
+    "handbookAmount": 9,
+    "type": "common",
+    "typeLong": "Common enemy",
+    "image": "/game/images/mobs/Specter.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Rifthound Whelp",
+    "handbookAmount": 9,
+    "type": "elite",
+    "typeLong": "Elite enemy",
+    "image": "/game/images/mobs/RifthoundWhelp.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Rifthound",
+    "handbookAmount": 9,
+    "type": "elite",
+    "typeLong": "Elite enemy",
+    "image": "/game/images/mobs/Rifthound.jpg"
   }
 ]

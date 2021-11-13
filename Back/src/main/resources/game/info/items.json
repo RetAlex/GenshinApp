@@ -304,5 +304,23 @@
     "name": "Spectral Nucleus",
     "image": "/game/images/items/Item_Spectral_Nucleus.png",
     "rarity": 3
+  },
+  {
+    "id": 52,
+    "name": "Concealed Claw",
+    "image": "/game/images/Item_Concealed_Claw.png",
+    "rarity": 2
+  },
+  {
+    "id": 53,
+    "name": "Concealed Unguis",
+    "image": "/game/images/items/Item_Concealed_Unguis.png",
+    "rarity": 3
+  },
+  {
+    "id": 54,
+    "name": "Concealed Talon",
+    "image": "/game/images/items/Item_Concealed_Talon.png",
+    "rarity": 4
   }
 ]
