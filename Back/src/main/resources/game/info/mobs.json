@@ -153,16 +153,8 @@
   },
   {
     "id": 20,
-    "name": "Rifthound Whelp",
-    "handbookAmount": 9,
-    "type": "elite",
-    "typeLong": "Elite enemy",
-    "image": "/game/images/mobs/RifthoundWhelp.jpg"
-  },
-  {
-    "id": 21,
     "name": "Rifthound",
-    "handbookAmount": 9,
+    "handbookAmount": 8,
     "type": "elite",
     "typeLong": "Elite enemy",
     "image": "/game/images/mobs/Rifthound.jpg"
