@@ -42,7 +42,7 @@
         data(){
           return {
             changeLog: [
-              {version: "Version 2.1 (Release, Current)", changes: ["Updated map with latest Inazuma regions", "Added multiple Mondstadt routes", "Created tools to assist route creation (currently only for internal use)"]},
+              {version: "Version 2.1 (Release, Current)", changes: ["Updated map with latest Inazuma regions", "Added multiple Mondstadt routes", "Created tools to assist route creation (currently only for internal use)", "Additional bugfixes & performance enhancements"]},
               {version: "Version 2.0.1", changes: ["Updated map format to be easier to handle", "Modified drop values and images for Inazuma mobs", "Added new Watatsumi & Seirai islands", "Improvements to drop calculations"], date: '5 October 2021', link: 'https://github.com/RetAlex/GenshinApp/pull/71'},
               {version: "Version 2.0", changes: ["Huge changes to the map for farming routes!", "Now you can change different regions on the map for better coherence", "Inazuma was added to the map", "Multiple farm routes for samurais were added", "Better loading time and zoom levels for the map", "Loot table were refreshed and appended with new inazuma enemies"], date: '1 September 2021', link: 'https://github.com/RetAlex/GenshinApp/pull/68'},
               {version: "Version 1.5", changes: ["Multiple enhancements to UX/UI", "Minor changes to Liuye routes based on feedback", "Custom routes feature in progress, no alpha yet"], date: '1 August 2021', link: ''},
