@@ -1,0 +1,12 @@
+{
+  "name": "gi-utils",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "converToArrow": "node RouteToArrows.js"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}

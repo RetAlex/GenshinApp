@@ -1,0 +1,64 @@
+{
+  "name": "Narukami beach nobushis",
+  "region": "inazuma",
+  "mobs": [
+    {
+      "id": 18,
+      "amount": 15
+    },
+    {
+      "id": 14,
+      "amount": 7
+    }
+  ],
+  "points": [
+    {
+      "name": "2 nobushi",
+      "lat": -781.28,
+      "lng": 540.10,
+      "mobId": 18
+    },
+    {
+      "name": "3 nobushi",
+      "lat": -783.28,
+      "lng": 531.35,
+      "mobId": 18
+    },
+    {
+      "name": "2 nobushi 2 TH",
+      "lat": -815.98,
+      "lng": 500.10,
+      "mobId": 18
+    },
+    {
+      "name": "2 nobushi 1 TH",
+      "lat": -839.73,
+      "lng": 506.85,
+      "mobId": 18
+    },
+    {
+      "name": "1 nobushi 2 TH",
+      "lat": -827.73,
+      "lng": 494.04,
+      "mobId": 18
+    },
+    {
+      "name": "2 nobushi 2 TH v2",
+      "lat": -845.00,
+      "lng": 485.05,
+      "mobId": 18
+    },
+    {
+      "name": "3 nobushi v2",
+      "lat": -856.51,
+      "lng": 476.80,
+      "mobId": 18
+    }
+  ],
+  "line": {
+    "latlngs": [[-781.28, 540.10], [-783.28, 531.35], [-815.98, 500.10], [-839.73, 506.85], [-827.73, 494.04], [-845.00, 485.05], [-856.51, 476.80]],
+    "color": "white",
+    "weight": 2
+  },
+  "show": false
+}
