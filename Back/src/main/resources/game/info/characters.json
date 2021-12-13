@@ -1,0 +1,278 @@
+[
+  {
+    "id": 1,
+    "name": "Amber",
+    "image": "/game/images/characters/1.png",
+    "items": []
+  },
+  {
+    "id": 2,
+    "name": "Barbara",
+    "image": "/game/images/characters/2.png",
+    "items": []
+  },
+  {
+    "id": 3,
+    "name": "Beidou",
+    "image": "/game/images/characters/3.png",
+    "items": []
+  },
+  {
+    "id": 4,
+    "name": "Bennett",
+    "image": "/game/images/characters/4.png",
+    "items": []
+  },
+  {
+    "id": 5,
+    "name": "Chongyun",
+    "image": "/game/images/characters/5.png",
+    "items": []
+  },
+  {
+    "id": 6,
+    "name": "Diluc",
+    "image": "/game/images/characters/6.png",
+    "items": []
+  },
+  {
+    "id": 7,
+    "name": "Fishcl",
+    "image": "/game/images/characters/7.png",
+    "items": []
+  },
+  {
+    "id": 8,
+    "name": "Jean",
+    "image": "/game/images/characters/8.png",
+    "items": []
+  },
+  {
+    "id": 9,
+    "name": "Kaeya",
+    "image": "/game/images/characters/9.png",
+    "items": []
+  },
+  {
+    "id": 10,
+    "name": "Keqing",
+    "image": "/game/images/characters/10.png",
+    "items": []
+  },
+  {
+    "id": 11,
+    "name": "Klee",
+    "image": "/game/images/characters/11.png",
+    "items": []
+  },
+  {
+    "id": 12,
+    "name": "Lisa",
+    "image": "/game/images/characters/12.png",
+    "items": []
+  },
+  {
+    "id": 13,
+    "name": "Mona",
+    "image": "/game/images/characters/13.png",
+    "items": []
+  },
+  {
+    "id": 14,
+    "name": "Ningguang",
+    "image": "/game/images/characters/14.png",
+    "items": []
+  },
+  {
+    "id": 15,
+    "name": "Noelle",
+    "image": "/game/images/characters/15.png",
+    "items": []
+  },
+  {
+    "id": 16,
+    "name": "Qiqi",
+    "image": "/game/images/characters/16.png",
+    "items": []
+  },
+  {
+    "id": 17,
+    "name": "Razor",
+    "image": "/game/images/characters/17.png",
+    "items": []
+  },
+  {
+    "id": 18,
+    "name": "Sucrose",
+    "image": "/game/images/characters/18.png",
+    "items": []
+  },
+  {
+    "id": 19,
+    "name": "Traveler (Anemo)",
+    "image": "/game/images/characters/19.png",
+    "items": []
+  },
+  {
+    "id": 20,
+    "name": "Traveler (Geo)",
+    "image": "/game/images/characters/20.png",
+    "items": []
+  },
+  {
+    "id": 21,
+    "name": "Traveler (Electro)",
+    "image": "/game/images/characters/21.png",
+    "items": []
+  },
+  {
+    "id": 22,
+    "name": "Vennti",
+    "image": "/game/images/characters/22.png",
+    "items": []
+  },
+  {
+    "id": 23,
+    "name": "Xiangling",
+    "image": "/game/images/characters/23.png",
+    "items": []
+  },
+  {
+    "id": 24,
+    "name": "Xiao",
+    "image": "/game/images/characters/24.png",
+    "items": []
+  },
+  {
+    "id": 25,
+    "name": "Xingqiu",
+    "image": "/game/images/characters/25.png",
+    "items": []
+  },
+  {
+    "id": 26,
+    "name": "Tartaglia",
+    "image": "/game/images/characters/26.png",
+    "items": []
+  },
+  {
+    "id": 27,
+    "name": "Zhongli",
+    "image": "/game/images/characters/27.png",
+    "items": []
+  },
+  {
+    "id": 28,
+    "name": "Diona",
+    "image": "/game/images/characters/28.png",
+    "items": []
+  },
+  {
+    "id": 29,
+    "name": "Xinyan",
+    "image": "/game/images/characters/29.png",
+    "items": []
+  },
+  {
+    "id": 30,
+    "name": "Ganyu",
+    "image": "/game/images/characters/30.png",
+    "items": []
+  },
+  {
+    "id": 31,
+    "name": "Albedo",
+    "image": "/game/images/characters/31.png",
+    "items": []
+  },
+  {
+    "id": 32,
+    "name": "Rosaria",
+    "image": "/game/images/characters/32.png",
+    "items": []
+  },
+  {
+    "id": 33,
+    "name": "Kamisato Ayaya",
+    "image": "/game/images/characters/33.png",
+    "items": []
+  },
+  {
+    "id": 34,
+    "name": "Hu Tao",
+    "image": "/game/images/characters/34.png",
+    "items": []
+  },
+  {
+    "id": 35,
+    "name": "Yanfei",
+    "image": "/game/images/characters/35.png",
+    "items": []
+  },
+  {
+    "id": 36,
+    "name": "Eula",
+    "image": "/game/images/characters/36.png",
+    "items": []
+  },
+  {
+    "id": 37,
+    "name": "Kaedaharra Kazuha",
+    "image": "/game/images/characters/37.png",
+    "items": []
+  },
+  {
+    "id": 38,
+    "name": "Yoimiya",
+    "image": "/game/images/characters/38.png",
+    "items": []
+  },
+  {
+    "id": 39,
+    "name": "Sayu",
+    "image": "/game/images/characters/39.png",
+    "items": []
+  },
+  {
+    "id": 40,
+    "name": "Raiden Shogun",
+    "image": "/game/images/characters/40.png",
+    "items": []
+  },
+  {
+    "id": 41,
+    "name": "Sangonomiya Kokomi",
+    "image": "/game/images/characters/41.png",
+    "items": []
+  },
+  {
+    "id": 42,
+    "name": "Aloy",
+    "image": "/game/images/characters/42.png",
+    "items": []
+  },
+  {
+    "id": 43,
+    "name": "Kujou Sara",
+    "image": "/game/images/characters/43.png",
+    "items": []
+  },
+  {
+    "id": 44,
+    "name": "Thoma",
+    "image": "/game/images/characters/44.png",
+    "items": []
+  },
+  {
+    "id": 45,
+    "name": "Gorou",
+    "image": "/game/images/characters/45.png",
+    "items": []
+  },
+  {
+    "id": 46,
+    "name": "Arataki Itto",
+    "image": "/game/images/characters/46.png",
+    "items": []
+  }
+]

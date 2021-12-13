@@ -1,0 +1,570 @@
+{
+  "swords": [
+    {
+      "id": 1,
+      "name": "Blackliff Longsword",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 2,
+      "name": "Favonius Sword",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 3,
+      "name": "Iron Sting",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 4,
+      "name": "Lion's roar",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 5,
+      "name": "Prototype Rancour",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 6,
+      "name": "Royal Longsworrd",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 7,
+      "name": "Sacrificial Sword",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 8,
+      "name": "The Alley Flash",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 9,
+      "name": "The black sword",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 10,
+      "name": "The flute",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 11,
+      "name": "Sword of Descension",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 12,
+      "name": "Festering desire",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 13,
+      "name": "Amenoma Kageuchi",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 14,
+      "name": "Aquila Favonia",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 15,
+      "name": "Skyward Blade",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 16,
+      "name": "Summit Shaper",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 17,
+      "name": "Primordial Jade Cutter",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 18,
+      "name": "Freedom-Sworn",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 19,
+      "name": "Mistsplitter Reforged",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 20,
+      "name": "Cinnabar Spindle",
+      "image": "",
+      "items": []
+    }
+  ],
+  "claymore": [
+    {
+      "id": 21,
+      "name": "Blackliff Slasher",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 22,
+      "name": "Favonius Greatsword",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 23,
+      "name": "Lithic Blade",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 24,
+      "name": "Prototype Archaic",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 25,
+      "name": "Painslesher",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 26,
+      "name": "Royal Greatsword",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 27,
+      "name": "Serpent Spine",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 28,
+      "name": "The Bell",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 29,
+      "name": "Whiteblind",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 30,
+      "name": "Sacrificial Greatsword",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 31,
+      "name": "Snow-Tombed Starsilver",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 32,
+      "name": "Katsuragikiri Nagamasa",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 33,
+      "name": "Luxurious Sea-Lord",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 34,
+      "name": "Akuoumaru",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 35,
+      "name": "Skyward Pride",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 36,
+      "name": "Wolf's Gravestone",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 37,
+      "name": "The Unforged",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 38,
+      "name": "Song of Broken Pines",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 39,
+      "name": "Redhorn Stonethresher",
+      "image": "",
+      "items": []
+    }
+  ],
+  "polearm": [
+    {
+      "id": 40,
+      "name": "Blackliff Pole",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 41,
+      "name": "Crescent Pike",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 42,
+      "name": "Deathmatch",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 43,
+      "name": "Dragon's Bane",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 44,
+      "name": "Lithic Spear",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 45,
+      "name": "Prototype Starglitter",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 46,
+      "name": "Favonius Lance",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 47,
+      "name": "Royal Spear",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 48,
+      "name": "Dragonspine Spear",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 49,
+      "name": "Kitain Cross Spear",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 50,
+      "name": "The Catch",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 51,
+      "name": "Wavebreaker's Fin",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 52,
+      "name": "Vortex Vanquisher",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 53,
+      "name": "Primordial Jade Winged-Spear",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 54,
+      "name": "Skyward Spine",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 55,
+      "name": "Staff of Home",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 56,
+      "name": "Engulfing Lightning",
+      "image": "",
+      "items": []
+    }
+  ],
+  "bow": [
+    {
+      "id": 57,
+      "name": "The Stringless",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 58,
+      "name": "Alley Hunter",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 59,
+      "name": "Blackliff Warbow",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 60,
+      "name": "Compound Bow",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 61,
+      "name": "Favonius Warbow",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 62,
+      "name": "Prototype Crescent",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 63,
+      "name": "Royal Bow",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 64,
+      "name": "Rust",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 65,
+      "name": "Sacrificial Bow",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 66,
+      "name": "The Viridescent Hunt",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 67,
+      "name": "Windblume Ode",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 68,
+      "name": "Mitternachts Waltz",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 69,
+      "name": "Hamayumi",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 70,
+      "name": "Skyward Harp",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 71,
+      "name": "Amos' Bow",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 72,
+      "name": "Elegy for the End",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 73,
+      "name": "Thundering Pulse",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 74,
+      "name": "Polar Star",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 75,
+      "name": "Predator",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 76,
+      "name": "Mouun's Moon",
+      "image": "",
+      "items": []
+    }
+  ],
+  "catalyst": [
+    {
+      "id": 77,
+      "name": "Blackliff Agate",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 78,
+      "name": "Favoniuss Codex",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 79,
+      "name": "Mappa Mare",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 80,
+      "name": "Prototype Amber",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 81,
+      "name": "Royal Grimoire",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 82,
+      "name": "Sacrificial Fragments",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 83,
+      "name": "Solar Pearl",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 84,
+      "name": "The Widsith",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 85,
+      "name": "Wine and Song",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 86,
+      "name": "Eye of Perception",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 87,
+      "name": "Frostbearer",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 88,
+      "name": "Dodoco Tales",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 89,
+      "name": "Hakushin Ring",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 90,
+      "name": "Lost Prayer to the Sacred Winds",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 91,
+      "name": "Skyward Atlas",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 92,
+      "name": "Memory of Dust",
+      "image": "",
+      "items": []
+    },
+    {
+      "id": 93,
+      "name": "Everlasting Moonglow",
+      "image": "",
+      "items": []
+    }
+  ]
+}
