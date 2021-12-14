@@ -1,6 +1,34 @@
 <template>
     <div class="route-list-wrap col-lg-4 col-md-12 pl-0">
         <button class="route-list-btn" @click="menuOpened = !menuOpened"><i class="fa fa-list-ul"></i></button>
+        <b-collapse :open="false" @open="toggleFilters()" animation="slide" aria-id="contentIdForA11y1">
+            <template #trigger><button class="filter-btn">Choose Filter</button></template>
+            <div class="filter-wrap">
+                <b-dropdown class="col-lg-6" v-model="filter.characters" multiple aria-role="list">
+                    <template #trigger>
+                        <b-button type="is-primary" icon-right="menu-down">Characters</b-button>
+                    </template>
+
+                    <b-dropdown-item v-for="char in filterOptions.characters" :key="char.id" :value="char" aria-role="listitem">
+                        <span>{{char.name}}</span>
+                    </b-dropdown-item>
+                </b-dropdown>
+                <b-dropdown class="col-lg-6" v-model="filter.weapons" multiple aria-role="list">
+                    <template #trigger>
+                        <b-button type="is-primary" icon-right="menu-down">Weapons</b-button>
+                    </template>
+
+                    <b-collapse v-for="type in Object.keys(filterOptions.weapons)" :key="type" :open="false" animation="slide" aria-id="contentIdForA11y1">
+                        <template #trigger><div class="weapon-type-title">{{type}}</div></template>
+                        <div class="weapons-wrap">
+                            <b-dropdown-item v-for="weapon in filterOptions.weapons[type]" :key="weapon.id" :value="weapon" aria-role="listitem">
+                                <span>{{weapon.name}}</span>
+                            </b-dropdown-item>
+                        </div>
+                    </b-collapse>
+                </b-dropdown>
+            </div>
+        </b-collapse>
         <div class="route-items" :class="menuOpened ? 'active' : ''">
             <button class="route-list-close" @click="menuOpened = !menuOpened"><i class="fa fa-close"></i></button>
             <div v-if="routes && routes.length">
@@ -15,40 +43,7 @@
                                 <span class="monster-amount">{{mob.amount}}</span>
                             </span>
                         </div>
-                        <b-collapse class="list" :open="false" @open="getRouteDrop(route)" position="is-bottom"
-                                    animation="slide" aria-id="contentIdForA11y1">
-                            <template #trigger="props">
-                                <a aria-controls="contentIdForA11y1">
-                                    <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon>
-                                    {{ !props.open ? 'Show estimated drop' : 'Hide estimated drop' }}
-                                </a>
-                            </template>
-                            <div class="drop-info-wrapper">
-                                <b-loading :is-full-page="false" :active="!route.drop"></b-loading>
-                                <div class="drop-info row" v-if="route.drop">
-                                    <div class="drop-info-item col-md-6">
-                                        <img class="drop-icon" src="../assets/images/icons/mora.png"/>
-                                        <span>x{{route.drop.totalMora}}</span>
-                                    </div>
-                                    <div class="drop-info-item col-md-6">
-                                        <img class="drop-icon" src="../assets/images/icons/char_exp.png"/>
-                                        <span>x{{route.drop.totalExperience}}</span>
-                                    </div>
-                                </div>
-
-                                <div class="drop-info" v-if="route.drop">
-                                    <div v-for="item in route.drop.items" :key="item.itemId" class="drop-info-item">
-                                        <div v-if="item && item.amount > 0">
-                                            <span :class="'rarity-' + itemIcons[item.itemId]['rarity']">
-                                                <img class="drop-icon" :alt="itemIcons[item.itemId]['name']"
-                                                     :src="itemIcons[item.itemId]['image']"/>
-                                            </span>
-                                            <span>x{{item.amount}}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </b-collapse>
+                        <route-item-drop :route="route" :item-icons="itemIcons"></route-item-drop>
                     </div>
                     <div class="route-footer">
                         <a class="route-button" v-bind:class="{ hidden: !route.show }"
@@ -63,36 +58,44 @@
 </template>
 
 <script>
+    import RouteItemDrop from "@/components/RouteItemDrop";
     export default {
         name: "RoutesList",
+        components: {RouteItemDrop},
         props: ['routes', 'mobIcons', 'itemIcons'],
         data() {
             return {
                 apiLink: process.env.VUE_APP_API,
-                menuOpened: false
+                menuOpened: false,
+                filterOpened: false,
+                filterOptions: {weapons: [], characters: []},
+                filter: {weapons: [], characters: []}
             }
         },
         methods: {
-            async getRouteDrop(route) {
-                if (route.drop) return;
-                const requestOptions = {
-                    method: "POST",
-                    headers: {"Content-Type": "application/json"},
-                    body: JSON.stringify({mobs: route.mobs, worldLevel: localStorage.wl})
-                };
-                const res = await fetch(this.apiLink + "/exp-calc/calculate", requestOptions);
-                this.$set(route, 'drop', await res.json());
-                this.$forceUpdate();
-            },
             toggleOnMap(route) {
                 route.show = !route.show;
                 this.$forceUpdate();
+            },
+            async toggleFilters() {
+                if (!this.filterOptions.weapons.length && !this.filterOptions.characters.length) {
+                    await this.getFilterCharOptions();
+                    await this.getFilterWeaponOptions();
+                }
+            },
+            async getFilterCharOptions() {
+                const res = await fetch(this.apiLink + "/game/info/characters.json");
+                this.$set(this.filterOptions, 'characters', await res.json());
+            },
+            async getFilterWeaponOptions() {
+                const res = await fetch(this.apiLink + "/game/info/weaponss.json");
+                this.$set(this.filterOptions, 'weapons', await res.json());
             }
         }
     }
 </script>
 
-<style scoped>
+<style>
     .route-list-btn {
         display: none;
     }
@@ -103,6 +106,91 @@
 
     .route-items .center-text {
         margin-top: 20px;
+    }
+
+    .filter-btn {
+        border-top-left-radius: 5px;
+        position: absolute;
+        right: 20px;
+        border: none;
+        border-top-right-radius: 5px;
+        padding: 7px 20px;
+        font-size: 10px;
+        top: -29px;
+        background: #5baaf6;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+    .filter-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 15px;
+        background: #fff;
+        border-bottom: 1px solid #eee;
+    }
+
+    .filter-wrap .weapon-type-title {
+        text-transform: uppercase;
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        transition: color .3s ease;
+        padding: 5px;
+        border-bottom: 1px solid #e3e3e3;
+        color: #777;
+    }
+
+    .filter-wrap .weapon-type-title:hover {
+        color: #5baaf6;
+    }
+
+    .filter-wrap .dropdown {
+        padding: 0;
+    }
+
+    .filter-wrap .dropdown-trigger {
+        width: 100%;
+    }
+
+    .filter-wrap .dropdown-trigger .button {
+        background: #f2f2fe !important;;
+        color: #777 !important;
+        font-size: 12px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .filter-wrap .dropdown-trigger .button span {
+        font-weight: normal !important;
+    }
+
+    .filter-wrap .dropdown-content {
+        max-height: 300px;
+        overflow: auto;
+        background: #f2f2fe !important;
+    }
+
+    .filter-wrap .dropdown-content .dropdown-item {
+        color: #777 !important;
+        font-size: 12px;
+    }
+
+    .filter-wrap .dropdown-content a.dropdown-item:hover {
+        background-color: rgba(253, 205, 229, 0.3)
+    }
+
+    .filter-wrap .dropdown-menu {
+        width: 100%;
+        background: transparent;
+        border: none;
     }
 
     @media (max-width: 992px) {

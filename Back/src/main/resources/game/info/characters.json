@@ -3,13 +3,13 @@
     "id": 1,
     "name": "Amber",
     "image": "/game/images/characters/1.png",
-    "items": []
+    "items": [7, 8, 9]
   },
   {
     "id": 2,
     "name": "Barbara",
     "image": "/game/images/characters/2.png",
-    "items": []
+    "items": [4, 5, 6]
   },
   {
     "id": 3,
