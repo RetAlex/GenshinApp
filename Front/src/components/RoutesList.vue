@@ -4,7 +4,7 @@
         <b-collapse :open="false" @open="toggleFilters()" animation="slide" aria-id="contentIdForA11y1">
             <template #trigger><button class="filter-btn">Choose Filter</button></template>
             <div class="filter-wrap">
-                <b-dropdown class="col-lg-6" v-model="filter.characters" multiple aria-role="list">
+                <b-dropdown @change="applyFilter()" class="col-lg-6" v-model="filter.characters" multiple aria-role="list">
                     <template #trigger>
                         <b-button type="is-primary" icon-right="menu-down">Characters</b-button>
                     </template>
@@ -13,7 +13,7 @@
                         <span>{{char.name}}</span>
                     </b-dropdown-item>
                 </b-dropdown>
-                <b-dropdown class="col-lg-6" v-model="filter.weapons" multiple aria-role="list">
+                <b-dropdown @change="applyFilter()" class="col-lg-6" v-model="filter.weapons" multiple aria-role="list">
                     <template #trigger>
                         <b-button type="is-primary" icon-right="menu-down">Weapons</b-button>
                     </template>
@@ -62,12 +62,11 @@
     export default {
         name: "RoutesList",
         components: {RouteItemDrop},
-        props: ['routes', 'mobIcons', 'itemIcons'],
+        props: ['routes', 'mobIcons', 'itemIcons', 'cachedRoutes'],
         data() {
             return {
                 apiLink: process.env.VUE_APP_API,
                 menuOpened: false,
-                filterOpened: false,
                 filterOptions: {weapons: [], characters: []},
                 filter: {weapons: [], characters: []}
             }
@@ -90,6 +89,21 @@
             async getFilterWeaponOptions() {
                 const res = await fetch(this.apiLink + "/game/info/weaponss.json");
                 this.$set(this.filterOptions, 'weapons', await res.json());
+            },
+            applyFilter() {
+                let filteredRoutes = this.cachedRoutes.filter(value => this.prepareFilterData().includes(value.items));
+                console.log(filteredRoutes)
+            },
+            prepareFilterData() {
+                let items = [];
+                const filterData = JSON.parse(JSON.stringify(this.filter));
+                for (let key in filterData) {
+                    filterData[key].forEach(el => this.pushItems(items, el.items))
+                }
+                return items;
+            },
+            pushItems(itemsList, newItems) {
+                newItems.forEach(el => {if (!itemsList.includes(el)) itemsList.push(el)});
             }
         }
     }

@@ -49,7 +49,7 @@
                             </l-map>
                         </div>
                     </div>
-                    <routes-list :routes="routes[region]" :mobIcons="mobIcons" :itemIcons="itemIcons"></routes-list>
+                    <routes-list :routes="routes[region]" :cached-routes="cachedRoutes[region]" :mobIcons="mobIcons" :itemIcons="itemIcons"></routes-list>
                 </div>
             </div>
         </div>
@@ -87,7 +87,8 @@
                 teleportsVisible: true,
                 routes: {},
                 mobIcons: {},
-                itemIcons: {}
+                itemIcons: {},
+                cachedRoutes: {}
             };
         },
         methods: {
@@ -136,7 +137,7 @@
                 dataRoutes.forEach(route => {
                     if (!ret[route.region]) ret[route.region] = [];
                     ret[route.region].push(route);
-                    this.$set(this.routes, route.region, ret[route.region]);
+                    this.$set(this.cachedRoutes, route.region, ret[route.region]);
                 })
             },
             getMapUrl(region) {
@@ -151,6 +152,7 @@
             await this.getMobs();
             await this.getItems();
             await this.getRoutes();
+            this.routes = this.cachedRoutes;
         }
     }
 </script>
@@ -391,6 +393,16 @@
     a.dropdown-item.is-active, .dropdown .dropdown-menu .has-link a.is-active, button.dropdown-item.is-active {
         background-color: rgba(253, 205, 229, 1) !important;
         color: #1e1e1e;
+    }
+
+    @media (max-width: 1023px) {
+        .dropdown.is-mobile-modal > .dropdown-menu {
+            z-index: 5000 !important;
+        }
+
+        .dropdown .background {
+            z-index: 4000;
+        }
     }
 
 </style>
