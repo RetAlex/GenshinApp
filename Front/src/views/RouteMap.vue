@@ -39,7 +39,7 @@
                                 <l-marker :visible="teleportsVisible" v-for="teleport in teleports[region]"
                                           :key="teleport.name"
                                           :lat-lng="teleport" :icon="icons[teleport.type]"></l-marker>
-                                <l-layer-group v-for="route in routes[region]" :key="route.name" :visible="route.show">
+                                <l-layer-group v-for="route in cachedRoutes[region]" :key="route.name" :visible="route.show">
                                     <l-marker v-for="point in route.points" :key="point.name"
                                               :lat-lng="point" :icon="mobIcons[point.mobId].point"></l-marker>
                                     <l-polyline v-if="route.line" :lat-lngs="route.line.latlngs" :color="route.line.color"
@@ -49,7 +49,7 @@
                             </l-map>
                         </div>
                     </div>
-                    <routes-list :routes="routes[region]" :mobIcons="mobIcons" :itemIcons="itemIcons"></routes-list>
+                    <routes-list :cached-routes="cachedRoutes[region]" :mobIcons="mobIcons" :itemIcons="itemIcons"></routes-list>
                 </div>
             </div>
         </div>
@@ -85,9 +85,9 @@
                 icons: teleportIcons,
                 teleports: teleports,
                 teleportsVisible: true,
-                routes: {},
                 mobIcons: {},
-                itemIcons: {}
+                itemIcons: {},
+                cachedRoutes: {}
             };
         },
         methods: {
@@ -136,7 +136,7 @@
                 dataRoutes.forEach(route => {
                     if (!ret[route.region]) ret[route.region] = [];
                     ret[route.region].push(route);
-                    this.$set(this.routes, route.region, ret[route.region]);
+                    this.$set(this.cachedRoutes, route.region, ret[route.region]);
                 })
             },
             getMapUrl(region) {
@@ -203,15 +203,19 @@
         background: #f2f2fe !important;
     }
 
-    .route-items {
+    .route-items-wrap {
         background: #FFFFFF;
+        height: 80vh;
+    }
+
+    .route-items {
         overflow-y: scroll;
         height: 80vh;
     }
 
     .route-item {
         background: #FFFFFF;
-        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.1);
+        /*box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.1);*/
         padding: 20px 0 0 0;
     }
 
@@ -385,12 +389,22 @@
 
     .map-controls .dropdown {
         margin-right: 10px;
-        z-index: 3000;
+        z-index: 1001;
     }
 
     a.dropdown-item.is-active, .dropdown .dropdown-menu .has-link a.is-active, button.dropdown-item.is-active {
         background-color: rgba(253, 205, 229, 1) !important;
         color: #1e1e1e;
+    }
+
+    @media (max-width: 1023px) {
+        .dropdown.is-mobile-modal > .dropdown-menu {
+            z-index: 5000 !important;
+        }
+
+        .dropdown .background {
+            z-index: 4000;
+        }
     }
 
 </style>

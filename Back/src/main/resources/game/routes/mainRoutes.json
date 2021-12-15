@@ -2,6 +2,7 @@
   {
     "name": "Narukami beach nobushis",
     "region": "inazuma",
+    "items": [34, 35, 36, 40, 41, 42],
     "mobs": [
       {
         "id": 18,
@@ -60,6 +61,7 @@
   {
     "name": "Yashiori nobushi",
     "region": "inazuma",
+    "items": [40, 41, 42],
     "mobs": [
       {
         "id": 18,
@@ -103,6 +105,7 @@
   {
     "name": "Yaoguang shore",
     "region": "liyue",
+    "items": [1, 2, 3, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 25, 26, 27, 28, 29, 30, 37, 38, 39],
     "mobs": [
       {
         "id": 6,
@@ -247,6 +250,7 @@
   },
   {
     "name": "Robots&Fatuis",
+    "items": [37, 38, 39, 22, 23, 24, 16, 17, 18, 19, 20, 21],
     "region": "liyue",
     "mobs": [
       {
@@ -422,6 +426,7 @@
   },
   {
     "name": "Robots",
+    "items": [37, 38, 39],
     "region": "liyue",
     "mobs": [
       {
@@ -481,6 +486,7 @@
   },
   {
     "name": "Treasure hoarders",
+    "items": [34, 35, 36, 16, 17, 18],
     "region": "liyue",
     "mobs": [
       {
@@ -564,6 +570,7 @@
   },
   {
     "name": "Thousand Winds Temple",
+    "items": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 37, 38, 39],
     "region": "mondstadt",
     "mobs": [
       {
@@ -653,6 +660,7 @@
   },
   {
     "name": "Galesong Hill",
+    "items": [1, 2, 3, 4, 5, 6, 10, 11, 12, 13, 14, 15, 16, 17, 18, 22, 23, 24, 28, 29, 30],
     "region": "mondstadt",
     "mobs": [
       {
@@ -767,6 +775,7 @@
   },
   {
     "name": "Dragonspine",
+    "items": [1, 2, 3, 4, 5, 6, 10, 11, 12, 16, 17, 18, 22, 23, 24, 25, 26, 27, 28, 29, 30],
     "region": "mondstadt",
     "mobs": [
       {
@@ -886,6 +895,7 @@
   {
     "name": "Dragonspine Fatui & Elites",
     "region": "mondstadt",
+    "items": [13, 14, 15, 16, 17, 18, 22, 23, 24, 34, 35, 36],
     "mobs": [
       {
         "id": 8,
@@ -980,6 +990,7 @@
   },
   {
     "name": "Brightcrown Canyon",
+    "items": [1, 2, 3, 4, 5, 6, 10, 11, 12, 13, 14, 15, 16, 17, 18, 25, 26, 27, 37, 38, 39],
     "region": "mondstadt",
     "mobs": [
       {
@@ -1080,6 +1091,7 @@
   },
   {
     "name": "Stormbearer Point",
+    "items": [1, 2, 3, 4, 5, 6, 16, 17, 18, 22, 23, 24, 37, 38, 39],
     "region": "mondstadt",
     "mobs": [
       {
