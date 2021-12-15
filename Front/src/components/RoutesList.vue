@@ -7,16 +7,19 @@
                 <div class="filter-wrap">
                     <b-dropdown @change="applyFilter()" class="col-lg-6" v-model="filter.characters" multiple aria-role="list">
                         <template #trigger>
-                            <b-button type="is-primary" icon-right="menu-down">{{filter.characters.length ? 'For: ' + namesToString(filter.characters) : 'Characters'}}</b-button>
+                            <b-button type="is-primary" icon-right="menu-down">{{filter.characters.length ? namesToString(filter.characters) : 'Characters'}}</b-button>
                         </template>
 
                         <b-dropdown-item v-for="char in filterOptions.characters" :key="char.id" :value="char" aria-role="listitem">
-                            <span>{{char.name}}</span>
+                            <div class="char-item">
+                                <span class="char-item-img" :style="{'background-image': `url(${require(apiLink + '/game/images/characters/' + char.id + '.png')})`}"></span>
+                                <span>{{char.name}}</span>
+                            </div>
                         </b-dropdown-item>
                     </b-dropdown>
                     <b-dropdown @change="applyFilter()" class="col-lg-6" v-model="filter.weapons" multiple aria-role="list">
                         <template #trigger>
-                            <b-button type="is-primary" icon-right="menu-down">{{filter.weapons.length ? 'For: ' + namesToString(filter.weapons) : 'Weapons'}}</b-button>
+                            <b-button type="is-primary" icon-right="menu-down">{{filter.weapons.length ? namesToString(filter.weapons) : 'Weapons'}}</b-button>
                         </template>
 
                         <b-collapse v-for="type in Object.keys(filterOptions.weapons)" :key="type" :open="false" animation="slide" aria-id="contentIdForA11y1">
