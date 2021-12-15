@@ -7,26 +7,30 @@
                 <div class="filter-wrap">
                     <b-dropdown @change="applyFilter()" class="col-lg-6" v-model="filter.characters" multiple aria-role="list">
                         <template #trigger>
-                            <b-button type="is-primary" icon-right="menu-down">{{filter.characters.length ? namesToString(filter.characters) : 'Characters'}}</b-button>
+                            <b-button type="is-primary" icon-right="menu-down">{{filter.characters.length ? 'For: ' + namesToString(filter.characters) : 'Characters'}}</b-button>
                         </template>
 
                         <b-dropdown-item v-for="char in filterOptions.characters" :key="char.id" :value="char" aria-role="listitem">
                             <div class="char-item">
-                                <span class="char-item-img" :style="{'background-image': `url(${require(apiLink + '/game/images/characters/' + char.id + '.png')})`}"></span>
+                                <span class="char-item-img" :style="{'background-image': 'url(' + apiLink + '/game/images/characters/' + char.id + '.png'}"></span>
                                 <span>{{char.name}}</span>
                             </div>
                         </b-dropdown-item>
                     </b-dropdown>
                     <b-dropdown @change="applyFilter()" class="col-lg-6" v-model="filter.weapons" multiple aria-role="list">
                         <template #trigger>
-                            <b-button type="is-primary" icon-right="menu-down">{{filter.weapons.length ? namesToString(filter.weapons) : 'Weapons'}}</b-button>
+                            <b-button type="is-primary" icon-right="menu-down">{{filter.weapons.length ? 'For: ' + namesToString(filter.weapons) : 'Weapons'}}</b-button>
                         </template>
 
                         <b-collapse v-for="type in Object.keys(filterOptions.weapons)" :key="type" :open="false" animation="slide" aria-id="contentIdForA11y1">
                             <template #trigger><div class="weapon-type-title">{{type}}</div></template>
                             <div class="weapons-wrap">
                                 <b-dropdown-item v-for="weapon in filterOptions.weapons[type]" :key="weapon.id" :value="weapon" aria-role="listitem">
-                                    <span>{{weapon.name}}</span>
+                                    <div :class="'weapon-item rarity-' + weapon.rarity">
+                                        <span class="weapon-item-img">
+                                            <span :style="{'background-image': 'url(' + apiLink + '/game/images/weapons/' + weapon.id + '.png'}"></span></span>
+                                        <span>{{weapon.name}}</span>
+                                    </div>
                                 </b-dropdown-item>
                             </div>
                         </b-collapse>
@@ -214,6 +218,7 @@
     .filter-wrap .dropdown-content .dropdown-item {
         color: #777 !important;
         font-size: 12px;
+        padding: 5px 10px;
     }
 
     .filter-wrap .dropdown-content a.dropdown-item:hover {
@@ -224,6 +229,42 @@
         width: 100%;
         background: transparent;
         border: none;
+    }
+
+    .filter-wrap .char-item .char-item-img {
+        width: 25px;
+        height: 25px;
+        margin-right: 7px;
+        border-radius: 50%;
+        display: inline-block;
+        background-size: cover;
+        background-position: bottom;
+    }
+
+    .filter-wrap .char-item, .filter-wrap .weapon-item {
+        display: flex;
+        align-items: center;
+    }
+
+    .filter-wrap .weapon-item .weapon-item-img {
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        margin-right: 7px;
+        display: inline-block;
+    }
+
+    .filter-wrap .weapon-item .weapon-item-img span {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        display: inline-block;
+        background-size: cover;
+        background-position: bottom;
+    }
+
+    .rarity-5 .weapon-item-img {
+        background-color: blue;
     }
 
     @media (max-width: 992px) {
@@ -267,6 +308,32 @@
         .route-list-wrap {
             position: unset !important;
         }
+
+        .filter-wrap .char-item .char-item-img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .filter-wrap .weapon-item .weapon-item-img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .filter-wrap .weapon-item .weapon-item-img span {
+            width: 40px;
+            height: 40px;
+        }
+
+        .filter-wrap .dropdown-content {
+            max-height: inherit;
+        }
+
+        .filter-wrap .dropdown-content .dropdown-item {
+            font-size: 16px;
+        }
+
     }
 
     @media (max-width: 765px) {

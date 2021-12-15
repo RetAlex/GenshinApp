@@ -387,7 +387,7 @@
         background-color: #5baaf6;
     }
 
-    .rarity-1 .reward-item-image,  .rarity-1 .drop-icon {
+    .rarity-1 .reward-item-image,  .rarity-1 .drop-icon, .rarity-1 .weapon-item-img {
         background: rgb(133,134,138);
         background: -moz-linear-gradient(175deg, rgba(133,134,138,1) 0%, rgba(176,174,172,1) 100%);
         background: -webkit-linear-gradient(175deg, rgba(133,134,138,1) 0%, rgba(176,174,172,1) 100%);
@@ -395,7 +395,7 @@
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#85868a",endColorstr="#b0aeac",GradientType=1);
     }
 
-    .rarity-2 .reward-item-image,  .rarity-2 .drop-icon {
+    .rarity-2 .reward-item-image,  .rarity-2 .drop-icon, .rarity-2 .weapon-item-img {
         background: rgb(111,137,134);
         background: -moz-linear-gradient(175deg, rgba(111,137,134,1) 0%, rgba(126,185,157,1) 100%);
         background: -webkit-linear-gradient(175deg, rgba(111,137,134,1) 0%, rgba(126,185,157,1) 100%);
@@ -403,7 +403,7 @@
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6f8986",endColorstr="#7eb99d",GradientType=1);
     }
 
-    .rarity-3 .reward-item-image,  .rarity-3 .drop-icon {
+    .rarity-3 .reward-item-image,  .rarity-3 .drop-icon, .rarity-3 .weapon-item-img {
         background: rgb(124,138,167);
         background: -moz-linear-gradient(175deg, rgba(124,138,167,1) 0%, rgba(127,184,215,1) 100%);
         background: -webkit-linear-gradient(175deg, rgba(124,138,167,1) 0%, rgba(127,184,215,1) 100%);
@@ -411,7 +411,7 @@
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7c8aa7",endColorstr="#7fb8d7",GradientType=1);
     }
 
-    .rarity-4 .reward-item-image,  .rarity-4 .drop-icon {
+    .rarity-4 .reward-item-image,  .rarity-4 .drop-icon, .rarity-4 .weapon-item-img {
         background: rgb(123,117,161);
         background: -moz-linear-gradient(175deg, rgba(123,117,161,1) 0%, rgba(167,142,209,1) 100%);
         background: -webkit-linear-gradient(175deg, rgba(123,117,161,1) 0%, rgba(167,142,209,1) 100%);
@@ -419,7 +419,7 @@
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7b75a1",endColorstr="#a78ed1",GradientType=1);
     }
 
-    .rarity-5 .reward-item-image,  .rarity-5 .drop-icon {
+    .rarity-5 .reward-item-image,  .rarity-5 .drop-icon, .rarity-5 .weapon-item-img {
         background: rgb(168,125,87);
         background: -moz-linear-gradient(175deg, rgba(168,125,87,1) 0%, rgba(223,166,103,1) 100%);
         background: -webkit-linear-gradient(175deg, rgba(168,125,87,1) 0%, rgba(223,166,103,1) 100%);
