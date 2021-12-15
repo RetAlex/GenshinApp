@@ -44,7 +44,7 @@
 <style scoped>
     .header-area {
         position: relative;
-        z-index: 3000;
+        z-index: 1000;
         top: 30px;
         left: 0px;
         right: 0px;

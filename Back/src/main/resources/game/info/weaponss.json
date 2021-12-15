@@ -1,570 +1,570 @@
 {
-  "swords": [
+  "sword": [
     {
       "id": 1,
       "name": "Blackliff Longsword",
-      "image": "",
+      "rarity": "4",
       "items": [7, 8, 9, 19, 20, 21]
     },
     {
       "id": 2,
       "name": "Favonius Sword",
-      "image": "",
+      "rarity": "4",
       "items": [7, 8, 9, 10, 11, 12]
     },
     {
       "id": 3,
       "name": "Iron Sting",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [28, 29, 30, 31, 32, 33]
     },
     {
       "id": 4,
       "name": "Lion's roar",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [34, 35, 36, 19, 20, 21]
     },
     {
       "id": 5,
       "name": "Prototype Rancour",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [16, 17, 18, 22, 23, 24]
     },
     {
       "id": 6,
       "name": "Royal Longsworrd",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [1, 2, 3, 10, 11, 12]
     },
     {
       "id": 7,
       "name": "Sacrificial Sword",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [4, 5, 6, 37, 38, 39]
     },
     {
       "id": 8,
       "name": "The Alley Flash",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [4, 5, 6, 10, 11, 12]
     },
     {
       "id": 9,
-      "name": "The black sword",
-      "image": "",
-      "items": []
+      "name": "The Black Sword",
+      "rarity": "4",
+      "items": [13, 14, 15, 25, 26, 27]
     },
     {
       "id": 10,
-      "name": "The flute",
-      "image": "",
-      "items": []
+      "name": "The Flute",
+      "rarity": "4",
+      "items": [13, 14, 15, 25, 26, 27]
     },
     {
       "id": 11,
       "name": "Sword of Descension",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [13, 14, 15, 34, 35, 36]
     },
     {
       "id": 12,
       "name": "Festering desire",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [10, 11, 12, 22, 23, 24]
     },
     {
       "id": 13,
       "name": "Amenoma Kageuchi",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [40, 41, 42, 43, 44, 45]
     },
     {
       "id": 14,
       "name": "Aquila Favonia",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [7, 8, 9, 10, 11, 12]
     },
     {
       "id": 15,
       "name": "Skyward Blade",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [13, 14, 15, 25, 26, 27]
     },
     {
       "id": 16,
       "name": "Summit Shaper",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [1, 2, 3, 19, 20, 21]
     },
     {
       "id": 17,
       "name": "Primordial Jade Cutter",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [16, 17, 18, 34, 35, 36]
     },
     {
       "id": 18,
       "name": "Freedom-Sworn",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [4, 5, 6, 37, 38, 39]
     },
     {
       "id": 19,
       "name": "Mistsplitter Reforged",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [40, 41, 42, 43, 44, 45]
     },
     {
       "id": 20,
       "name": "Cinnabar Spindle",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [1, 2, 3, 37, 38, 39]
     }
   ],
   "claymore": [
     {
       "id": 21,
       "name": "Blackliff Slasher",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [16, 17, 18, 22, 23, 24]
     },
     {
       "id": 22,
       "name": "Favonius Greatsword",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [22, 23, 24, 37, 38, 39]
     },
     {
       "id": 23,
       "name": "Lithic Blade",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [7, 8, 9, 19, 20, 21]
     },
     {
       "id": 24,
       "name": "Prototype Archaic",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [1, 2, 3, 31, 32, 33]
     },
     {
       "id": 25,
-      "name": "Painslesher",
-      "image": "",
-      "items": []
+      "name": "Painslasher",
+      "rarity": "4",
+      "items": [16, 17, 18, 4, 5, 6]
     },
     {
       "id": 26,
       "name": "Royal Greatsword",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [37, 38, 39, 25, 26, 27]
     },
     {
       "id": 27,
       "name": "Serpent Spine",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [31, 32, 33, 28, 29, 30]
     },
     {
       "id": 28,
       "name": "The Bell",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [10, 11, 12, 28, 29, 30]
     },
     {
       "id": 29,
       "name": "Whiteblind",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [19, 20, 21, 34, 35, 36]
     },
     {
       "id": 30,
       "name": "Sacrificial Greatsword",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [7, 8, 9, 13, 14, 15]
     },
     {
       "id": 31,
       "name": "Snow-Tombed Starsilver",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [10, 11, 12, 25, 26, 27]
     },
     {
       "id": 32,
       "name": "Katsuragikiri Nagamasa",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [40, 41, 42, 43, 44, 45]
     },
     {
       "id": 33,
       "name": "Luxurious Sea-Lord",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [31, 32, 33, 25, 26, 27]
     },
     {
       "id": 34,
       "name": "Akuoumaru",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [40, 41, 42, 52, 53, 54]
     },
     {
       "id": 35,
       "name": "Skyward Pride",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [25, 26, 27, 13, 14, 15]
     },
     {
       "id": 36,
       "name": "Wolf's Gravestone",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [37, 38, 39, 4, 5, 6]
     },
     {
       "id": 37,
       "name": "The Unforged",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [16, 17, 18, 34, 35, 36]
     },
     {
       "id": 38,
       "name": "Song of Broken Pines",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [1, 2, 3, 10, 11, 12]
     },
     {
       "id": 39,
       "name": "Redhorn Stonethresher",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [40, 41, 42, 52, 53, 54]
     }
   ],
   "polearm": [
     {
       "id": 40,
       "name": "Blackliff Pole",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [16, 17, 18, 22, 23, 24]
     },
     {
       "id": 41,
       "name": "Crescent Pike",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [19, 20, 21, 34, 35, 36]
     },
     {
       "id": 42,
       "name": "Deathmatch",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [13, 14, 15, 28, 29, 30]
     },
     {
       "id": 43,
       "name": "Dragon's Bane",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [4, 5, 6, 16, 17, 18]
     },
     {
       "id": 44,
       "name": "Lithic Spear",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [7, 8, 9, 31, 32, 33]
     },
     {
       "id": 45,
       "name": "Prototype Starglitter",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [1, 2, 3, 31, 32, 33]
     },
     {
       "id": 46,
       "name": "Favonius Lance",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [25, 26, 27, 37, 38, 39]
     },
     {
       "id": 47,
       "name": "Royal Spear",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [16, 17, 18, 22, 23, 24]
     },
     {
       "id": 48,
       "name": "Dragonspine Spear",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [16, 17, 18, 22, 23, 24]
     },
     {
       "id": 49,
       "name": "Kitain Cross Spear",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [34, 35, 36, 43, 44, 45]
     },
     {
       "id": 50,
       "name": "The Catch",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [43, 44, 45, 49, 50, 51]
     },
     {
       "id": 51,
       "name": "Wavebreaker's Fin",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [40, 41, 42, 52, 53, 54]
     },
     {
       "id": 52,
       "name": "Vortex Vanquisher",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [31, 32, 33, 34, 35, 36]
     },
     {
       "id": 53,
       "name": "Primordial Jade Winged-Spear",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [19, 20, 21, 22, 23, 24]
     },
     {
       "id": 54,
       "name": "Skyward Spine",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [4, 5, 6, 37, 38, 39]
     },
     {
       "id": 55,
-      "name": "Staff of Home",
-      "image": "",
-      "items": []
+      "name": "Staff of Homa",
+      "rarity": "5",
+      "items": [13, 14, 15, 25, 26, 27]
     },
     {
       "id": 56,
       "name": "Engulfing Lightning",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [40, 41, 42, 43, 44, 45]
     }
   ],
   "bow": [
     {
       "id": 57,
       "name": "The Stringless",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [7, 8, 9, 10, 11, 12]
     },
     {
       "id": 58,
       "name": "Alley Hunter",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [25, 26, 27, 37, 38, 39]
     },
     {
       "id": 59,
       "name": "Blackliff Warbow",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [19, 20, 21, 28, 29, 30]
     },
     {
       "id": 60,
       "name": "Compound Bow",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [22, 23, 24, 31, 32, 33]
     },
     {
       "id": 61,
       "name": "Favonius Warbow",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [28, 29, 30, 37, 38, 39]
     },
     {
       "id": 62,
       "name": "Prototype Crescent",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [16, 17, 18, 34, 35, 36]
     },
     {
       "id": 63,
       "name": "Royal Bow",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [4, 5, 6, 37, 38, 39]
     },
     {
       "id": 64,
       "name": "Rust",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [1, 2, 3, 19, 20, 21]
     },
     {
       "id": 65,
       "name": "Sacrificial Bow",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [13, 14, 15, 25, 26, 27]
     },
     {
       "id": 66,
       "name": "The Viridescent Hunt",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [7, 8, 9, 10, 11, 12]
     },
     {
       "id": 67,
       "name": "Windblume Ode",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [13, 14, 15, 28, 29, 30]
     },
     {
       "id": 68,
       "name": "Mitternachts Waltz",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [10, 11, 12, 34, 35, 36]
     },
     {
       "id": 69,
       "name": "Hamayumi",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [7, 8, 9, 46, 47, 48]
     },
     {
       "id": 70,
       "name": "Skyward Harp",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [7, 8, 9, 13, 14, 15]
     },
     {
       "id": 71,
       "name": "Amos' Bow",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [25, 26, 27, 37, 38, 39]
     },
     {
       "id": 72,
       "name": "Elegy for the End",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [10, 11, 12, 22, 23, 24]
     },
     {
       "id": 73,
       "name": "Thundering Pulse",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [7, 8, 9, 46, 47, 48]
     },
     {
       "id": 74,
       "name": "Polar Star",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [49, 50, 51, 52, 53, 54]
     },
     {
       "id": 75,
       "name": "Predator",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [7, 8, 9, 46, 47, 48]
     },
     {
       "id": 76,
       "name": "Mouun's Moon",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [46, 47, 48, 49, 50, 51]
     }
   ],
   "catalyst": [
     {
       "id": 77,
       "name": "Blackliff Agate",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [4, 5, 6, 19, 20, 21]
     },
     {
       "id": 78,
       "name": "Favoniuss Codex",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [4, 5, 6, 10, 11, 12]
     },
     {
       "id": 79,
       "name": "Mappa Mare",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [25, 26, 27, 31, 32, 33]
     },
     {
       "id": 80,
       "name": "Prototype Amber",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [7, 8, 9, 16, 17, 18]
     },
     {
       "id": 81,
       "name": "Royal Grimoire",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [10, 11, 12, 22, 23, 24]
     },
     {
       "id": 82,
       "name": "Sacrificial Fragments",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [34, 35, 36, 37, 38, 39]
     },
     {
       "id": 83,
       "name": "Solar Pearl",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [19, 20, 21, 28, 29, 30]
     },
     {
       "id": 84,
       "name": "The Widsith",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [1, 2, 3, 13, 14, 15]
     },
     {
       "id": 85,
       "name": "Wine and Song",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [13, 14, 15, 34, 35, 36]
     },
     {
       "id": 86,
       "name": "Eye of Perception",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [1, 2, 3, 16, 17, 18]
     },
     {
       "id": 87,
       "name": "Frostbearer",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [28, 29, 30, 37, 38, 39]
     },
     {
       "id": 88,
       "name": "Dodoco Tales",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [1, 2, 3, 13, 14, 15]
     },
     {
       "id": 89,
       "name": "Hakushin Ring",
-      "image": "",
-      "items": []
+      "rarity": "4",
+      "items": [4, 5, 6, 46, 47, 48]
     },
     {
       "id": 90,
       "name": "Lost Prayer to the Sacred Winds",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [25, 26, 27, 37, 38, 39]
     },
     {
       "id": 91,
       "name": "Skyward Atlas",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [7, 8, 9, 13, 14, 15]
     },
     {
       "id": 92,
       "name": "Memory of Dust",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [1, 2, 3, 31, 32, 33]
     },
     {
       "id": 93,
       "name": "Everlasting Moonglow",
-      "image": "",
-      "items": []
+      "rarity": "5",
+      "items": [46, 47, 48, 49, 50, 51]
     }
   ]
 }

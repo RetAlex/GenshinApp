@@ -1,37 +1,37 @@
 <template>
     <div class="route-list-wrap col-lg-4 col-md-12 pl-0">
         <button class="route-list-btn" @click="menuOpened = !menuOpened"><i class="fa fa-list-ul"></i></button>
-        <b-collapse :open="false" @open="toggleFilters()" animation="slide" aria-id="contentIdForA11y1">
-            <template #trigger><button class="filter-btn">Choose Filter</button></template>
-            <div class="filter-wrap">
-                <b-dropdown @change="applyFilter()" class="col-lg-6" v-model="filter.characters" multiple aria-role="list">
-                    <template #trigger>
-                        <b-button type="is-primary" icon-right="menu-down">Characters</b-button>
-                    </template>
+        <div class="route-items-wrap" :class="menuOpened ? 'active' : ''">
+            <b-collapse :open="false" @open="toggleFilters()" animation="slide" aria-id="contentIdForA11y1">
+                <template #trigger><button class="filter-btn">Choose Filter</button></template>
+                <div class="filter-wrap">
+                    <b-dropdown @change="applyFilter()" class="col-lg-6" v-model="filter.characters" multiple aria-role="list">
+                        <template #trigger>
+                            <b-button type="is-primary" icon-right="menu-down">{{filter.characters.length ? 'For: ' + namesToString(filter.characters) : 'Characters'}}</b-button>
+                        </template>
 
-                    <b-dropdown-item v-for="char in filterOptions.characters" :key="char.id" :value="char" aria-role="listitem">
-                        <span>{{char.name}}</span>
-                    </b-dropdown-item>
-                </b-dropdown>
-                <b-dropdown @change="applyFilter()" class="col-lg-6" v-model="filter.weapons" multiple aria-role="list">
-                    <template #trigger>
-                        <b-button type="is-primary" icon-right="menu-down">Weapons</b-button>
-                    </template>
+                        <b-dropdown-item v-for="char in filterOptions.characters" :key="char.id" :value="char" aria-role="listitem">
+                            <span>{{char.name}}</span>
+                        </b-dropdown-item>
+                    </b-dropdown>
+                    <b-dropdown @change="applyFilter()" class="col-lg-6" v-model="filter.weapons" multiple aria-role="list">
+                        <template #trigger>
+                            <b-button type="is-primary" icon-right="menu-down">{{filter.weapons.length ? 'For: ' + namesToString(filter.weapons) : 'Weapons'}}</b-button>
+                        </template>
 
-                    <b-collapse v-for="type in Object.keys(filterOptions.weapons)" :key="type" :open="false" animation="slide" aria-id="contentIdForA11y1">
-                        <template #trigger><div class="weapon-type-title">{{type}}</div></template>
-                        <div class="weapons-wrap">
-                            <b-dropdown-item v-for="weapon in filterOptions.weapons[type]" :key="weapon.id" :value="weapon" aria-role="listitem">
-                                <span>{{weapon.name}}</span>
-                            </b-dropdown-item>
-                        </div>
-                    </b-collapse>
-                </b-dropdown>
-            </div>
-        </b-collapse>
-        <div class="route-items" :class="menuOpened ? 'active' : ''">
+                        <b-collapse v-for="type in Object.keys(filterOptions.weapons)" :key="type" :open="false" animation="slide" aria-id="contentIdForA11y1">
+                            <template #trigger><div class="weapon-type-title">{{type}}</div></template>
+                            <div class="weapons-wrap">
+                                <b-dropdown-item v-for="weapon in filterOptions.weapons[type]" :key="weapon.id" :value="weapon" aria-role="listitem">
+                                    <span>{{weapon.name}}</span>
+                                </b-dropdown-item>
+                            </div>
+                        </b-collapse>
+                    </b-dropdown>
+                </div>
+            </b-collapse>
             <button class="route-list-close" @click="menuOpened = !menuOpened"><i class="fa fa-close"></i></button>
-            <div v-if="routes && routes.length">
+            <div v-if="routes && routes.length" class="route-items">
                 <div class="route-item" v-for="route in routes" :key="route.name">
                     <div class="route-header">
                         <h3 class="route-title">{{route.name}}</h3>
@@ -59,13 +59,15 @@
 
 <script>
     import RouteItemDrop from "@/components/RouteItemDrop";
+
     export default {
         name: "RoutesList",
         components: {RouteItemDrop},
-        props: ['routes', 'mobIcons', 'itemIcons', 'cachedRoutes'],
+        props: ['mobIcons', 'itemIcons', 'cachedRoutes'],
         data() {
             return {
                 apiLink: process.env.VUE_APP_API,
+                routes: this.cachedRoutes,
                 menuOpened: false,
                 filterOptions: {weapons: [], characters: []},
                 filter: {weapons: [], characters: []}
@@ -91,8 +93,11 @@
                 this.$set(this.filterOptions, 'weapons', await res.json());
             },
             applyFilter() {
-                let filteredRoutes = this.cachedRoutes.filter(value => this.prepareFilterData().includes(value.items));
-                console.log(filteredRoutes)
+                if (this.filter.characters.length || this.filter.weapons.length) {
+                    this.routes = this.cachedRoutes.filter(value => value.items.some(r => this.prepareFilterData().includes(r)));
+                } else {
+                    this.routes = this.cachedRoutes;
+                }
             },
             prepareFilterData() {
                 let items = [];
@@ -104,7 +109,17 @@
             },
             pushItems(itemsList, newItems) {
                 newItems.forEach(el => {if (!itemsList.includes(el)) itemsList.push(el)});
+            },
+            namesToString(list) {
+                let names = [];
+                list.forEach(el => names.push(el.name))
+                return names;
             }
+        },
+        mounted() {
+            setTimeout(() => {
+                this.routes = this.cachedRoutes;
+            }, 2000);
         }
     }
 </script>
@@ -118,8 +133,8 @@
         display: none;
     }
 
-    .route-items .center-text {
-        margin-top: 20px;
+    .route-items-wrap .center-text {
+        padding-top: 20px;
     }
 
     .filter-btn {
@@ -143,7 +158,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 10px 15px;
+        padding: 10px 25px;
         background: #fff;
         border-bottom: 1px solid #eee;
     }
@@ -172,6 +187,7 @@
 
     .filter-wrap .dropdown-trigger {
         width: 100%;
+        overflow: hidden;
     }
 
     .filter-wrap .dropdown-trigger .button {
@@ -208,7 +224,7 @@
     }
 
     @media (max-width: 992px) {
-        .route-items {
+        .route-items-wrap {
             top: 0;
             position: absolute;
             right: -200%;
@@ -218,7 +234,7 @@
             width: 100%;
         }
 
-        .route-items.active {
+        .route-items-wrap.active {
             right: 0;
         }
 
@@ -251,7 +267,7 @@
     }
 
     @media (max-width: 765px) {
-        .route-items {
+        .route-items-wrap {
             width: calc(100% - 1rem);
         }
     }
