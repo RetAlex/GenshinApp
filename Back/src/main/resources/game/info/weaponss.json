@@ -339,6 +339,12 @@
       "name": "Engulfing Lightning",
       "rarity": "5",
       "items": [40, 41, 42, 43, 44, 45]
+    } ,
+    {
+      "id": 94,
+      "name": "Calamity Queller",
+      "rarity": "5",
+      "items": [16, 17, 18, 28, 29, 30]
     }
   ],
   "bow": [
@@ -565,12 +571,6 @@
       "name": "Everlasting Moonglow",
       "rarity": "5",
       "items": [46, 47, 48, 49, 50, 51]
-    } ,
-    {
-      "id": 94,
-      "name": "Calamity Queller",
-      "rarity": "5",
-      "items": [16, 17, 18, 28, 29, 30]
     }
   ]
 }
