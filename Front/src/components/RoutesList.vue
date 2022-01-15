@@ -59,7 +59,7 @@
                     </div>
                 </div>
             </div>
-            <div v-else class="center-text"><p>No routs found</p></div>
+            <div v-else class="center-text"><p>No routes found</p></div>
         </div>
     </div>
 </template>
