@@ -274,5 +274,17 @@
     "name": "Arataki Itto",
     "image": "/game/images/characters/46.png",
     "items": [25, 26, 27]
+  } ,
+  {
+    "id": 47,
+    "name": "Shenhe",
+    "image": "/game/images/characters/47.png",
+    "items": [28, 29, 30]
+  } ,
+  {
+    "id": 48,
+    "name": "Yun Jin",
+    "image": "/game/images/characters/48.png",
+    "items": [1, 2, 3]
   }
 ]
