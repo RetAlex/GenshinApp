@@ -48,13 +48,13 @@
                     {
                         version: "Version 2.4 (Current release)",
                         changes: ["Enkanomiya map was added", "List of Enkanomiya routes was added and updated", "Fixed some bugs and enhancements"],
-                        date: '15 February 2021',
+                        date: '15 February 2022',
                         link: 'https://github.com/RetAlex/GenshinApp/releases/tag/2.4'
                     },
                     {
                         version: "Version 2.3",
                         changes: ["'Filter by weapon/character' feature was updated with new characters and weapons", "New mob 'Bathysmal Vishap' was added to the calculator mob list", "Added new characters, mobs and weapons with appropriate images", "Fixed some bugs and enhancements"],
-                        date: '15 January 2021',
+                        date: '15 January 2022',
                         link: 'https://github.com/RetAlex/GenshinApp/releases/tag/2.3'
                     },
                     {
