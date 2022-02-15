@@ -75,7 +75,7 @@
         data() {
             return {
                 apiLink: process.env.VUE_APP_API,
-                regions: ['mondstadt', 'liyue', 'inazuma'],
+                regions: ['mondstadt', 'liyue', 'inazuma', 'enkanomiya'],
                 active: 'inazuma',
                 bounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 maxBounds: latLngBounds([[0, 0], [-1024, 1024]]),
