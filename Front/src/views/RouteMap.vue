@@ -38,7 +38,7 @@
                                 <l-tile-layer :url="getMapUrl(region)"/>
                                 <l-marker :visible="true" v-for="marker in markers"
                                         :key="marker.title"
-                                        :lat-lng="marker._latlng" :icon="icons['waypoint']"></l-marker>
+                                        :lat-lng="marker._latlng" :icon="icons['marker']"></l-marker>
                                 <l-marker :visible="teleportsVisible" v-for="teleport in teleports[region]"
                                           :key="teleport.name"
                                           :lat-lng="teleport" :icon="icons[teleport.type]"></l-marker>

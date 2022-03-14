@@ -20,6 +20,11 @@ export const teleportIcons = {
         iconUrl: process.env.VUE_APP_API + '/game/images/maps/icons/seven.png',
         iconSize: [27, 32],
         iconAnchor: [11, 32]
+    }),
+    marker: L.icon({
+        iconUrl: process.env.VUE_APP_API + '/game/images/maps/icons/marker.png',
+        iconSize: [15, 20],
+        iconAnchor: [8, 12]
     })
 };
 
