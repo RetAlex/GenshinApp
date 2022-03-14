@@ -158,5 +158,13 @@
     "type": "elite",
     "typeLong": "Elite enemy",
     "image": "/game/images/mobs/Rifthound.jpg"
+  } ,
+  {
+    "id": 21,
+    "name": "Bathysmal Vishap",
+    "handbookAmount": 8,
+    "type": "elite",
+    "typeLong": "Elite enemy",
+    "image": "/game/images/mobs/BathysmalVishap.png"
   }
 ]

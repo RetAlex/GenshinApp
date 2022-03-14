@@ -139,7 +139,12 @@ export const teleports = {
         {name: "Narukami Island, Inazuma, Statue", lat: -148.83522155464635, lng: 777.5501394619271, type: 'seven'},
         {name: "Narukami Island 3, Inazuma", lat: -171.59165218331984, lng: 760.9390670902402, type: 'waypoint'},
         {name: "Narukami Island 4, Inazuma", lat: -96.08545972607868, lng: 862.1731312922634, type: 'waypoint'},
-        {name: "Empty Boat of a Thousand Gates, Inazuma", lat: -101.46436573756925, lng: 883.9341438355807, type: 'domain'},
+        {
+            name: "Empty Boat of a Thousand Gates, Inazuma",
+            lat: -101.46436573756925,
+            lng: 883.9341438355807,
+            type: 'domain'
+        },
         {name: "Narukami Island 5, Inazuma", lat: -142.0878890746887, lng: 837.6755929195931, type: 'waypoint'},
         {name: "Narukami Island 6, Inazuma", lat: -161.20269533738403, lng: 868.54819607193, type: 'waypoint'},
         {name: "Narukami Island 7, Inazuma", lat: -176.2090306974846, lng: 906.1004732628539, type: 'waypoint'},
@@ -196,6 +201,32 @@ export const teleports = {
         {name: "Tsurumi Island 6, Inazuma", lat: -949.7243213034416, lng: 531.9236495295959, type: 'waypoint'},
         {name: "Tsurumi Island 7, Inazuma", lat: -913.619518240905, lng: 534.5472243769314, type: 'waypoint'},
         {name: "Tsurumi Island, Inazuma, Statue", lat: -845.7574271325384, lng: 658.8215815315626, type: 'seven'}
+    ],
+    enkanomiya: [
+        {name: "The Serpent's Bowels 1, Enkanomiya", lat: -748.9569931030273, lng: 211.7303993666121, type: 'waypoint'},
+        {name: "The Serpent's Bowels 2, Enkanomiya", lat: -633.2536315917969, lng: 154.16101089022328, type: 'waypoint'},
+        {name: "The Serpent's Bowels 3, Enkanomiya", lat: -551.9449653625488, lng: 303.72825627813864, type: 'waypoint'},
+        {name: "Enkanomiya 1, Enkanomiya", lat: -94.375, lng: 392.6652397121837, type: 'waypoint'},
+        {name: "The Narrows 1, Enkanomiya", lat: -485.35630798339844, lng: 397.37745886263036, type: 'waypoint'},
+        {name: "The Narrows 2, Enkanomiya", lat: -408.9059371948242, lng: 394.4613545977469, type: 'waypoint'},
+        {name: "The Narrows 3, Enkanomiya", lat: -439.9179153442383, lng: 438.829091748714, type: 'waypoint'},
+        {name: "The Narrows 4, Enkanomiya", lat: -388.625, lng: 469.6777548710486, type: 'waypoint'},
+        {name: "Enkanomiya 2, Enkanomiya", lat: -240, lng: 909.551103565365, type: 'waypoint'},
+        {name: "Dainichi Mikoshi 1, Enkanomiya", lat: -456.8521270751953, lng: 584.6843213399868, type: 'waypoint'},
+        {name: "Dainichi Mikoshi 2, Enkanomiya", lat: -473.494384765625, lng: 553.3609962208634, type: 'waypoint'},
+        {name: "Dainichi Mikoshi 3, Enkanomiya", lat: -505.375, lng: 582.0551883741612, type: 'waypoint'},
+        {name: "Dainichi Mikoshi 4, Enkanomiya", lat: -511.875, lng: 646.6737569730778, type: 'waypoint'},
+        {name: "Dainichi Mikoshi 5, Enkanomiya", lat: -562.125, lng: 555.6627192982456, type: 'waypoint'},
+        {name: "Evernight Temple 1, Enkanomiya", lat: -405, lng: 815.4132407631984, type: 'waypoint'},
+        {name: "Evernight Temple 2, Enkanomiya", lat: -441.375, lng: 725.9155873554855, type: 'waypoint'},
+        {name: "Evernight Temple 3, Enkanomiya", lat: -455.25, lng: 782.5491915272052, type: 'waypoint'},
+        {name: "Evernight Temple 4, Enkanomiya", lat: -519.5, lng: 803.4302752849867, type: 'waypoint'},
+        {name: "The Serpent's Heart 1, Enkanomiya", lat: -633.5, lng: 670.6752344571105, type: 'waypoint'},
+        {name: "The Serpent's Heart 2, Enkanomiya", lat: -659.7284240722656, lng: 615.1227710389254, type: 'waypoint'},
+        {name: "The Serpent's Heart 3, Enkanomiya", lat: -638.625, lng: 528.9170648395182, type: 'waypoint'},
+        {name: "The Serpent's Heart 4, Enkanomiya", lat: -710.7137832641602, lng: 550.6667171962164, type: 'waypoint'},
+        {name: "The Serpent's Heart 5, Enkanomiya", lat: -777, lng: 520.8198763036623, type: 'waypoint'},
+        {name: "Kunado's Locus 1, Enkanomiya", lat: -861.75, lng: 696.1688899668526, type: 'waypoint'}
     ]
 };
 

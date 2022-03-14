@@ -9,7 +9,8 @@
                 </div>
                 <div class="offset-lg-3 col-lg-6">
                     <div class="center-text">
-                        <p>This page contains all the latest updates of an application. The updates are posted as soon as they are available for users.</p>
+                        <p>This page contains all the latest updates of an application. The updates are posted as soon
+                            as they are available for users.</p>
                     </div>
                 </div>
             </div>
@@ -19,13 +20,15 @@
                     <div class="change-item">
                         <div class="change-content">
                             <ul>
-                                <li v-for="changeDescription in change.changes" :key="changeDescription"><p>- {{ changeDescription }}</p></li>
+                                <li v-for="changeDescription in change.changes" :key="changeDescription"><p>- {{
+                                    changeDescription }}</p></li>
                             </ul>
                             <div class="user-image">
                                 <img src="../assets/images/version.svg" alt="">
                             </div>
                             <div class="change-info">
-                                <h3 class="user-name"><a :href="change.link" target="_blank">{{ change.version }}</a></h3>
+                                <h3 class="user-name"><a :href="change.link" target="_blank">{{ change.version }}</a>
+                                </h3>
                                 <a>{{ change.date }}</a>
                             </div>
                         </div>
@@ -42,7 +45,19 @@
         data(){
           return {
             changeLog: [
-              {version: "Version 2.4 (Current release)", changes: ["Preparations are done for custom routes! Soon, you will be able to create your own routes and share them with friends!", "Add custom marker feature was added as a part of custom route preparations. Click any place on the map to add custom marker.", "Some bugfixes and improvements."], date: '14 March 2022', link: 'https://github.com/RetAlex/GenshinApp/releases/tag/2.4'},
+              {version: "Version 2.5 (Current release)", changes: ["Preparations are done for custom routes! Soon, you will be able to create your own routes and share them with friends!", "Add custom marker feature was added as a part of custom route preparations. Click any place on the map to add custom marker.", "Some bugfixes and improvements."], date: '14 March 2022', link: 'https://github.com/RetAlex/GenshinApp/releases/tag/2.5'},
+              {
+                version: "Version 2.4",
+                changes: ["Enkanomiya map was added", "List of Enkanomiya routes was added and updated", "Fixed some bugs and enhancements"],
+                date: '15 February 2022',
+                link: 'https://github.com/RetAlex/GenshinApp/releases/tag/2.4'
+              },
+              {
+                version: "Version 2.3",
+                changes: ["'Filter by weapon/character' feature was updated with new characters and weapons", "New mob 'Bathysmal Vishap' was added to the calculator mob list", "Added new characters, mobs and weapons with appropriate images", "Fixed some bugs and enhancements"],
+                date: '15 January 2022',
+                link: 'https://github.com/RetAlex/GenshinApp/releases/tag/2.3'
+              },
               {version: "Version 2.2", changes: ["Added new 'Filter by weapon/character' feature.", "The feature allows you to choose weapons/characters in order to filter routes only for required materials", "Added all the characters and weapons with appropriate images", "Fixed some bugs and enhancements"], date: '15 December 2021', link: 'https://github.com/RetAlex/GenshinApp/releases/tag/2.2'},
               {version: "Version 2.1", changes: ["Updated map with latest Inazuma regions", "Added multiple Mondstadt routes", "Created tools to assist route creation (currently only for internal use)", "Additional bugfixes & performance enhancements"], date: '15 November 2021', link: 'https://github.com/RetAlex/GenshinApp/releases/tag/2.1.1'},
               {version: "Version 2.0.1", changes: ["Updated map format to be easier to handle", "Modified drop values and images for Inazuma mobs", "Added new Watatsumi & Seirai islands", "Improvements to drop calculations"], date: '5 October 2021', link: 'https://github.com/RetAlex/GenshinApp/pull/71'},
@@ -113,12 +128,12 @@
         transition: all 0.3s ease 0s;
     }
 
-    .change-item .change-content .change-info h3 a{
+    .change-item .change-content .change-info h3 a {
         color: #1e1e1e;
         transition: all 0.3s ease 0s;
     }
 
-    .change-item .change-content .change-info h3 a:hover{
+    .change-item .change-content .change-info h3 a:hover {
         color: #5baaf6;
     }
 
