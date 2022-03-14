@@ -36,6 +36,9 @@
                                    :max-bounds="maxBounds" :crs="crs"
                                    @click="addMarker">
                                 <l-tile-layer :url="getMapUrl(region)"/>
+                                <l-marker :visible="true" v-for="marker in markers"
+                                        :key="marker.title"
+                                        :lat-lng="marker._latlng" :icon="icons['marker']"></l-marker>
                                 <l-marker :visible="teleportsVisible" v-for="teleport in teleports[region]"
                                           :key="teleport.name"
                                           :lat-lng="teleport" :icon="icons[teleport.type]"></l-marker>
@@ -87,13 +90,37 @@
                 teleportsVisible: true,
                 mobIcons: {},
                 itemIcons: {},
-                cachedRoutes: {}
+                cachedRoutes: {},
+                markers: [],
+                noMarkerZone: []
             };
         },
         methods: {
             addMarker(event) {
-                this.copy(`lat: ${event.latlng.lat}, lng: ${event.latlng.lng}`);
-                //this.markers.push(event.latlng);
+                if(!this.checkMarkerZone(event.latlng)){
+                  console.log("Can't place marker at", event.latlng)
+                  return;
+                }
+                // this.copy(`lat: ${event.latlng.lat}, lng: ${event.latlng.lng}`);
+                let marker = L.marker(event.latlng);
+                this.noMarkerZone.push (event.latlng)
+                console.log("Placed marker: ", marker)
+                this.markers.push(marker);
+                this.$forceUpdate();
+            },
+            checkMarkerZone(markerLatLng){
+              // Maximum pixel distance allowed to other markers
+              const epsilon = 3;
+
+               for (let zoneId in this.noMarkerZone){
+                 let zone = this.noMarkerZone[zoneId];
+                console.log("Comparing: ", markerLatLng, zone)
+                if (Math.abs(markerLatLng.lat-zone.lat)<epsilon && Math.abs(markerLatLng.lng-zone.lng)<epsilon) {
+                  console.log("Check marker zone failed, conflicting zone: ", zone)
+                  return false;
+                }
+              }
+              return true;
             },
             copy(text) {
                 let input = document.createElement('textarea');
