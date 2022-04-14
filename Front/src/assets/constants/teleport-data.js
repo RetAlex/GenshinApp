@@ -233,6 +233,23 @@ export const teleports = {
         {name: "The Serpent's Heart 4, Enkanomiya", lat: -710.7137832641602, lng: 550.6667171962164, type: 'waypoint'},
         {name: "The Serpent's Heart 5, Enkanomiya", lat: -777, lng: 520.8198763036623, type: 'waypoint'},
         {name: "Kunado's Locus 1, Enkanomiya", lat: -861.75, lng: 696.1688899668526, type: 'waypoint'}
+    ],
+    chasm: [
+        {name: "The Chasm, The Chasm 1", lat: -275.6390329487332, lng: 413.3115328644191, type: 'waypoint'},
+        {name: "The Chasm, The Chasm 2", lat: -251.49999021927414, lng: 553.3587791934473, type: 'waypoint'},
+        {name: "The Chasm, The Chasm 3", lat: -311.4265377577837, lng: 622.7736241672098, type: 'waypoint'},
+        {name: "The Chasm, The Chasm 4", lat: -298.7698703461401, lng: 747.3492521626647, type: 'waypoint'},
+        {name: "The Chasm, The Chasm 5", lat: -421.81337441083326, lng: 779.855602337497, type: 'waypoint'},
+        {name: "The Chasm, The Chasm 6", lat: -416.93314981307435, lng: 419.27948111837054, type: 'waypoint'},
+        {name: "The Chasm, The Chasm 7", lat: -460.80215942629656, lng: 554.1762620070842, type: 'waypoint'},
+        {name: "The Chasm, The Chasm 8", lat: -562.2763155947517, lng: 635.4601782382493, type: 'waypoint'},
+        {name: "The Chasm, The Chasm 9", lat: -578.7814184852002, lng: 764.0495225668126, type: 'waypoint'},
+        {name: "The Chasm, The Chasm 10", lat: -638.2998198174233, lng: 709.2614556252652, type: 'waypoint'},
+        {name: "The Chasm, The Chasm 11", lat: -765.2403671117631, lng: 734.1191547574833, type: 'waypoint'},
+        {name: "The Chasm, The Chasm 12", lat: -749.857422072473, lng: 592.8600882719652, type: 'waypoint'},
+        {name: "The Chasm, The Chasm 13", lat: -672.6205147472901, lng: 466.496197667177, type: 'waypoint'},
+        {name: "The Chasm, The Chasm 14", lat: -572.7791789951825, lng: 230.4051837791303, type: 'waypoint'},
+        {name: "The Chasm, The Chasm 15", lat: -695.5367253479244, lng: 163.34108254507234, type: 'waypoint'}
     ]
 };
 
