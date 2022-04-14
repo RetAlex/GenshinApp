@@ -78,8 +78,8 @@
         data() {
             return {
                 apiLink: process.env.VUE_APP_API,
-                regions: ['mondstadt', 'liyue', 'inazuma', 'enkanomiya'],
-                active: 'inazuma',
+                regions: ['mondstadt', 'liyue', 'chasm', 'inazuma', 'enkanomiya'],
+                active: 'liyue',
                 bounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 maxBounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 minZoom: 0,
@@ -101,7 +101,7 @@
                   console.log("Can't place marker at", event.latlng)
                   return;
                 }
-                // this.copy(`lat: ${event.latlng.lat}, lng: ${event.latlng.lng}`);
+                this.copy(`lat: ${event.latlng.lat}, lng: ${event.latlng.lng}`);
                 let marker = L.marker(event.latlng);
                 this.noMarkerZone.push (event.latlng)
                 console.log("Placed marker: ", marker)
