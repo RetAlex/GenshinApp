@@ -47,9 +47,15 @@ export default {
     return {
       changeLog: [
         {
-          version: "Version 2.6 (Current release)",
+          version: "Version 2.7 (Current release)",
+          changes: ["Started work on custom routes! Feature expected to arrive in version 2.8-2.9", "Updated some resources to a better resolution", "Bugfixes and improvements", "Improved filter weapon/character routes feature"],
+          date: '18 May 2022',
+          link: 'https://github.com/RetAlex/GenshinApp/releases/tag/2.7'
+        },
+        {
+          version: "Version 2.6",
           changes: ["Added chasm map and interest points to match the recent version of the application", "Added new monsters and drops from the recent game update", "Added new filters for weapons and characters (now caught up with every single character and epic+ weapon released!)"],
-          date: '15 Aoril 2022',
+          date: '15 April 2022',
           link: 'https://github.com/RetAlex/GenshinApp/releases/tag/2.6'
         },
         {
