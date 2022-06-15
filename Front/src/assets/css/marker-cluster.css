@@ -1,0 +1,79 @@
+.leaflet-cluster-anim .leaflet-marker-icon, .leaflet-cluster-anim .leaflet-marker-shadow {
+    -webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.3s ease-in;
+    -moz-transition: -moz-transform 0.3s ease-out, opacity 0.3s ease-in;
+    -o-transition: -o-transform 0.3s ease-out, opacity 0.3s ease-in;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-in;
+}
+
+.leaflet-cluster-spider-leg {
+    /* stroke-dashoffset (duration and function) should match with leaflet-marker-icon transform in order to track it exactly */
+    -webkit-transition: -webkit-stroke-dashoffset 0.3s ease-out, -webkit-stroke-opacity 0.3s ease-in;
+    -moz-transition: -moz-stroke-dashoffset 0.3s ease-out, -moz-stroke-opacity 0.3s ease-in;
+    -o-transition: -o-stroke-dashoffset 0.3s ease-out, -o-stroke-opacity 0.3s ease-in;
+    transition: stroke-dashoffset 0.3s ease-out, stroke-opacity 0.3s ease-in;
+}
+
+.marker-cluster-small {
+    background-color: rgba(92, 164, 132, 0.6);
+}
+.marker-cluster-small div {
+    background-color: rgba(83, 133, 114, 0.6);
+}
+
+.marker-cluster-medium {
+    background-color: rgba(81, 147, 187, 0.6);
+}
+.marker-cluster-medium div {
+    background-color: rgba(90, 121, 161, 0.6);
+}
+
+.marker-cluster-large {
+    background-color: rgba(184, 129, 206, 0.6);
+}
+.marker-cluster-large div {
+    background-color: rgba(116, 99, 165, 0.6);
+}
+
+/* IE 6-8 fallback colors */
+.leaflet-oldie .marker-cluster-small {
+    background-color: rgb(92, 164, 132);
+}
+.leaflet-oldie .marker-cluster-small div {
+    background-color: rgb(83, 133, 114);
+}
+
+.leaflet-oldie .marker-cluster-medium {
+    background-color: rgb(81, 147, 187);
+}
+.leaflet-oldie .marker-cluster-medium div {
+    background-color: rgb(90, 121, 161);
+}
+
+.leaflet-oldie .marker-cluster-large {
+    background-color: rgb(184, 129, 206);
+}
+.leaflet-oldie .marker-cluster-large div {
+    background-color: rgb(116, 99, 165);
+}
+
+.marker-cluster {
+    background-clip: padding-box;
+    border-radius: 20px;
+    width: 35px !important;
+    height: 35px !important;
+}
+.marker-cluster div {
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    margin-top: 5px;
+
+    text-align: center;
+    border-radius: 20px;
+    font: 10px "Raleway", sans-serif;
+    color: #fff;
+    font-weight: 600;
+}
+.marker-cluster span {
+    line-height: 23px;
+}

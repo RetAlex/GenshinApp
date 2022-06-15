@@ -286,5 +286,17 @@
     "name": "Yun Jin",
     "image": "/game/images/characters/48.png",
     "items": [1, 2, 3]
+  },
+  {
+    "id": 49,
+    "name": "Yae Miko",
+    "image": "/game/images/characters/49.png",
+    "items": [40, 41, 42]
+  },
+  {
+    "id": 50,
+    "name": "Kamisato Ayato",
+    "image": "/game/images/characters/50.png",
+    "items": [40, 41, 42]
   }
 ]

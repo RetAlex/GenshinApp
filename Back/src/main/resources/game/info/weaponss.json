@@ -119,6 +119,12 @@
       "name": "Cinnabar Spindle",
       "rarity": "4",
       "items": [1, 2, 3, 37, 38, 39]
+    },
+    {
+      "id": 97,
+      "name": "Haran Geppaku Futsu",
+      "rarity": "5",
+      "items": [40, 41, 42, 55, 56, 57]
     }
   ],
   "claymore": [
@@ -571,6 +577,18 @@
       "name": "Everlasting Moonglow",
       "rarity": "5",
       "items": [46, 47, 48, 49, 50, 51]
+    },
+    {
+      "id": 95,
+      "name": "Oathsworn Eye",
+      "rarity": "4",
+      "items": [49, 50, 51, 52, 53, 54]
+    },
+    {
+      "id": 96,
+      "name": "Kagura's Verity",
+      "rarity": "5",
+      "items": [49, 50, 51, 52, 53, 54]
     }
   ]
 }

@@ -17,7 +17,8 @@
     "vue": "^2.6.11",
     "vue-router": "^3.4.9",
     "vue-slick-carousel": "^1.0.6",
-    "vue2-leaflet": "^2.7.0"
+    "vue2-leaflet": "^2.7.0",
+    "vue2-leaflet-markercluster": "^3.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
