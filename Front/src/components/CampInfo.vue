@@ -9,10 +9,10 @@
             </div>
             <route-item-drop :route="camp" :item-icons="itemIcons"></route-item-drop>
         </div>
-        <div class="route-footer">
-            <a class="route-button" v-bind:class="{ hidden: !camp.show }">
-                {{ !camp.show ? 'Add to the current route' : 'Delete from the current route' }}</a>
-        </div>
+<!--        <div class="route-footer">-->
+<!--            <a class="route-button" v-bind:class="{ hidden: !camp.show }">-->
+<!--                {{ !camp.show ? 'Add to the current route' : 'Delete from the current route' }}</a>-->
+<!--        </div>-->
     </div>
 </template>
 

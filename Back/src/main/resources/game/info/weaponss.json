@@ -473,6 +473,18 @@
       "name": "Mouun's Moon",
       "rarity": "4",
       "items": [46, 47, 48, 49, 50, 51]
+    },
+    {
+      "id": 98,
+      "name": "Aqua Simulacra",
+      "rarity": "5",
+      "items": [49, 50, 51, 55, 56, 57]
+    },
+    {
+      "id": 99,
+      "name": "Fading Twilight",
+      "rarity": "4",
+      "items": [19, 20, 21, 4, 5, 6]
     }
   ],
   "catalyst": [

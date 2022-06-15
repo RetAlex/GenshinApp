@@ -25,6 +25,7 @@
             </b-dropdown>
             <b-field>
                 <b-switch v-model="teleportsVisible" type="is-info">Show Teleports</b-switch>
+                <b-switch v-model="campsVisible" type="is-info">Show Enemy Camps </b-switch>
             </b-field>
         </div>
         <div v-for="region in regions" :key="region">
@@ -36,6 +37,15 @@
                                    :max-bounds="maxBounds" :crs="crs"
                                    @click="addMarker">
                                 <l-tile-layer :url="getMapUrl(region)"/>
+                                <v-marker-cluster :options="markerClusterOptions">
+                                    <l-marker :visible="campsVisible" v-for="camp in camps[region]"
+                                              :key="camp.id" :lat-lng="camp" :icon="mobIcons[camp.mobIcon].point">
+                                        <l-popup>
+                                            <camp-info :camp="camp" :item-icons="itemIcons"
+                                                       :mob-icons="mobIcons"></camp-info>
+                                        </l-popup>
+                                    </l-marker>
+                                </v-marker-cluster>
                                 <l-marker :visible="true" v-for="marker in markers"
                                           :key="marker.title"
                                           :lat-lng="marker._latlng" :icon="icons['marker']"></l-marker>
@@ -51,15 +61,6 @@
                                                 :weight="route.line.weight"
                                                 :className="'path'"></l-polyline>
                                 </l-layer-group>
-                                <v-marker-cluster :options="markerClusterOptions">
-                                    <l-marker :visible="true" v-for="camp in camps"
-                                              :key="camp.id" :lat-lng="camp" :icon="mobIcons[camp.mobIcon].point">
-                                        <l-popup>
-                                            <camp-info :camp="camp" :item-icons="itemIcons"
-                                                       :mob-icons="mobIcons"></camp-info>
-                                        </l-popup>
-                                    </l-marker>
-                                </v-marker-cluster>
                             </l-map>
                         </div>
                     </div>
@@ -109,6 +110,7 @@
                 icons: teleportIcons,
                 teleports: teleports,
                 teleportsVisible: true,
+                campsVisible: true,
                 mobIcons: {},
                 itemIcons: {},
                 cachedRoutes: {},
@@ -119,12 +121,12 @@
         },
         methods: {
             addMarker(event) {
-                console.log(event)
+                console.log(event);
                 // if(!this.checkMarkerZone(event.latlng)){
                 //   console.log("Can't place marker at", event.latlng)
                 //   return;
                 // }
-                this.copy(`lat: ${event.latlng.lat}, lng: ${event.latlng.lng}`);
+                // this.copy(`lat: ${event.latlng.lat}, lng: ${event.latlng.lng}`);
                 // let marker = L.marker(event.latlng);
                 // this.noMarkerZone.push (event.latlng)
                 // console.log("Placed marker: ", marker)
