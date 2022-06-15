@@ -298,5 +298,11 @@
     "name": "Kamisato Ayato",
     "image": "/game/images/characters/50.png",
     "items": [40, 41, 42]
+  },
+  {
+    "id": 50,
+    "name": "Yelan",
+    "image": "/game/images/characters/51.png",
+    "items": [22, 23, 24]
   }
 ]
