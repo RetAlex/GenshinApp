@@ -37,22 +37,34 @@
                                    @click="addMarker">
                                 <l-tile-layer :url="getMapUrl(region)"/>
                                 <l-marker :visible="true" v-for="marker in markers"
-                                        :key="marker.title"
-                                        :lat-lng="marker._latlng" :icon="icons['marker']"></l-marker>
+                                          :key="marker.title"
+                                          :lat-lng="marker._latlng" :icon="icons['marker']"></l-marker>
                                 <l-marker :visible="teleportsVisible" v-for="teleport in teleports[region]"
                                           :key="teleport.name"
                                           :lat-lng="teleport" :icon="icons[teleport.type]"></l-marker>
-                                <l-layer-group v-for="route in cachedRoutes[region]" :key="route.name" :visible="route.show">
+                                <l-layer-group v-for="route in cachedRoutes[region]" :key="route.name"
+                                               :visible="route.show">
                                     <l-marker v-for="point in route.points" :key="point.name"
                                               :lat-lng="point" :icon="mobIcons[point.mobId].point"></l-marker>
-                                    <l-polyline v-if="route.line" :lat-lngs="route.line.latlngs" :color="route.line.color"
+                                    <l-polyline v-if="route.line" :lat-lngs="route.line.latlngs"
+                                                :color="route.line.color"
                                                 :weight="route.line.weight"
                                                 :className="'path'"></l-polyline>
                                 </l-layer-group>
+                                <v-marker-cluster :options="markerClusterOptions">
+                                    <l-marker :visible="true" v-for="camp in camps"
+                                              :key="camp.id" :lat-lng="camp" :icon="mobIcons[camp.mobIcon].point">
+                                        <l-popup>
+                                            <camp-info :camp="camp" :item-icons="itemIcons"
+                                                       :mob-icons="mobIcons"></camp-info>
+                                        </l-popup>
+                                    </l-marker>
+                                </v-marker-cluster>
                             </l-map>
                         </div>
                     </div>
-                    <routes-list :cached-routes="cachedRoutes[region]" :mobIcons="mobIcons" :itemIcons="itemIcons"></routes-list>
+                    <routes-list :cached-routes="cachedRoutes[region]" :mobIcons="mobIcons"
+                                 :itemIcons="itemIcons"></routes-list>
                 </div>
             </div>
         </div>
@@ -61,25 +73,34 @@
 
 <script>
     import {CRS, latLngBounds} from "leaflet";
-    import {LMap, LTileLayer, LPolyline, LLayerGroup} from 'vue2-leaflet';
+    import {LMap, LTileLayer, LPolyline, LLayerGroup, LPopup} from 'vue2-leaflet';
     import {teleportIcons, teleports} from "@/assets/constants/teleport-data";
     import L from "leaflet";
     import RoutesList from "@/components/RoutesList";
+    import {camps} from "../assets/constants/routes-data";
+    import CampInfo from "../components/CampInfo";
+    import Vue2LeafletMarkerCluster from "vue2-leaflet-markercluster";
+    import "../assets/css/marker-cluster.css"
+    import {markerClusterOptions} from "../assets/constants/options";
 
     export default {
         name: "RouteMap",
         components: {
+            CampInfo,
             RoutesList,
             LMap,
             LTileLayer,
             LPolyline,
-            LLayerGroup
+            LLayerGroup,
+            LPopup,
+            "v-marker-cluster": Vue2LeafletMarkerCluster
         },
         data() {
             return {
                 apiLink: process.env.VUE_APP_API,
+                markerClusterOptions: markerClusterOptions,
                 regions: ['mondstadt', 'liyue', 'chasm', 'inazuma', 'enkanomiya'],
-                active: 'liyue',
+                active: 'mondstadt',
                 bounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 maxBounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 minZoom: 0,
@@ -92,35 +113,37 @@
                 itemIcons: {},
                 cachedRoutes: {},
                 markers: [],
-                noMarkerZone: []
+                noMarkerZone: [],
+                camps: []
             };
         },
         methods: {
             addMarker(event) {
-                if(!this.checkMarkerZone(event.latlng)){
-                  console.log("Can't place marker at", event.latlng)
-                  return;
-                }
+                console.log(event)
+                // if(!this.checkMarkerZone(event.latlng)){
+                //   console.log("Can't place marker at", event.latlng)
+                //   return;
+                // }
                 this.copy(`lat: ${event.latlng.lat}, lng: ${event.latlng.lng}`);
-                let marker = L.marker(event.latlng);
-                this.noMarkerZone.push (event.latlng)
-                console.log("Placed marker: ", marker)
-                this.markers.push(marker);
-                this.$forceUpdate();
+                // let marker = L.marker(event.latlng);
+                // this.noMarkerZone.push (event.latlng)
+                // console.log("Placed marker: ", marker)
+                // this.markers.push(marker);
+                // this.$forceUpdate();
             },
-            checkMarkerZone(markerLatLng){
-              // Maximum pixel distance allowed to other markers
-              const epsilon = 3;
+            checkMarkerZone(markerLatLng) {
+                // Maximum pixel distance allowed to other markers
+                const epsilon = 3;
 
-               for (let zoneId in this.noMarkerZone){
-                 let zone = this.noMarkerZone[zoneId];
-                console.log("Comparing: ", markerLatLng, zone)
-                if (Math.abs(markerLatLng.lat-zone.lat)<epsilon && Math.abs(markerLatLng.lng-zone.lng)<epsilon) {
-                  console.log("Check marker zone failed, conflicting zone: ", zone)
-                  return false;
+                for (let zoneId in this.noMarkerZone) {
+                    let zone = this.noMarkerZone[zoneId];
+                    console.log("Comparing: ", markerLatLng, zone)
+                    if (Math.abs(markerLatLng.lat - zone.lat) < epsilon && Math.abs(markerLatLng.lng - zone.lng) < epsilon) {
+                        console.log("Check marker zone failed, conflicting zone: ", zone)
+                        return false;
+                    }
                 }
-              }
-              return true;
+                return true;
             },
             copy(text) {
                 let input = document.createElement('textarea');
@@ -178,6 +201,7 @@
             await this.getMobs();
             await this.getItems();
             await this.getRoutes();
+            this.camps = camps;
         }
     }
 </script>
@@ -280,24 +304,24 @@
         margin-bottom: 20px;
     }
 
-    .route-item .route-body .monster-image {
+    .route-body .monster-image {
         width: 30px;
         height: 30px;
         margin-left: 5px;
     }
 
-    .route-item .route-body .monsters-wrapper {
+    .route-body .monsters-wrapper {
         text-align: center;
         width: 80%;
         margin: auto;
         margin-top: 5px;
     }
 
-    .route-item .route-body .monsters-wrapper .monster {
+    .route-body .monsters-wrapper .monster {
         position: relative;
     }
 
-    .route-item .route-body .monsters-wrapper .monster-amount {
+    .route-body .monsters-wrapper .monster-amount {
         color: white;
         background: rgb(91, 170, 246);
         border-radius: 50%;
@@ -313,7 +337,7 @@
         right: -5px;
     }
 
-    .route-item .route-body .list a {
+    .route-body .list a {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -326,49 +350,19 @@
         transition: color .3s ease;
     }
 
-    .route-item .route-body .list a:hover {
+    .route-body .list a:hover {
         color: #5baaf6;
     }
 
-    .route-item .route-body .list .drop-info-wrapper {
-        position: relative;
-        min-height: 100px;
-    }
-
-    .route-item .route-body .list .drop-info {
-        font-size: 13px;
-        padding: 10px 20px;
-        position: relative;
-    }
-
-    .route-item .route-body .list .drop-info:nth-child(2) {
-        display: flex;
-        flex-flow: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .route-item .route-body .list .drop-info .drop-info-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .route-item .route-body .list .drop-info .drop-info-item .drop-icon {
-        width: 22px;
-        margin: 2px 5px;
-        border-radius: 50%;
-    }
-
-    .route-item .route-body .list {
+    .route-body .list {
         text-align: center;
     }
 
-    .route-item .route-footer {
+    .route-item .route-footer, .camp-info .route-footer {
         text-align: center;
     }
 
-    .route-item .route-footer .route-button {
+    .route-item .route-footer .route-button, .camp-info .route-footer .route-button {
         color: #FFFFFF;
         background-color: rgba(91, 170, 246, 1);
         width: 100%;
@@ -380,7 +374,7 @@
         transition: all .3s ease;
     }
 
-    .route-item .route-footer .route-button.hidden {
+    .route-item .route-footer .route-button.hidden, .camp-info .route-footer .route-button.hidden {
         color: #888888;
         background-color: rgba(253, 205, 229, 1);
     }
