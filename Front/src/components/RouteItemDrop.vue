@@ -61,5 +61,42 @@
 </script>
 
 <style scoped>
+    .drop-info-wrapper {
+        position: relative;
+        min-height: 100px;
+    }
 
+    .drop-info {
+        font-size: 13px;
+        padding: 10px 20px;
+        position: relative;
+    }
+
+    .drop-info:nth-child(2) {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .drop-info .drop-info-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .drop-info .drop-info-item .drop-icon {
+        width: 22px;
+        margin: 2px 5px;
+        border-radius: 50%;
+    }
+
+    .camp-info .drop-info {
+        padding: 0;
+    }
+
+    .camp-info .drop-info-wrapper {
+        min-height: 0;
+        padding-bottom: 10px;
+    }
 </style>

@@ -166,5 +166,21 @@
     "type": "elite",
     "typeLong": "Elite enemy",
     "image": "/game/images/mobs/BathysmalVishap.png"
+  },
+  {
+    "id": 22,
+    "name": "Shadowy Husk",
+    "handbookAmount": 8,
+    "type": "elite",
+    "typeLong": "Elite enemy",
+    "image": "/game/images/mobs/ShadowyHusk.png"
+  },
+  {
+    "id": 23,
+    "name": "Eye of the Storm",
+    "handbookAmount": 8,
+    "type": "elite",
+    "typeLong": "Elite enemy",
+    "image": "/game/images/mobs/EyeStorm.png"
   }
 ]

@@ -322,5 +322,23 @@
     "name": "Concealed Talon",
     "image": "/game/images/items/Item_Concealed_Talon.png",
     "rarity": 4
+  },
+  {
+    "id": 55,
+    "name": "Gloomy Statuette",
+    "image": "/game/images/items/Item_Gloomy_Statuette.png",
+    "rarity": 2
+  },
+  {
+    "id": 56,
+    "name": "Dark Statuette",
+    "image": "/game/images/items/Item_Dark_Statuette.png",
+    "rarity": 3
+  },
+  {
+    "id": 57,
+    "name": "Deathly Statuette",
+    "image": "/game/images/items/Item_Deathly_Statuette.png",
+    "rarity": 4
   }
 ]
