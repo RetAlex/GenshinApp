@@ -101,7 +101,7 @@
                 apiLink: process.env.VUE_APP_API,
                 markerClusterOptions: markerClusterOptions,
                 regions: ['mondstadt', 'liyue', 'chasm', 'inazuma', 'enkanomiya'],
-                active: 'liyue',
+                active: 'mondstadt',
                 bounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 maxBounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 minZoom: 0,
