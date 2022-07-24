@@ -300,9 +300,21 @@
     "items": [40, 41, 42]
   },
   {
-    "id": 50,
+    "id": 51,
     "name": "Yelan",
     "image": "/game/images/characters/51.png",
     "items": [22, 23, 24]
+  },
+  {
+    "id": 52,
+    "name": "Kuki Shinobu",
+    "image": "/game/images/characters/52.png",
+    "items": [49, 50, 51]
+  },
+  {
+    "id": 53,
+    "name": "Shikanoin Heizou",
+    "image": "/game/images/characters/53.png",
+    "items": [34, 35, 36]
   }
 ]
