@@ -47,7 +47,13 @@ export default {
     return {
       changeLog: [
         {
-          version: "Version 2.8 (Current release)",
+          version: "Version 2.9 (Current release)",
+          changes: ["Custom routes: added mob camps for Chasm & Liuye maps", "Some adjustments and improvement for clusterization and camps feature", "Added new weapons and characters to filters.", "Bugfixes and security improvements"],
+          date: '24 July 2022',
+          link: 'https://github.com/RetAlex/GenshinApp/releases/tag/2.9'
+        },
+        {
+          version: "Version 2.8",
           changes: ["Custom routes: added mob camps for Mondstadt", "Added marker clusterization for all mobs, - when points are too close they will collapse to a bigger group. Zoom in to show everything", "Added new weapons and characters to filters.", "UI adjustments"],
           date: '17 June 2022',
           link: 'https://github.com/RetAlex/GenshinApp/releases/tag/2.8'

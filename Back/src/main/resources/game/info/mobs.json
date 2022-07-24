@@ -182,5 +182,13 @@
     "type": "elite",
     "typeLong": "Elite enemy",
     "image": "/game/images/mobs/EyeStorm.png"
+  },
+  {
+    "id": 24,
+    "name": "Geovishap",
+    "handbookAmount": 8,
+    "type": "elite",
+    "typeLong": "Elite enemy",
+    "image": "/game/images/mobs/Geovishap.png"
   }
 ]
