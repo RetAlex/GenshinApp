@@ -6884,5 +6884,3584 @@ export const camps = {
             "mobIcon": 15
         },
 
+    ],
+    inazuma: [
+        {
+            "id": 974,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 13}],
+            "lat": -39.96573257446289, "lng": 840.2204584040747,
+            "mobIcon": 18
+        },
+        {
+            "id": 975,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 4}],
+            "lat": -54.5, "lng": 840.2205432937182,
+            "mobIcon": 18
+        },
+        {
+            "id": 976,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 6}],
+            "lat": -122.625, "lng": 720.1028862478778,
+            "mobIcon": 18
+        },
+        {
+            "id": 977,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 4}],
+            "lat": -105.9457778930664, "lng": 855.2216166834678,
+            "mobIcon": 17
+        },
+        {
+            "id": 978,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 4}],
+            "lat": -129.23248291015625, "lng": 857.3532082316426,
+            "mobIcon": 17
+        },
+        {
+            "id": 979,
+            "name": "Camp",
+            "mobs": [{id: 1, amount: 1}],
+            "lat": -121.73576354980469, "lng": 840.8555954212649,
+            "mobIcon": 1
+        },
+        {
+            "id": 980,
+            "name": "Camp",
+            "mobs": [{id: 2, amount: 1}],
+            "lat": -128.28309631347656, "lng": 831.1156104095926,
+            "mobIcon": 2
+        },
+        {
+            "id": 981,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 9, amount: 1}],
+            "lat": -118.75, "lng": 834.6027589134126,
+            "mobIcon": 11
+        },
+        {
+            "id": 982,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 4}],
+            "lat": -141.48736572265625, "lng": 826.5450657894737,
+            "mobIcon": 14
+        },
+        {
+            "id": 983,
+            "name": "Camp",
+            "mobs": [{id: 8, amount: 3}],
+            "lat": -149.94925689697266, "lng": 833.525298771753,
+            "mobIcon": 8
+        },
+        {
+            "id": 984,
+            "name": "Camp",
+            "mobs": [{id: 8, amount: 1}],
+            "lat": -154.2925796508789, "lng": 843.0255295654712,
+            "mobIcon": 8
+        },
+        {
+            "id": 985,
+            "name": "Camp",
+            "mobs": [{id: 8, amount: 2}],
+            "lat": -150.85824584960938, "lng": 846.2529638423175,
+            "mobIcon": 8
+        },
+        {
+            "id": 986,
+            "name": "Camp",
+            "mobs": [{id: 1, amount: 1}],
+            "lat": -148.12360382080078, "lng": 851.1750033160017,
+            "mobIcon": 1
+        },
+        {
+            "id": 987,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}],
+            "lat": -130.38183975219727, "lng": 871.7821254244482,
+            "mobIcon": 18
+        },
+        {
+            "id": 988,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}],
+            "lat": -148.19198989868164, "lng": 876.4766129032258,
+            "mobIcon": 18
+        },
+        {
+            "id": 989,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}, {id: 3, amount: 1}],
+            "lat": -134.17047119140625, "lng": 884.3683073137734,
+            "mobIcon": 16
+        },
+        {
+            "id": 990,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -134.51788330078125, "lng": 887.3260694105476,
+            "mobIcon": 13
+        },
+        {
+            "id": 991,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -128.49224090576172, "lng": 891.8219426464346,
+            "mobIcon": 13
+        },
+        {
+            "id": 992,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -132.01833724975586, "lng": 895.5401919301783,
+            "mobIcon": 13
+        },
+        {
+            "id": 993,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -141.1732177734375, "lng": 899.0516971296689,
+            "mobIcon": 13
+        },
+        {
+            "id": 994,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -150.89682006835938, "lng": 906.203325949703,
+            "mobIcon": 13
+        },
+        {
+            "id": 995,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 4}],
+            "lat": -154.875, "lng": 925.4673174872665,
+            "mobIcon": 18
+        },
+        {
+            "id": 996,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -160.08372497558594, "lng": 904.8374227371604,
+            "mobIcon": 15
+        },
+        {
+            "id": 997,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -182.53846740722656, "lng": 883.1520439834466,
+            "mobIcon": 15
+        },
+        {
+            "id": 998,
+            "name": "Camp",
+            "mobs": [{id: 4, amount: 1}, {id: 10, amount: 1}],
+            "lat": -196.21260833740234, "lng": 887.8038084279499,
+            "mobIcon": 4
+        },
+        {
+            "id": 999,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 1}, {id: 9, amount: 1}],
+            "lat": -203.76290130615234, "lng": 907.5045989627547,
+            "mobIcon": 10
+        },
+        {
+            "id": 1000,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 1}, {id: 9, amount: 2}],
+            "lat": -197.375, "lng": 914.5899405772495,
+            "mobIcon": 10
+        },
+        {
+            "id": 1001,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -223.125, "lng": 907.219949066214,
+            "mobIcon": 15
+        },
+        {
+            "id": 1002,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 4}],
+            "lat": -219.72747802734375, "lng": 907.7638797883064,
+            "mobIcon": 18
+        },
+        {
+            "id": 1003,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -224.78497314453125, "lng": 884.8695700472199,
+            "mobIcon": 13
+        },
+        {
+            "id": 1004,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 12, amount: 2}, {id: 9, amount: 1}],
+            "lat": -220.8381576538086, "lng": 869.5742114547962,
+            "mobIcon": 12
+        },
+        {
+            "id": 1005,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 9, amount: 1}],
+            "lat": -198.5, "lng": 849.225,
+            "mobIcon": 11
+        },
+        {
+            "id": 1006,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 9, amount: 1}],
+            "lat": -184.35692596435547, "lng": 822.3505836162988,
+            "mobIcon": 11
+        },
+        {
+            "id": 1007,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 1}, {id: 13, amount: 3}],
+            "lat": -207.61024475097656, "lng": 859.8850120039261,
+            "mobIcon": 7
+        },
+        {
+            "id": 1008,
+            "name": "Camp",
+            "mobs": [{id: 4, amount: 1}],
+            "lat": -202.63884735107422, "lng": 870.6029907019313,
+            "mobIcon": 4
+        },
+        {
+            "id": 1009,
+            "name": "Camp",
+            "mobs": [{id: 4, amount: 1}],
+            "lat": -196.79754638671875, "lng": 858.5955008488964,
+            "mobIcon": 4
+        },
+        {
+            "id": 1010,
+            "name": "Camp",
+            "mobs": [{id: 4, amount: 1}],
+            "lat": -179, "lng": 864.3404923599321,
+            "mobIcon": 4
+        },
+        {
+            "id": 1011,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -187.375, "lng": 869.469142614601,
+            "mobIcon": 16
+        },
+        {
+            "id": 1012,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -167.6786346435547, "lng": 850.205919726231,
+            "mobIcon": 16
+        },
+        {
+            "id": 1013,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -161.375, "lng": 848.3446943972835,
+            "mobIcon": 16
+        },
+        {
+            "id": 1014,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -182.375, "lng": 872.0921052631579,
+            "mobIcon": 18
+        },
+        {
+            "id": 1015,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -173.79682159423828, "lng": 860.9232697103141,
+            "mobIcon": 18
+        },
+        {
+            "id": 1016,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -211.31483459472656, "lng": 840.3335901023981,
+            "mobIcon": 18
+        },
+        {
+            "id": 1017,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -191.75253295898438, "lng": 838.8357279286927,
+            "mobIcon": 18
+        },
+        {
+            "id": 1018,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -191.5, "lng": 833.9672750424448,
+            "mobIcon": 18
+        },
+        {
+            "id": 1019,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -195.5, "lng": 828.7225806451613,
+            "mobIcon": 18
+        },
+        {
+            "id": 1020,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -194.933837890625, "lng": 825.2114859666808,
+            "mobIcon": 18
+        },
+        {
+            "id": 1021,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -188.27941131591797, "lng": 818.1800704981961,
+            "mobIcon": 18
+        },
+        {
+            "id": 1022,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -192.06016540527344, "lng": 827.404900387309,
+            "mobIcon": 15
+        },
+        {
+            "id": 1023,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -182.875, "lng": 813.2238539898133,
+            "mobIcon": 13
+        },
+        {
+            "id": 1024,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -169.5616455078125, "lng": 825.9003355793718,
+            "mobIcon": 15
+        },
+        {
+            "id": 1025,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 1}],
+            "lat": -155.9338836669922, "lng": 818.0124860727929,
+            "mobIcon": 10
+        },
+        {
+            "id": 1026,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -155.875, "lng": 814.35220713073,
+            "mobIcon": 13
+        },
+        {
+            "id": 1027,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 3}],
+            "lat": -155.8500213623047, "lng": 823.2140303347835,
+            "mobIcon": 13
+        },
+        {
+            "id": 1028,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}, {id: 14, amount: 2}],
+            "lat": -164.143310546875, "lng": 818.2788621471774,
+            "mobIcon": 18
+        },
+        {
+            "id": 1029,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 1}],
+            "lat": -179.10755920410156, "lng": 796.2148852000212,
+            "mobIcon": 9
+        },
+        {
+            "id": 1030,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 1}],
+            "lat": -198.22103118896484, "lng": 798.3554319423812,
+            "mobIcon": 9
+        },
+        {
+            "id": 1031,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -199.15213775634766, "lng": 804.0871720474321,
+            "mobIcon": 18
+        },
+        {
+            "id": 1032,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}],
+            "lat": -221.375, "lng": 818.4697368421052,
+            "mobIcon": 18
+        },
+        {
+            "id": 1033,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 1}],
+            "lat": -223.80551147460938, "lng": 802.3109593856112,
+            "mobIcon": 14
+        },
+        {
+            "id": 1034,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 12, amount: 1}, {id: 9, amount: 1}],
+            "lat": -201.2465362548828, "lng": 789.3742107915959,
+            "mobIcon": 11
+        },
+        {
+            "id": 1035,
+            "name": "Camp",
+            "mobs": [{id: 6, amount: 1}, {id: 10, amount: 1}, {id: 9, amount: 1}],
+            "lat": -231.10753631591797, "lng": 849.9639318495331,
+            "mobIcon": 6
+        },
+        {
+            "id": 1036,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 9, amount: 1}],
+            "lat": -232.82357025146484, "lng": 834.1644872798175,
+            "mobIcon": 11
+        },
+        {
+            "id": 1037,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 3}],
+            "lat": -243.43478393554688, "lng": 836.6482498143039,
+            "mobIcon": 15
+        },
+        {
+            "id": 1038,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -243.75392150878906, "lng": 853.2580124549024,
+            "mobIcon": 13
+        },
+        {
+            "id": 1039,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -240.71149444580078, "lng": 791.48357418559,
+            "mobIcon": 13
+        },
+        {
+            "id": 1040,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 1}],
+            "lat": -259.726318359375, "lng": 802.8082585022283,
+            "mobIcon": 9
+        },
+        {
+            "id": 1041,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 4}],
+            "lat": -247.5, "lng": 783.2261460101868,
+            "mobIcon": 9
+        },
+        {
+            "id": 1042,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 1}],
+            "lat": -246.16748809814453, "lng": 820.5904233870967,
+            "mobIcon": 9
+        },
+        {
+            "id": 1043,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}, {id: 14, amount: 3}],
+            "lat": -250.25, "lng": 819.414205088073,
+            "mobIcon": 18
+        },
+        {
+            "id": 1044,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -298.75, "lng": 939.837181663837,
+            "mobIcon": 16
+        },
+        {
+            "id": 1045,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -301.25, "lng": 776.7247028862479,
+            "mobIcon": 18
+        },
+        {
+            "id": 1046,
+            "name": "Camp",
+            "mobs": [{id: 6, amount: 1}],
+            "lat": -244, "lng": 668.4730475382004,
+            "mobIcon": 6
+        },
+        {
+            "id": 1047,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -295.3504409790039, "lng": 666.4772495755518,
+            "mobIcon": 13
+        },
+        {
+            "id": 1048,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}, {id: 10, amount: 1}],
+            "lat": -248.72991943359375, "lng": 653.9113990874363,
+            "mobIcon": 13
+        },
+        {
+            "id": 1049,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}, {id: 14, amount: 1}],
+            "lat": -279.16822052001953, "lng": 656.6838222225169,
+            "mobIcon": 18
+        },
+        {
+            "id": 1050,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}, {id: 14, amount: 1}],
+            "lat": -290.8142318725586, "lng": 682.2053420787352,
+            "mobIcon": 18
+        },
+        {
+            "id": 1051,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 10, amount: 1}],
+            "lat": -281.875, "lng": 681.9739388794567,
+            "mobIcon": 11
+        },
+        {
+            "id": 1052,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 9, amount: 1}],
+            "lat": -320.13104248046875, "lng": 743.2159685377759,
+            "mobIcon": 11
+        },
+        {
+            "id": 1053,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 2}, {id: 9, amount: 1}],
+            "lat": -284.375, "lng": 709.2199066213922,
+            "mobIcon": 7
+        },
+        {
+            "id": 1054,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 12, amount: 1}, {id: 9, amount: 1}],
+            "lat": -304.7688674926758, "lng": 723.2872463258701,
+            "mobIcon": 11
+        },
+        {
+            "id": 1055,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 1}, {id: 13, amount: 1}],
+            "lat": -298.4903869628906, "lng": 724.3991219227504,
+            "mobIcon": 9
+        },
+        {
+            "id": 1056,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}, {id: 14, amount: 1}],
+            "lat": -329.0637435913086, "lng": 688.4754254430178,
+            "mobIcon": 18
+        },
+        {
+            "id": 1057,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}, {id: 14, amount: 1}],
+            "lat": -313.625, "lng": 677.2291171477079,
+            "mobIcon": 18
+        },
+        {
+            "id": 1058,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 1}],
+            "lat": -331.4773864746094, "lng": 690.7128687393888,
+            "mobIcon": 14
+        },
+        {
+            "id": 1059,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 1}],
+            "lat": -323.9724807739258, "lng": 699.0949915110357,
+            "mobIcon": 14
+        },
+        {
+            "id": 1060,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 1}],
+            "lat": -320.51224517822266, "lng": 701.1199682990238,
+            "mobIcon": 14
+        },
+        {
+            "id": 1061,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -312.61454010009766, "lng": 710.1037029790959,
+            "mobIcon": 18
+        },
+        {
+            "id": 1062,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -323.5660858154297, "lng": 732.6459332555178,
+            "mobIcon": 18
+        },
+        {
+            "id": 1063,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -316.625, "lng": 732.7227928692699,
+            "mobIcon": 18
+        },
+        {
+            "id": 1064,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -320, "lng": 717.8428268251273,
+            "mobIcon": 18
+        },
+        {
+            "id": 1065,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -314.125, "lng": 714.468039049236,
+            "mobIcon": 18
+        },
+        {
+            "id": 1066,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -297.577880859375, "lng": 675.4771222410866,
+            "mobIcon": 18
+        },
+        {
+            "id": 1067,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -312.5567169189453, "lng": 653.8864092012415,
+            "mobIcon": 18
+        },
+        {
+            "id": 1068,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}],
+            "lat": -312.75, "lng": 657.4750424448217,
+            "mobIcon": 18
+        },
+        {
+            "id": 1067,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -342.09910583496094, "lng": 690.3643436969439,
+            "mobIcon": 13
+        },
+        {
+            "id": 1068,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -343.75, "lng": 674.7228777589135,
+            "mobIcon": 15
+        },
+        {
+            "id": 1069,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 1}],
+            "lat": -359.89652252197266, "lng": 699.1598173546265,
+            "mobIcon": 7
+        },
+        {
+            "id": 1070,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 1}],
+            "lat": -364.8529357910156, "lng": 727.9729626485569,
+            "mobIcon": 7
+        },
+        {
+            "id": 1071,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 2}],
+            "lat": -361, "lng": 691.0973684210526,
+            "mobIcon": 14
+        },
+        {
+            "id": 1072,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 1}],
+            "lat": -372.75, "lng": 674.8433361629882,
+            "mobIcon": 14
+        },
+        {
+            "id": 1073,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 1}],
+            "lat": -379.0253677368164, "lng": 671.9333928002972,
+            "mobIcon": 14
+        },
+        {
+            "id": 1074,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}],
+            "lat": -393.9072952270508, "lng": 687.5949371286079,
+            "mobIcon": 18
+        },
+        {
+            "id": 1075,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}],
+            "lat": -364.875, "lng": 651.8480899830221,
+            "mobIcon": 18
+        },
+        {
+            "id": 1076,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -359.1827163696289, "lng": 657.3898414287988,
+            "mobIcon": 18
+        },
+        {
+            "id": 1077,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}],
+            "lat": -373.3990173339844, "lng": 647.190418081494,
+            "mobIcon": 18
+        },
+        {
+            "id": 1078,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -360.4539489746094, "lng": 667.1284536157682,
+            "mobIcon": 18
+        },
+        {
+            "id": 1079,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -361.25, "lng": 663.3455008488964,
+            "mobIcon": 18
+        },
+        {
+            "id": 1080,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 3}],
+            "lat": -372.1241455078125, "lng": 652.9925025201612,
+            "mobIcon": 15
+        },
+        {
+            "id": 1081,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}, {id: 8, amount: 1}],
+            "lat": -380.55957794189453, "lng": 644.0165514908743,
+            "mobIcon": 16
+        },
+        {
+            "id": 1082,
+            "name": "Camp",
+            "mobs": [{id: 3, amount: 1}, {id: 8, amount: 1}],
+            "lat": -386.39483642578125, "lng": 653.8263403278862,
+            "mobIcon": 3
+        },
+        {
+            "id": 1083,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 2}, {id: 12, amount: 1}, {id: 9, amount: 1}],
+            "lat": -350.3013000488281, "lng": 644.2313779976655,
+            "mobIcon": 7
+        },
+        {
+            "id": 1084,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 12, amount: 1}, {id: 9, amount: 1}],
+            "lat": -354.3192901611328, "lng": 614.7259337860781,
+            "mobIcon": 11
+        },
+        {
+            "id": 1085,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 2}],
+            "lat": -343.75, "lng": 607.9744482173174,
+            "mobIcon": 7
+        },
+        {
+            "id": 1086,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 12, amount: 1}],
+            "lat": -331.5, "lng": 610.4713921901528,
+            "mobIcon": 11
+        },
+        {
+            "id": 1087,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -324.11415100097656, "lng": 609.7955837489388,
+            "mobIcon": 18
+        },
+        {
+            "id": 1088,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -355.7576675415039, "lng": 607.1704527668718,
+            "mobIcon": 18
+        },
+        {
+            "id": 1089,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -354.393310546875, "lng": 593.8791416861205,
+            "mobIcon": 18
+        },
+        {
+            "id": 1090,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 1}],
+            "lat": -357.28517150878906, "lng": 600.6377884921477,
+            "mobIcon": 7
+        },
+        {
+            "id": 1091,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -348.125, "lng": 602.2224108658744,
+            "mobIcon": 13
+        },
+        {
+            "id": 1092,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 2}],
+            "lat": -346.9912109375, "lng": 598.924541065365,
+            "mobIcon": 15
+        },
+        {
+            "id": 1093,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 2}],
+            "lat": -388.60120010375977, "lng": 628.9345480952886,
+            "mobIcon": 15
+        },
+        {
+            "id": 1094,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -363.7111587524414, "lng": 625.175619263317,
+            "mobIcon": 15
+        },
+        {
+            "id": 1095,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -365.375, "lng": 616.2257640067912,
+            "mobIcon": 15
+        },
+        {
+            "id": 1096,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}],
+            "lat": -371.625, "lng": 604.9784380305603,
+            "mobIcon": 11
+        },
+        {
+            "id": 1097,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -372.875, "lng": 588.483234295416,
+            "mobIcon": 16
+        },
+        {
+            "id": 1098,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -373.1715087890625, "lng": 614.750933454478,
+            "mobIcon": 18
+        },
+        {
+            "id": 1099,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -391, "lng": 622.3462648556877,
+            "mobIcon": 18
+        },
+        {
+            "id": 1100,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 9, amount: 1}],
+            "lat": -392.875, "lng": 585.1075127334466,
+            "mobIcon": 11
+        },
+        {
+            "id": 1101,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 2}, {id: 9, amount: 1}],
+            "lat": -383.375, "lng": 591.2309422750425,
+            "mobIcon": 10
+        },
+        {
+            "id": 1102,
+            "name": "Camp",
+            "mobs": [{id: 8, amount: 3}],
+            "lat": -390.44017028808594, "lng": 603.7256297087224,
+            "mobIcon": 8
+        },
+        {
+            "id": 1103,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}, {id: 18, amount: 1}, {id: 4, amount: 1}, {id: 8, amount: 1}],
+            "lat": -379.390380859375, "lng": 623.6309857146647,
+            "mobIcon": 16
+        },
+        {
+            "id": 1104,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}, {id: 4, amount: 1}],
+            "lat": -410.6519546508789, "lng": 661.755314555921,
+            "mobIcon": 18
+        },
+        {
+            "id": 1105,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}, {id: 4, amount: 1}],
+            "lat": -430.2706756591797, "lng": 668.2194821731748,
+            "mobIcon": 18
+        },
+        {
+            "id": 1106,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}, {id: 4, amount: 1}],
+            "lat": -447.20399475097656, "lng": 643.2276902721774,
+            "mobIcon": 18
+        },
+        {
+            "id": 1107,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}, {id: 4, amount: 1}],
+            "lat": -434.41837310791016, "lng": 654.2018914473684,
+            "mobIcon": 18
+        },
+        {
+            "id": 1108,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -447.75, "lng": 634.3491511035654,
+            "mobIcon": 18
+        },
+        {
+            "id": 1109,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}, {id: 8, amount: 1}],
+            "lat": -402.6599807739258, "lng": 642.6684538810484,
+            "mobIcon": 16
+        },
+        {
+            "id": 1110,
+            "name": "Camp",
+            "mobs": [{id: 8, amount: 2}],
+            "lat": -404.12999725341797, "lng": 647.078179714028,
+            "mobIcon": 8
+        },
+        {
+            "id": 1111,
+            "name": "Camp",
+            "mobs": [{id: 12, amount: 1}],
+            "lat": -429.2836227416992, "lng": 635.853548785017,
+            "mobIcon": 12
+        },
+        {
+            "id": 1112,
+            "name": "Camp",
+            "mobs": [{id: 4, amount: 1}],
+            "lat": -427.35951232910156, "lng": 625.6820173227928,
+            "mobIcon": 4
+        },
+        {
+            "id": 1113,
+            "name": "Camp",
+            "mobs": [{id: 3, amount: 1}],
+            "lat": -420.74491119384766, "lng": 628.558898490556,
+            "mobIcon": 3
+        },
+        {
+            "id": 1114,
+            "name": "Camp",
+            "mobs": [{id: 3, amount: 1}],
+            "lat": -413.06710052490234, "lng": 633.3014318495331,
+            "mobIcon": 3
+        },
+        {
+            "id": 1115,
+            "name": "Camp",
+            "mobs": [{id: 4, amount: 1}],
+            "lat": -410.92520904541016, "lng": 630.3004801570459,
+            "mobIcon": 4
+        },
+        {
+            "id": 1116,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 2}],
+            "lat": -417.6048583984375, "lng": 612.957681517933,
+            "mobIcon": 17
+        },
+        {
+            "id": 1117,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 2}],
+            "lat": -417.5, "lng": 588.9788624787776,
+            "mobIcon": 7
+        },
+        {
+            "id": 1118,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 3}],
+            "lat": -440.9461975097656, "lng": 611.81675774618,
+            "mobIcon": 11
+        },
+        {
+            "id": 1119,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 1}, {id: 11, amount: 1}, {id: 9, amount: 1}],
+            "lat": -431.9876403808594, "lng": 600.5564658717105,
+            "mobIcon": 7
+        },
+        {
+            "id": 1120,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 1}, {id: 11, amount: 1}, {id: 9, amount: 1}],
+            "lat": -412.3091926574707, "lng": 598.2599304302844,
+            "mobIcon": 7
+        },
+        {
+            "id": 1121,
+            "name": "Camp",
+            "mobs": [{id: 6, amount: 1}, {id: 11, amount: 2}, {id: 12, amount: 1}],
+            "lat": -416.47791290283203, "lng": 602.7200724214771,
+            "mobIcon": 11
+        },
+        {
+            "id": 1122,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 10, amount: 1}, {id: 9, amount: 1}],
+            "lat": -340.5968475341797, "lng": 565.1997562738752,
+            "mobIcon": 11
+        },
+        {
+            "id": 1123,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}, {id: 13, amount: 1}],
+            "lat": -353.25, "lng": 556.8542869269949,
+            "mobIcon": 18
+        },
+        {
+            "id": 1124,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -362.9828643798828, "lng": 585.7332508754245,
+            "mobIcon": 18
+        },
+        {
+            "id": 1125,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 4}],
+            "lat": -360.875, "lng": 574.224363327674,
+            "mobIcon": 18
+        },
+        {
+            "id": 1126,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -334.07847595214844, "lng": 548.5903451294568,
+            "mobIcon": 18
+        },
+        {
+            "id": 1127,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -361.7019271850586, "lng": 555.0050350169779,
+            "mobIcon": 15
+        },
+        {
+            "id": 1128,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -362.5060691833496, "lng": 517.9889283677313,
+            "mobIcon": 13
+        },
+        {
+            "id": 1129,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -358.2569351196289, "lng": 482.73404074702887,
+            "mobIcon": 18
+        },
+        {
+            "id": 1130,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -344.6431427001953, "lng": 495.8887005584147,
+            "mobIcon": 18
+        },
+        {
+            "id": 1131,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -349, "lng": 483.2343803056027,
+            "mobIcon": 18
+        },
+        {
+            "id": 1132,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -365.0670166015625, "lng": 500.54189254164896,
+            "mobIcon": 18
+        },
+        {
+            "id": 1133,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -359.5, "lng": 514.1002971137522,
+            "mobIcon": 18
+        },
+        {
+            "id": 1134,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -331.7976379394531, "lng": 452.5730082435802,
+            "mobIcon": 18
+        },
+        {
+            "id": 1135,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -368, "lng": 415.10742784380307,
+            "mobIcon": 18
+        },
+        {
+            "id": 1136,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -386.8143005371094, "lng": 438.5920797299448,
+            "mobIcon": 18
+        },
+        {
+            "id": 1137,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -389.875, "lng": 440.2216893039049,
+            "mobIcon": 18
+        },
+        {
+            "id": 1138,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -380.51551818847656, "lng": 423.1503959306027,
+            "mobIcon": 16
+        },
+        {
+            "id": 1139,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 1}],
+            "lat": -377.64417266845703, "lng": 443.97119986205433,
+            "mobIcon": 9
+        },
+        {
+            "id": 1140,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 1}],
+            "lat": -367, "lng": 474.5981324278438,
+            "mobIcon": 9
+        },
+        {
+            "id": 1141,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 1}],
+            "lat": -351.125, "lng": 439.8510611205433,
+            "mobIcon": 9
+        },
+        {
+            "id": 1142,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 2}],
+            "lat": -344.625, "lng": 438.1070882852292,
+            "mobIcon": 9
+        },
+        {
+            "id": 1143,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -369.3723602294922, "lng": 470.0679894750106,
+            "mobIcon": 15
+        },
+        {
+            "id": 1144,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -350.125, "lng": 461.35038200339557,
+            "mobIcon": 15
+        },
+        {
+            "id": 1145,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}, {id: 14, amount: 1}],
+            "lat": -339.20902252197266, "lng": 449.04616089903436,
+            "mobIcon": 18
+        },
+        {
+            "id": 1146,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 10, amount: 1}, {id: 9, amount: 1}],
+            "lat": -356.09820556640625, "lng": 423.5442009762309,
+            "mobIcon": 11
+        },
+        {
+            "id": 1147,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 10, amount: 1}, {id: 9, amount: 1}],
+            "lat": -364.8675231933594, "lng": 383.1322123036927,
+            "mobIcon": 11
+        },
+        {
+            "id": 1148,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 4}],
+            "lat": -397.125, "lng": 386.229117147708,
+            "mobIcon": 17
+        },
+        {
+            "id": 1149,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -414.15271759033203, "lng": 429.9476202713816,
+            "mobIcon": 18
+        },
+        {
+            "id": 1150,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -422.125, "lng": 434.7358234295416,
+            "mobIcon": 18
+        },
+        {
+            "id": 1151,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -397.66930389404297, "lng": 450.01630229334677,
+            "mobIcon": 18
+        },
+        {
+            "id": 1152,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -382.125, "lng": 466.6039049235993,
+            "mobIcon": 18
+        },
+        {
+            "id": 1153,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -391.9334259033203, "lng": 504.42319128687393,
+            "mobIcon": 18
+        },
+        {
+            "id": 1154,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -407.7786865234375, "lng": 512.3227122904287,
+            "mobIcon": 18
+        },
+        {
+            "id": 1155,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}],
+            "lat": -407.4402160644531, "lng": 441.1110903676783,
+            "mobIcon": 18
+        },
+        {
+            "id": 1156,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}],
+            "lat": -418.75, "lng": 522.3451188455008,
+            "mobIcon": 18
+        },
+        {
+            "id": 1157,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 5}],
+            "lat": -404.5, "lng": 529.3470713073006,
+            "mobIcon": 18
+        },
+        {
+            "id": 1158,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -377, "lng": 474.6,
+            "mobIcon": 13
+        },
+        {
+            "id": 1159,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -391.0109634399414, "lng": 444.4856390598472,
+            "mobIcon": 13
+        },
+        {
+            "id": 1160,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -415.35803985595703, "lng": 438.40966846615026,
+            "mobIcon": 13
+        },
+        {
+            "id": 1161,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -409.54327392578125, "lng": 490.65448058149406,
+            "mobIcon": 13
+        },
+        {
+            "id": 1162,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -420.1260681152344, "lng": 490.8676616882428,
+            "mobIcon": 13
+        },
+        {
+            "id": 1163,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -405.5, "lng": 518.9723259762309,
+            "mobIcon": 13
+        },
+        {
+            "id": 1164,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -398.375, "lng": 514.348896434635,
+            "mobIcon": 13
+        },
+        {
+            "id": 1165,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 1}],
+            "lat": -405.875, "lng": 476.4740662139219,
+            "mobIcon": 10
+        },
+        {
+            "id": 1166,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -410.09580993652344, "lng": 463.1439807937182,
+            "mobIcon": 16
+        },
+        {
+            "id": 1167,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -411.5, "lng": 540.5867147707979,
+            "mobIcon": 16
+        },
+        {
+            "id": 1168,
+            "name": "Camp",
+            "mobs": [{id: 4, amount: 1}],
+            "lat": -429, "lng": 521.3455857385399,
+            "mobIcon": 4
+        },
+        {
+            "id": 1169,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -432.25, "lng": 449.10823429541597,
+            "mobIcon": 15
+        },
+        {
+            "id": 1170,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 1}],
+            "lat": -430.75, "lng": 456.10382003395586,
+            "mobIcon": 14
+        },
+        {
+            "id": 1171,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 1}],
+            "lat": -422.25, "lng": 512.2182937181664,
+            "mobIcon": 14
+        },
+        {
+            "id": 1172,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 1}],
+            "lat": -385.3239059448242, "lng": 515.9320481616087,
+            "mobIcon": 14
+        },
+        {
+            "id": 1173,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 3}],
+            "lat": -372.62625885009766, "lng": 479.8436654419567,
+            "mobIcon": 14
+        },
+        {
+            "id": 1174,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}, {id: 14, amount: 2}],
+            "lat": -379.07120513916016, "lng": 469.3379254430178,
+            "mobIcon": 14
+        },
+        {
+            "id": 1175,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}, {id: 14, amount: 2}],
+            "lat": -387.375, "lng": 487.4696519524618,
+            "mobIcon": 14
+        },
+        {
+            "id": 1176,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}, {id: 17, amount: 3}, {id: 13, amount: 1}],
+            "lat": -409.88875579833984, "lng": 485.3486417657046,
+            "mobIcon": 17
+        },
+        {
+            "id": 1177,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}, {id: 17, amount: 1}],
+            "lat": -420.875, "lng": 473.35912563667233,
+            "mobIcon": 18
+        },
+        {
+            "id": 1178,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}, {id: 13, amount: 1}],
+            "lat": -405.8617248535156, "lng": 496.622670011407,
+            "mobIcon": 15
+        },
+        {
+            "id": 1179,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 2}],
+            "lat": -433.375, "lng": 433.8705857385399,
+            "mobIcon": 15
+        },
+        {
+            "id": 1180,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -439, "lng": 445.8578947368421,
+            "mobIcon": 13
+        },
+        {
+            "id": 1181,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -439.375, "lng": 501.7206281833616,
+            "mobIcon": 13
+        },
+        {
+            "id": 1182,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -442.77530670166016, "lng": 498.66493427684634,
+            "mobIcon": 13
+        },
+        {
+            "id": 1183,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 1}],
+            "lat": -454.24629974365234, "lng": 511.4425456281834,
+            "mobIcon": 14
+        },
+        {
+            "id": 1184,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 1}],
+            "lat": -451.64957427978516, "lng": 515.9611649777165,
+            "mobIcon": 14
+        },
+        {
+            "id": 1185,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 1}],
+            "lat": -437.75, "lng": 458.351273344652,
+            "mobIcon": 14
+        },
+        {
+            "id": 1186,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -438.125, "lng": 477.34656196943973,
+            "mobIcon": 18
+        },
+        {
+            "id": 1187,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -439.2874755859375, "lng": 488.59467980687606,
+            "mobIcon": 18
+        },
+        {
+            "id": 1188,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -447, "lng": 506.7246179966044,
+            "mobIcon": 18
+        },
+        {
+            "id": 1189,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -443.375, "lng": 528.4698217317488,
+            "mobIcon": 18
+        },
+        {
+            "id": 1190,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 4}],
+            "lat": -466.9134292602539, "lng": 485.96624343431665,
+            "mobIcon": 18
+        },
+        {
+            "id": 1191,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 4}],
+            "lat": -455.55889892578125, "lng": 449.319496100382,
+            "mobIcon": 18
+        },
+        {
+            "id": 1192,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -632.25, "lng": 544.716298811545,
+            "mobIcon": 15
+        },
+        {
+            "id": 1193,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 2}],
+            "lat": -619.875, "lng": 522.4738115449915,
+            "mobIcon": 9
+        },
+        {
+            "id": 1194,
+            "name": "Camp",
+            "mobs": [{id: 12, amount: 1}, {id: 10, amount: 3}],
+            "lat": -638.5358276367188, "lng": 555.0765498991935,
+            "mobIcon": 10
+        },
+        {
+            "id": 1195,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 2}, {id: 9, amount: 2}],
+            "lat": -629.5807266235352, "lng": 555.0564459757004,
+            "mobIcon": 10
+        },
+        {
+            "id": 1196,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 1}, {id: 12, amount: 1}, {id: 10, amount: 1}, {id: 9, amount: 1}],
+            "lat": -587.875, "lng": 521.7267826825127,
+            "mobIcon": 7
+        },
+        {
+            "id": 1197,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -347.4199752807617, "lng": 253.81629615874363,
+            "mobIcon": 17
+        },
+        {
+            "id": 1198,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -372.60267639160156, "lng": 249.05127176955114,
+            "mobIcon": 17
+        },
+        {
+            "id": 1199,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -367.75, "lng": 266.7325127334465,
+            "mobIcon": 17
+        },
+        {
+            "id": 1200,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -359.65111541748047, "lng": 264.87059933414685,
+            "mobIcon": 17
+        },
+        {
+            "id": 1201,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -357.75, "lng": 258.47614601018677,
+            "mobIcon": 17
+        },
+        {
+            "id": 1202,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -344.72489166259766, "lng": 193.17994167153014,
+            "mobIcon": 17
+        },
+        {
+            "id": 1202,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 2}],
+            "lat": -379.74078369140625, "lng": 230.9315849161715,
+            "mobIcon": 17
+        },
+        {
+            "id": 1203,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -358, "lng": 171.8663170495543,
+            "mobIcon": 17
+        },
+        {
+            "id": 1204,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 2}],
+            "lat": -459.75, "lng": 250.47262308998302,
+            "mobIcon": 17
+        },
+        {
+            "id": 1205,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 3}],
+            "lat": -459.375, "lng": 257.8577674023769,
+            "mobIcon": 19
+        },
+        {
+            "id": 1206,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 5}],
+            "lat": -441.4132995605469, "lng": 260.0719655268463,
+            "mobIcon": 19
+        },
+        {
+            "id": 1207,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -424, "lng": 269.98068760611204,
+            "mobIcon": 18
+        },
+        {
+            "id": 1208,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -397.3002395629883, "lng": 303.4100368739389,
+            "mobIcon": 18
+        },
+        {
+            "id": 1209,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -340.75, "lng": 181.7453310696095,
+            "mobIcon": 18
+        },
+        {
+            "id": 1210,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 2}],
+            "lat": -417.7749481201172, "lng": 267.2320882852292,
+            "mobIcon": 9
+        },
+        {
+            "id": 1211,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 1}],
+            "lat": -450.51915740966797, "lng": 305.2468484719864,
+            "mobIcon": 9
+        },
+        {
+            "id": 1212,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -452.125, "lng": 274.10649405772494,
+            "mobIcon": 16
+        },
+        {
+            "id": 1213,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -400.75, "lng": 294.6084465195246,
+            "mobIcon": 16
+        },
+        {
+            "id": 1214,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}, {id: 8, amount: 2}],
+            "lat": -442.76634979248047, "lng": 283.0510407271329,
+            "mobIcon": 16
+        },
+        {
+            "id": 1215,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 2}, {id: 13, amount: 1}],
+            "lat": -393.22042083740234, "lng": 293.8828595872241,
+            "mobIcon": 19
+        },
+        {
+            "id": 1216,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}, {id: 9, amount: 1}],
+            "lat": -410.5, "lng": 283.2263582342954,
+            "mobIcon": 15
+        },
+        {
+            "id": 1217,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 2}, {id: 12, amount: 1}, {id: 9, amount: 2}],
+            "lat": -419.5, "lng": 126.47941426146011,
+            "mobIcon": 11
+        },
+        {
+            "id": 1218,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 3}],
+            "lat": -436.75, "lng": 120.24066213921901,
+            "mobIcon": 19
+        },
+        {
+            "id": 1219,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 2}],
+            "lat": -399.8949432373047, "lng": 137.14336783080432,
+            "mobIcon": 7
+        },
+        {
+            "id": 1220,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 2}],
+            "lat": -389.2157516479492, "lng": 105.4943798745225,
+            "mobIcon": 17
+        },
+        {
+            "id": 1221,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -405.5, "lng": 130.3617572156197,
+            "mobIcon": 17
+        },
+        {
+            "id": 1222,
+            "name": "Camp",
+            "mobs": [{id: 6, amount: 1}],
+            "lat": -440.125, "lng": 130.4886247877759,
+            "mobIcon": 6
+        },
+        {
+            "id": 1223,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -363.75, "lng": 137.2374363327674,
+            "mobIcon": 16
+        },
+        {
+            "id": 1224,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -356.28206634521484, "lng": 192.7917416635717,
+            "mobIcon": 16
+        },
+        {
+            "id": 1225,
+            "name": "Camp",
+            "mobs": [{id: 4, amount: 1}],
+            "lat": -360.125, "lng": 193.6121392190153,
+            "mobIcon": 4
+        },
+        {
+            "id": 1226,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -366, "lng": 147.23841256366723,
+            "mobIcon": 17
+        },
+        {
+            "id": 1227,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -361.5, "lng": 180.48493208828523,
+            "mobIcon": 15
+        },
+        {
+            "id": 1228,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -359.75, "lng": 167.1077674023769,
+            "mobIcon": 15
+        },
+        {
+            "id": 1229,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 3}],
+            "lat": -362.25, "lng": 157.48535653650254,
+            "mobIcon": 15
+        },
+        {
+            "id": 1230,
+            "name": "Camp",
+            "mobs": [{id: 8, amount: 3}],
+            "lat": -354.625, "lng": 159.1117572156197,
+            "mobIcon": 8
+        },
+        {
+            "id": 1231,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 4}],
+            "lat": -363.9034729003906, "lng": 189.94118084478458,
+            "mobIcon": 19
+        },
+        {
+            "id": 1232,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}],
+            "lat": -366.625, "lng": 162.36383701188456,
+            "mobIcon": 18
+        },
+        {
+            "id": 1233,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}],
+            "lat": -379.1049118041992, "lng": 153.10740910839345,
+            "mobIcon": 18
+        },
+        {
+            "id": 1234,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -369, "lng": 176.7346349745331,
+            "mobIcon": 18
+        },
+        {
+            "id": 1235,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -372.75, "lng": 174.23896434634975,
+            "mobIcon": 18
+        },
+        {
+            "id": 1236,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -376.5, "lng": 182.6046689303905,
+            "mobIcon": 18
+        },
+        {
+            "id": 1237,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -381.5, "lng": 185.73238539898134,
+            "mobIcon": 18
+        },
+        {
+            "id": 1238,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -390.5, "lng": 204.60284380305603,
+            "mobIcon": 18
+        },
+        {
+            "id": 1239,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -414.00360107421875, "lng": 173.5718927406091,
+            "mobIcon": 18
+        },
+        {
+            "id": 1240,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -416.125, "lng": 230.30576254775042,
+            "mobIcon": 18
+        },
+        {
+            "id": 1241,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -418.125, "lng": 220.60636672325975,
+            "mobIcon": 18
+        },
+        {
+            "id": 1242,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}],
+            "lat": -391.625, "lng": 215.34634974533105,
+            "mobIcon": 18
+        },
+        {
+            "id": 1243,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 2}],
+            "lat": -398.875, "lng": 199.85305602716468,
+            "mobIcon": 19
+        },
+        {
+            "id": 1244,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 2}],
+            "lat": -401.75, "lng": 190.73578098471987,
+            "mobIcon": 19
+        },
+        {
+            "id": 1245,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 3}],
+            "lat": -396.75074005126953, "lng": 163.6850895983659,
+            "mobIcon": 13
+        },
+        {
+            "id": 1246,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 1}],
+            "lat": -394.7594528198242, "lng": 156.8674872665535,
+            "mobIcon": 13
+        },
+        {
+            "id": 1247,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -398.625, "lng": 169.72801358234295,
+            "mobIcon": 15
+        },
+        {
+            "id": 1248,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 3}, {id: 13, amount: 1}],
+            "lat": -389.625, "lng": 157.23552631578946,
+            "mobIcon": 19
+        },
+        {
+            "id": 1249,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}, {id: 13, amount: 2}],
+            "lat": -386.125, "lng": 209.9682088285229,
+            "mobIcon": 19
+        },
+        {
+            "id": 1250,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 1}, {id: 12, amount: 1}, {id: 10, amount: 1}],
+            "lat": -391.75, "lng": 166.8611205432937,
+            "mobIcon": 7
+        },
+        {
+            "id": 1251,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -377.25, "lng": 218.84613752122243,
+            "mobIcon": 17
+        },
+        {
+            "id": 1252,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 4}],
+            "lat": -383, "lng": 217.4820882852292,
+            "mobIcon": 19
+        },
+        {
+            "id": 1253,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 2}],
+            "lat": -452.24583435058594, "lng": 223.66964250185697,
+            "mobIcon": 19
+        },
+        {
+            "id": 1254,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 2}],
+            "lat": -458.625, "lng": 200.73204584040747,
+            "mobIcon": 19
+        },
+        {
+            "id": 1255,
+            "name": "Camp",
+            "mobs": [{id: 8, amount: 2}],
+            "lat": -455.75, "lng": 208.475,
+            "mobIcon": 8
+        },
+        {
+            "id": 1256,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -462.8162155151367, "lng": 195.79182439781408,
+            "mobIcon": 15
+        },
+        {
+            "id": 1257,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}, {id: 19, amount: 1}],
+            "lat": -438.41419219970703, "lng": 240.1807648689516,
+            "mobIcon": 19
+        },
+        {
+            "id": 1258,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -441.6211929321289, "lng": 236.9633386168294,
+            "mobIcon": 19
+        },
+        {
+            "id": 1259,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 2}],
+            "lat": -442.78226470947266, "lng": 242.465304674236,
+            "mobIcon": 13
+        },
+        {
+            "id": 1260,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 3}],
+            "lat": -429.75, "lng": 205.60445670628184,
+            "mobIcon": 10
+        },
+        {
+            "id": 1261,
+            "name": "Camp",
+            "mobs": [{id: 6, amount: 1}, {id: 12, amount: 1}],
+            "lat": -421.8149719238281, "lng": 205.19400500053058,
+            "mobIcon": 6
+        },
+        {
+            "id": 1262,
+            "name": "Camp",
+            "mobs": [{id: 12, amount: 1}, {id: 9, amount: 2}],
+            "lat": -445.48473358154297, "lng": 229.3889825843591,
+            "mobIcon": 12
+        },
+        {
+            "id": 1263,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 2}],
+            "lat": -455, "lng": 173.7300509337861,
+            "mobIcon": 19
+        },
+        {
+            "id": 1264,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 2}],
+            "lat": -451.625, "lng": 167.98429541595925,
+            "mobIcon": 15
+        },
+        {
+            "id": 1265,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}],
+            "lat": -445.5, "lng": 164.86269100169778,
+            "mobIcon": 18
+        },
+        {
+            "id": 1265,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}],
+            "lat": -445.5, "lng": 164.86269100169778,
+            "mobIcon": 18
+        },
+        {
+            "id": 1266,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}],
+            "lat": -442.625, "lng": 162.99070458404074,
+            "mobIcon": 18
+        },
+        {
+            "id": 1267,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -438.2128219604492, "lng": 162.53310165534805,
+            "mobIcon": 18
+        },
+        {
+            "id": 1268,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 4}],
+            "lat": -423.7128219604492, "lng": 169.030894524618,
+            "mobIcon": 19
+        },
+        {
+            "id": 1269,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 12, amount: 2}, {id: 10, amount: 2}],
+            "lat": -484.4589614868164, "lng": 773.4802134178692,
+            "mobIcon": 11
+        },
+        {
+            "id": 1270,
+            "name": "Camp",
+            "mobs": [{id: 6, amount: 1}, {id: 10, amount: 2}, {id: 9, amount: 3}],
+            "lat": -516.5, "lng": 733.2277164685909,
+            "mobIcon": 6
+        },
+        {
+            "id": 1271,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 9, amount: 3}],
+            "lat": -538.25, "lng": 782.8502971137522,
+            "mobIcon": 11
+        },
+        {
+            "id": 1272,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 1}],
+            "lat": -536.2924270629883, "lng": 787.2490522867148,
+            "mobIcon": 10
+        },
+        {
+            "id": 1273,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -561.4450454711914, "lng": 744.7229981297751,
+            "mobIcon": 15
+        },
+        {
+            "id": 1274,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -543.875, "lng": 817.4694397283531,
+            "mobIcon": 15
+        },
+        {
+            "id": 1275,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -474.625, "lng": 761.231494057725,
+            "mobIcon": 15
+        },
+        {
+            "id": 1276,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -490, "lng": 776.6020797962649,
+            "mobIcon": 15
+        },
+        {
+            "id": 1277,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -503.0397186279297, "lng": 811.4701612903226,
+            "mobIcon": 15
+        },
+        {
+            "id": 1278,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -490.1042022705078, "lng": 814.9614630862691,
+            "mobIcon": 15
+        },
+        {
+            "id": 1279,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 3}],
+            "lat": -543, "lng": 759.2236842105264,
+            "mobIcon": 15
+        },
+        {
+            "id": 1280,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 3}],
+            "lat": -493.4181594848633, "lng": 764.0357869535229,
+            "mobIcon": 19
+        },
+        {
+            "id": 1281,
+            "name": "Camp",
+            "mobs": [{id: 8, amount: 3}],
+            "lat": -512.7128677368164, "lng": 746.4245712409805,
+            "mobIcon": 8
+        },
+        {
+            "id": 1282,
+            "name": "Camp",
+            "mobs": [{id: 8, amount: 3}],
+            "lat": -523.875, "lng": 765.600169779287,
+            "mobIcon": 8
+        },
+        {
+            "id": 1283,
+            "name": "Camp",
+            "mobs": [{id: 8, amount: 3}],
+            "lat": -534.5343475341797, "lng": 768.3816197341893,
+            "mobIcon": 8
+        },
+        {
+            "id": 1284,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -519.4242630004883, "lng": 759.8500868792445,
+            "mobIcon": 18
+        },
+        {
+            "id": 1285,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -515.375, "lng": 756.6025042444821,
+            "mobIcon": 18
+        },
+        {
+            "id": 1286,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -515.6511764526367, "lng": 760.7265280135823,
+            "mobIcon": 18
+        },
+        {
+            "id": 1287,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 2}],
+            "lat": -539.375, "lng": 744.4746604414262,
+            "mobIcon": 19
+        },
+        {
+            "id": 1288,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -542.5, "lng": 748.1066638370119,
+            "mobIcon": 19
+        },
+        {
+            "id": 1289,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 2}],
+            "lat": -532.7106704711914, "lng": 786.325089863646,
+            "mobIcon": 19
+        },
+        {
+            "id": 1290,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 2}],
+            "lat": -531.875, "lng": 800.599363327674,
+            "mobIcon": 17
+        },
+        {
+            "id": 1291,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}, {id: 8, amount: 1}],
+            "lat": -532.5846176147461, "lng": 752.0749986735993,
+            "mobIcon": 16
+        },
+        {
+            "id": 1292,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -530.614818572998, "lng": 767.5786389802631,
+            "mobIcon": 16
+        },
+        {
+            "id": 1293,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -494.4862174987793, "lng": 784.1877359335208,
+            "mobIcon": 16
+        },
+        {
+            "id": 1294,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -504.75, "lng": 776.6014855687606,
+            "mobIcon": 16
+        },
+        {
+            "id": 1295,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -501.75, "lng": 807.4796264855688,
+            "mobIcon": 16
+        },
+        {
+            "id": 1296,
+            "name": "Camp",
+            "mobs": [{id: 4, amount: 1}],
+            "lat": -509.2220993041992, "lng": 738.7673748540959,
+            "mobIcon": 4
+        },
+        {
+            "id": 1297,
+            "name": "Camp",
+            "mobs": [{id: 8, amount: 1}],
+            "lat": -525.125, "lng": 760.5962224108658,
+            "mobIcon": 8
+        },
+        {
+            "id": 1298,
+            "name": "Camp",
+            "mobs": [{id: 8, amount: 1}],
+            "lat": -525, "lng": 769.0950764006791,
+            "mobIcon": 8
+        },
+        {
+            "id": 1299,
+            "name": "Camp",
+            "mobs": [{id: 8, amount: 1}],
+            "lat": -510.79412841796875, "lng": 789.6957349586163,
+            "mobIcon": 8
+        },
+        {
+            "id": 1300,
+            "name": "Camp",
+            "mobs": [{id: 8, amount: 1}],
+            "lat": -506.875, "lng": 786.9714770797963,
+            "mobIcon": 8
+        },
+        {
+            "id": 1301,
+            "name": "Camp",
+            "mobs": [{id: 8, amount: 1}],
+            "lat": -503.07910537719727, "lng": 789.1792099957555,
+            "mobIcon": 8
+        },
+        {
+            "id": 1302,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -492.86561584472656, "lng": 749.9523981324278,
+            "mobIcon": 17
+        },
+        {
+            "id": 1303,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -494.67333221435547, "lng": 756.9271762919143,
+            "mobIcon": 17
+        },
+        {
+            "id": 1304,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -502.9661407470703, "lng": 750.3784672113752,
+            "mobIcon": 17
+        },
+        {
+            "id": 1305,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -560.8094711303711, "lng": 794.7796828575977,
+            "mobIcon": 18
+        },
+        {
+            "id": 1306,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}, {id: 14, amount: 1}],
+            "lat": -572.3638763427734, "lng": 789.5981420442488,
+            "mobIcon": 18
+        },
+        {
+            "id": 1307,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 5}],
+            "lat": -606.5, "lng": 784.0206182353566,
+            "mobIcon": 14
+        },
+        {
+            "id": 1308,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 2}],
+            "lat": -617.625, "lng": 808.2231748726656,
+            "mobIcon": 14
+        },
+        {
+            "id": 1309,
+            "name": "Camp",
+            "mobs": [{id: 12, amount: 1}, {id: 10, amount: 1}, {id: 9, amount: 1}],
+            "lat": -609.9690704345703, "lng": 855.2649266500424,
+            "mobIcon": 12
+        },
+        {
+            "id": 1310,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 10, amount: 1}, {id: 9, amount: 1}],
+            "lat": -611.7220916748047, "lng": 841.1581689701825,
+            "mobIcon": 11
+        },
+        {
+            "id": 1311,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -584.6940765380859, "lng": 815.317086030348,
+            "mobIcon": 16
+        },
+        {
+            "id": 1312,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -588.5, "lng": 783.4806027164686,
+            "mobIcon": 15
+        },
+        {
+            "id": 1313,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -594.5006561279297, "lng": 778.8873046875,
+            "mobIcon": 19
+        },
+        {
+            "id": 1314,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -610.875, "lng": 792.8516977928692,
+            "mobIcon": 19
+        },
+        {
+            "id": 1315,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -615.7233963012695, "lng": 794.6112627997666,
+            "mobIcon": 19
+        },
+        {
+            "id": 1316,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -615.6651077270508, "lng": 801.1382941824066,
+            "mobIcon": 19
+        },
+        {
+            "id": 1317,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -617.375, "lng": 804.4792020373515,
+            "mobIcon": 19
+        },
+        {
+            "id": 1318,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 3}],
+            "lat": -611.75, "lng": 801.347623089983,
+            "mobIcon": 19
+        },
+        {
+            "id": 1319,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 3}],
+            "lat": -582.625, "lng": 808.3460101867572,
+            "mobIcon": 19
+        },
+        {
+            "id": 1320,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 3}],
+            "lat": -600.875, "lng": 816.4693548387097,
+            "mobIcon": 19
+        },
+        {
+            "id": 1321,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 4}],
+            "lat": -603.9491004943848, "lng": 832.5812005915747,
+            "mobIcon": 19
+        },
+        {
+            "id": 1322,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -608.375, "lng": 821.7259762308998,
+            "mobIcon": 19
+        },
+        {
+            "id": 1323,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -613.9171752929688, "lng": 825.940418081494,
+            "mobIcon": 19
+        },
+        {
+            "id": 1324,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -615.4024887084961, "lng": 831.9443739057194,
+            "mobIcon": 19
+        },
+        {
+            "id": 1325,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -643.0498428344727, "lng": 856.097759709253,
+            "mobIcon": 19
+        },
+        {
+            "id": 1326,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -647.875, "lng": 849.2175297113752,
+            "mobIcon": 19
+        },
+        {
+            "id": 1327,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 2}],
+            "lat": -650.75, "lng": 840.7183361629882,
+            "mobIcon": 19
+        },
+        {
+            "id": 1328,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 2}],
+            "lat": -627.875, "lng": 845.5956281833617,
+            "mobIcon": 9
+        },
+        {
+            "id": 1329,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -644.48828125, "lng": 849.2768373965407,
+            "mobIcon": 15
+        },
+        {
+            "id": 1330,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 10, amount: 3}, {id: 9, amount: 3}],
+            "lat": -629.479133605957, "lng": 838.0099838179117,
+            "mobIcon": 11
+        },
+        {
+            "id": 1331,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 12, amount: 1}, {id: 10, amount: 1}, {id: 9, amount: 1}],
+            "lat": -602.5, "lng": 947.139540999045,
+            "mobIcon": 11
+        },
+        {
+            "id": 1332,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 9, amount: 1}, {id: 19, amount: 4}],
+            "lat": -603.125, "lng": 910.2248302207131,
+            "mobIcon": 19
+        },
+        {
+            "id": 1333,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 10, amount: 2}],
+            "lat": -612.1828002929688, "lng": 915.347659897602,
+            "mobIcon": 11
+        },
+        {
+            "id": 1334,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 9, amount: 2}],
+            "lat": -612.1148071289062, "lng": 930.5495185165535,
+            "mobIcon": 11
+        },
+        {
+            "id": 1335,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 1}, {id: 9, amount: 1}],
+            "lat": -631.5, "lng": 906.8547113752122,
+            "mobIcon": 10
+        },
+        {
+            "id": 1336,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}, {id: 9, amount: 1}],
+            "lat": -625, "lng": 916.9009695988964,
+            "mobIcon": 19
+        },
+        {
+            "id": 1337,
+            "name": "Camp",
+            "mobs": [{id: 12, amount: 1}, {id: 9, amount: 1}],
+            "lat": -603.918830871582, "lng": 937.452771514219,
+            "mobIcon": 12
+        },
+        {
+            "id": 1338,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 3}],
+            "lat": -623.2900390625, "lng": 929.875814410017,
+            "mobIcon": 19
+        },
+        {
+            "id": 1339,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -627.125, "lng": 922.2167623885823,
+            "mobIcon": 19
+        },
+        {
+            "id": 1340,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -631.375, "lng": 922.1268128581282,
+            "mobIcon": 19
+        },
+        {
+            "id": 1341,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -629.75, "lng": 918.7268675721562,
+            "mobIcon": 19
+        },
+        {
+            "id": 1342,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 4}],
+            "lat": -577.125, "lng": 916.4755093378608,
+            "mobIcon": 9
+        },
+        {
+            "id": 1343,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 1}],
+            "lat": -591.875, "lng": 931.848259762309,
+            "mobIcon": 9
+        },
+        {
+            "id": 1344,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 1}],
+            "lat": -590.2781372070312, "lng": 909.5588291861205,
+            "mobIcon": 9
+        },
+        {
+            "id": 1345,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 1}],
+            "lat": -604.4611053466797, "lng": 942.5900480157046,
+            "mobIcon": 10
+        },
+        {
+            "id": 1346,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 1}],
+            "lat": -595.875, "lng": 940.8492359932088,
+            "mobIcon": 10
+        },
+        {
+            "id": 1347,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 1}],
+            "lat": -598.875, "lng": 951.0909168081494,
+            "mobIcon": 10
+        },
+        {
+            "id": 1348,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}],
+            "lat": -596.625, "lng": 946.9704584040747,
+            "mobIcon": 11
+        },
+        {
+            "id": 1349,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 3}],
+            "lat": -596.375, "lng": 931.4692275042445,
+            "mobIcon": 11
+        },
+        {
+            "id": 1350,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -559.125, "lng": 913.4694397283531,
+            "mobIcon": 18
+        },
+        {
+            "id": 1351,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -546.375, "lng": 906.8471137521223,
+            "mobIcon": 18
+        },
+        {
+            "id": 1352,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 3}],
+            "lat": -553.9225158691406, "lng": 874.9003873089983,
+            "mobIcon": 19
+        },
+        {
+            "id": 1353,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 3}],
+            "lat": -557.982795715332, "lng": 889.1273228591893,
+            "mobIcon": 19
+        },
+        {
+            "id": 1354,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 4}],
+            "lat": -525.25, "lng": 904.5991935483871,
+            "mobIcon": 13
+        },
+        {
+            "id": 1355,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 3}],
+            "lat": -533.5023956298828, "lng": 831.6794792550934,
+            "mobIcon": 17
+        },
+        {
+            "id": 1356,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}],
+            "lat": -544.9780654907227, "lng": 845.8980787086163,
+            "mobIcon": 18
+        },
+        {
+            "id": 1357,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -534, "lng": 855.344312393888,
+            "mobIcon": 18
+        },
+        {
+            "id": 1358,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -474.2673797607422, "lng": 860.3212588868846,
+            "mobIcon": 18
+        },
+        {
+            "id": 1359,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -495.6995315551758, "lng": 892.4158511513158,
+            "mobIcon": 18
+        },
+        {
+            "id": 1360,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 1}],
+            "lat": -488.5, "lng": 887.7205008488964,
+            "mobIcon": 18
+        },
+        {
+            "id": 1361,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -494.75, "lng": 876.349363327674,
+            "mobIcon": 18
+        },
+        {
+            "id": 1362,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}, {id: 14, amount: 2}],
+            "lat": -491.375, "lng": 890.0943972835314,
+            "mobIcon": 18
+        },
+        {
+            "id": 1363,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -482.9931411743164, "lng": 886.2846276793293,
+            "mobIcon": 15
+        },
+        {
+            "id": 1364,
+            "name": "Camp",
+            "mobs": [{id: 16, amount: 1}],
+            "lat": -519.4151229858398, "lng": 822.9893556345501,
+            "mobIcon": 16
+        },
+        {
+            "id": 1365,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -469.40001678466797, "lng": 852.9620656037775,
+            "mobIcon": 19
+        },
+        {
+            "id": 1366,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 3}],
+            "lat": -479.0679168701172, "lng": 836.8395151342318,
+            "mobIcon": 19
+        },
+        {
+            "id": 1367,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 3}],
+            "lat": -508.75, "lng": 845.9659168081494,
+            "mobIcon": 19
+        },
+        {
+            "id": 1368,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 4}],
+            "lat": -494.35125732421875, "lng": 828.2900708961163,
+            "mobIcon": 19
+        },
+        {
+            "id": 1369,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 2}, {id: 13, amount: 1}],
+            "lat": -512.125, "lng": 829.0987691001698,
+            "mobIcon": 19
+        },
+        {
+            "id": 1370,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 2}, {id: 10, amount: 1}],
+            "lat": -511.125, "lng": 835.7219439728353,
+            "mobIcon": 11
+        },
+        {
+            "id": 1371,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}],
+            "lat": -513.5118179321289, "lng": 824.4577433613646,
+            "mobIcon": 18
+        },
+        {
+            "id": 1372,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 3}],
+            "lat": -509.125, "lng": 862.0904499151104,
+            "mobIcon": 18
+        },
+        {
+            "id": 1373,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 4}],
+            "lat": -518.6775665283203, "lng": 839.3023570140068,
+            "mobIcon": 14
+        },
+        {
+            "id": 1374,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 2}],
+            "lat": -490.875, "lng": 863.8489388794567,
+            "mobIcon": 14
+        },
+        {
+            "id": 1375,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 2}],
+            "lat": -488.75, "lng": 859.2477859056664,
+            "mobIcon": 14
+        },
+        {
+            "id": 1376,
+            "name": "Camp",
+            "mobs": [{id: 14, amount: 3}],
+            "lat": -486.25, "lng": 854.7307724957556,
+            "mobIcon": 14
+        },
+        {
+            "id": 1377,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 3}],
+            "lat": -486.75, "lng": 814.3557300509337,
+            "mobIcon": 17
+        },
+        {
+            "id": 1378,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 2}],
+            "lat": -472.6704788208008, "lng": 854.9403527562606,
+            "mobIcon": 13
+        },
+        {
+            "id": 1379,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 2}],
+            "lat": -484.7678680419922, "lng": 842.5834249655136,
+            "mobIcon": 9
+        },
+        {
+            "id": 1380,
+            "name": "Camp",
+            "mobs": [{id: 12, amount: 1}],
+            "lat": -487.4078674316406, "lng": 840.6001256764644,
+            "mobIcon": 12
+        },
+        {
+            "id": 1381,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -583.1376266479492, "lng": 841.7730087409805,
+            "mobIcon": 17
+        },
+        {
+            "id": 1382,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -577.25, "lng": 855.5932937181664,
+            "mobIcon": 17
+        },
+        {
+            "id": 1383,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 2}],
+            "lat": -569.5821151733398, "lng": 832.0591422166808,
+            "mobIcon": 17
+        },
+        {
+            "id": 1384,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 2}],
+            "lat": -567.4632415771484, "lng": 855.9934127626274,
+            "mobIcon": 17
+        },
+        {
+            "id": 1385,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 2}],
+            "lat": -568.375, "lng": 850.344312393888,
+            "mobIcon": 17
+        },
+        {
+            "id": 1386,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 2}],
+            "lat": -563.7661895751953, "lng": 845.3250570352292,
+            "mobIcon": 17
+        },
+        {
+            "id": 1387,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 3}],
+            "lat": -583.375, "lng": 848.5946943972835,
+            "mobIcon": 17
+        },
+        {
+            "id": 1388,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 3}],
+            "lat": -563.5164031982422, "lng": 849.5279011698854,
+            "mobIcon": 17
+        },
+        {
+            "id": 1389,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 3}],
+            "lat": -564.875, "lng": 840.468972835314,
+            "mobIcon": 17
+        },
+        {
+            "id": 1390,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}, {id: 13, amount: 1}],
+            "lat": -572, "lng": 846.7299235993208,
+            "mobIcon": 17
+        },
+        {
+            "id": 1391,
+            "name": "Camp",
+            "mobs": [{id: 18, amount: 2}, {id: 14, amount: 2}],
+            "lat": -569.1422729492188, "lng": 894.6916158213073,
+            "mobIcon": 18
+        },
+        {
+            "id": 1392,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 10, amount: 1}, {id: 9, amount: 1}],
+            "lat": -594.75, "lng": 880.8475382003396,
+            "mobIcon": 11
+        },
+        {
+            "id": 1393,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 3}],
+            "lat": -599.75, "lng": 874.347156196944,
+            "mobIcon": 13
+        },
+        {
+            "id": 1394,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 3}],
+            "lat": -585.2514190673828, "lng": 896.0326264723047,
+            "mobIcon": 19
+        },
+        {
+            "id": 1395,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -585.125, "lng": 890.469779286927,
+            "mobIcon": 19
+        },
+        {
+            "id": 1396,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -587.8134002685547, "lng": 885.0936342715407,
+            "mobIcon": 19
+        },
+        {
+            "id": 1397,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -590.7021789550781, "lng": 888.056947355157,
+            "mobIcon": 19
+        },
+        {
+            "id": 1398,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 1}],
+            "lat": -592.25, "lng": 883.7207555178268,
+            "mobIcon": 19
+        },
+        {
+            "id": 1399,
+            "name": "Camp",
+            "mobs": [{id: 1, amount: 3}, {id: 6, amount: 1}, {id: 9, amount: 2}],
+            "lat": -911.0054321289062, "lng": 546.8567583430603,
+            "mobIcon": 1
+        },
+        {
+            "id": 1400,
+            "name": "Camp",
+            "mobs": [{id: 20, amount: 4}, {id: 6, amount: 1}, {id: 10, amount: 1}, {id: 9, amount: 2}],
+            "lat": -907.04736328125, "lng": 568.1509788837012,
+            "mobIcon": 20
+        },
+        {
+            "id": 1401,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 12, amount: 1}, {id: 10, amount: 1}, {id: 9, amount: 1}, {id: 13, amount: 1}],
+            "lat": -960.5213928222656, "lng": 534.1212008568548,
+            "mobIcon": 11
+        },
+        {
+            "id": 1402,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 10, amount: 1}, {id: 9, amount: 2}],
+            "lat": -944, "lng": 527.8546689303905,
+            "mobIcon": 11
+        },
+        {
+            "id": 1403,
+            "name": "Camp",
+            "mobs": [{id: 19, amount: 3}],
+            "lat": -954.25, "lng": 542.6039898132428,
+            "mobIcon": 19
+        },
+        {
+            "id": 1404,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 2}],
+            "lat": -942.25, "lng": 532.8545415959253,
+            "mobIcon": 9
+        },
+        {
+            "id": 1405,
+            "name": "Camp",
+            "mobs": [{id: 20, amount: 2}],
+            "lat": -934.5, "lng": 526.9818760611206,
+            "mobIcon": 20
+        },
+        {
+            "id": 1406,
+            "name": "Camp",
+            "mobs": [{id: 20, amount: 2}],
+            "lat": -956.375, "lng": 561.9748726655348,
+            "mobIcon": 20
+        },
+        {
+            "id": 1407,
+            "name": "Camp",
+            "mobs": [{id: 20, amount: 2}],
+            "lat": -958.5, "lng": 549.2283531409169,
+            "mobIcon": 20
+        },
+        {
+            "id": 1408,
+            "name": "Camp",
+            "mobs": [{id: 6, amount: 1}],
+            "lat": -930.875, "lng": 550.9744057724957,
+            "mobIcon": 6
+        },
+        {
+            "id": 1409,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}],
+            "lat": -911.875, "lng": 523.7267826825127,
+            "mobIcon": 11
+        },
+        {
+            "id": 1410,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -912.25, "lng": 530.4729202037352,
+            "mobIcon": 15
+        },
+        {
+            "id": 1411,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 2}],
+            "lat": -909.5999984741211, "lng": 503.39404744535227,
+            "mobIcon": 15
+        },
+        {
+            "id": 1412,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 2}],
+            "lat": -903.375, "lng": 524.603013582343,
+            "mobIcon": 17
+        },
+        {
+            "id": 1413,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 2}],
+            "lat": -905.8120269775391, "lng": 507.3606960950764,
+            "mobIcon": 17
+        },
+        {
+            "id": 1414,
+            "name": "Camp",
+            "mobs": [{id: 12, amount: 1}, {id: 9, amount: 3}],
+            "lat": -898.3522834777832, "lng": 525.6095411316851,
+            "mobIcon": 9
+        },
+        {
+            "id": 1415,
+            "name": "Camp",
+            "mobs": [{id: 12, amount: 1}, {id: 9, amount: 3}],
+            "lat": -895.125, "lng": 571.5952886247878,
+            "mobIcon": 9
+        },
+        {
+            "id": 1416,
+            "name": "Camp",
+            "mobs": [{id: 12, amount: 3}, {id: 13, amount: 1}],
+            "lat": -893.75, "lng": 576.0948641765705,
+            "mobIcon": 12
+        },
+        {
+            "id": 1417,
+            "name": "Camp",
+            "mobs": [{id: 12, amount: 3}, {id: 13, amount: 2}],
+            "lat": -899.25, "lng": 578.6079796264855,
+            "mobIcon": 12
+        },
+        {
+            "id": 1418,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 12, amount: 1}, {id: 9, amount: 1}, {id: 13, amount: 1}],
+            "lat": -891.125, "lng": 491.2357809847199,
+            "mobIcon": 11
+        },
+        {
+            "id": 1419,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 7, amount: 1}, {id: 9, amount: 3}],
+            "lat": -824.75, "lng": 646.9705857385399,
+            "mobIcon": 11
+        },
+        {
+            "id": 1420,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 7, amount: 1}, {id: 9, amount: 3}],
+            "lat": -883.1164169311523, "lng": 599.7974141818761,
+            "mobIcon": 11
+        },
+        {
+            "id": 1421,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 2}, {id: 9, amount: 2}],
+            "lat": -883.1164169311523, "lng": 599.7974141818761,
+            "mobIcon": 10
+        },
+        {
+            "id": 1422,
+            "name": "Camp",
+            "mobs": [{id: 12, amount: 1}, {id: 13, amount: 2}],
+            "lat": -866.75, "lng": 634.4693548387097,
+            "mobIcon": 13
+        },
+        {
+            "id": 1423,
+            "name": "Camp",
+            "mobs": [{id: 12, amount: 1}, {id: 13, amount: 1}],
+            "lat": -870.5, "lng": 636.9753820033956,
+            "mobIcon": 12
+        },
+        {
+            "id": 1424,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 4}],
+            "lat": -870, "lng": 600.4779711375212,
+            "mobIcon": 10
+        },
+        {
+            "id": 1425,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 4}],
+            "lat": -889.2191162109375, "lng": 592.5798778384974,
+            "mobIcon": 13
+        },
+        {
+            "id": 1426,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 2}],
+            "lat": -850.5860061645508, "lng": 594.5596333165323,
+            "mobIcon": 17
+        },
+        {
+            "id": 1427,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 2}],
+            "lat": -815.625, "lng": 567.4731748726656,
+            "mobIcon": 17
+        },
+        {
+            "id": 1428,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 2}],
+            "lat": -809.5, "lng": 554.5968166383701,
+            "mobIcon": 17
+        },
+        {
+            "id": 1429,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 2}],
+            "lat": -801.5, "lng": 542.2546596455858,
+            "mobIcon": 17
+        },
+        {
+            "id": 1430,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 3}],
+            "lat": -823.5, "lng": 586.3474957555178,
+            "mobIcon": 17
+        },
+        {
+            "id": 1431,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 3}],
+            "lat": -832.5, "lng": 584.8457979626486,
+            "mobIcon": 17
+        },
+        {
+            "id": 1432,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 3}],
+            "lat": -833.5, "lng": 588.8516977928692,
+            "mobIcon": 17
+        },
+        {
+            "id": 1433,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 3}],
+            "lat": -836.125, "lng": 544.3479626485569,
+            "mobIcon": 17
+        },
+        {
+            "id": 1434,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 3}],
+            "lat": -839.625, "lng": 539.1061120543294,
+            "mobIcon": 17
+        },
+        {
+            "id": 1435,
+            "name": "Camp",
+            "mobs": [{id: 1, amount: 1}, {id: 17, amount: 2}],
+            "lat": -835.9698028564453, "lng": 561.2213981589558,
+            "mobIcon": 17
+        },
+        {
+            "id": 1436,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -819.0712852478027, "lng": 558.1107372134975,
+            "mobIcon": 17
+        },
+        {
+            "id": 1437,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -796.4098205566406, "lng": 517.599251910017,
+            "mobIcon": 17
+        },
+        {
+            "id": 1438,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}],
+            "lat": -796.375, "lng": 512.8562818336163,
+            "mobIcon": 17
+        },
+        {
+            "id": 1439,
+            "name": "Camp",
+            "mobs": [{id: 9, amount: 1}],
+            "lat": -775, "lng": 516.231494057725,
+            "mobIcon": 9
+        },
+        {
+            "id": 1440,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -793.875, "lng": 528.1064091680815,
+            "mobIcon": 15
+        },
+        {
+            "id": 1441,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -834.125, "lng": 554.8511035653651,
+            "mobIcon": 15
+        },
+        {
+            "id": 1442,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -841.875, "lng": 521.9787351443124,
+            "mobIcon": 15
+        },
+        {
+            "id": 1443,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 2}],
+            "lat": -830, "lng": 596.8441850594228,
+            "mobIcon": 15
+        },
+        {
+            "id": 1444,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 2}],
+            "lat": -830, "lng": 601.9715619694398,
+            "mobIcon": 13
+        },
+        {
+            "id": 1445,
+            "name": "Camp",
+            "mobs": [{id: 20, amount: 2}],
+            "lat": -816.4891204833984, "lng": 509.7604202037351,
+            "mobIcon": 20
+        },
+        {
+            "id": 1446,
+            "name": "Camp",
+            "mobs": [{id: 20, amount: 2}],
+            "lat": -802, "lng": 533.8565365025466,
+            "mobIcon": 20
+        },
+        {
+            "id": 1447,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 9, amount: 3}],
+            "lat": -830.125, "lng": 528.3557724957556,
+            "mobIcon": 11
+        },
+        {
+            "id": 1448,
+            "name": "Camp",
+            "mobs": [{id: 17, amount: 1}, {id: 12, amount: 1}, {id: 9, amount: 3}],
+            "lat": -827.5, "lng": 587.3498726655348,
+            "mobIcon": 17
+        },
+        {
+            "id": 1449,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 12, amount: 1}, {id: 10, amount: 1}, {id: 9, amount: 1}],
+            "lat": -834.25, "lng": 598.5957555178268,
+            "mobIcon": 11
+        },
+        {
+            "id": 1450,
+            "name": "Camp",
+            "mobs": [{id: 12, amount: 1}, {id: 10, amount: 1}, {id: 9, amount: 2}],
+            "lat": -785.3564758300781, "lng": 516.3828904260399,
+            "mobIcon": 12
+        },
+        {
+            "id": 1451,
+            "name": "Camp",
+            "mobs": [{id: 1, amount: 1}, {id: 17, amount: 2}],
+            "lat": -822, "lng": 540.604584040747,
+            "mobIcon": 17
+        },
+        {
+            "id": 1452,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 9, amount: 3}],
+            "lat": -848.2830123901367, "lng": 574.8568642893146,
+            "mobIcon": 11
+        },
+        {
+            "id": 1453,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 9, amount: 3}],
+            "lat": -857.2360458374023, "lng": 574.5060145638795,
+            "mobIcon": 11
+        },
+        {
+            "id": 1454,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 7, amount: 1}, {id: 10, amount: 1}, {id: 9, amount: 1}],
+            "lat": -858.14208984375, "lng": 552.4946705220713,
+            "mobIcon": 11
+        },
+        {
+            "id": 1455,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 1}],
+            "lat": -854.5741271972656, "lng": 550.1328774936333,
+            "mobIcon": 10
+        },
+        {
+            "id": 1456,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 1}],
+            "lat": -861.375, "lng": 556.606494057725,
+            "mobIcon": 10
+        },
+        {
+            "id": 1457,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -863.75, "lng": 560.4811544991511,
+            "mobIcon": 15
+        },
+        {
+            "id": 1458,
+            "name": "Camp",
+            "mobs": [{id: 15, amount: 1}],
+            "lat": -863.8867263793945, "lng": 624.7254700432406,
+            "mobIcon": 15
+        },
+        {
+            "id": 1459,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}],
+            "lat": -854.875, "lng": 580.3502122241086,
+            "mobIcon": 11
+        },
+        {
+            "id": 1460,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 1}],
+            "lat": -871.851448059082, "lng": 586.3482173174873,
+            "mobIcon": 7
+        },
+        {
+            "id": 1461,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 2}],
+            "lat": -870.875, "lng": 581.7294142614601,
+            "mobIcon": 7
+        },
+        {
+            "id": 1462,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 2}],
+            "lat": -862, "lng": 568.2331918505943,
+            "mobIcon": 7
+        },
+        {
+            "id": 1463,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 2}],
+            "lat": -866.5048065185547, "lng": 575.0558965142191,
+            "mobIcon": 7
+        },
+        {
+            "id": 1464,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 2}],
+            "lat": -863, "lng": 579.9724533106961,
+            "mobIcon": 7
+        },
+        {
+            "id": 1465,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 3}],
+            "lat": -878.25, "lng": 574.7283955857386,
+            "mobIcon": 7
+        },
+        {
+            "id": 1466,
+            "name": "Camp",
+            "mobs": [{id: 20, amount: 2}],
+            "lat": -873.7682495117188, "lng": 567.3832026275998,
+            "mobIcon": 20
+        },
+        {
+            "id": 1467,
+            "name": "Camp",
+            "mobs": [{id: 13, amount: 4}],
+            "lat": -844.5, "lng": 562.6077674023769,
+            "mobIcon": 13
+        },
+        {
+            "id": 1468,
+            "name": "Camp",
+            "mobs": [{id: 20, amount: 2}],
+            "lat": -850.2660522460938, "lng": 499.2743338152589,
+            "mobIcon": 20
+        },
+        {
+            "id": 1469,
+            "name": "Camp",
+            "mobs": [{id: 20, amount: 1}],
+            "lat": -865.5, "lng": 497.48204584040747,
+            "mobIcon": 20
+        },
+        {
+            "id": 1470,
+            "name": "Camp",
+            "mobs": [{id: 20, amount: 1}],
+            "lat": -877.125, "lng": 496.85836162988113,
+            "mobIcon": 20
+        },
+        {
+            "id": 1471,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}],
+            "lat": -846, "lng": 530.3509762308998,
+            "mobIcon": 11
+        },
+        {
+            "id": 1472,
+            "name": "Camp",
+            "mobs": [{id: 12, amount: 1}],
+            "lat": -878, "lng": 523.8498726655348,
+            "mobIcon": 12
+        },
+        {
+            "id": 1473,
+            "name": "Camp",
+            "mobs": [{id: 12, amount: 1}, {id: 9, amount: 1}],
+            "lat": -887, "lng": 530.6084465195246,
+            "mobIcon": 12
+        },
+        {
+            "id": 1474,
+            "name": "Camp",
+            "mobs": [{id: 12, amount: 1}, {id: 9, amount: 2}],
+            "lat": -871.875, "lng": 519.1040747028862,
+            "mobIcon": 12
+        },
+        {
+            "id": 1475,
+            "name": "Camp",
+            "mobs": [{id: 7, amount: 1}, {id: 9, amount: 2}],
+            "lat": -855.875, "lng": 528.2269524617997,
+            "mobIcon": 7
+        },
+        {
+            "id": 1476,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 3}, {id: 9, amount: 1}],
+            "lat": -849.375, "lng": 508.6073853989813,
+            "mobIcon": 10
+        },
+        {
+            "id": 1477,
+            "name": "Camp",
+            "mobs": [{id: 12, amount: 1}, {id: 10, amount: 1}, {id: 9, amount: 2}],
+            "lat": -865.375, "lng": 529.7255517826825,
+            "mobIcon": 12
+        },
+        {
+            "id": 1478,
+            "name": "Camp",
+            "mobs": [{id: 11, amount: 1}, {id: 10, amount: 1}, {id: 9, amount: 1}],
+            "lat": -868.993408203125, "lng": 508.5463480873302,
+            "mobIcon": 11
+        },
+        {
+            "id": 1479,
+            "name": "Camp",
+            "mobs": [{id: 20, amount: 1}, {id: 10, amount: 2}, {id: 9, amount: 2}],
+            "lat": -860.5, "lng": 516.6050084889644,
+            "mobIcon": 20
+        },
+        {
+            "id": 1480,
+            "name": "Camp",
+            "mobs": [{id: 10, amount: 2}, {id: 9, amount: 2}],
+            "lat": -859.375, "lng": 510.10178268251275,
+            "mobIcon": 10
+        },
     ]
 };

@@ -78,7 +78,6 @@
     import {teleportIcons, teleports} from "@/assets/constants/teleport-data";
     import L from "leaflet";
     import RoutesList from "@/components/RoutesList";
-    import {camps} from "../assets/constants/routes-data";
     import CampInfo from "../components/CampInfo";
     import Vue2LeafletMarkerCluster from "vue2-leaflet-markercluster";
     import "../assets/css/marker-cluster.css"
@@ -116,7 +115,7 @@
                 cachedRoutes: {},
                 markers: [],
                 noMarkerZone: [],
-                camps: []
+                camps: {}
             };
         },
         methods: {
@@ -126,7 +125,7 @@
                 //   console.log("Can't place marker at", event.latlng)
                 //   return;
                 // }
-                this.copy(`lat: ${event.latlng.lat}, lng: ${event.latlng.lng}`);
+                this.copy(`"lat": ${event.latlng.lat}, "lng": ${event.latlng.lng}`);
                 // let marker = L.marker(event.latlng);
                 // this.noMarkerZone.push (event.latlng)
                 // console.log("Placed marker: ", marker)
@@ -191,6 +190,10 @@
                     this.$set(this.cachedRoutes, route.region, ret[route.region]);
                 })
             },
+            async getCamps() {
+                const res = await fetch(this.apiLink + "/game/info/camps.json");
+                this.camps = await res.json();
+            },
             getMapUrl(region) {
                 return `${this.apiLink}/tms/1.0.0/teyvat@png/${region}/{z}/{x}/{y}.png`
             },
@@ -203,7 +206,7 @@
             await this.getMobs();
             await this.getItems();
             await this.getRoutes();
-            this.camps = camps;
+            await this.getCamps();
         }
     }
 </script>
