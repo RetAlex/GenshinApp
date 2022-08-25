@@ -47,7 +47,13 @@ export default {
     return {
       changeLog: [
         {
-          version: "Version 2.9 (Current release)",
+          version: "Version 2.10 (Current release)",
+          changes: ["Added mob camps fpr Inazuma", "Updated and improved filters for maps, mainly camp layout filters", "New weapons and characters added to filters", "Bugfixes and stability improvements"],
+          date: '23 August 2022',
+          link: 'https://github.com/RetAlex/GenshinApp/releases/tag/2.10'
+        },
+        {
+          version: "Version 2.9",
           changes: ["Custom routes: added mob camps for Chasm & Liuye maps", "Some adjustments and improvement for clusterization and camps feature", "Added new weapons and characters to filters.", "Bugfixes and security improvements"],
           date: '24 July 2022',
           link: 'https://github.com/RetAlex/GenshinApp/releases/tag/2.9'
