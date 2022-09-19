@@ -316,5 +316,23 @@
     "name": "Shikanoin Heizou",
     "image": "/game/images/characters/53.png",
     "items": [34, 35, 36]
+  },
+  {
+    "id": 54,
+    "name": "Tighnari",
+    "image": "/game/images/characters/54.png",
+    "items": [61, 62, 63]
+  },
+  {
+    "id": 55,
+    "name": "Dori",
+    "image": "/game/images/characters/55.png",
+    "items": [58, 59, 60]
+  },
+  {
+    "id": 56,
+    "name": "Collei",
+    "image": "/game/images/characters/56.png",
+    "items": [7, 8, 9]
   }
 ]

@@ -340,5 +340,77 @@
     "name": "Deathly Statuette",
     "image": "/game/images/items/Item_Deathly_Statuette.png",
     "rarity": 4
+  },
+  {
+    "id": 58,
+    "name": "Faded Red Satin",
+    "image": "/game/images/items/Item_Faded_Red_Satin.png",
+    "rarity": 1
+  },
+  {
+    "id": 59,
+    "name": "Trimmed Red Silk",
+    "image": "/game/images/items/Item_Trimmed_Red_Silk.png",
+    "rarity": 2
+  },
+  {
+    "id": 60,
+    "name": "Rich Red Brocade",
+    "image": "/game/images/items/Item_Rich_Red_Brocade.png",
+    "rarity": 3
+  },
+  {
+    "id": 61,
+    "name": "Fungal Spores",
+    "image": "/game/images/items/Item_Fungal_Spores.png",
+    "rarity": 1
+  },
+  {
+    "id": 62,
+    "name": "Luminescent Pollen",
+    "image": "/game/images/items/Item_Luminescent_Pollen.png",
+    "rarity": 2
+  },
+  {
+    "id": 63,
+    "name": "Crystalline Cyst Dust",
+    "image": "/game/images/items/Item_Crystalline_Cyst_Dust.png",
+    "rarity": 3
+  },
+  {
+    "id": 64,
+    "name": "Inactivated Fungal Nucleus",
+    "image": "/game/images/items/Item_Inactivated_Fungal_Nucleus.png",
+    "rarity": 2
+  },
+  {
+    "id": 65,
+    "name": "Dormant Fungal Nucleus",
+    "image": "/game/images/items/Item_Dormant_Fungal_Nucleus.png",
+    "rarity": 3
+  },
+  {
+    "id": 66,
+    "name": "Robust Fungal Nucleus",
+    "image": "/game/images/items/Item_Robust_Fungal_Nucleus.png",
+    "rarity": 4
+  },
+  {
+    "id": 67,
+    "name": "Chaos Storage",
+    "image": "/game/images/items/Item_Chaos_Storage.png",
+    "rarity": 2
+  },
+  {
+    "id": 68,
+    "name": "Chaos Module",
+    "image": "/game/images/items/Item_Chaos_Module.png",
+    "rarity": 3
+  },
+  {
+    "id": 69,
+    "name": "Chaos Bolt",
+    "image": "/game/images/items/Item_Chaos_Bolt.png",
+    "rarity": 4
   }
 ]

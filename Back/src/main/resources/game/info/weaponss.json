@@ -125,6 +125,18 @@
       "name": "Haran Geppaku Futsu",
       "rarity": "5",
       "items": [40, 41, 42, 55, 56, 57]
+    },
+    {
+      "id": 100,
+      "name": "Kagotsurube Isshin",
+      "rarity": "4",
+      "items": [49, 50, 51, 55, 56, 57]
+    },
+    {
+      "id": 101,
+      "name": "Sapwood Blade",
+      "rarity": "4",
+      "items": [58, 59, 60, 67, 68, 69]
     }
   ],
   "claymore": [
@@ -241,6 +253,12 @@
       "name": "Redhorn Stonethresher",
       "rarity": "5",
       "items": [40, 41, 42, 52, 53, 54]
+    },
+    {
+      "id": 102,
+      "name": "Forest Regalia",
+      "rarity": "4",
+      "items": [58, 59, 60, 67, 68, 69]
     }
   ],
   "polearm": [
@@ -351,6 +369,12 @@
       "name": "Calamity Queller",
       "rarity": "5",
       "items": [16, 17, 18, 28, 29, 30]
+    },
+    {
+      "id": 103,
+      "name": "Moonpiercer",
+      "rarity": "4",
+      "items": [22, 23, 24, 67, 68, 69]
     }
   ],
   "bow": [
@@ -485,6 +509,24 @@
       "name": "Fading Twilight",
       "rarity": "4",
       "items": [19, 20, 21, 4, 5, 6]
+    },
+    {
+      "id": 104,
+      "name": "King’s Squire",
+      "rarity": "4",
+      "items": [61, 62, 63, 64, 65, 66]
+    },
+    {
+      "id": 105,
+      "name": "End of the Line",
+      "rarity": "4",
+      "items": [7, 8, 9, 64, 65, 66]
+    },
+    {
+      "id": 106,
+      "name": "Hunter’s Path",
+      "rarity": "5",
+      "items": [58, 59, 60, 64, 65, 66]
     }
   ],
   "catalyst": [
@@ -601,6 +643,12 @@
       "name": "Kagura's Verity",
       "rarity": "5",
       "items": [49, 50, 51, 52, 53, 54]
+    },
+    {
+      "id": 107,
+      "name": "Fruit of Fulfillment",
+      "rarity": "4",
+      "items": [61, 62, 63, 55, 56, 57]
     }
   ]
 }

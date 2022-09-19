@@ -99,8 +99,8 @@
             return {
                 apiLink: process.env.VUE_APP_API,
                 markerClusterOptions: markerClusterOptions,
-                regions: ['mondstadt', 'liyue', 'chasm', 'inazuma', 'enkanomiya'],
-                active: 'mondstadt',
+                regions: ['mondstadt', 'liyue', 'chasm', 'inazuma', 'enkanomiya', 'sumeru'],
+                active: 'sumeru',
                 bounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 maxBounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 minZoom: 0,
