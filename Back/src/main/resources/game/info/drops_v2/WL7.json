@@ -460,5 +460,71 @@
         "chance": 0.3
       }
     ]
+  },
+  "25": {
+    "experience": 19,
+    "mora": 40,
+    "items": [
+      {
+        "id": 58,
+        "chance": 0.9
+      },
+      {
+        "id": 59,
+        "chance": 0.5
+      },
+      {
+        "id": 60,
+        "chance": 0.3
+      }
+    ]
+  },
+  "26": {
+    "experience": 19,
+    "mora": 40,
+    "items": [
+      {
+        "id": 61,
+        "chance": 0.9
+      },
+      {
+        "id": 62,
+        "chance": 0.5
+      },
+      {
+        "id": 63,
+        "chance": 0.3
+      },
+      {
+        "id": 64,
+        "chance": 5
+      },
+      {
+        "id": 65,
+        "chance": 2
+      },
+      {
+        "id": 66,
+        "chance": 0.3
+      }
+    ]
+  },
+  "27": {
+    "experience": 57,
+    "mora": 200,
+    "items": [
+      {
+        "id": 67,
+        "chance": 5
+      },
+      {
+        "id": 68,
+        "chance": 2
+      },
+      {
+        "id": 69,
+        "chance": 0.3
+      }
+    ]
   }
 }
