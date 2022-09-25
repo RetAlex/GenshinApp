@@ -190,5 +190,29 @@
     "type": "elite",
     "typeLong": "Elite enemy",
     "image": "/game/images/mobs/Geovishap.png"
+  },
+  {
+    "id": 25,
+    "name": "Eremites",
+    "handbookAmount": 8,
+    "type": "common",
+    "typeLong": "Common enemy",
+    "image": "/game/images/mobs/Eremites.png"
+  },
+  {
+    "id": 26,
+    "name": "Fungi",
+    "handbookAmount": 8,
+    "type": "common",
+    "typeLong": "Common enemy",
+    "image": "/game/images/mobs/Fungi.png"
+  },
+  {
+    "id": 27,
+    "name": "RuinDrake",
+    "handbookAmount": 8,
+    "type": "elite",
+    "typeLong": "Elite enemy",
+    "image": "/game/images/mobs/RuinDrake.png"
   }
 ]
