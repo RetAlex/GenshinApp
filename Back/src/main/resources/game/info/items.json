@@ -412,5 +412,23 @@
     "name": "Chaos Bolt",
     "image": "/game/images/items/Item_Chaos_Bolt.png",
     "rarity": 4
+  },
+  {
+    "id": 70,
+    "name": "Damaged Prism",
+    "image": "/game/images/items/Item_Damaged_Prism.png",
+    "rarity": 2
+  },
+  {
+    "id": 71,
+    "name": "Turbid Prism",
+    "image": "/game/images/items/Item_Turbid_Prism.png",
+    "rarity": 3
+  },
+  {
+    "id": 72,
+    "name": "Radiant Prism",
+    "image": "/game/images/items/Item_Radiant_Prism.png",
+    "rarity": 4
   }
 ]
