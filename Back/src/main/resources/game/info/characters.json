@@ -334,5 +334,23 @@
     "name": "Collei",
     "image": "/game/images/characters/56.png",
     "items": [7, 8, 9]
+  },
+  {
+    "id": 57,
+    "name": "Candace",
+    "image": "/game/images/characters/57.png",
+    "items": [58, 59, 60]
+  },
+  {
+    "id": 58,
+    "name": "Cyno",
+    "image": "/game/images/characters/58.png",
+    "items": [4, 5, 6]
+  },
+  {
+    "id": 59,
+    "name": "Nilou",
+    "image": "/game/images/characters/59.png",
+    "items": [61, 62, 63]
   }
 ]
