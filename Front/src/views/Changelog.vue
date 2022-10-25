@@ -47,7 +47,13 @@ export default {
     return {
       changeLog: [
         {
-          version: "Version 3.0 (Current release)",
+          version: "Version 3.1 (Current release)",
+          changes: ["Added some Sumeru weapons and characters", "Added Sumeru drops, materials", "Minor bugfixes and improvements", "Performance optimization for newer images"],
+          date: '24 September 2022',
+          link: 'https://github.com/RetAlex/GenshinApp/releases/tag/3.1'
+        },
+        {
+          version: "Version 3.0",
           changes: ["Added sumeru map", "Added new characters, weapons to filters", "Added markers on sumeru maps", "Minor bugs and improvements"],
           date: '24 September 2022',
           link: 'https://github.com/RetAlex/GenshinApp/releases/tag/3.0'
