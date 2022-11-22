@@ -685,6 +685,12 @@
       "name": "Wandering Evenstar",
       "rarity": "4",
       "items": [61, 62, 63, 64, 65, 66]
+    },
+    {
+      "id": 114,
+      "name": "A Thousand Floating Dreams",
+      "rarity": "5",
+      "items": [61, 62, 63, 70, 71, 72]
     }
   ]
 }

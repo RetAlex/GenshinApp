@@ -352,5 +352,17 @@
     "name": "Nilou",
     "image": "/game/images/characters/59.png",
     "items": [61, 62, 63]
+  },
+  {
+    "id": 60,
+    "name": "Nahida",
+    "image": "/game/images/characters/60.png",
+    "items": [61, 62, 63]
+  },
+  {
+    "id": 61,
+    "name": "Layla",
+    "image": "/game/images/characters/61.png",
+    "items": [4, 5, 6]
   }
 ]
