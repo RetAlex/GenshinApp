@@ -209,10 +209,18 @@
   },
   {
     "id": 27,
-    "name": "RuinDrake",
+    "name": "Ruin Drake",
     "handbookAmount": 8,
     "type": "elite",
     "typeLong": "Elite enemy",
     "image": "/game/images/mobs/RuinDrake.png"
+  },
+  {
+    "id": 28,
+    "name": "Primal Construct",
+    "handbookAmount": 8,
+    "type": "elite",
+    "typeLong": "Elite enemy",
+    "image": "/game/images/mobs/PrimalConstruct.jpg"
   }
 ]
