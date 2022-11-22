@@ -49,7 +49,7 @@ export default {
         {
           version: "Version 3.1 (Current release)",
           changes: ["Added some Sumeru weapons and characters", "Added Sumeru drops, materials", "Minor bugfixes and improvements", "Performance optimization for newer images"],
-          date: '24 September 2022',
+          date: '24 October 2022',
           link: 'https://github.com/RetAlex/GenshinApp/releases/tag/3.1'
         },
         {
