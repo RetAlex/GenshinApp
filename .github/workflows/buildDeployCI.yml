@@ -34,18 +34,18 @@ jobs:
           cp Back/target/GI.war Docker/Production/build/GI.war
           docker build --build-arg -t ${{secrets.DOCKER_STAGING_IMAGE_NAME}} Docker/Production
 
-      # Deploy application to production
-      - name: Deploy application to production
+      # Deploy application to staging
+      - name: Deploy application to staging
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{secrets.AWS_REGION}}
+          aws-region: ${{ secrets.AWS_REGION }}
       - run: |
           aws ecr get-login-password | docker login --username AWS --password-stdin ${{secrets.DOCKER_REGISTRY_URL}}
           docker push ${{secrets.DOCKER_STAGING_IMAGE_NAME}}
-      # Stop the previous task of this service to spin up a new instance. Can't use "update" service feature due to capacity restrictions
           aws ecs stop-task --cluster ${{secrets.AWS_ECS_CLUSTER_NAME}} --task $(aws ecs list-tasks --cluster ${{secrets.AWS_ECS_CLUSTER_NAME}} --service ${{secrets.AWS_ECS_STAGING_SERVICE_NAME}} --output text --query taskArns[0])
+      # Stop the previous task of this service to spin up a new instance. Can't use "update" service feature due to capacity restrictions
       # Previous "Update" strategy
       # aws ecs update-service --cluster ${{secrets.AWS_ECS_CLUSTER_NAME}} --service ${{secrets.AWS_ECS_SERVICE_NAME}} --force-new-deployment
 
