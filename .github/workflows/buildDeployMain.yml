@@ -31,7 +31,7 @@ jobs:
       # Copy the artifact and build docker image
       - name: Copy built application package for docker and build an image
         run: |
-          cp Back/target/GI.war Docker/Production/build/GI.war
+          cp Back/target/GI.war Docker/build/GI.war
           docker build --build-arg MAIL_HOST="${{secrets.MAIL_HOST}}" --build-arg MAIL_PORT="${{secrets.MAIL_PORT}}" \
           --build-arg MAIL_USERNAME="${{secrets.MAIL_USERNAME}}" --build-arg MAIL_PASSWORD="${{secrets.MAIL_PASSWORD}}" \
           --build-arg FEEDBACK_RECIPIENT="${{secrets.FEEDBACK_RECIPIENT}}" --build-arg PROFILE="production"\

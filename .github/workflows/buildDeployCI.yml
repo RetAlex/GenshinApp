@@ -1,4 +1,4 @@
-name: Production build and deploy
+name: Staging build and deploy
 on:
   push:
     branches: [ integration ]
@@ -31,7 +31,7 @@ jobs:
       # Copy the artifact and build docker image
       - name: Copy built application package for docker and build an image
         run: |
-          cp Back/target/GI.war Docker/Production/build/GI.war
+          cp Back/target/GI.war Docker/build/GI.war
           docker build -t ${{secrets.DOCKER_STAGING_IMAGE_NAME}} --build-arg PROFILE="staging" Docker
 
       # Deploy application to staging
