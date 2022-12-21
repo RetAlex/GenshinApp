@@ -32,7 +32,7 @@ jobs:
       - name: Copy built application package for docker and build an image
         run: |
           cp Back/target/GI.war Docker/Production/build/GI.war
-          docker build -t ${{secrets.DOCKER_STAGING_IMAGE_NAME}} Docker/Production
+          docker build -t ${{secrets.DOCKER_STAGING_IMAGE_NAME}} --build-arg PROFILE="staging" Docker
 
       # Deploy application to staging
       - name: Deploy application to staging
