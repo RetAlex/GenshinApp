@@ -82,6 +82,7 @@
     import Vue2LeafletMarkerCluster from "vue2-leaflet-markercluster";
     import "../assets/css/marker-cluster.css"
     import {markerClusterOptions} from "../assets/constants/options";
+    import {camps} from "@/assets/constants/routes-data";
 
     export default {
         name: "RouteMap",
@@ -100,7 +101,7 @@
                 apiLink: process.env.VUE_APP_API,
                 markerClusterOptions: markerClusterOptions,
                 regions: ['mondstadt', 'liyue', 'chasm', 'inazuma', 'enkanomiya', 'sumeru'],
-                active: 'mondstadt',
+                active: 'chasm',
                 bounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 maxBounds: latLngBounds([[0, 0], [-1024, 1024]]),
                 minZoom: 0,
@@ -125,7 +126,7 @@
                 //   console.log("Can't place marker at", event.latlng)
                 //   return;
                 // }
-                this.copy(`lat: ${event.latlng.lat}, lng: ${event.latlng.lng}`);
+                this.copy(`"lat": ${event.latlng.lat}, "lng": ${event.latlng.lng}`);
                 // let marker = L.marker(event.latlng);
                 // this.noMarkerZone.push (event.latlng)
                 // console.log("Placed marker: ", marker)
@@ -191,8 +192,9 @@
                 })
             },
             async getCamps() {
-                const res = await fetch(this.apiLink + "/game/info/camps.json");
-                this.camps = await res.json();
+                // const res = await fetch(this.apiLink + "/game/info/camps.json");
+                // this.camps = await res.json();
+                this.camps = camps;
             },
             getMapUrl(region) {
                 return `${this.apiLink}/tms/1.0.0/teyvat@png/${region}/{z}/{x}/{y}.png`
