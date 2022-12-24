@@ -13,8 +13,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="copyright">genshin-assistants.click is not affiliated with HoYoverse.
-                        <span>Genshin Impact, game content and materials are trademarks and copyrights of HoYoverse.</span></p>
+                    <p class="copyright">>Genshin Impact, game content and materials are trademarks and copyrights of HoYoverse.</p>
                 </div>
                 <b-modal v-model="isFeedbackModalActive" has-modal-card trap-focus aria-role="dialog" aria-label="Feedback" aria-modal>
                     <template #default="props">
