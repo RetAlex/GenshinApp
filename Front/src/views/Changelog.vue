@@ -49,7 +49,7 @@ export default {
         {
           version: "Version 3.3 (Current release)",
           changes: ["Added new weapons and characters", "Added Sumeru Desert area map", "Minor visual improvements", "Fixed JSON files errors"],
-          date: '22 November 2022',
+          date: '24 December 2022',
           link: 'https://github.com/RetAlex/GenshinApp/releases/tag/3.3'
         },
         {

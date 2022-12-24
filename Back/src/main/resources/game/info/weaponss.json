@@ -148,6 +148,12 @@
 			"name": "Key of Khaj-Nisut",
 			"rarity": "5",
 			"items": [58, 59, 60, 70, 71, 72]
+		},
+		{
+			"id": 116,
+			"name": "Toukabou Shigure",
+			"rarity": "4",
+			"items": [40, 41, 42, 70, 71, 72]
 		}
 	],
 	"claymore": [{
@@ -686,6 +692,12 @@
 			"name": "A Thousand Floating Dreams",
 			"rarity": "5",
 			"items": [61, 62, 63, 70, 71, 72]
+		},
+		{
+			"id": 115,
+			"name": "Tulaytullah’s Remembrance",
+			"rarity": "5",
+			"items": [61, 62, 63, 64, 65, 66]
 		}
 	]
 }

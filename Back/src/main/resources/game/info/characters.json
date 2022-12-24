@@ -364,5 +364,17 @@
     "name": "Layla",
     "image": "/game/images/characters/61.png",
     "items": [4, 5, 6]
+  },
+  {
+    "id": 62,
+    "name": "Faruzan",
+    "image": "/game/images/characters/62.png",
+    "items": [58, 59, 60]
+  },
+  {
+    "id": 63,
+    "name": "Wanderer",
+    "image": "/game/images/characters/63.png",
+    "items": [40, 41, 42]
   }
 ]

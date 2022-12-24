@@ -544,5 +544,35 @@
         "chance": 0.3
       }
     ]
+  },
+  "28": {
+    "experience": 57,
+    "mora": 200,
+    "items": [
+      {
+        "id": 55,
+        "chance": 5
+      },
+      {
+        "id": 56,
+        "chance": 2
+      },
+      {
+        "id": 57,
+        "chance": 0.3
+      },
+      {
+        "id": 13,
+        "chance": 5
+      },
+      {
+        "id": 14,
+        "chance": 2
+      },
+      {
+        "id": 15,
+        "chance": 0.3
+      }
+    ]
   }
 }
