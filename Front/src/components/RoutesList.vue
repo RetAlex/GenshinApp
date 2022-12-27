@@ -9,7 +9,6 @@
                         <template #trigger>
                             <b-button type="is-primary" icon-right="menu-down">{{filter.characters.length ? 'For: ' + namesToString(filter.characters) : 'Characters'}}</b-button>
                         </template>
-
                         <b-dropdown-item v-for="char in filterOptions.characters" :key="char.id" :value="char" aria-role="listitem">
                             <div class="char-item">
                                 <span class="char-item-img" :style="{'background-image': 'url(' + apiLink + '/game/images/characters/' + char.id + '.png'}"></span>

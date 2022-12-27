@@ -1,5 +1,4 @@
-name: CI
-
+name: Staging build and deploy
 on:
   push:
     branches: [ integration ]
@@ -21,7 +20,7 @@ jobs:
           node-version: '12'
       - run: cd Front && npm install && npm run build
 
-      # Build java application
+      # Copy frontend assets and build java application
       - uses: actions/setup-java@v1
         with:
           java-version: 11
@@ -29,17 +28,24 @@ jobs:
           mkdir -p Back/src/main/resources/assets || true && cp -r Front/dist/* Back/src/main/resources/assets
           cd Back && mvn clean package
 
+      # Copy the artifact and build docker image
+      - name: Copy built application package for docker and build an image
+        run: |
+          cp Back/target/GI.war Docker/build/GI.war
+          docker build -t ${{secrets.DOCKER_STAGING_IMAGE_NAME}} --build-arg PROFILE="staging" Docker
 
-      # Copy assets required to build the image
-      - name: Copy built application package for docker
-        run: cp Back/target/GI.war Docker/CI/build/GI.war
-
-      # Deploy application to heroku
-      - name: Build, Push and Deploy to Heroku
-        id: heroku
-        uses: jctaveras/heroku-deploy@v1.0.0
+      # Deploy application to staging
+      - name: Deploy application to staging
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          email: ${{ secrets.HEROKU_EMAIL }}
-          api_key: ${{ secrets.HEROKU_API_KEY }}
-          app_name: "genshin-application-ci"
-          dockerfile: "Docker/CI"
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      - run: |
+          aws ecr get-login-password | docker login --username AWS --password-stdin ${{secrets.DOCKER_REGISTRY_URL}}
+          docker push ${{secrets.DOCKER_STAGING_IMAGE_NAME}}
+          aws ecs stop-task --cluster ${{secrets.AWS_ECS_CLUSTER_NAME}} --task $(aws ecs list-tasks --cluster ${{secrets.AWS_ECS_CLUSTER_NAME}} --service ${{secrets.AWS_ECS_STAGING_SERVICE_NAME}} --output text --query taskArns[0])
+      # Stop the previous task of this service to spin up a new instance. Can't use "update" service feature due to capacity restrictions
+      # Previous "Update" strategy
+      # aws ecs update-service --cluster ${{secrets.AWS_ECS_CLUSTER_NAME}} --service ${{secrets.AWS_ECS_SERVICE_NAME}} --force-new-deployment
+

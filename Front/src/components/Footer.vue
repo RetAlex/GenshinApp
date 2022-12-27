@@ -13,7 +13,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="copyright">Copyright &copy; 2020 Somethingo</p>
+                    <p class="copyright">>Genshin Impact, game content and materials are trademarks and copyrights of HoYoverse.</p>
                 </div>
                 <b-modal v-model="isFeedbackModalActive" has-modal-card trap-focus aria-role="dialog" aria-label="Feedback" aria-modal>
                     <template #default="props">
@@ -88,6 +88,10 @@
         color: #fff;
         letter-spacing: 0.88px;
         text-transform: uppercase;
+    }
+
+    footer .copyright span {
+        display: block;
     }
 
     @media (max-width: 991px) {

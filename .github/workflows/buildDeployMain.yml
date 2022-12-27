@@ -31,10 +31,11 @@ jobs:
       # Copy the artifact and build docker image
       - name: Copy built application package for docker and build an image
         run: |
-          cp Back/target/GI.war Docker/Production/build/GI.war
+          cp Back/target/GI.war Docker/build/GI.war
           docker build --build-arg MAIL_HOST="${{secrets.MAIL_HOST}}" --build-arg MAIL_PORT="${{secrets.MAIL_PORT}}" \
           --build-arg MAIL_USERNAME="${{secrets.MAIL_USERNAME}}" --build-arg MAIL_PASSWORD="${{secrets.MAIL_PASSWORD}}" \
-          --build-arg FEEDBACK_RECIPIENT="${{secrets.FEEDBACK_RECIPIENT}}" -t ${{secrets.DOCKER_IMAGE_NAME}} Docker/Production
+          --build-arg FEEDBACK_RECIPIENT="${{secrets.FEEDBACK_RECIPIENT}}" --build-arg PROFILE="production"\
+          -t ${{secrets.DOCKER_IMAGE_NAME}} Docker
 
       # Deploy application to production
       - name: Deploy application to production
@@ -46,6 +47,7 @@ jobs:
       - run: |
           aws ecr get-login-password | docker login --username AWS --password-stdin ${{secrets.DOCKER_REGISTRY_URL}}
           docker push ${{secrets.DOCKER_IMAGE_NAME}}
+          aws ecs stop-task --cluster ${{secrets.AWS_ECS_CLUSTER_NAME}} --task $(aws ecs list-tasks --cluster ${{secrets.AWS_ECS_CLUSTER_NAME}} --service ${{secrets.AWS_ECS_SERVICE_NAME}} --output text --query taskArns[0])
       # Commented due to insufficient capacity to avoid disruptive triggers;
       # aws ecs update-service --cluster ${{secrets.AWS_ECS_CLUSTER_NAME}} --service ${{secrets.AWS_ECS_SERVICE_NAME}} --force-new-deployment
 

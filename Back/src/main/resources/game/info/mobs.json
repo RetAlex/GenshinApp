@@ -222,5 +222,13 @@
     "type": "elite",
     "typeLong": "Elite enemy",
     "image": "/game/images/mobs/PrimalConstruct.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Abyss Herald",
+    "handbookAmount": 8,
+    "type": "elite",
+    "typeLong": "Elite enemy",
+    "image": "/game/images/mobs/AbyssHerald.png"
   }
 ]

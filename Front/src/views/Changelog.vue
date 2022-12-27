@@ -47,7 +47,13 @@ export default {
     return {
       changeLog: [
         {
-          version: "Version 3.2 (Current release)",
+          version: "Version 3.3 (Current release)",
+          changes: ["Added new weapons and characters", "Added enemy camps on The Chasm map", "Added new enemy images", "Minor bugfixes and improvements"],
+          date: '24 December 2022',
+          link: 'https://github.com/RetAlex/GenshinApp/releases/tag/3.3'
+        },
+        {
+          version: "Version 3.2",
           changes: ["Added new weapons and characters", "Added Sumeru Desert area map", "Minor visual improvements", "Fixed JSON files errors"],
           date: '22 November 2022',
           link: 'https://github.com/RetAlex/GenshinApp/releases/tag/3.2'
