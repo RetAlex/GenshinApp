@@ -48,7 +48,7 @@ export default {
       changeLog: [
         {
           version: "Version 3.4 (Current release)",
-          changes: ["Added new Sumeru area on the map", "Added new weapons and characters for filter feature", "Added new enemies and items", "UI changes for Character Experience Calculator"],
+          changes: ["Added new Sumeru area on the map", "Added new weapons and characters for filter feature", "Added new enemies and items", "UI changes for Character Experience Calculator", "Minor UI bug fixes"],
           date: '25 January 2023',
           link: 'https://github.com/RetAlex/GenshinApp/releases/tag/3.4'
         },
