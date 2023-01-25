@@ -1,5 +1,5 @@
 {
-   mondstadt: [
+   "mondstadt": [
         {
             "id": 1,
             "name": "Camp",
@@ -2281,7 +2281,7 @@
             "mobIcon": 9
         }
     ],
-    liyue: [
+    "liyue": [
         {
             "id": 326,
             "name": "Camp",
@@ -6850,7 +6850,7 @@
         },
 
     ],
-    inazuma: [
+    "inazuma": [
         {
             "id": 974,
             "name": "Camp",
@@ -10429,7 +10429,7 @@
             "mobIcon": 10
         },
     ],
-    chasm: [
+    "chasm": [
         {
             "id": 1489,
             "name": "Camp",
