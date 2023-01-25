@@ -430,5 +430,23 @@
     "name": "Radiant Prism",
     "image": "/game/images/items/Item_Radiant_Prism.png",
     "rarity": 4
+  },
+  {
+    "id": 73,
+    "name": "Desiccated Shell",
+    "image": "/game/images/items/Item_Desiccated_Shell.png",
+    "rarity": 2
+  },
+  {
+    "id": 74,
+    "name": "Sturdy Shell",
+    "image": "/game/images/items/Item_Sturdy_Shell.png",
+    "rarity": 3
+  },
+  {
+    "id": 75,
+    "name": "Marked Shell",
+    "image": "/game/images/items/Item_Marked_Shell.png",
+    "rarity": 4
   }
 ]

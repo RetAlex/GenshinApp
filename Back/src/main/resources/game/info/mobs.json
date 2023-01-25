@@ -230,5 +230,13 @@
     "type": "elite",
     "typeLong": "Elite enemy",
     "image": "/game/images/mobs/AbyssHerald.png"
+  },
+  {
+    "id": 30,
+    "name": "Consecrated Beast",
+    "handbookAmount": 8,
+    "type": "elite",
+    "typeLong": "Elite enemy",
+    "image": "/game/images/mobs/ConsecratedBeast.png"
   }
 ]
