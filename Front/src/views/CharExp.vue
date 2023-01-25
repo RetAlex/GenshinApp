@@ -24,7 +24,7 @@
             </div>
             <div class="row enemies-title">
                 <b-tabs position="is-centered">
-                    <b-tab-item v-model="activeTab" v-for="mobType in mobTypes" :label="mobType" :key="mobType">
+                    <b-tab-item v-for="mobType in mobTypes" :label="mobType" :key="mobType">
                         <div class="enemies row">
                             <div class="col-lg-4 col-md-6 col-sm-12" v-for="mob in mobs[mobType]" :key="mob.id">
                                 <div class="monster-card">

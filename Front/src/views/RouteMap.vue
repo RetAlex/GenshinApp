@@ -244,6 +244,7 @@
     }
 
     #map .row.map-container {
+        z-index: 1;
         position: relative;
         margin-left: -1.5rem;
         margin-right: -1.5rem;
@@ -416,7 +417,7 @@
 
     .map-controls .dropdown {
         margin-right: 10px;
-        z-index: 1001;
+        z-index: 101;
     }
 
     a.dropdown-item.is-active, .dropdown .dropdown-menu .has-link a.is-active, button.dropdown-item.is-active {
