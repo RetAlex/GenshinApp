@@ -376,5 +376,17 @@
     "name": "Wanderer",
     "image": "/game/images/characters/63.png",
     "items": [40, 41, 42]
+  },
+  {
+    "id": 64,
+    "name": "Alhaitham",
+    "image": "/game/images/characters/63.png",
+    "items": [58, 59, 60]
+  },
+  {
+    "id": 65,
+    "name": "Yaoyao",
+    "image": "/game/images/characters/63.png",
+    "items": [25, 26, 27]
   }
 ]
