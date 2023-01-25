@@ -9,9 +9,7 @@
                 </div>
                 <div class="offset-lg-1 col-lg-10">
                     <div class="center-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat</p>
+                        <p>Choose your world level and the amount of each enemy to calculate received character experience and mora</p>
                     </div>
                 </div>
             </div>
@@ -24,27 +22,26 @@
                     </ul>
                 </div>
             </div>
-            <div class="row" v-for="mobType in mobTypes" :key="mobType">
-                <div>
-                    <div class="head row">
-                        <h2 class="enemies-title">{{ mobType }}</h2>
-                    </div>
-                    <div class="enemies row">
-                        <div class="col-lg-4 col-md-6 col-sm-12" v-for="mob in mobs[mobType]" :key="mob.id">
-                            <div class="monster-card">
-                                <img class="monster-image" :src="apiLink + mob.image"
-                                     :alt="mob.name">
-                                <div class="monster-card-control">
-                                    <div class="monster-name">{{mob.name}}</div>
-                                    <input class="monster-amount-input" v-model="mobAmounts['mob'+mob.id]" type="number"
-                                           placeholder="0" min="0"/>
-                                    <button class="monster-handbook-button" @click="fillFromHandbook(mob.id)">Fill
-                                    </button>
+            <div class="row enemies-title">
+                <b-tabs position="is-centered">
+                    <b-tab-item v-model="activeTab" v-for="mobType in mobTypes" :label="mobType" :key="mobType">
+                        <div class="enemies row">
+                            <div class="col-lg-4 col-md-6 col-sm-12" v-for="mob in mobs[mobType]" :key="mob.id">
+                                <div class="monster-card">
+                                    <img class="monster-image" :src="apiLink + mob.image"
+                                         :alt="mob.name">
+                                    <div class="monster-card-control">
+                                        <div class="monster-name">{{mob.name}}</div>
+                                        <input class="monster-amount-input" v-model="mobAmounts['mob'+mob.id]" type="number"
+                                               placeholder="0" min="0"/>
+                                        <button class="monster-handbook-button" @click="fillFromHandbook(mob.id)">Fill
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </b-tab-item>
+                </b-tabs>
             </div>
             <div class="row result">
                 <div class="process">
@@ -252,12 +249,21 @@
         width: 100%;
     }
 
-    .enemies-title {
+    .enemies-title .b-tabs .tabs li a {
         padding-left: 20px;
         letter-spacing: 1px;
-        font-size: 15px;
+        font-size: 12px;
         color: #777;
-        margin-bottom: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .enemies-title .b-tabs .tabs li.is-active a {
+        border-bottom-color: rgb(91, 170, 246);
+    }
+
+    .enemies-title .b-tabs .tabs li:hover a {
+        border-bottom-color: rgba(253, 205, 229, 1);
     }
 
     .advent-rank-wrap ul {
