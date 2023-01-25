@@ -154,6 +154,12 @@
 			"name": "Toukabou Shigure",
 			"rarity": "4",
 			"items": [40, 41, 42, 70, 71, 72]
+		},
+		{
+			"id": 117,
+			"name": "Light of Foliar Incision",
+			"rarity": "5",
+			"items": [58, 59, 60, 73, 74, 75]
 		}
 	],
 	"claymore": [{
