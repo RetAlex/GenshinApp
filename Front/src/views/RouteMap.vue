@@ -82,7 +82,6 @@
     import Vue2LeafletMarkerCluster from "vue2-leaflet-markercluster";
     import "../assets/css/marker-cluster.css"
     import {markerClusterOptions} from "../assets/constants/options";
-    import {camps} from "@/assets/constants/routes-data";
 
     export default {
         name: "RouteMap",
@@ -192,9 +191,9 @@
                 })
             },
             async getCamps() {
-                // const res = await fetch(this.apiLink + "/game/info/camps.json");
-                // this.camps = await res.json();
-                this.camps = camps;
+                const res = await fetch(this.apiLink + "/game/info/camps.json");
+                this.camps = await res.json();
+                // this.camps = camps;
             },
             getMapUrl(region) {
                 return `${this.apiLink}/tms/1.0.0/teyvat@png/${region}/{z}/{x}/{y}.png`

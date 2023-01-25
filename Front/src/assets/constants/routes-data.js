@@ -456,7 +456,7 @@ export const camps = {
         {
             "id": 60,
             "name": "Camp",
-            "mobs": [{id: 12, amount: 1}, {id: 10, amount: 2}, {id: 10, amount: 1}],
+            "mobs": [{id: 12, amount: 1}, {id: 10, amount: 2}, {id: 9, amount: 1}],
             "lat": -506.0628967285156, "lng": 650.9311218261719,
             "mobIcon": 10
         },
