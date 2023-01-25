@@ -191,8 +191,8 @@
                 })
             },
             async getCamps() {
-                const res = await fetch(this.apiLink + "/game/info/camps.json");
-                this.camps = await res.json();
+                // const res = await fetch(this.apiLink + "/game/info/camps.json");
+                // this.camps = await res.json();
                 // this.camps = camps;
             },
             getMapUrl(region) {
